@@ -1,6 +1,4 @@
-deploy on fidb.app
-
+remove unused code
 [migrate] copy code from `readonlylink-laravel`
-
 `files/`
 `projects/`

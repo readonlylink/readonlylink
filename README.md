@@ -1,8 +1,7 @@
-# FiDB Website
+# Readonly.Link Website
 
-Website of [FiDB](https://github.com/fidb-official/fidb).
-
-[ [WEBSITE](https://fidb.dev) ]
+[ [WEBSITE](https://readonly.link)
+| [ABOUT](https://readonly.link/about) ]
 
 ## Development
 
