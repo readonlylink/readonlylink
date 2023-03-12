@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 </script>
 
 <template>
-  <PageLayout>
     <div class="flex h-full flex-col items-center justify-center">
       <div class="flex flex-col space-y-2 px-3">
         <div class="text-6xl font-bold">FiDB</div>
@@ -26,5 +24,4 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
         <div class="py-16"></div>
       </div>
     </div>
-  </PageLayout>
 </template>

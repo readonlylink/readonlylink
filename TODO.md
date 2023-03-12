@@ -10,9 +10,11 @@ setup route -- `projects/`
 
 # scripts
 
-ambr 'template #en' 'template #en'
+ambr 'template #default' 'template #en'
 
 # later
+
+rename `md/` use `lang="ts"`
 
 rename `ut/` to `utils/`
 fix naming convention
