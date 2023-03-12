@@ -1,4 +1,3 @@
-[migrate] `PageToolbar`
 [migrate] `PageMenu`
 [migrate] `PageLayout`
 
