@@ -1,5 +1,6 @@
-[migrate] `PageMenu`
 [migrate] `PageLayout`
+
+ambr PageHeader PageHead
 
 fix `Home` -- `/` -- `ActivityForAll`
 
