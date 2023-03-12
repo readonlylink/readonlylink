@@ -1,4 +1,6 @@
-fix `layouts/page-layout` -- no login for now
+[migrate] `PageToolbar`
+[migrate] `PageMenu`
+[migrate] `PageLayout`
 
 fix `Home` -- `/` -- `ActivityForAll`
 
