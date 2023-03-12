@@ -1,7 +1,3 @@
-[migrate] `PageLayout`
-
-ambr PageHeader PageHead
-
 fix `Home` -- `/` -- `ActivityForAll`
 
 setup route -- `files/`
