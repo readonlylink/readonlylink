@@ -1,0 +1,63 @@
+@import 'splitpanes/dist/splitpanes.css';
+
+/*
+  Code taken from:
+  https://antoniandre.github.io/splitpanes/#increased-touch-zone
+*/
+
+.splitpanes__splitter {
+  position: relative;
+}
+
+.splitpanes__splitter:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0);
+  opacity: 0;
+  z-index: 20;
+}
+
+.splitpanes__splitter:hover:before {
+  opacity: 1;
+}
+
+@layer utilities {
+  .splitter-1 > .splitpanes__splitter:before {
+    left: -1px;
+    right: -1px;
+    height: 100%;
+  }
+
+  .splitter-2 > .splitpanes__splitter:before {
+    left: -2px;
+    right: -2px;
+    height: 100%;
+  }
+
+  .splitter-3 > .splitpanes__splitter:before {
+    left: -3px;
+    right: -3px;
+    height: 100%;
+  }
+
+  .splitter-4 > .splitpanes__splitter:before {
+    left: -4px;
+    right: -4px;
+    height: 100%;
+  }
+
+  .splitter-5 > .splitpanes__splitter:before {
+    left: -5px;
+    right: -5px;
+    height: 100%;
+  }
+
+  .splitter-6 > .splitpanes__splitter:before {
+    left: -6px;
+    right: -6px;
+    height: 100%;
+  }
+}
