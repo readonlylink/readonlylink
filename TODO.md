@@ -1,5 +1,3 @@
-fix `Docs` -- `/docs`
-
 fix `layouts/page-layout` -- no login for now
 
 fix `Home` -- `/` -- `ActivityForAll`
@@ -9,6 +7,10 @@ setup route -- `projects/`
 
 `files/`
 `projects/`
+
+# scripts
+
+ambr 'template #en' 'template #en'
 
 # later
 
