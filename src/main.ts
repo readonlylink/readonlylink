@@ -6,6 +6,7 @@ import App from './App.vue'
 import * as Directives from './directives'
 import router from './router'
 import './styles/index.css'
+import './styles/fonts.css'
 
 const app = createApp(App)
 
