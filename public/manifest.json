@@ -1,7 +1,7 @@
 {
-  "name": "FiDB",
-  "short_name": "Fi",
-  "description": "File system as database.",
+  "name": "Readonly.Link",
+  "short_name": "-r--",
+  "description": "A document rendering tool, and a community for authors.",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#ffffff",
