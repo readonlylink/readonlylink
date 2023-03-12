@@ -1,5 +1,3 @@
-fix `Home` -- `/` -- `ActivityForAll`
-
 setup route -- `files/`
 setup route -- `projects/`
 
