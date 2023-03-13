@@ -1,8 +1,3 @@
-# articles
-
-`articles/` -- `loadState` -- async
-`articles/` -- `stateReactive`
-
 # books
 
 `books/` -- fix `State` -- use record instead of class
