@@ -2,7 +2,6 @@
 import { Head } from '@vueuse/head'
 import { watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
-import { useExtensionStore } from '../../composables/extension-store'
 import { State } from './State'
 import { stateDocument } from './stateDocument'
 import { stateReactive } from './stateReactive'
@@ -28,6 +27,6 @@ watch(
   <MdPage
     class="m-6"
     :document="stateDocument(state)"
-    :customComponents="useExtensionStore().components"
+    :customComponents="state.extensions.components"
   />
 </template>
