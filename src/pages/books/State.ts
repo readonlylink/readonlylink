@@ -29,7 +29,7 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const extensions = useExtensionStore()
 
-  const config = {}
+  const config = {} as any
 
   return {
     url,
