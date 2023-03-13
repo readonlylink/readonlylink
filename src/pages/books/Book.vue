@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import Lang from '../../components/Lang.vue'
 import BookLoaded from './BookLoaded.vue'
+import BookLoading from './BookLoading.vue'
 import { loadState, State } from './State'
 
 const route = useRoute()
@@ -28,13 +28,7 @@ watch(
 
 <template>
   <div class="mx-auto max-w-3xl">
-    <div v-if="!state" class="px-4 py-6 font-sans text-xl text-gray-500">
-      <Lang class="font-bold">
-        <template #zh> 书籍加载中⋯⋯ </template>
-        <template #en> Loading book ... </template>
-      </Lang>
-    </div>
-
-    <BookLoaded v-else :state="state" />
+    <BookLoaded v-if="state" :state="state" />
+    <BookLoading v-else />
   </div>
 </template>
