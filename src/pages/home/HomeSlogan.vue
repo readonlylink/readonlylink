@@ -1,5 +1,5 @@
 <script setup>
-import Lang from "../../components/Lang.vue"
+import Lang from '../../components/Lang.vue'
 </script>
 
 <template>

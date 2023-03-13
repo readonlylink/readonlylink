@@ -1,3 +1,11 @@
+<script setup>
+import { MdPageState as State } from '../../md-page-state'
+
+import Highlight from '../../../atoms/Highlight.vue'
+
+defineProps({ state: State, node: Object })
+</script>
+
 <template>
   <div>
     <pre
@@ -12,13 +20,3 @@
     />
   </div>
 </template>
-
-<script setup>
-import { computed } from "vue"
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-
-import Highlight from "../../../atoms/Highlight.vue"
-
-defineProps({ state: State, node: Object })
-</script>

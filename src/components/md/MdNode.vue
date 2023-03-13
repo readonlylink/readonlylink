@@ -10,11 +10,11 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import { Node } from "@xieyuheng/postmark"
-import { MdPageState as State } from "./md-page-state"
+import { Node } from '@xieyuheng/postmark'
+import { computed } from 'vue'
+import { MdPageState as State } from './md-page-state'
 
-import { components } from "./nodes"
+import { components } from './nodes'
 
 const props = defineProps({ state: State, node: Node })
 

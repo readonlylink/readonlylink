@@ -23,23 +23,23 @@
 </template>
 
 <script setup>
-import { MdPageState as State } from "../../md-page-state"
+import { MdPageState as State } from '../../md-page-state'
 
-import MdDefaultTitle from "./MdDefaultTitle.vue"
-import MdDefaultAttributes from "./MdDefaultAttributes.vue"
-import MdNode from "../../MdNode.vue"
+import MdNode from '../../MdNode.vue'
+import MdDefaultAttributes from './MdDefaultAttributes.vue'
+import MdDefaultTitle from './MdDefaultTitle.vue'
 
 const props = defineProps({ state: State })
 
 const names = [
-  "venue",
-  "author",
-  "authors",
-  "translator",
-  "translators",
-  "keywords",
-  "year",
-  "date",
+  'venue',
+  'author',
+  'authors',
+  'translator',
+  'translators',
+  'keywords',
+  'year',
+  'date',
 ]
 
 function showAttributes() {

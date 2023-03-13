@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import Hyperlink from '../../components/Hyperlink.vue'
 import IconTranslate from '../../components/icons/IconTranslate.vue'
 import Lang from '../../components/Lang.vue'
-import Hyperlink from '../../components/Hyperlink.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 import PageLang from './PageLang.vue'
 

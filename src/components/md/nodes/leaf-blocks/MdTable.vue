@@ -1,3 +1,11 @@
+<script setup>
+import { Nodes } from '@xieyuheng/postmark'
+import { MdPageState as State } from '../../md-page-state'
+import MdNode from '../../MdNode.vue'
+
+defineProps({ state: State, node: Nodes.Table })
+</script>
+
 <template>
   <table class="my-4 w-full">
     <thead>
@@ -36,11 +44,3 @@
     </tbody>
   </table>
 </template>
-
-<script setup>
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-import MdNode from "../../MdNode.vue"
-
-defineProps({ state: State, node: Nodes.Table })
-</script>

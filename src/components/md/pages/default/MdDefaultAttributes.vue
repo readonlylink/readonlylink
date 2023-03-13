@@ -60,15 +60,15 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import { normalizeAttributes } from "./normalize-attributes"
+import { computed } from 'vue'
+import { normalizeAttributes } from './normalize-attributes'
 
-import SpanJoin from "../../../atoms/SpanJoin.vue"
-import IconPencil from "../../../icons/IconPencil.vue"
-import IconCalendar from "../../../icons/IconCalendar.vue"
-import IconTranslate from "../../../icons/IconTranslate.vue"
-import IconLocationMarker from "../../../icons/IconLocationMarker.vue"
-import IconHashtag from "../../../icons/IconHashtag.vue"
+import SpanJoin from '../../../atoms/SpanJoin.vue'
+import IconCalendar from '../../../icons/IconCalendar.vue'
+import IconHashtag from '../../../icons/IconHashtag.vue'
+import IconLocationMarker from '../../../icons/IconLocationMarker.vue'
+import IconPencil from '../../../icons/IconPencil.vue'
+import IconTranslate from '../../../icons/IconTranslate.vue'
 
 const props = defineProps({ attributes: Object })
 

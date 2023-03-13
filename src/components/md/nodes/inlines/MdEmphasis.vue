@@ -9,9 +9,9 @@
 </template>
 
 <script setup>
-import { Node } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-import MdNode from "../../MdNode.vue"
+import { Node } from '@xieyuheng/postmark'
+import { MdPageState as State } from '../../md-page-state'
+import MdNode from '../../MdNode.vue'
 
 defineProps({ state: State, node: Node })
 </script>

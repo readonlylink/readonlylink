@@ -6,9 +6,9 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from "vue"
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
+import { Nodes } from '@xieyuheng/postmark'
+import { computed, ref, watch } from 'vue'
+import { MdPageState as State } from '../../md-page-state'
 
 defineProps({ state: State, node: Nodes.SoftLineBreak })
 
@@ -33,7 +33,7 @@ watch(
       needBreak.value = false
     }
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 function isCJKAndFullwidthPunctuation(char) {

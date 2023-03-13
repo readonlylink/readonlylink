@@ -3,9 +3,9 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import hljs from "highlight.js/lib/common"
-import { safeHtml } from "../../ut/safe-html"
+import hljs from 'highlight.js/lib/common'
+import { computed } from 'vue'
+import { safeHtml } from '../../ut/safe-html'
 
 const props = defineProps({ lang: String, text: String })
 

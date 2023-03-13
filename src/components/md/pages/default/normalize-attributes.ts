@@ -1,4 +1,4 @@
-import { formatDate } from "../../../../ut/format-date"
+import { formatDate } from '../../../../ut/format-date'
 
 type Attributes = {
   translators: Array<{ name: string; username?: string }>
@@ -33,7 +33,7 @@ export function normalizeAttributes(attributes: any): Attributes {
 }
 
 export function normalizeUser(user: any): { name: string; username?: string } {
-  if (typeof user["name"] === "string") {
+  if (typeof user['name'] === 'string') {
     return user
   }
 
@@ -41,12 +41,12 @@ export function normalizeUser(user: any): { name: string; username?: string } {
 }
 
 export function normalizeDate(date: any): string | undefined {
-  if (typeof date === "number") {
+  if (typeof date === 'number') {
     if (date < 10000) return date.toString()
     else return formatDate(date)
   } else if (date instanceof Date) {
     return formatDate(date)
-  } else if (typeof date === "string") {
+  } else if (typeof date === 'string') {
     const parsed = new Date(date)
     if (Number.isNaN(parsed.getTime())) return date
     else return formatDate(parsed)

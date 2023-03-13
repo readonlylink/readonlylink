@@ -1,4 +1,4 @@
-import * as ut from "./index"
+import * as ut from './index'
 
 {
   const x = [1, 2, new Set([1, 2, [1, 2, 3]])]
@@ -7,21 +7,21 @@ import * as ut from "./index"
 }
 
 {
-  const x = new Map().set("a", "a").set("b", "b").set("c", "c")
-  const y = new Map().set("c", "c").set("b", "b").set("a", "a")
+  const x = new Map().set('a', 'a').set('b', 'b').set('c', 'c')
+  const y = new Map().set('c', 'c').set('b', 'b').set('a', 'a')
   ut.assertEqual(x, y)
 }
 
 {
-  const x = [1, { x: "x", y: "y" }, new Set([1, 2, [1, 2, { x: "x", y: "y" }]])]
-  const y = [1, { x: "x", y: "y" }, new Set([1, 2, [1, 2, { x: "x", y: "y" }]])]
+  const x = [1, { x: 'x', y: 'y' }, new Set([1, 2, [1, 2, { x: 'x', y: 'y' }]])]
+  const y = [1, { x: 'x', y: 'y' }, new Set([1, 2, [1, 2, { x: 'x', y: 'y' }]])]
   ut.assertEqual(x, y)
 }
 
 {
   const f = (x: number) => `x: ${x}`
-  const x = [f, { x: "x", y: "y" }, new Set([1, 2, [1, 2, { x: "x", y: "y" }]])]
-  const y = [f, { x: "x", y: "y" }, new Set([1, 2, [1, 2, { x: "x", y: "y" }]])]
+  const x = [f, { x: 'x', y: 'y' }, new Set([1, 2, [1, 2, { x: 'x', y: 'y' }]])]
+  const y = [f, { x: 'x', y: 'y' }, new Set([1, 2, [1, 2, { x: 'x', y: 'y' }]])]
   ut.assertEqual(x, y)
 }
 

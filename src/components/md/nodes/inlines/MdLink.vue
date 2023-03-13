@@ -21,19 +21,19 @@
 </template>
 
 <script setup>
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
+import { Nodes } from '@xieyuheng/postmark'
+import { MdPageState as State } from '../../md-page-state'
 
-import MdNode from "../../../md/MdNode.vue"
-import IconExternalLink from "../../../icons/IconExternalLink.vue"
+import IconExternalLink from '../../../icons/IconExternalLink.vue'
+import MdNode from '../../../md/MdNode.vue'
 
 defineProps({ state: State, node: Nodes.Link })
 
 function isExternalLink(path) {
   return (
-    path.startsWith("http://") ||
-    path.startsWith("https://") ||
-    path.startsWith("mailto:")
+    path.startsWith('http://') ||
+    path.startsWith('https://') ||
+    path.startsWith('mailto:')
   )
 }
 </script>

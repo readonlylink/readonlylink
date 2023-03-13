@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue"
+import { ref, watch } from 'vue'
 
 defineProps({ align: String })
 
@@ -31,13 +31,13 @@ const show = ref(false)
 
 watch(show, () => {
   if (show.value) {
-    document.addEventListener("click", clickAway)
+    document.addEventListener('click', clickAway)
   }
 })
 
 function clickAway(event) {
   if (!inside(root.value, event.target)) {
-    document.removeEventListener("click", clickAway)
+    document.removeEventListener('click', clickAway)
     show.value = false
   }
 }

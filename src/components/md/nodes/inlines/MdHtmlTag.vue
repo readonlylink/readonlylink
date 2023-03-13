@@ -3,9 +3,9 @@
 </template>
 
 <script setup>
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-import { safeHtml } from "../../../../ut/safe-html"
+import { Nodes } from '@xieyuheng/postmark'
+import { safeHtml } from '../../../../ut/safe-html'
+import { MdPageState as State } from '../../md-page-state'
 
 defineProps({ state: State, node: Nodes.HtmlTag })
 </script>

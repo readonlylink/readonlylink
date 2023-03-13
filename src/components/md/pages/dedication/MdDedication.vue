@@ -11,9 +11,9 @@
 </template>
 
 <script setup>
-import { MdPageState as State } from "../../md-page-state"
+import { MdPageState as State } from '../../md-page-state'
 
-import MdNode from "../../MdNode.vue"
+import MdNode from '../../MdNode.vue'
 
 defineProps({ state: State })
 </script>

@@ -1,3 +1,14 @@
+<script setup>
+import { Nodes } from '@xieyuheng/postmark'
+import { computed } from 'vue'
+import { MdPageState as State } from '../../md-page-state'
+import MdNode from '../../MdNode.vue'
+
+const props = defineProps({ state: State, node: Nodes.Paragraph })
+
+const indent = computed(() => props.state.document.attributes.paragraph?.indent)
+</script>
+
 <template>
   <div
     :style="{
@@ -12,14 +23,3 @@
     />
   </div>
 </template>
-
-<script setup>
-import { computed } from "vue"
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-import MdNode from "../../MdNode.vue"
-
-const props = defineProps({ state: State, node: Nodes.Paragraph })
-
-const indent = computed(() => props.state.document.attributes.paragraph?.indent)
-</script>

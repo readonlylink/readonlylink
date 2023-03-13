@@ -1,6 +1,5 @@
-import { Nodes } from "@xieyuheng/postmark"
-import { Component } from "vue"
-import { CustomComponent, ExtensionStore } from "./extension-store"
+import { Nodes } from '@xieyuheng/postmark'
+import { CustomComponent } from './extension-store'
 
 export class MdPageState {
   document: Nodes.Document

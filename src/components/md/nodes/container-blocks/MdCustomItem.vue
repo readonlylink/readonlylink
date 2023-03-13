@@ -14,17 +14,15 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
+import { computed } from 'vue'
 
 const props = defineProps({ state: Object, node: Object })
 
 const plugin = computed(() =>
   props.state.customComponents.find(
     (component) =>
-      component.kind === "CustomItem" &&
-      component.customKind === props.node.customKind
-  )
+      component.kind === 'CustomItem' &&
+      component.customKind === props.node.customKind,
+  ),
 )
 </script>

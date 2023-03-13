@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import { MdPageState as State } from "../../md-page-state"
+import { computed } from 'vue'
+import { MdPageState as State } from '../../md-page-state'
 
 const props = defineProps({ state: State })
 

@@ -1,7 +1,7 @@
-import ty, { Schema } from "@xieyuheng/ty"
+import { Schema } from '@xieyuheng/ty'
 
 export function createProps(
-  schemas: Record<string, Schema<unknown>>
+  schemas: Record<string, Schema<unknown>>,
 ): Record<string, { validator: (value: any) => boolean }> {
   const validators: Record<string, { validator: (value: any) => boolean }> = {}
 

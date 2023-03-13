@@ -1,6 +1,6 @@
-import * as ut from "./index"
+import * as ut from './index'
 
-const target = "構造-the-constructivization-of-mathematics"
+const target = '構造-the-constructivization-of-mathematics'
 
 // prettier-ignore
 {

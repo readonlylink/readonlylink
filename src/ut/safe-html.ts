@@ -1,4 +1,4 @@
-import sanitizeHtml from "sanitize-html"
+import sanitizeHtml from 'sanitize-html'
 
 // NOTE https://github.com/apostrophecms/sanitize-html#default-options
 

@@ -1,3 +1,17 @@
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({ state: Object, node: Object })
+
+const plugin = computed(() =>
+  props.state.customComponents.find(
+    (component) =>
+      component.kind === 'CustomBlock' &&
+      component.customKind === props.node.customKind,
+  ),
+)
+</script>
+
 <template>
   <component
     v-if="plugin"
@@ -12,19 +26,3 @@
     >{{ node.customKind }}</span
   >
 </template>
-
-<script setup>
-import { computed } from "vue"
-import { Nodes } from "@xieyuheng/postmark"
-import { MdPageState as State } from "../../md-page-state"
-
-const props = defineProps({ state: Object, node: Object })
-
-const plugin = computed(() =>
-  props.state.customComponents.find(
-    (component) =>
-      component.kind === "CustomBlock" &&
-      component.customKind === props.node.customKind
-  )
-)
-</script>

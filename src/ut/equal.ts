@@ -1,4 +1,4 @@
-import fastDeepEqual from "fast-deep-equal"
+import fastDeepEqual from 'fast-deep-equal'
 
 // NOTE The module "fast-deep-equal": https://github.com/epoberezkin/fast-deep-equal
 // Comparison details of Node's `assert.deepEqual()`:
