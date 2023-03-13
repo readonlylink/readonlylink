@@ -6,14 +6,14 @@ export class Project {
   config: Record<string, any>
   contents: Array<Content>
 
-  constructor(opts: {
+  constructor(options: {
     link: Link
     config: Record<string, any>
     contents: Array<Content>
   }) {
-    this.link = opts.link
-    this.config = opts.config
-    this.contents = opts.contents
+    this.link = options.link
+    this.config = options.config
+    this.contents = options.contents
   }
 
   get title(): string {

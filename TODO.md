@@ -8,10 +8,18 @@
 `manuals/` -- setup route
 `manuals/` -- use object as state instead of class
 
+# refactor
+
+about `Link`
+
 # articles
 
 `articles/` -- use object as state instead of class
 `articles/` -- `ArticleTxt` -- for plaintext
+
+# history
+
+support history again
 
 # later
 
