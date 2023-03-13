@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Head } from '@vueuse/head'
 import { reactive, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/Lang.vue'
@@ -26,10 +25,6 @@ watch(
 </script>
 
 <template>
-  <Head>
-    <title v-if="state?.title">{{ state.title }}</title>
-  </Head>
-
   <div class="mx-auto max-w-3xl">
     <div v-if="!state" class="px-4 py-6 font-sans text-xl text-gray-500">
       <Lang class="font-bold">

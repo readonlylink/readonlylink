@@ -1,7 +1,5 @@
 # articles
 
-`articles/` -- `stateTitle`
-
 `articles/` -- `loadState`
 `articles/` -- `stateReactive`
 `articles/` -- use object as state instead of class
