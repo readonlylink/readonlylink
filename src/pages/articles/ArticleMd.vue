@@ -3,11 +3,14 @@ import { Head } from '@vueuse/head'
 import { watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { useExtensionStore } from '../../composables/extension-store'
+import { State } from './State'
 import { stateDocument } from './stateDocument'
+import { stateReactive } from './stateReactive'
 import { stateTitle } from './stateTitle'
 
-const props = defineProps<{ state: any }>()
-const extensions = useExtensionStore()
+const props = defineProps<{ state: State }>()
+
+const state = stateReactive(props.state)
 
 watch(
   () => props.state.url,
@@ -25,6 +28,6 @@ watch(
   <MdPage
     class="m-6"
     :document="stateDocument(state)"
-    :customComponents="extensions.components"
+    :customComponents="useExtensionStore().components"
   />
 </template>

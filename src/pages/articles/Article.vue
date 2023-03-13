@@ -4,7 +4,6 @@ import { useRoute } from 'vue-router'
 import Lang from '../../components/Lang.vue'
 import ArticleMd from './ArticleMd.vue'
 import { loadState, State } from './State'
-import { stateReactive } from './stateReactive'
 
 const route = useRoute()
 
@@ -13,11 +12,9 @@ const state = ref<State | undefined>(undefined)
 watch(
   () => route.params.url,
   async () => {
-    state.value = stateReactive(
-      await loadState({
-        url: String(route.params.url),
-      }),
-    )
+    state.value = await loadState({
+      url: String(route.params.url),
+    })
   },
   {
     immediate: true,

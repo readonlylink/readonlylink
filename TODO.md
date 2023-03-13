@@ -1,7 +1,12 @@
+`articles/` -- state has `extensions`
+`articles/` -- `ArticleLoading.vue`
+
 # books
 
-`books/` -- `BookLoading.vue`
+`books/` -- call `stateReactive` synchronously
+`books/` -- state has `extensions`
 
+`books/` -- `BookLoading.vue`
 `books/` -- `BookConfig.ts`
 
 `books/` -- `BookTitlePage.vue`
@@ -19,7 +24,9 @@ about `Link`
 
 # articles
 
-`articles/` -- `ArticleTxt` -- for plaintext
+`articles/` -- `ArticleTxt` -- for plaintext --
+
+- be careful about calling `stateReactive` only in one place
 
 # history
 
