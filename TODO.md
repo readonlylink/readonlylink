@@ -1,7 +1,5 @@
 # books
 
-`books/` -- `loadBookConfig`
-
 `books/` -- `BookTitlePage.vue`
 `books/` -- `BookContents.vue`
 `books/` -- `BookPage.vue`

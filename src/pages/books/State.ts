@@ -1,7 +1,7 @@
 import qs from 'qs'
 import { ExtensionStore } from '../../components/md/extension-store'
 import { useExtensionStore } from '../../composables/extension-store'
-import { BookConfig } from './BookConfig'
+import { BookConfig, loadBookConfig } from './BookConfig'
 
 export type State = {
   url: string
@@ -29,7 +29,7 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const extensions = useExtensionStore()
 
-  const config = {} as any
+  const config = await loadBookConfig({ url })
 
   return {
     url,
