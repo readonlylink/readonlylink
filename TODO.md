@@ -1,8 +1,7 @@
 # articles
 
-`articles/` -- `loadState`
+`articles/` -- `loadState` -- async
 `articles/` -- `stateReactive`
-`articles/` -- use object as state instead of class
 
 # books
 

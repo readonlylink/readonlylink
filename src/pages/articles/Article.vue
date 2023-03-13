@@ -16,7 +16,7 @@ watch(
     const url = stringTrimEnd(String(route.params.url), '/')
     const response = await fetch(url)
     const text = await response.text()
-    state.value = reactive(new State({ url, text }))
+    state.value = reactive({ url, text })
   },
   {
     immediate: true,
