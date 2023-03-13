@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import BookTitlePage from './BookTitlePage.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
-// import BookTitlePage from "./BookTitlePage.vue"
 // import BookContents from "./BookContents.vue"
 // import BookPage from "./BookPage.vue"
 
@@ -16,11 +16,9 @@ const state = stateReactive(props.state)
     <title>{{ state.config.title }}</title>
   </Head>
 
-  <pre>{{ state.config }}</pre>
-
-  <pre>{{ state.texts }}</pre>
-
   <!-- <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
        <BookPage v-else-if="state.path" :state="state" />
        <BookTitlePage v-else :state="state" /> -->
+
+  <BookTitlePage :state="state" />
 </template>
