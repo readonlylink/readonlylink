@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import qs from 'qs'
-import { reactive, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/Lang.vue'
-import { State } from './State'
+import { loadState, State } from './State'
+import { stateReactive } from './stateReactive'
 // import BookTitlePage from "./BookTitlePage.vue"
 // import BookContents from "./BookContents.vue"
 // import BookPage from "./BookPage.vue"
@@ -15,15 +15,12 @@ const state = ref<State | undefined>(undefined)
 watch(
   () => route.params.url,
   async () => {
-    const url = String(route.params.url)
-    const path = String(route.params.path)
-    const query = qs.parse(new URL(window.location.href).search, {
-      ignoreQueryPrefix: true,
-    })
-    const frontMatter = query['front-matter']
-      ? String(query['front-matter'])
-      : ''
-    state.value = reactive(new State({ url, path, frontMatter }))
+    state.value = stateReactive(
+      await loadState({
+        url: String(route.params.url),
+        path: String(route.params.path),
+      }),
+    )
   },
   { immediate: true },
 )

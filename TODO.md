@@ -1,9 +1,5 @@
 # books
 
-`books/` -- fix `State` -- use record instead of class
-`books/` -- `loadState`
-`books/` -- `stateReactive`
-
 `books/` -- `BookLoading.vue`
 
 `books/` -- `BookConfig.ts`
