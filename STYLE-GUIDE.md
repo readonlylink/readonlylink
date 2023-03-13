@@ -10,6 +10,8 @@ The `stateReactive` function is used to create watchers, and it must
 NOT be called in async function -- like in `loadState` or in
 `onMounted(async () => { ... })`.
 
+We should call `stateReactive` after the state is loaded.
+
 > Watchers declared synchronously inside `setup()` or `<script setup>`
 > are bound to the owner component instance, and will be automatically
 > stopped when the owner component is unmounted.

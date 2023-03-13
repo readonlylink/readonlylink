@@ -1,5 +1,3 @@
-`articles/` -- `ArticleLoading.vue`
-
 # books
 
 `books/` -- `BookLoading.vue`
