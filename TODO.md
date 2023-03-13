@@ -1,5 +1,4 @@
-`books/` -- call `stateReactive` synchronously
-
+`articles/` -- `ArticleLoaded.vue`
 `articles/` -- `ArticleLoading.vue`
 
 # books
