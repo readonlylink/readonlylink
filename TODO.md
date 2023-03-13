@@ -1,9 +1,5 @@
-setup route -- `projects/`
-
 `articles/`
 `projects/`
-
-# scripts
 
 # later
 
