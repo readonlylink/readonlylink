@@ -1,10 +1,9 @@
-`articles/` -- state has `extensions`
 `articles/` -- `ArticleLoading.vue`
 
 # books
 
 `books/` -- call `stateReactive` synchronously
-`books/` -- state has `extensions`
+`books/` -- `State` has `extensions`
 
 `books/` -- `BookLoading.vue`
 `books/` -- `BookConfig.ts`
