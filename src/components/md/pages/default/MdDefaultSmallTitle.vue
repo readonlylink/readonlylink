@@ -1,3 +1,7 @@
+<script setup>
+defineProps({ attributes: Object, href: String })
+</script>
+
 <template>
   <Link
     v-if="attributes.title"
@@ -10,7 +14,3 @@
     </div>
   </Link>
 </template>
-
-<script setup>
-defineProps({ attributes: Object, href: String })
-</script>

@@ -1,10 +1,3 @@
-<template>
-  <br v-if="state.document.attributes.newline === 'preserve'" />
-  <span v-else ref="softLineBreakElement">
-    <span v-if="needBreak">&nbsp;</span>
-  </span>
-</template>
-
 <script setup>
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, ref, watch } from 'vue'
@@ -46,3 +39,10 @@ function isCJKAndFullwidthPunctuation(char) {
   return false
 }
 </script>
+
+<template>
+  <br v-if="state.document.attributes.newline === 'preserve'" />
+  <span v-else ref="softLineBreakElement">
+    <span v-if="needBreak">&nbsp;</span>
+  </span>
+</template>

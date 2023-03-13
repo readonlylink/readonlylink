@@ -1,3 +1,11 @@
+<script setup>
+import { Nodes } from '@xieyuheng/postmark'
+import { MdPageState as State } from '../../md-page-state'
+import MdNode from '../../MdNode.vue'
+
+defineProps({ state: State, node: Nodes.Strong })
+</script>
+
 <template>
   <span class="font-bold"
     ><MdNode
@@ -7,11 +15,3 @@
       :node="child"
   /></span>
 </template>
-
-<script setup>
-import { Nodes } from '@xieyuheng/postmark'
-import { MdPageState as State } from '../../md-page-state'
-import MdNode from '../../MdNode.vue'
-
-defineProps({ state: State, node: Nodes.Strong })
-</script>

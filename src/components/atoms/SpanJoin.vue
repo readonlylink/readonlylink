@@ -1,3 +1,7 @@
+<script setup>
+defineProps({ items: Array })
+</script>
+
 <template>
   <span v-for="(item, index) in items" :key="index">
     <slot name="item" v-bind="item"></slot>
@@ -6,7 +10,3 @@
     </span>
   </span>
 </template>
-
-<script setup>
-defineProps({ items: Array })
-</script>

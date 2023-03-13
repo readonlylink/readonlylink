@@ -1,27 +1,3 @@
-<template>
-  <div class="flex flex-col text-xl">
-    <MdDefaultTitle
-      class="my-6"
-      v-if="state.document.attributes.title"
-      :state="state"
-    />
-
-    <MdDefaultAttributes
-      v-if="showAttributes()"
-      class="mb-6"
-      :attributes="state.document.attributes"
-    />
-
-    <div
-      class="my-2 font-serif"
-      v-for="(child, index) in state.document.children"
-      :key="index"
-    >
-      <MdNode :state="state" :node="child" />
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { MdPageState as State } from '../../md-page-state'
 
@@ -47,3 +23,27 @@ function showAttributes() {
   return names.some((name) => keys.includes(name))
 }
 </script>
+
+<template>
+  <div class="flex flex-col text-xl">
+    <MdDefaultTitle
+      class="my-6"
+      v-if="state.document.attributes.title"
+      :state="state"
+    />
+
+    <MdDefaultAttributes
+      v-if="showAttributes()"
+      class="mb-6"
+      :attributes="state.document.attributes"
+    />
+
+    <div
+      class="my-2 font-serif"
+      v-for="(child, index) in state.document.children"
+      :key="index"
+    >
+      <MdNode :state="state" :node="child" />
+    </div>
+  </div>
+</template>

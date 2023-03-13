@@ -1,7 +1,3 @@
-<template>
-  <pre><code v-html="safeHtml(highlightedHtml)"></code></pre>
-</template>
-
 <script setup>
 import hljs from 'highlight.js/lib/common'
 import { computed } from 'vue'
@@ -14,3 +10,7 @@ const highlightedHtml = computed(() => {
   return result.value
 })
 </script>
+
+<template>
+  <pre><code v-html="safeHtml(highlightedHtml)"></code></pre>
+</template>

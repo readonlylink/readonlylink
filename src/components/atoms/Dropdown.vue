@@ -1,26 +1,3 @@
-<template>
-  <div ref="root" class="relative">
-    <div
-      @click.prevent="show = !show"
-      aria-haspopup="true"
-      :aria-expanded="show"
-    >
-      <slot name="trigger"></slot>
-    </div>
-
-    <div
-      v-show="show"
-      class="absolute z-40"
-      :class="{
-        'right-0': align === 'right',
-        'left-0': align === 'left',
-      }"
-    >
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, watch } from 'vue'
 
@@ -48,3 +25,26 @@ function inside(container, target) {
   return inside(container, target.parentElement)
 }
 </script>
+
+<template>
+  <div ref="root" class="relative">
+    <div
+      @click.prevent="show = !show"
+      aria-haspopup="true"
+      :aria-expanded="show"
+    >
+      <slot name="trigger"></slot>
+    </div>
+
+    <div
+      v-show="show"
+      class="absolute z-40"
+      :class="{
+        'right-0': align === 'right',
+        'left-0': align === 'left',
+      }"
+    >
+      <slot></slot>
+    </div>
+  </div>
+</template>

@@ -1,3 +1,13 @@
+<script setup>
+import { computed } from 'vue'
+import { MdPageState as State } from '../../md-page-state'
+
+const props = defineProps({ state: State })
+
+const title = computed(() => props.state.document.attributes.title)
+const subtitle = computed(() => props.state.document.attributes.subtitle)
+</script>
+
 <template>
   <div class="flex flex-col font-sans">
     <h1 class="text-4xl font-bold leading-tight md:text-5xl md:leading-tight">
@@ -12,13 +22,3 @@
     </h1>
   </div>
 </template>
-
-<script setup>
-import { computed } from 'vue'
-import { MdPageState as State } from '../../md-page-state'
-
-const props = defineProps({ state: State })
-
-const title = computed(() => props.state.document.attributes.title)
-const subtitle = computed(() => props.state.document.attributes.subtitle)
-</script>

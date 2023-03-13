@@ -1,3 +1,21 @@
+<script setup>
+import { Nodes } from '@xieyuheng/postmark'
+import { MdPageState as State } from '../../md-page-state'
+
+import IconExternalLink from '../../../icons/IconExternalLink.vue'
+import MdNode from '../../../md/MdNode.vue'
+
+defineProps({ state: State, node: Nodes.Link })
+
+function isExternalLink(path) {
+  return (
+    path.startsWith('http://') ||
+    path.startsWith('https://') ||
+    path.startsWith('mailto:')
+  )
+}
+</script>
+
 <template>
   <!-- NOTE A link starts with `http` is viewed as an external link. -->
   <a
@@ -19,21 +37,3 @@
     />
   </a>
 </template>
-
-<script setup>
-import { Nodes } from '@xieyuheng/postmark'
-import { MdPageState as State } from '../../md-page-state'
-
-import IconExternalLink from '../../../icons/IconExternalLink.vue'
-import MdNode from '../../../md/MdNode.vue'
-
-defineProps({ state: State, node: Nodes.Link })
-
-function isExternalLink(path) {
-  return (
-    path.startsWith('http://') ||
-    path.startsWith('https://') ||
-    path.startsWith('mailto:')
-  )
-}
-</script>

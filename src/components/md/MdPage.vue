@@ -1,7 +1,3 @@
-<template>
-  <component :is="component" :state="state" />
-</template>
-
 <script setup>
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, reactive } from 'vue'
@@ -24,3 +20,7 @@ const state = reactive(
 const kind = computed(() => state.document.attributes.kind || 'Default')
 const component = computed(() => components[kind.value])
 </script>
+
+<template>
+  <component :is="component" :state="state" />
+</template>
