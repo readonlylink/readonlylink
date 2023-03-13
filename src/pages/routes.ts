@@ -9,7 +9,8 @@ import Project from './projects/Project.vue'
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
   { path: '/docs', component: Docs },
-  { path: '/articles', component: Article },
+  { path: '/articles', redirect: '/' },
+  { path: '/articles/:url(.*)', component: Article },
   { path: '/projects', component: Project },
   { path: '/about', component: About },
   { path: '/:pathMatch(.*)', component: PageNotFound },

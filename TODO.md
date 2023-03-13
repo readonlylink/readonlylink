@@ -1,4 +1,3 @@
-`articles/` -- `ArticleLoading` vs `ArticleMd`
 `projects/`
 
 # later

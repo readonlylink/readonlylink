@@ -1,15 +1,13 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { useExtensionStore } from '../../composables/extension-store'
-import { History } from '../../models/history'
-import { Link } from '../../models/link'
 
 export class State {
-  link: Link
+  url: string
   text: string
 
-  constructor(opts: { link: Link; text: string }) {
-    this.link = opts.link
-    this.text = opts.text
+  constructor(options: { url: string; text: string }) {
+    this.url = options.url
+    this.text = options.text
   }
 
   get document(): Nodes.Document {
@@ -17,34 +15,20 @@ export class State {
   }
 
   get title(): string {
-    if (this.link.path.endsWith('.md')) {
-      if (this.document.attributes.title) {
-        return this.document.attributes.title
-      }
-
-      if (this.firstHeadline) {
-        return this.firstHeadline.formatBody()
-      }
+    if (this.document.attributes.title) {
+      return this.document.attributes.title
     }
 
-    return '/' + this.link.path
+    if (this.firstHeadline) {
+      return this.firstHeadline.formatBody()
+    }
+
+    return this.url
   }
 
-  private get firstHeadline(): Nodes.Headline | undefined {
+  get firstHeadline(): Nodes.Headline | undefined {
     return this.document.children.find(
       (node) => node instanceof Nodes.Headline,
     ) as Nodes.Headline | undefined
-  }
-
-  async saveHistory(): Promise<void> {
-    const history = await History.load()
-    await history.prepend({
-      kind: 'Article',
-      link: this.link,
-      attributes: {
-        ...this.document.attributes,
-        title: this.title,
-      },
-    })
   }
 }

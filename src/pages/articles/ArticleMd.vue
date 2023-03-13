@@ -2,14 +2,12 @@
 import { watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { useExtensionStore } from '../../composables/extension-store'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { State } from './State'
 
-const props = defineProps<{ state: State }>()
+const props = defineProps<{ state: any }>()
 const extensions = useExtensionStore()
 
 watch(
-  () => props.state.link.path,
+  () => props.state.url,
   () => {
     window.scrollTo(0, 0)
   },
@@ -17,11 +15,9 @@ watch(
 </script>
 
 <template>
-  <PageLayout>
-    <MdPage
-      class="m-6"
-      :document="state.document"
-      :customComponents="extensions.components"
-    />
-  </PageLayout>
+  <MdPage
+    class="m-6"
+    :document="state.document"
+    :customComponents="extensions.components"
+  />
 </template>
