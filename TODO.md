@@ -1,4 +1,3 @@
-`articles/` -- `ArticleLoaded.vue`
 `articles/` -- `ArticleLoading.vue`
 
 # books
@@ -21,9 +20,7 @@ about `Link`
 
 # articles
 
-`articles/` -- `ArticleTxt` -- for plaintext --
-
-- be careful about calling `stateReactive` only in one place
+`articles/` -- `ArticleTxt` -- for plaintext
 
 # history
 

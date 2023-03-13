@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/Lang.vue'
-import ArticleMd from './ArticleMd.vue'
+import ArticleLoaded from './ArticleLoaded.vue'
 import { loadState, State } from './State'
 
 const route = useRoute()
@@ -31,6 +31,6 @@ watch(
       </Lang>
     </div>
 
-    <ArticleMd v-else :state="state" />
+    <ArticleLoaded v-else :state="state" />
   </div>
 </template>
