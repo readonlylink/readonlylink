@@ -1,7 +1,20 @@
+# articles
+
+`articles/` -- use object as state instead of class
+
 # books
 
-`books/` -- read config
-`books/` -- use object as state instead of class
+`books/` -- fix `State` -- use record instead of class
+`books/` -- `loadState`
+`books/` -- `stateReactive`
+
+`books/` -- `BookLoading.vue`
+
+`books/` -- `BookConfig.ts`
+
+`books/` -- `BookTitlePage.vue`
+`books/` -- `BookContents.vue`
+`books/` -- `BookPage.vue`
 
 # manuals
 
@@ -14,7 +27,6 @@ about `Link`
 
 # articles
 
-`articles/` -- use object as state instead of class
 `articles/` -- `ArticleTxt` -- for plaintext
 
 # history

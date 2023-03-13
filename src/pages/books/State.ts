@@ -1,13 +1,11 @@
-import { Project, ProjectPaginator } from '../../models/project'
-
 export class State {
-  project: Project
-  text?: string
-  paginator?: ProjectPaginator
+  url: string
+  path: string
+  frontMatter: string
 
-  constructor(opts: { project: Project; paginator?: ProjectPaginator }) {
-    this.project = opts.project
-    this.paginator = opts.paginator
-    this.text = opts.paginator?.text
+  constructor(options: { url: string; path: string; frontMatter: string }) {
+    this.url = options.url
+    this.path = options.path
+    this.frontMatter = options.frontMatter
   }
 }

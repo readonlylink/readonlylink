@@ -13,6 +13,7 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/articles/:url(.*)', component: Article },
   { path: '/books', redirect: '/' },
   { path: '/books/:url(.*)', component: Book },
+  { path: '/books/:url(.*)/-/:path(.*)', component: Book },
   { path: '/about', component: About },
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
