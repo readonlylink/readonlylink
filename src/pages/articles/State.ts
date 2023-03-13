@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { useExtensionStore } from '../../composables/extension-store'
+import { stateDocument } from './stateDocument'
 
 export class State {
   url: string
@@ -10,13 +10,11 @@ export class State {
     this.text = options.text
   }
 
-  get document(): Nodes.Document {
-    return useExtensionStore().parser.parseDocument(this.text)
-  }
-
   get title(): string {
-    if (this.document.attributes.title) {
-      return this.document.attributes.title
+    const document = stateDocument(this)
+
+    if (document.attributes.title) {
+      return document.attributes.title
     }
 
     if (this.firstHeadline) {
@@ -27,8 +25,10 @@ export class State {
   }
 
   get firstHeadline(): Nodes.Headline | undefined {
-    return this.document.children.find(
-      (node) => node instanceof Nodes.Headline,
-    ) as Nodes.Headline | undefined
+    const document = stateDocument(this)
+
+    return document.children.find((node) => node instanceof Nodes.Headline) as
+      | Nodes.Headline
+      | undefined
   }
 }

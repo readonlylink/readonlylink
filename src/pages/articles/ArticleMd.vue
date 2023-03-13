@@ -2,6 +2,7 @@
 import { watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { useExtensionStore } from '../../composables/extension-store'
+import { stateDocument } from './stateDocument'
 
 const props = defineProps<{ state: any }>()
 const extensions = useExtensionStore()
@@ -17,7 +18,7 @@ watch(
 <template>
   <MdPage
     class="m-6"
-    :document="state.document"
+    :document="stateDocument(state)"
     :customComponents="extensions.components"
   />
 </template>
