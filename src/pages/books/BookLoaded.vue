@@ -18,6 +18,8 @@ const state = stateReactive(props.state)
 
   <pre>{{ state.config }}</pre>
 
+  <pre>{{ state.texts }}</pre>
+
   <!-- <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
        <BookPage v-else-if="state.path" :state="state" />
        <BookTitlePage v-else :state="state" /> -->

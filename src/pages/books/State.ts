@@ -1,3 +1,4 @@
+import { join } from 'path-browserify'
 import qs from 'qs'
 import { ExtensionStore } from '../../components/md/extension-store'
 import { useExtensionStore } from '../../composables/extension-store'
@@ -9,6 +10,7 @@ export type State = {
   frontMatter?: string
   extensions: ExtensionStore
   config: BookConfig
+  texts: Record<string, string>
 }
 
 export type StateOptions = {
@@ -31,11 +33,20 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const config = await loadBookConfig({ url })
 
+  const entries = config.contents.map(async (path) => {
+    const response = await fetch(new URL(join(config.src, path), url))
+    const text = await response.text()
+    return [path, text]
+  })
+
+  const texts = Object.fromEntries(await Promise.all(entries))
+
   return {
     url,
     path,
     frontMatter,
     extensions,
     config,
+    texts,
   }
 }
