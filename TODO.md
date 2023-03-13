@@ -1,12 +1,9 @@
-setup route -- `files/`
 setup route -- `projects/`
 
-`files/`
+`articles/`
 `projects/`
 
 # scripts
-
-ambr 'template #default' 'template #en'
 
 # later
 
