@@ -2,3 +2,6 @@
 @import './scrollbar.css';
 @import './splitpanes.css';
 @import './selection.css';
+@import './svg.css';
+@import 'highlight.js/styles/github.css';
+@import 'katex/dist/katex.css';

@@ -1,0 +1,6 @@
+/* https://stackoverflow.com/questions/26091989/svg-viewbox-height-issue-on-ios-safari */
+
+svg {
+  width: 100%;
+  height: 100%;
+}
