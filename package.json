@@ -7,6 +7,8 @@
     "check:watch": "while true; do vue-tsc --noEmit --watch && break; done",
     "check:ts": "tsc --noEmit",
     "check:ts:watch": "tsc --noEmit --watch",
+    "test:ts": "vitest --dir src --threads false --run",
+    "test": "npm run test:ts",
     "format": "prettier src --write",
     "prepare": "husky install"
   },
