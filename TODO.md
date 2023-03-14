@@ -1,7 +1,9 @@
 # manuals
 
 `manuals/` -- `State` & `loadState`
-`manuals/` -- `stateReactive`
+`manuals/` -- `ManualLoading`
+`manuals/` -- `ManualLoaded`
+
 `manuals/` -- improve manual style
 
 # articles
