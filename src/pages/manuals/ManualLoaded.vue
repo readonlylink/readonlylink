@@ -32,7 +32,7 @@ watch(
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <ManualLayout>
+  <ManualLayout :state="state">
     <ManualPage
       v-if="currentDocument"
       :state="state"

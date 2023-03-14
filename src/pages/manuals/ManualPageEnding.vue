@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { State } from './State'
 
-defineProps<{
-  state: State
-}>()
+defineProps<{ state: State }>()
 </script>
 
 <template>TODO</template>

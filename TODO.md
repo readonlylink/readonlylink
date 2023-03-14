@@ -1,10 +1,9 @@
 # manuals
 
-`manuals/` -- `ManualPageHead`
 `manuals/` -- `ManualPageNavbar`
 `manuals/` -- `ManualPageEnding`
 
-`manuals/` -- improve manual style
+`manuals/` -- `ManualPageHead` -- fix style
 
 # articles
 
