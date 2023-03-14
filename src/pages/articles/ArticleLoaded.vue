@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ArticleMd from './ArticleMd.vue'
+import ArticleMarkdown from './ArticleMarkdown.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
 
@@ -9,5 +9,5 @@ const state = stateReactive(props.state)
 </script>
 
 <template>
-  <ArticleMd :state="state" />
+  <ArticleMarkdown :state="state" />
 </template>
