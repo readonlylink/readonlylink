@@ -1,12 +1,18 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { Head } from '@vueuse/head'
+import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import ManualPage from './ManualPage.vue'
 import { State } from './State'
+import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateReactive } from './stateReactive'
+import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
 const state = stateReactive(props.state)
 const route = useRoute()
+
+const currentDocument = computed(() => stateCurrentDocument(state))
 
 watch(
   () => route.params.path,
@@ -17,13 +23,9 @@ watch(
 </script>
 
 <template>
-  <div>
-    <div>
-      {{ state.config }}
-    </div>
+  <Head>
+    <title>{{ stateTitle(state) }}</title>
+  </Head>
 
-    <div>
-      {{ state.texts }}
-    </div>
-  </div>
+  <ManualPage :state="state" :document="currentDocument" />
 </template>

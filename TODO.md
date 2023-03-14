@@ -1,6 +1,7 @@
 # manuals
 
-`manuals/` -- `ManualLoaded`
+`manuals/` -- `ManualPage`
+`manuals/` -- `stateTitle`
 `manuals/` -- improve manual style
 
 # articles
@@ -25,8 +26,8 @@ http://localhost:5173/books/https://raw.githubusercontent.com/readonlylink/reado
 
 ```
 http://localhost:5173/manuals/http://localhost:5173/docs/manual/manual.json
-http://localhost:5173/manuals/https://raw.githubusercontent.com/readonlylink/readonlylink/master/public/docs/manual.json
-http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cicada-solo/blob/master/manual.json
+http://localhost:5173/manuals/https://raw.githubusercontent.com/readonlylink/readonlylink/master/public/docs/manual/manual.json
+http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cicada-solo/master/manual.json
 ```
 
 # history
