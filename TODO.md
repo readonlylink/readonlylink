@@ -1,7 +1,11 @@
 # manuals
 
-`manuals/` -- `ManualPage`
-`manuals/` -- `stateTitle`
+`manuals/` -- fix first page
+`manuals/` -- `ManualLayout`
+`manuals/` -- `ManualPageEnding`
+`manuals/` -- `ManualPageHead`
+`manuals/` -- `ManualPageNavbar`
+
 `manuals/` -- improve manual style
 
 # articles

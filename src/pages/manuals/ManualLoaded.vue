@@ -27,5 +27,10 @@ watch(
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <ManualPage :state="state" :document="currentDocument" />
+  <ManualPage
+    v-if="currentDocument"
+    :state="state"
+    :document="currentDocument"
+  />
+  <div v-else>Error, no currentDocument</div>
 </template>
