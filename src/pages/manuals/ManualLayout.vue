@@ -30,7 +30,7 @@ const showNavbar = ref(false)
     <div class="mt-10 md:hidden">
       <div class="flex overflow-y-auto">
         <ManualPageNavbar
-          is-mobile="true"
+          :is-mobile="true"
           v-if="showNavbar"
           :state="state"
           class="fixed z-20 h-full w-full overflow-y-auto"

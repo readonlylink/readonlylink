@@ -1,6 +1,5 @@
 # manuals
 
-`manuals/` -- `ManualPageNavbar`
 `manuals/` -- `ManualPageEnding`
 
 `manuals/` -- `ManualPageHead` -- fix style
