@@ -5,6 +5,8 @@
 
 `manuals/` -- `ManualPageHead` -- fix style
 
+- no need head, to be like zguide: https://zguide.zeromq.org/docs/chapter2/
+
 # articles
 
 `articles/` -- `ArticlePlaintext`
@@ -40,6 +42,6 @@ support history again
 improve loading page
 fix naming convention
 `md/` uses `lang="ts"`
-inline package `@xieyuheng/postmark`
+improve `@xieyuheng/postmark` API
 add katex extensions back
 refactor postmark api
