@@ -15,7 +15,6 @@ support history again
 # later
 
 improve loading page
-rename `ut/` to `utils/`
 fix naming convention
 `md/` uses `lang="ts"`
 inline package `@xieyuheng/postmark`

@@ -1,4 +1,4 @@
-import { formatDate } from '../../../../ut/format-date'
+import { formatDate } from '../../../../utils/formatDate'
 
 type Attributes = {
   translators: Array<{ name: string; username?: string }>
