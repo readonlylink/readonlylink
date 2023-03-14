@@ -1,6 +1,5 @@
 # books
 
-`books/` -- `BookContents.vue`
 `books/` -- `BookPage.vue`
 
 # manuals

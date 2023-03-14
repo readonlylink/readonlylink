@@ -29,18 +29,17 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         <span>{{ state.config.subtitle }}</span>
       </h2>
 
-      <Hyperlink
-        preserve-state
-        :href="`/books/${state.url}`"
-        :data="{ 'front-matter': 'contents' }"
-        class="flex space-x-1.5 py-4 text-gray-400 hover:text-gray-900"
-      >
-        <IconBookOpen class="w-5 pb-0.5" />
+      <Hyperlink :href="`/books/${state.url}?front-matter=contents`">
+        <div
+          class="flex items-center space-x-1.5 py-4 text-gray-400 hover:text-gray-900"
+        >
+          <IconBookOpen class="w-5 pb-0.5" />
 
-        <Lang class="text-xl">
-          <template #zh> 阅读 </template>
-          <template #en> READ </template>
-        </Lang>
+          <Lang class="text-xl">
+            <template #zh> 阅读 </template>
+            <template #en> READ </template>
+          </Lang>
+        </div>
       </Hyperlink>
     </div>
 
