@@ -8,6 +8,7 @@ import BookTitlePage from './BookTitlePage.vue'
 import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateReactive } from './stateReactive'
+import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
 const state = stateReactive(props.state)
@@ -32,7 +33,7 @@ watch(
 
 <template>
   <Head>
-    <title>{{ state.config.title }}</title>
+    <title>{{ stateTitle(state) }}</title>
   </Head>
 
   <BookContents v-if="state.frontMatter === 'contents'" :state="state" />

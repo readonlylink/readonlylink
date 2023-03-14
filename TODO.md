@@ -1,9 +1,3 @@
-# books
-
-`stateCurrentDocumentTitle`
-
-`books/` -- `BookPageNavbar.vue`
-
 # manuals
 
 `manuals/` -- setup route

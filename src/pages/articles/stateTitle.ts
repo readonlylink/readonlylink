@@ -9,7 +9,7 @@ export function stateTitle(state: State): string {
     return document.attributes.title
   }
 
-  const firstHeadline = stateFirstHeadline(state)
+  const firstHeadline = documentFirstHeadline(document)
   if (firstHeadline !== undefined) {
     return firstHeadline.formatBody()
   }
@@ -17,9 +17,9 @@ export function stateTitle(state: State): string {
   return state.url
 }
 
-function stateFirstHeadline(state: State): Nodes.Headline | undefined {
-  const document = stateDocument(state)
-
+function documentFirstHeadline(
+  document: Nodes.Document,
+): Nodes.Headline | undefined {
   return document.children.find((node) => node instanceof Nodes.Headline) as
     | Nodes.Headline
     | undefined

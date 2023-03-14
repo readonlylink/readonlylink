@@ -5,13 +5,10 @@ import MdPage from '../../components/md/MdPage.vue'
 import BookPageNavbar from './BookPageNavbar.vue'
 import { State } from './State'
 
-const props = defineProps<{ state: State; document: Nodes.Document }>()
-
-// const title = computed(() =>
-//   props.state.paginator
-//     ? props.state.paginator.title + ' | ' + props.state.project.config.title
-//     : props.state.project.config.title,
-// )
+const props = defineProps<{
+  state: State
+  document: Nodes.Document
+}>()
 
 watch(
   () => props.state.path,
@@ -22,14 +19,11 @@ watch(
 </script>
 
 <template>
-  <!-- <Head>
-       <title>{{ title }}</title>
-       </Head> -->
-
   <div class="flex h-screen flex-col px-6">
     <BookPageNavbar class="py-6" :state="state" />
 
     <MdPage
+      :key="state.path"
       :document="document"
       :customComponents="state.extensions.components"
     />
