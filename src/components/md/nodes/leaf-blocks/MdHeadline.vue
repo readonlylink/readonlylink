@@ -1,7 +1,7 @@
 <script setup>
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, nextTick, ref, watch } from 'vue'
-import * as ut from '../../../../ut'
+import { slug } from '../../../../utils/slug'
 import { MdPageState as State } from '../../md-page-state'
 
 import MdNode from '../../MdNode.vue'
@@ -12,7 +12,7 @@ const headlineElement = ref(null)
 
 const headlineId = computed(() => {
   const text = props.node.children.map((child) => child.format()).join('')
-  return ut.slug(text)
+  return slug(text)
 })
 
 const hovered = ref(false)
