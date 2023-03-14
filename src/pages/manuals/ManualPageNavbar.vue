@@ -10,6 +10,10 @@ defineProps<{ state: State }>()
   <div
     class="flex flex-col overflow-y-auto border-r border-gray-300 px-6 pt-6 pb-10 font-sans"
   >
+    <div class="mb-3 border-b border-stone-400 pb-3 text-xl font-bold">
+      {{ state.config.title }}
+    </div>
+
     <div v-for="(paths, name) in state.config.sections" :key="name">
       <div v-if="name !== 'default'" class="py-3 text-xl font-bold">
         {{ name }}
