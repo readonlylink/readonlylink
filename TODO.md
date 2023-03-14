@@ -4,10 +4,6 @@
 `manuals/` -- use object as state instead of class
 `manuals/` -- improve manual style
 
-# refactor
-
-about `Link`
-
 # articles
 
 `articles/` -- `ArticlePlaintext`
