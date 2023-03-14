@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import { State } from './State'
-import { stateDocuments } from './stateDocuments'
 
 defineProps<{
   state: State
@@ -28,7 +27,7 @@ defineProps<{
               'underline decoration-stone-500 decoration-wavy underline-offset-4'
             "
           >
-            {{ stateDocuments(state)[path].attributes.title }}
+            {{ state.documents[path].attributes.title }}
           </Hyperlink>
         </div>
       </div>
