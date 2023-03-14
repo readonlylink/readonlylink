@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
+
 import { State } from './State'
 
-defineProps<{
-  state: State
-  isMobile?: Boolean
-}>()
+defineProps<{ state: State }>()
 </script>
 
 <template>
   <div
-    class="flex flex-col overflow-y-auto border-r border-r border-gray-200 px-6 pt-6 pb-10 font-sans"
-    style="width: 320px"
+    class="flex flex-col overflow-y-auto border-r border-gray-300 px-6 pt-6 pb-10 font-sans"
   >
     <div v-for="(paths, name) in state.config.sections" :key="name">
       <div v-if="name !== 'default'" class="py-3 text-xl font-bold">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ManualPageHead from './ManualPageHead.vue'
+import IconMenu from '../../components/icons/IconMenu.vue'
 import ManualPageNavbar from './ManualPageNavbar.vue'
 import { State } from './State'
 
@@ -11,15 +11,13 @@ const showNavbar = ref(false)
 
 <template>
   <div class="flex h-screen flex-col">
-    <ManualPageHead
-      class="fixed z-10 w-full bg-white px-6 opacity-90 md:relative md:py-2"
-      :state="state"
-      @toggleNavbar="showNavbar = !showNavbar"
-    />
-
     <div class="hidden h-full overflow-y-auto md:block">
       <div class="flex h-full overflow-y-auto">
-        <ManualPageNavbar :state="state" class="h-full overflow-y-auto" />
+        <ManualPageNavbar
+          :state="state"
+          class="overflow-y-auto"
+          style="width: 420px"
+        />
 
         <div class="w-full overflow-y-auto">
           <slot />
@@ -27,19 +25,25 @@ const showNavbar = ref(false)
       </div>
     </div>
 
-    <div class="mt-10 md:hidden">
+    <div class="flex flex-col md:hidden">
       <div class="flex overflow-y-auto">
         <ManualPageNavbar
-          :is-mobile="true"
           v-if="showNavbar"
           :state="state"
-          class="fixed z-20 h-full w-full overflow-y-auto"
+          class="fixed z-20 h-full w-5/6 overflow-y-auto bg-white"
         />
 
         <div class="w-full overflow-y-auto">
           <slot />
         </div>
       </div>
+
+      <button
+        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 md:hidden"
+        @click="showNavbar = !showNavbar"
+      >
+        <IconMenu class="w-7 text-stone-500" />
+      </button>
     </div>
   </div>
 </template>

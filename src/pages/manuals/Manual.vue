@@ -24,8 +24,6 @@ watch(
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl">
-    <ManualLoaded v-if="state" :state="state" />
-    <ManualLoading v-else />
-  </div>
+  <ManualLoaded v-if="state" :state="state" />
+  <ManualLoading v-else />
 </template>

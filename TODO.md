@@ -1,9 +1,3 @@
-# manuals
-
-`manuals/` -- `ManualPageHead` -- fix style
-
-- no need head, to be like zguide: https://zguide.zeromq.org/docs/chapter2/
-
 # articles
 
 `articles/` -- `ArticlePlaintext`
