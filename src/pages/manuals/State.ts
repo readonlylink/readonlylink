@@ -18,13 +18,13 @@ export type StateOptions = {
 }
 
 export async function loadState(options: StateOptions): Promise<State> {
-  const { path } = options
-
   const url = stringTrimEnd(options.url, '/')
 
   const extensions = useExtensionStore()
 
   const config = await loadManualConfig({ url })
+
+  const path = options.path || config.main
 
   const texts = Object.fromEntries(
     await Promise.all(

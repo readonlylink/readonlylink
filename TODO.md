@@ -1,6 +1,6 @@
 # manuals
 
-`manuals/` -- fix first page
+`manuals/` -- `stateReactivelyUpdateRoute`
 `manuals/` -- `ManualLayout`
 `manuals/` -- `ManualPageEnding`
 `manuals/` -- `ManualPageHead`
