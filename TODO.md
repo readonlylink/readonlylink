@@ -1,6 +1,5 @@
 # manuals
 
-`manuals/` -- `stateReactivelyUpdateRoute`
 `manuals/` -- `ManualLayout`
 `manuals/` -- `ManualPageEnding`
 `manuals/` -- `ManualPageHead`
