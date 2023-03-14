@@ -1,14 +1,19 @@
 # manuals
 
-`manuals/` -- `State`
-`manuals/` -- `ManualConfig`
-`manuals/` -- `loadState`
+`manuals/` -- `State` & `loadState`
 `manuals/` -- `stateReactive`
 `manuals/` -- improve manual style
 
 # articles
 
 `articles/` -- `ArticlePlaintext`
+
+# examples
+
+```
+http://localhost:5173/articles/https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md
+http://localhost:5173/books/https://raw.githubusercontent.com/readonlylink/readonlylink-books/master/rework/book.json
+```
 
 # history
 
