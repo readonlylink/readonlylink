@@ -28,13 +28,15 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const config = await loadBookConfig({ url })
 
-  const entries = config.contents.map(async (path) => {
-    const response = await fetch(new URL(join(config.src, path), url))
-    const text = await response.text()
-    return [path, text]
-  })
-
-  const texts = Object.fromEntries(await Promise.all(entries))
+  const texts = Object.fromEntries(
+    await Promise.all(
+      config.contents.map(async (path) => {
+        const response = await fetch(new URL(join(config.src, path), url))
+        const text = await response.text()
+        return [path, text]
+      }),
+    ),
+  )
 
   return {
     url,

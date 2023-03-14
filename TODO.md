@@ -1,8 +1,7 @@
 # manuals
 
-`manuals/` -- `State` & `loadState`
+`manuals/` -- `Manual` call `loadState`
 `manuals/` -- `ManualLoaded`
-
 `manuals/` -- improve manual style
 
 # articles
