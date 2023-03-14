@@ -1,5 +1,8 @@
 # books
 
+`stateCurrentDocument`
+`stateCurrentDocumentTitle`
+
 `books/` -- `BookPageNavbar.vue`
 
 # manuals
