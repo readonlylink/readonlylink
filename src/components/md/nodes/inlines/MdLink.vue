@@ -33,7 +33,7 @@ function isExternalLink(path) {
 
     <IconExternalLink
       v-if="isExternalLink(node.href)"
-      class="inline w-4 shrink-0 text-gray-500"
+      class="inline w-4 shrink-0 text-stone-500"
     />
   </a>
 </template>

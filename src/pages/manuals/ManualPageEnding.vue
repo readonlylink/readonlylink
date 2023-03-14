@@ -11,12 +11,12 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex justify-center space-x-4">
-    <div class="w-1/2 border border-gray-300" v-if="statePrevPath(state)">
+    <div class="w-1/2 border border-stone-300" v-if="statePrevPath(state)">
       <Hyperlink
         :href="`/manuals/${state.url}/-/${statePrevPath(state)}`"
         title="Previous Page"
       >
-        <div class="flex h-full p-3 text-gray-700 hover:text-gray-400">
+        <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
           <div class="flex w-1/5 justify-start py-3">
             <IconArrowLeft class="w-6" />
           </div>
@@ -34,12 +34,12 @@ defineProps<{ state: State }>()
       </Hyperlink>
     </div>
 
-    <div class="w-1/2 border border-gray-300" v-if="stateNextPath(state)">
+    <div class="w-1/2 border border-stone-300" v-if="stateNextPath(state)">
       <Hyperlink
         :href="`/manuals/${state.url}/-/${stateNextPath(state)}`"
         title="Next Page"
       >
-        <div class="flex h-full p-3 text-gray-700 hover:text-gray-400">
+        <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
           <div
             class="flex w-4/5 items-center justify-center overflow-x-auto text-xl font-bold"
           >

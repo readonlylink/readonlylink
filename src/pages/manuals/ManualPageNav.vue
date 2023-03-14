@@ -8,7 +8,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex flex-col overflow-y-auto border-r border-gray-300 px-6 pt-6 pb-10 font-sans"
+    class="flex flex-col overflow-y-auto border-r border-stone-300 px-6 pt-6 pb-10 font-sans"
   >
     <div class="mb-3 border-b border-stone-400 pb-3 text-xl font-bold">
       {{ state.config.title }}
@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
         <div class="py-0.5">
           <Hyperlink
             :href="`/manuals/${state.url}/-/${path}`"
-            class="text-xl hover:text-gray-500"
+            class="text-xl hover:text-stone-500"
             :class="
               path === state.path &&
               'underline decoration-stone-500 decoration-wavy underline-offset-4'

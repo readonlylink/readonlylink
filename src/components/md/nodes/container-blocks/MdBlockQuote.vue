@@ -8,7 +8,7 @@ defineProps({ state: State, node: Nodes.BlockQuote })
 
 <template>
   <div
-    class="my-2 ml-px flex flex-col border-l-4 border-gray-300 pl-4 text-gray-600"
+    class="my-2 ml-px flex flex-col border-l-4 border-stone-300 pl-4 text-stone-600"
   >
     <div class="py-2" v-for="(child, index) in node.children" :key="index">
       <MdNode :state="state" :node="child" />

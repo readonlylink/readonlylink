@@ -13,7 +13,7 @@ defineProps({ state: State, node: Nodes.Table })
         <th
           v-for="(children, index) in node.header"
           :key="index"
-          class="border-2 border-gray-300 px-2 py-1 font-bold"
+          class="border-2 border-stone-300 px-2 py-1 font-bold"
           :align="node.alignments[index] || 'left'"
         >
           <MdNode
@@ -30,7 +30,7 @@ defineProps({ state: State, node: Nodes.Table })
         <td
           v-for="(data, index) in row"
           :key="index"
-          class="border-2 border-gray-300 px-2 py-1"
+          class="border-2 border-stone-300 px-2 py-1"
           :align="node.alignments[index] || 'left'"
         >
           <MdNode

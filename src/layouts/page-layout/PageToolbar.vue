@@ -10,7 +10,7 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex">
-    <div class="mr-2 flex text-gray-400 hover:text-gray-900">
+    <div class="mr-2 flex text-stone-400 hover:text-stone-900">
       <PageLang />
 
       <IconTranslate class="w-5 p-px" />
@@ -18,15 +18,15 @@ const lang = useGlobalLang()
 
     <!-- <UserMenu v-if="$page.props.auth.user" :user="$page.props.auth.user" /> -->
 
-    <div class="flex flex-wrap font-sans text-gray-400">
-      <Hyperlink class="mr-2 hover:text-gray-900" href="/login">
+    <div class="flex flex-wrap font-sans text-stone-400">
+      <Hyperlink class="mr-2 hover:text-stone-900" href="/login">
         <Lang>
           <template #zh> 登录 </template>
           <template #en> LOGIN </template>
         </Lang>
       </Hyperlink>
 
-      <Hyperlink class="hover:text-gray-900" href="/register">
+      <Hyperlink class="hover:text-stone-900" href="/register">
         <Lang>
           <template #zh> 注册 </template>
           <template #en> REGISTER </template>

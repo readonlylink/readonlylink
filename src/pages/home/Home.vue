@@ -10,7 +10,7 @@ import HomeSlogan from './HomeSlogan.vue'
       <HomeSlogan class="my-4" />
 
       <div class="flex items-baseline space-x-4">
-        <Lang class="font-logo text-2xl font-semibold text-gray-800">
+        <Lang class="font-logo text-2xl font-semibold text-stone-800">
           <template #zh> 评介 </template>
           <template #en> Reviews </template>
         </Lang>

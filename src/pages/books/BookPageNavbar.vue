@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="statePrevPath(state)"
         :href="`/books/${state.url}/-/${statePrevPath(state)}`"
-        class="text-gray-400 hover:text-gray-700"
+        class="text-stone-400 hover:text-stone-700"
         title="Previous Page"
       >
         <Lang>
@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
           <template #en> PREV </template>
         </Lang>
       </Hyperlink>
-      <div v-else class="text-gray-200">
+      <div v-else class="text-stone-200">
         <Lang>
           <template #zh> 前一页 </template>
           <template #en> PREV </template>
@@ -33,7 +33,7 @@ defineProps<{ state: State }>()
     <div class="flex">
       <Hyperlink
         :href="`/books/${state.url}`"
-        class="text-gray-400 hover:text-gray-700"
+        class="text-stone-400 hover:text-stone-700"
         title="Back to Title Page"
       >
         <Lang>
@@ -44,7 +44,7 @@ defineProps<{ state: State }>()
       <div class="px-0.5">/</div>
       <Hyperlink
         :href="`/books/${state.url}?front-matter=contents`"
-        class="text-gray-400 hover:text-gray-700"
+        class="text-stone-400 hover:text-stone-700"
         title="Back to Contents"
       >
         <Lang>
@@ -58,7 +58,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="stateNextPath(state)"
         :href="`/books/${state.url}/-/${stateNextPath(state)}`"
-        class="text-gray-400 hover:text-gray-700"
+        class="text-stone-400 hover:text-stone-700"
         title="Next Page"
       >
         <Lang>
@@ -66,7 +66,7 @@ defineProps<{ state: State }>()
           <template #en> NEXT </template>
         </Lang>
       </Hyperlink>
-      <div v-else class="text-gray-200">
+      <div v-else class="text-stone-200">
         <Lang>
           <template #zh> 下一页 </template>
           <template #en> NEXT </template>

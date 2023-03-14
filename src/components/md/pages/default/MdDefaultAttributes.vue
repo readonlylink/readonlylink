@@ -15,7 +15,7 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
 </script>
 
 <template>
-  <div class="flex flex-col font-sans text-gray-700">
+  <div class="flex flex-col font-sans text-stone-700">
     <div
       class="flex items-center font-bold"
       v-if="attributes.authors.length > 0"
@@ -24,7 +24,7 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       <SpanJoin :items="attributes.authors">
         <template #item="{ name, username }">
           <Link
-            class="hover:text-gray-400"
+            class="hover:text-stone-400"
             v-if="username"
             :href="`/authors/${username}`"
             >{{ name }}</Link
@@ -41,7 +41,7 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       <SpanJoin :items="attributes.translators">
         <template #item="{ name, username }">
           <Link
-            class="hover:text-gray-400"
+            class="hover:text-stone-400"
             v-if="username"
             :href="`/authors/${username}`"
             >{{ name }}</Link

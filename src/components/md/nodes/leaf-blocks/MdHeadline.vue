@@ -66,7 +66,7 @@ function scrollIntoView() {
     <div
       class="flex w-4 justify-end pr-0.5 font-bold"
       :class="[
-        hovered ? 'text-gray-400' : 'text-white',
+        hovered ? 'text-stone-400' : 'text-white',
         {
           'text-3xl md:text-4xl': node.level === 1,
           'text-2xl md:text-3xl': node.level === 2,

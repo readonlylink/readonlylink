@@ -31,7 +31,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
       <Hyperlink :href="`/books/${state.url}?front-matter=contents`">
         <div
-          class="flex items-center space-x-1.5 py-4 text-gray-400 hover:text-gray-900"
+          class="flex items-center space-x-1.5 py-4 text-stone-400 hover:text-stone-900"
         >
           <IconBookOpen class="w-5 pb-0.5" />
 
@@ -68,7 +68,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-sans text-lg hover:text-gray-500 md:flex-row"
+        class="flex flex-col items-center py-1 font-sans text-lg hover:text-stone-500 md:flex-row"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>

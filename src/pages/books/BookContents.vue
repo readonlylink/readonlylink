@@ -19,13 +19,13 @@ onMounted(() => {
       <div>
         <Hyperlink
           :href="`/books/${state.url}/-/${path}`"
-          class="font-sans hover:text-gray-500"
+          class="font-sans hover:text-stone-500"
         >
           {{ document.attributes.title }}
         </Hyperlink>
 
         <div
-          class="text-right font-sans text-xs italic leading-3 tracking-tight text-gray-500 hover:text-black"
+          class="text-right font-sans text-xs italic leading-3 tracking-tight text-stone-500 hover:text-black"
         >
           <Hyperlink :href="`/books/${state.url}/-/${path}`">
             {{ path }}

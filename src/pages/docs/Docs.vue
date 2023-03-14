@@ -19,7 +19,7 @@ const lang = useGlobalLang()
     <DocsSlogan class="my-4" />
 
     <div class="flex items-baseline space-x-4">
-      <Lang class="font-logo text-2xl font-semibold text-gray-800">
+      <Lang class="font-logo text-2xl font-semibold text-stone-800">
         <template #zh> 文档 </template>
         <template #en> Documents </template>
       </Lang>

@@ -19,10 +19,5 @@ module.exports = {
       ],
       logo: ['Bodoni Moda', 'Source Han Serif SC', 'serif'],
     },
-    extend: {
-      colors: {
-        gray: colors.stone,
-      },
-    },
   },
 }

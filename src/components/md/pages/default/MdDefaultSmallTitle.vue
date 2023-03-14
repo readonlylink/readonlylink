@@ -5,7 +5,7 @@ defineProps({ attributes: Object, href: String })
 <template>
   <Link
     v-if="attributes.title"
-    class="overflow-x-auto py-3 font-bold text-gray-900 hover:text-gray-400"
+    class="overflow-x-auto py-3 font-bold text-stone-900 hover:text-stone-400"
     :href="href"
   >
     <div class="text-xl">{{ attributes.title }}</div>
