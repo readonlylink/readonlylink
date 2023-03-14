@@ -1,6 +1,6 @@
 # books
 
-`books/` -- `BookPage.vue`
+`books/` -- `BookPageNavbar.vue`
 
 # manuals
 

@@ -13,14 +13,16 @@ watch(
   () => route.params.url,
   async () => {
     const url = String(route.params.url)
-    const path = String(route.params.path)
+    const path = route.params.path ? String(route.params.path) : undefined
     const frontMatter = route.query['front-matter']
       ? String(route.query['front-matter'])
       : undefined
 
     state.value = await loadState({ url, path, frontMatter })
   },
-  { immediate: true },
+  {
+    immediate: true,
+  },
 )
 </script>
 

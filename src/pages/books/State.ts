@@ -6,7 +6,7 @@ import { BookConfig, loadBookConfig } from './BookConfig'
 
 export type State = {
   url: string
-  path: string
+  path?: string
   frontMatter?: string
   extensions: ExtensionStore
   config: BookConfig
@@ -15,7 +15,7 @@ export type State = {
 
 export type StateOptions = {
   url: string
-  path: string
+  path?: string
   frontMatter?: string
 }
 

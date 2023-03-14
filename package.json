@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "@vueuse/head": "^1.1.19",
+    "@vueuse/head": "^1.1.23",
     "@xieyuheng/postmark": "^0.2.22",
     "floating-vue": "^2.0.0-beta.20",
     "highlight.js": "^11.7.0",
