@@ -5,6 +5,7 @@ import Book from './books/Book.vue'
 import Docs from './docs/Docs.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import Home from './home/Home.vue'
+import Manual from './manuals/Manual.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
@@ -14,6 +15,9 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/books', redirect: '/' },
   { path: '/books/:url(.*)', component: Book },
   { path: '/books/:url(.*)/-/:path(.*)', component: Book },
+  { path: '/manuals', redirect: '/' },
+  { path: '/manuals/:url(.*)', component: Manual },
+  { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
   { path: '/about', component: About },
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
