@@ -1,3 +1,10 @@
+fix the use of icon
+improve loading page
+remove unused code
+
+`ManualPageNav` -- support nav click away
+support enter url
+
 # articles
 
 `articles/` -- `ArticlePlaintext`
@@ -30,9 +37,7 @@ support history again
 
 # later
 
-improve loading page
-fix naming convention
 `md/` uses `lang="ts"`
+
 improve `@xieyuheng/postmark` API
 add katex extensions back
-refactor postmark api
