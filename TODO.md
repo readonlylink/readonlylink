@@ -1,7 +1,6 @@
 # manuals
 
 `manuals/` -- `State` & `loadState`
-`manuals/` -- `ManualLoading`
 `manuals/` -- `ManualLoaded`
 
 `manuals/` -- improve manual style
