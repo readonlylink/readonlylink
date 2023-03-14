@@ -1,6 +1,9 @@
 # manuals
 
-`manuals/` -- use object as state instead of class
+`manuals/` -- `State`
+`manuals/` -- `ManualConfig`
+`manuals/` -- `loadState`
+`manuals/` -- `stateReactive`
 `manuals/` -- improve manual style
 
 # articles
