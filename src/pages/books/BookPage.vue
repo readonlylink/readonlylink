@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import { Nodes } from '@xieyuheng/postmark'
 import { watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import BookPageNavbar from './BookPageNavbar.vue'
 import { State } from './State'
-import { stateDocuments } from './stateDocuments'
 
-const props = defineProps<{ state: State; path: string }>()
+const props = defineProps<{ state: State; document: Nodes.Document }>()
 
 // const title = computed(() =>
 //   props.state.paginator
@@ -30,7 +30,7 @@ watch(
     <BookPageNavbar class="py-6" :state="state" />
 
     <MdPage
-      :document="stateDocuments(state)[path]"
+      :document="document"
       :customComponents="state.extensions.components"
     />
 
