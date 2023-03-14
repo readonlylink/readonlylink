@@ -2,12 +2,12 @@
 import { Head } from '@vueuse/head'
 import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import ManualLayout from './ManualLayout.vue'
 import ManualPage from './ManualPage.vue'
 import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateReactive } from './stateReactive'
 import { stateReactivelyUpdateRoute } from './stateReactivelyUpdateRoute'
-
 import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
@@ -32,10 +32,12 @@ watch(
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <ManualPage
-    v-if="currentDocument"
-    :state="state"
-    :document="currentDocument"
-  />
-  <div v-else>Error, no currentDocument</div>
+  <ManualLayout>
+    <ManualPage
+      v-if="currentDocument"
+      :state="state"
+      :document="currentDocument"
+    />
+    <div v-else>Error, no currentDocument</div>
+  </ManualLayout>
 </template>

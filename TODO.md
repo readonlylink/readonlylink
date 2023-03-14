@@ -1,9 +1,8 @@
 # manuals
 
-`manuals/` -- `ManualLayout`
-`manuals/` -- `ManualPageEnding`
 `manuals/` -- `ManualPageHead`
 `manuals/` -- `ManualPageNavbar`
+`manuals/` -- `ManualPageEnding`
 
 `manuals/` -- improve manual style
 
