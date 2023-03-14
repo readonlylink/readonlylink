@@ -1,5 +1,4 @@
 import { join } from 'path-browserify'
-import qs from 'qs'
 import { ExtensionStore } from '../../components/md/extension-store'
 import { useExtensionStore } from '../../composables/extension-store'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
@@ -17,20 +16,13 @@ export type State = {
 export type StateOptions = {
   url: string
   path: string
+  frontMatter?: string
 }
 
 export async function loadState(options: StateOptions): Promise<State> {
-  const { path } = options
+  const { path, frontMatter } = options
 
   const url = stringTrimEnd(options.url, '/')
-
-  const query = qs.parse(new URL(window.location.href).search, {
-    ignoreQueryPrefix: true,
-  })
-
-  const frontMatter = query['front-matter']
-    ? String(query['front-matter'])
-    : undefined
 
   const extensions = useExtensionStore()
 

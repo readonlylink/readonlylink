@@ -1,15 +1,23 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 import BookContents from './BookContents.vue'
 import BookTitlePage from './BookTitlePage.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
-// import BookContents from "./BookContents.vue"
 // import BookPage from "./BookPage.vue"
 
 const props = defineProps<{ state: State }>()
-
 const state = stateReactive(props.state)
+const route = useRoute()
+
+watch(
+  () => route.query['front-matter'],
+  (value) => {
+    state.frontMatter = value ? String(value) : undefined
+  },
+)
 </script>
 
 <template>

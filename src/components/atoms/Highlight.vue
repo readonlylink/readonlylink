@@ -3,7 +3,7 @@ import hljs from 'highlight.js/lib/common'
 import { computed } from 'vue'
 import { safeHtml } from '../../ut/safe-html'
 
-const props = defineProps<{ lang: string; text: string }>()
+const props = defineProps<{ text: string }>()
 
 const highlightedHtml = computed(() => {
   const result = hljs.highlightAuto(props.text)
