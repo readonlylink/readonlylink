@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <div
-    class="flex flex-col overflow-y-auto border-r border-gray-200 bg-stone-50 px-6 pt-6 pb-10 font-sans shadow-md shadow-stone-200"
+    class="flex flex-col overflow-y-auto border-r border-r border-gray-200 px-6 pt-6 pb-10 font-sans"
     style="width: 320px"
   >
     <div v-for="(paths, name) in state.config.sections" :key="name">
