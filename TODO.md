@@ -1,7 +1,3 @@
-entrance link to docs
-
-- use `QuestionMarkCircleIcon`
-
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
 
