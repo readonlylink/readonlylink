@@ -14,6 +14,9 @@ support enter url
 
 ```
 http://localhost:5173/articles/https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md
+http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/persons/vladimir-voevodsky/how-i-became-interested-in-foundations-of-mathematics.md
+http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/translations/zh/how-i-became-interested-in-foundations-of-mathematics.md
+http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/papers/publish/a-recursive-combinatorial-description-of-cell-complex.md
 ```
 
 **books:**

@@ -1,5 +1,5 @@
-<script setup>
-defineProps({ items: Array })
+<script setup lang="ts">
+defineProps<{ items: Array<any> }>()
 </script>
 
 <template>

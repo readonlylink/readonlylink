@@ -1,13 +1,14 @@
-<script setup>
+<script setup lang="ts">
+import {
+  CalendarDaysIcon,
+  HashtagIcon,
+  LanguageIcon,
+  MapPinIcon,
+  PencilIcon,
+} from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
-import { normalizeAttributes } from './normalize-attributes'
-
 import SpanJoin from '../../../atoms/SpanJoin.vue'
-import IconCalendar from '../../../icons/IconCalendar.vue'
-import IconHashtag from '../../../icons/IconHashtag.vue'
-import IconLocationMarker from '../../../icons/IconLocationMarker.vue'
-import IconPencil from '../../../icons/IconPencil.vue'
-import LanguageIcon from '../../../icons/LanguageIcon.vue'
+import { normalizeAttributes } from './normalize-attributes'
 
 const props = defineProps({ attributes: Object })
 
@@ -20,16 +21,10 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       class="flex items-center font-bold"
       v-if="attributes.authors.length > 0"
     >
-      <IconPencil class="w-5 shrink-0 pr-1" />
+      <PencilIcon class="w-5 shrink-0 pr-1" />
       <SpanJoin :items="attributes.authors">
-        <template #item="{ name, username }">
-          <Link
-            class="hover:text-stone-400"
-            v-if="username"
-            :href="`/authors/${username}`"
-            >{{ name }}</Link
-          >
-          <span v-else>{{ name }}</span>
+        <template #item="{ name }">
+          <span>{{ name }}</span>
         </template>
         <template #delimiter>
           <span class="pr-1">,</span>
@@ -39,14 +34,8 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
     <div class="flex items-center" v-if="attributes.translators.length > 0">
       <LanguageIcon class="w-5 shrink-0 pr-1" />
       <SpanJoin :items="attributes.translators">
-        <template #item="{ name, username }">
-          <Link
-            class="hover:text-stone-400"
-            v-if="username"
-            :href="`/authors/${username}`"
-            >{{ name }}</Link
-          >
-          <span v-else>{{ name }}</span>
+        <template #item="{ name }">
+          <span>{{ name }}</span>
         </template>
         <template #delimiter>
           <span class="pr-1">,</span>
@@ -54,15 +43,15 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       </SpanJoin>
     </div>
     <div class="flex items-center" v-if="attributes.date">
-      <IconCalendar class="w-5 shrink-0 pr-1" />
+      <CalendarDaysIcon class="w-5 shrink-0 pr-1" />
       {{ attributes.date }}
     </div>
     <div class="flex items-center" v-if="attributes.venue">
-      <IconLocationMarker class="w-5 shrink-0 pr-1" />
+      <MapPinIcon class="w-5 shrink-0 pr-1" />
       {{ attributes.venue }}
     </div>
     <div class="flex items-center" v-if="attributes.keywords.length > 0">
-      <IconHashtag class="w-5 shrink-0 pr-1" />
+      <HashtagIcon class="w-5 shrink-0 pr-1" />
       <SpanJoin :items="attributes.keywords.map((keyword) => ({ keyword }))">
         <template #item="{ keyword }">
           <span>{{ keyword }}</span>
