@@ -1,5 +1,6 @@
+import { onClickOutside as useOnClickOutside } from '@vueuse/core'
 import { Directive } from 'vue'
 
 export const onClickOutside: Directive = {
-  mounted: (el) => el.blur(),
+  mounted: (target, { value }) => useOnClickOutside(target, value),
 }

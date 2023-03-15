@@ -7,6 +7,8 @@ import { State } from './State'
 const props = defineProps<{ state: State }>()
 
 const showNav = ref(false)
+
+const log = console.log
 </script>
 
 <template>
@@ -41,6 +43,11 @@ const showNav = ref(false)
       <button
         class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 md:hidden"
         @click="showNav = !showNav"
+        v-on-click-outside="
+          () => {
+            showNav = false
+          }
+        "
       >
         <Bars3Icon class="w-7 text-stone-500" />
       </button>
