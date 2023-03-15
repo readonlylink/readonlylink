@@ -13,6 +13,7 @@ import ManualEntrance from './manuals/ManualEntrance.vue'
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
   { path: '/docs', component: Docs },
+  { path: '/about', component: About },
 
   { path: '/articles', component: ArticleEntrance },
   { path: '/articles/', component: ArticleEntrance },
@@ -28,6 +29,5 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/:url(.*)', component: Manual },
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
 
-  { path: '/about', component: About },
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]

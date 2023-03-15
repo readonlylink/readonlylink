@@ -1,14 +1,27 @@
-<template>
-  <div class="px-6">
-    <section class="space-y-2 py-4">
-      <h2>404</h2>
-      <p>Page Not Found</p>
-    </section>
-  </div>
-</template>
+<script setup lang="ts">
+import { Head } from '@vueuse/head'
+import Lang from '../../components/Lang.vue'
+import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import { useGlobalLang } from '../../reactives/useGlobalLang'
 
-<style scoped>
-h2 {
-  @apply py-1 font-sans text-2xl font-bold;
-}
-</style>
+const lang = useGlobalLang()
+</script>
+
+<template>
+  <PageLayout>
+    <Head>
+      <title v-if="lang.isZh()">404 | 只读</title>
+      <title v-else>404 | Readonly</title>
+    </Head>
+
+    <div class="space-y-2 py-4">
+      <div class="font-mono text-2xl">404</div>
+      <div>
+        <Lang>
+          <template #zh> 没有这个页面。 </template>
+          <template #en> Page not found. </template>
+        </Lang>
+      </div>
+    </div>
+  </PageLayout>
+</template>
