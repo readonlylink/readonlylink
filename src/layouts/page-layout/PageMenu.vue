@@ -10,7 +10,7 @@ import Lang from '../../components/Lang.vue'
     <div class="flex flex-wrap">
       <Hyperlink
         class="pr-3 hover:text-stone-900"
-        href="/manuals/https://raw.githubusercontent.com/readonlylink/readonlylink-manual/master/manual.json"
+        href="/manuals/https://readonly.link/docs/manual.json"
       >
         <Lang>
           <template #zh> 文档 </template>
