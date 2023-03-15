@@ -1,5 +1,3 @@
-remove `composables/extension-store/`
-
 support enter url
 
 remove unused code

@@ -1,7 +1,6 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { join } from 'path-browserify'
 import { ExtensionStore } from '../../components/md/extension-store'
-import { useExtensionStore } from '../../composables/extension-store'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadManualConfig, ManualConfig } from './ManualConfig'
 
@@ -21,11 +20,8 @@ export type StateOptions = {
 
 export async function loadState(options: StateOptions): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
-
-  const extensions = useExtensionStore()
-
+  const extensions = new ExtensionStore()
   const config = await loadManualConfig({ url })
-
   const path = options.path || config.main
 
   const texts: Record<string, string> = Object.fromEntries(
