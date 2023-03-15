@@ -7,9 +7,9 @@ title: Introduction
 When your contents are rendered successfully,
 we will not display any extra contents (such as Ads).
 
-# Source Code
+<!-- # Source Code -->
 
-Source code of this manual is available at
-[`readonlylink-manual` repository](https://github.com/readonlylink/readonlylink-manual).
+<!-- Source code of this manual is available at -->
+<!-- [`readonlylink-manual` repository](https://github.com/readonlylink/readonlylink-manual). -->
 
-Welcame to give feedback.
+<!-- Welcame to give feedback. -->
