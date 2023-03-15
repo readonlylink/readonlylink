@@ -1,9 +1,9 @@
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
 
-# home
+# subscription
 
-home page should show official subscription
+support subscription
 
 # examples
 
@@ -28,6 +28,10 @@ http://localhost:5173/books/https://raw.githubusercontent.com/readonlylink/reado
 http://localhost:5173/manuals/https://raw.githubusercontent.com/readonlylink/readonlylink-manual/master/manual.json
 http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cicada-solo/master/manual.json
 ```
+
+# home
+
+home page should show official subscription
 
 # history
 
