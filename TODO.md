@@ -1,9 +1,11 @@
-[articles] `ArticleEntrance` support enter url
+[books] `BookEntrance` support enter url
+
+[manuals] `ManualEntrance` support enter url
+
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
 
-[books] `BookEntrance` support enter url
-[manuals] `ManualEntrance` support enter url
+entrances link to docs
 
 # examples
 

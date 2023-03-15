@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { PlayIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
-import { useForm } from '../../components/form'
+import { formSubmit, useForm } from '../../components/form'
 import FormInput from '../../components/form/FormInput.vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
@@ -21,14 +22,30 @@ const lang = useGlobalLang()
         <title v-else>Articles</title>
       </Head>
 
-      <FormInput name="url" :form="form" placeholder="https://...">
-        <template #label>
-          <Lang class="font-logo text-2xl font-semibold text-stone-800">
-            <template #zh> 文章 </template>
-            <template #en> Articles </template>
-          </Lang>
-        </template>
-      </FormInput>
+      <form
+        @submit.prevent="
+          (event) => {
+            formSubmit(form, event, async ({ url }) => {
+              $router.push({ path: `/articles/${url}` })
+            })
+          }
+        "
+      >
+        <FormInput name="url" type="url" :form="form">
+          <template #label>
+            <Lang class="font-logo text-2xl font-semibold text-stone-800">
+              <template #zh> 文章 </template>
+              <template #en> Articles </template>
+            </Lang>
+          </template>
+
+          <template #input-end>
+            <button class="px-4">
+              <PlayIcon class="w-6" />
+            </button>
+          </template>
+        </FormInput>
+      </form>
 
       <div class="py-16"></div>
     </div>
