@@ -43,7 +43,7 @@ const lang = useGlobalLang()
                 <template #en> Article </template>
               </Lang>
               <Hyperlink
-                href="/manuals/https://readonly.link/docs/manual.json/-/kinds-of-renders/article.md"
+                href="/manuals/https://readonly.link/docs/en/manual.json/-/kinds-of-renders/article.md"
               >
                 <QuestionMarkCircleIcon class="h-6 w-6 text-stone-800" />
               </Hyperlink>
