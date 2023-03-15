@@ -1,6 +1,15 @@
-support enter url
+# articles
 
-remove unused code
+[articles] `ArticleEntrance` support enter url
+
+- prefix with
+
+  ```
+  https://readonly.link/articles/
+  ```
+
+[articles] support `data:` link
+[articles] support editing and share `data:` link
 
 # examples
 
