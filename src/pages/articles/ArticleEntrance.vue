@@ -21,16 +21,16 @@ const lang = useGlobalLang()
         <title v-else>Articles</title>
       </Head>
 
-      <div class="flex items-baseline space-x-4">
-        <Lang class="font-logo text-2xl font-semibold text-stone-800">
-          <template #zh> 文章 </template>
-          <template #en> Articles </template>
-        </Lang>
-      </div>
+      <FormInput name="url" :form="form" placeholder="https://...">
+        <template #label>
+          <Lang class="font-logo text-2xl font-semibold text-stone-800">
+            <template #zh> 文章 </template>
+            <template #en> Articles </template>
+          </Lang></template
+        >
+      </FormInput>
 
-      <FormInput name="url" :form="form" />
-
-      <div class="py-10"></div>
+      <div class="py-16"></div>
     </div>
   </PageLayout>
 </template>
