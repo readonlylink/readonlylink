@@ -9,12 +9,16 @@ const route = useRoute()
 
 const state = ref<State | undefined>(undefined)
 
+function useStateOptions() {
+  const url = String(route.params.url)
+
+  return { url }
+}
+
 watch(
   () => route.params.url,
   async () => {
-    state.value = await loadState({
-      url: String(route.params.url),
-    })
+    state.value = await loadState(useStateOptions())
   },
   {
     immediate: true,
@@ -23,8 +27,6 @@ watch(
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl">
-    <ArticleLoaded v-if="state" :state="state" />
-    <ArticleLoading v-else />
-  </div>
+  <ArticleLoaded v-if="state" :state="state" />
+  <ArticleLoading v-else :options="useStateOptions()" />
 </template>

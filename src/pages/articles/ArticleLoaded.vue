@@ -9,5 +9,7 @@ const state = stateReactive(props.state)
 </script>
 
 <template>
-  <ArticleMarkdown :state="state" />
+  <div class="mx-auto max-w-3xl">
+    <ArticleMarkdown :state="state" />
+  </div>
 </template>

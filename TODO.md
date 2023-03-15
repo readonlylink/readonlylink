@@ -1,5 +1,3 @@
-`ArticleLoading` take `options`
-
 remove unused code
 
 `ManualPageNav` -- support nav click away
