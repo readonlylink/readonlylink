@@ -1,4 +1,3 @@
-`BookLoading` take `options`
 `ArticleLoading` take `options`
 
 remove unused code

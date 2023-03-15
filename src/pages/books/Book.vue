@@ -9,16 +9,20 @@ const route = useRoute()
 
 const state = ref<State | undefined>(undefined)
 
+function useStateOptions() {
+  const url = String(route.params.url)
+  const path = route.params.path ? String(route.params.path) : undefined
+  const frontMatter = route.query['front-matter']
+    ? String(route.query['front-matter'])
+    : undefined
+
+  return { url, path, frontMatter }
+}
+
 watch(
   () => route.params.url,
   async () => {
-    const url = String(route.params.url)
-    const path = route.params.path ? String(route.params.path) : undefined
-    const frontMatter = route.query['front-matter']
-      ? String(route.query['front-matter'])
-      : undefined
-
-    state.value = await loadState({ url, path, frontMatter })
+    state.value = await loadState(useStateOptions())
   },
   {
     immediate: true,
@@ -27,8 +31,6 @@ watch(
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl">
-    <BookLoaded v-if="state" :state="state" />
-    <BookLoading v-else />
-  </div>
+  <BookLoaded v-if="state" :state="state" />
+  <BookLoading v-else :options="useStateOptions()" />
 </template>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Lang from '../../components/Lang.vue'
+import { StateOptions } from './State'
+
+defineProps<{ options: StateOptions }>()
 </script>
 
 <template>
@@ -8,5 +11,9 @@ import Lang from '../../components/Lang.vue'
       <template #zh> 书籍加载中⋯⋯ </template>
       <template #en> Loading book ... </template>
     </Lang>
+
+    <div class="overflow-x-auto whitespace-pre font-mono text-lg">
+      {{ options }}
+    </div>
   </div>
 </template>

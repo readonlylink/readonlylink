@@ -32,15 +32,17 @@ watch(
 </script>
 
 <template>
-  <Head>
-    <title>{{ stateTitle(state) }}</title>
-  </Head>
+  <div class="mx-auto max-w-3xl">
+    <Head>
+      <title>{{ stateTitle(state) }}</title>
+    </Head>
 
-  <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
-  <BookPage
-    v-else-if="currentDocument"
-    :state="state"
-    :document="currentDocument"
-  />
-  <BookTitlePage v-else :state="state" />
+    <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
+    <BookPage
+      v-else-if="currentDocument"
+      :state="state"
+      :document="currentDocument"
+    />
+    <BookTitlePage v-else :state="state" />
+  </div>
 </template>
