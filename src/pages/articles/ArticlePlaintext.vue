@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { watch } from 'vue'
-import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
-import { stateDocument } from './stateDocument'
 
 const props = defineProps<{ state: State }>()
 
@@ -15,9 +13,7 @@ watch(
 </script>
 
 <template>
-  <MdPage
-    class="m-6"
-    :document="stateDocument(state)"
-    :customComponents="state.extensions.components"
-  />
+  <div class="m-6 overflow-x-auto whitespace-pre font-mono">
+    {{ state.text }}
+  </div>
 </template>

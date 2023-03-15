@@ -1,11 +1,7 @@
-remove unused code
-
 `ManualPageNav` -- support nav click away
 support enter url
 
-# articles
-
-`articles/` -- `ArticlePlaintext`
+remove unused code
 
 # examples
 
@@ -36,9 +32,10 @@ http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cica
 
 support history again
 
-# later
+# postmark
 
 `md/` uses `lang="ts"`
 
 improve `@xieyuheng/postmark` API
+
 add katex extensions back
