@@ -1,3 +1,7 @@
+v-on-clicl-outside
+
+remove `composables/extension-store/`
+
 `ManualPageNav` -- support nav click away
 support enter url
 

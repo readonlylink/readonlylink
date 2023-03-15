@@ -16,5 +16,6 @@ app.use(FloatingVue)
 
 app.directive('focus', Directives.focus)
 app.directive('blur', Directives.blur)
+app.directive('on-click-outside', Directives.onClickOutside)
 
 app.mount('#app')
