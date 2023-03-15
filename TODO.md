@@ -1,4 +1,4 @@
-[manuals] `ManualEntrance` support enter url
+error page use `PageLayout`
 
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
