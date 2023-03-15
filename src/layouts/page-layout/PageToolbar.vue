@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { LanguageIcon } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
-import IconTranslate from '../../components/icons/IconTranslate.vue'
 import Lang from '../../components/Lang.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 import PageLang from './PageLang.vue'
@@ -13,7 +13,7 @@ const lang = useGlobalLang()
     <div class="mr-2 flex text-stone-400 hover:text-stone-900">
       <PageLang />
 
-      <IconTranslate class="w-5 p-px" />
+      <LanguageIcon class="w-5 p-px" />
     </div>
 
     <!-- <UserMenu v-if="$page.props.auth.user" :user="$page.props.auth.user" /> -->

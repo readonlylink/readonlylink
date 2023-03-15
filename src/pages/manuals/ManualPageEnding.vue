@@ -1,7 +1,6 @@
 <script setup lang="ts">
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
-import IconArrowLeft from '../../components/icons/IconArrowLeft.vue'
-import IconArrowRight from '../../components/icons/IconArrowRight.vue'
 import { State } from './State'
 import { stateNextPath } from './stateNextPath'
 import { statePrevPath } from './statePrevPath'
@@ -18,7 +17,7 @@ defineProps<{ state: State }>()
       >
         <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
           <div class="flex w-1/5 justify-start py-3">
-            <IconArrowLeft class="w-6" />
+            <ArrowLeftIcon class="w-6" />
           </div>
 
           <div
@@ -51,7 +50,7 @@ defineProps<{ state: State }>()
           </div>
 
           <div class="flex w-1/5 justify-end py-3">
-            <IconArrowRight class="w-6" />
+            <ArrowRightIcon class="w-6" />
           </div>
         </div>
       </Hyperlink>

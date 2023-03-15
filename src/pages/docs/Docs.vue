@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
-import IconExternalLink from '../../components/icons/IconExternalLink.vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
@@ -32,10 +32,11 @@ const lang = useGlobalLang()
       >
         <Lang class="font-sans font-bold underline">
           <template #zh>
-            只读链接手册 <IconExternalLink class="inline w-4" />
+            只读链接手册 <ArrowTopRightOnSquareIcon class="inline w-4" />
           </template>
           <template #en>
-            Readonly.Link Manual <IconExternalLink class="inline w-4" />
+            Readonly.Link Manual
+            <ArrowTopRightOnSquareIcon class="inline w-4" />
           </template>
         </Lang>
       </a>

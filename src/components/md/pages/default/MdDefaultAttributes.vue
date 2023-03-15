@@ -7,7 +7,7 @@ import IconCalendar from '../../../icons/IconCalendar.vue'
 import IconHashtag from '../../../icons/IconHashtag.vue'
 import IconLocationMarker from '../../../icons/IconLocationMarker.vue'
 import IconPencil from '../../../icons/IconPencil.vue'
-import IconTranslate from '../../../icons/IconTranslate.vue'
+import LanguageIcon from '../../../icons/LanguageIcon.vue'
 
 const props = defineProps({ attributes: Object })
 
@@ -37,7 +37,7 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       </SpanJoin>
     </div>
     <div class="flex items-center" v-if="attributes.translators.length > 0">
-      <IconTranslate class="w-5 shrink-0 pr-1" />
+      <LanguageIcon class="w-5 shrink-0 pr-1" />
       <SpanJoin :items="attributes.translators">
         <template #item="{ name, username }">
           <Link

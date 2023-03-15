@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
-import IconExternalLink from '../../components/icons/IconExternalLink.vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
@@ -57,7 +57,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            谢宇恒 <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            谢宇恒
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           发起。
         </template>
@@ -68,7 +69,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Xie Yuheng <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Xie Yuheng
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           at the end of 2021.
         </template>
@@ -123,7 +125,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Issues <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Issues
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           来响应大家发现的问题，用
           <a
@@ -131,7 +134,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            讨论区 <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            讨论区
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           来倾听反馈。
         </template>
@@ -142,7 +146,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Issues <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Issues
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           to respond to bug reports, and
           <a
@@ -150,7 +155,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Discussions <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Discussions
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           to listen to general feedback.
         </template>
@@ -173,7 +179,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Postmark <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Postmark
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           来定制 Markdown 解析器。
         </template>
@@ -184,7 +191,8 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
           >
-            Postmark <IconExternalLink class="w-4 shrink-0 text-stone-500" />
+            Postmark
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
           </a>
           to customize Markdown parser.
         </template>

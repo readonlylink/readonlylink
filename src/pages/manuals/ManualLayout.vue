@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { Bars3Icon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
-import IconMenu from '../../components/icons/IconMenu.vue'
 import ManualPageNav from './ManualPageNav.vue'
 import { State } from './State'
 
@@ -42,7 +42,7 @@ const showNavbar = ref(false)
         class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 md:hidden"
         @click="showNavbar = !showNavbar"
       >
-        <IconMenu class="w-7 text-stone-500" />
+        <Bars3Icon class="w-7 text-stone-500" />
       </button>
     </div>
   </div>

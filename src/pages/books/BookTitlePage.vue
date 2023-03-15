@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import { BookOpenIcon, LanguageIcon } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
-import IconBookOpen from '../../components/icons/IconBookOpen.vue'
-import IconTranslate from '../../components/icons/IconTranslate.vue'
 import Lang from '../../components/Lang.vue'
 import { normalizeAttributes } from '../../components/md/pages/default/normalize-attributes'
 import { State } from './State'
@@ -33,7 +32,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         <div
           class="flex items-center space-x-1.5 py-4 text-stone-400 hover:text-stone-900"
         >
-          <IconBookOpen class="w-5 pb-0.5" />
+          <BookOpenIcon class="w-5 pb-0.5" />
 
           <Lang class="text-xl">
             <template #zh> 阅读 </template>
@@ -59,7 +58,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
           class="flex items-center text-center font-sans text-xl font-bold"
           title="Translators"
         >
-          <IconTranslate class="w-5 pr-1" />
+          <LanguageIcon class="w-5 pr-1" />
           {{ attributes.translators.map(({ name }) => name).join(', ') }}
         </div>
       </div>

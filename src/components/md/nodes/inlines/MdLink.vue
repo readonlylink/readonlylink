@@ -1,9 +1,8 @@
 <script setup>
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Nodes } from '@xieyuheng/postmark'
-import { MdPageState as State } from '../../md-page-state'
-
-import IconExternalLink from '../../../icons/IconExternalLink.vue'
 import MdNode from '../../../md/MdNode.vue'
+import { MdPageState as State } from '../../md-page-state'
 
 defineProps({ state: State, node: Nodes.Link })
 
@@ -31,7 +30,7 @@ function isExternalLink(path) {
       :node="child"
     />
 
-    <IconExternalLink
+    <ArrowTopRightOnSquareIcon
       v-if="isExternalLink(node.href)"
       class="inline w-4 shrink-0 text-stone-500"
     />

@@ -1,4 +1,3 @@
-fix the use of icon
 improve loading page
 remove unused code
 
