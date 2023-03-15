@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import hljs from 'highlight.js/lib/common'
 import { computed } from 'vue'
-import { safeHtml } from '../../utils/safeHtml'
+import { safeHtml } from '../utils/safeHtml'
 
 const props = defineProps<{ text: string }>()
 

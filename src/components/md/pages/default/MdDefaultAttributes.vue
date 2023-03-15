@@ -7,7 +7,7 @@ import {
   PencilIcon,
 } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
-import SpanJoin from '../../../atoms/SpanJoin.vue'
+import SpanJoin from '../../../SpanJoin.vue'
 import { normalizeAttributes } from './normalize-attributes'
 
 const props = defineProps({ attributes: Object })
