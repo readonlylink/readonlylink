@@ -1,6 +1,5 @@
-`ManualLoading` take state and show info
-`BookLoading` take state and show info
-`ArticleLoading` take state and show info
+`BookLoading` take `options`
+`ArticleLoading` take `options`
 
 remove unused code
 
