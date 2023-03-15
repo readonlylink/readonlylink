@@ -1,7 +1,7 @@
 <script setup>
 import { MdPageState as State } from '../../md-page-state'
 
-import Highlight from '../../../atoms/Highlight.vue'
+import Highlight from '../../../Highlight.vue'
 
 defineProps({ state: State, node: Object })
 </script>
