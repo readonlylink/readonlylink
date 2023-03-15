@@ -6,7 +6,7 @@ import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
-const showNavbar = ref(false)
+const showNav = ref(false)
 </script>
 
 <template>
@@ -28,7 +28,7 @@ const showNavbar = ref(false)
     <div class="flex flex-col md:hidden">
       <div class="flex overflow-y-auto">
         <ManualPageNav
-          v-if="showNavbar"
+          v-if="showNav"
           :state="state"
           class="fixed z-20 h-full w-5/6 overflow-y-auto bg-white"
         />
@@ -40,7 +40,7 @@ const showNavbar = ref(false)
 
       <button
         class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 md:hidden"
-        @click="showNavbar = !showNavbar"
+        @click="showNav = !showNav"
       >
         <Bars3Icon class="w-7 text-stone-500" />
       </button>

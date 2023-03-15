@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import ManualLoaded from './ManualLoaded.vue'
 import ManualLoading from './ManualLoading.vue'
 import { loadState, State } from './State'
 
