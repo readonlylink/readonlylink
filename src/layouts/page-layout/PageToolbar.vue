@@ -13,21 +13,5 @@ const lang = useGlobalLang()
 
       <LanguageIcon class="w-5 p-px" />
     </div>
-
-    <!-- <div class="flex flex-wrap font-sans text-stone-400">
-         <Hyperlink class="mr-2 hover:text-stone-900" href="/login">
-         <Lang>
-         <template #zh> 登录 </template>
-         <template #en> LOGIN </template>
-         </Lang>
-         </Hyperlink>
-
-         <Hyperlink class="hover:text-stone-900" href="/register">
-         <Lang>
-         <template #zh> 注册 </template>
-         <template #en> REGISTER </template>
-         </Lang>
-         </Hyperlink>
-         </div> -->
   </div>
 </template>

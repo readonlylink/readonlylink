@@ -18,12 +18,12 @@ import Lang from '../../components/Lang.vue'
         </Lang>
       </Hyperlink>
 
-      <!-- <Hyperlink class="pr-3 hover:text-stone-900" href="/history">
-           <Lang>
-           <template #zh> 历史 </template>
-           <template #en> HISTORY </template>
-           </Lang>
-           </Hyperlink> -->
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/history">
+        <Lang>
+          <template #zh> 历史 </template>
+          <template #en> HISTORY </template>
+        </Lang>
+      </Hyperlink>
 
       <Hyperlink class="pr-3 hover:text-stone-900" href="/about">
         <Lang>
