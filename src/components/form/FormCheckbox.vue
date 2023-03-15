@@ -23,17 +23,5 @@ defineProps<{
         v-bind="$attrs"
       />
     </div>
-
-    <ol
-      v-if="form.unprocessable?.errors[name]"
-      class="list-inside list-disc py-1 text-base font-bold text-orange-400"
-    >
-      <li
-        v-for="(message, index) of form.unprocessable.errors[name]"
-        :key="index"
-      >
-        {{ message }}
-      </li>
-    </ol>
   </div>
 </template>

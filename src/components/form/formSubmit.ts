@@ -1,8 +1,6 @@
-import { Form, FormValues, Unprocessable } from './Form'
+import { Form, FormValues } from './Form'
 
-type Action<T extends FormValues> = (values: T) => Promise<{
-  unprocessable?: Unprocessable
-} | void>
+type Action<T extends FormValues> = (values: T) => Promise<void>
 
 export async function formSubmit<T extends FormValues>(
   form: Form<T>,
@@ -10,12 +8,19 @@ export async function formSubmit<T extends FormValues>(
   action: Action<T>,
 ): Promise<void> {
   form.processing = true
-  form.unprocessable = undefined
 
-  assignValuesFromEvent(event, form.values)
-  const result = await action(form.values)
+  try {
+    assignValuesFromEvent(event, form.values)
+    await action(form.values)
+  } catch (error) {
+    if (error instanceof Error) {
+      form.error = error
+    } else {
+      form.error = new Error(`unknown error`)
+      console.error({ message: 'unknown error', error })
+    }
+  }
 
-  form.unprocessable = result?.unprocessable
   form.processing = false
 }
 
