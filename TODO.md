@@ -1,4 +1,7 @@
-improve loading page
+`ManualLoading` take state and show info
+`BookLoading` take state and show info
+`ArticleLoading` take state and show info
+
 remove unused code
 
 `ManualPageNav` -- support nav click away
