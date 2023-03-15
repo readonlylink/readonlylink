@@ -1,7 +1,7 @@
+entrances link to docs
+
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
-
-entrances link to docs
 
 # examples
 

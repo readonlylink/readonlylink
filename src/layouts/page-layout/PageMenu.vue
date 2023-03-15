@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
 </script>

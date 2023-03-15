@@ -1,4 +1,4 @@
-<script setup lant="ts">
+<script setup lang="ts">
 import { Head } from '@vueuse/head'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 import PageHead from './PageHead.vue'
