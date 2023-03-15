@@ -3,6 +3,7 @@ import About from './about/About.vue'
 import Article from './articles/Article.vue'
 import ArticleEntrance from './articles/ArticleEntrance.vue'
 import Book from './books/Book.vue'
+import BookEntrance from './books/BookEntrance.vue'
 import Docs from './docs/Docs.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import Home from './home/Home.vue'
@@ -16,8 +17,8 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/articles/', component: ArticleEntrance },
   { path: '/articles/:url(.*)', component: Article },
 
-  { path: '/books', redirect: '/' },
-  { path: '/books/', redirect: '/' },
+  { path: '/books', component: BookEntrance },
+  { path: '/books/', component: BookEntrance },
   { path: '/books/:url(.*)', component: Book },
   { path: '/books/:url(.*)/-/:path(.*)', component: Book },
 

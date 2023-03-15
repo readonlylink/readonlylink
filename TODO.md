@@ -1,5 +1,3 @@
-[books] `BookEntrance` support enter url
-
 [manuals] `ManualEntrance` support enter url
 
 [articles] `ArticleEntrance` support `data:` link
