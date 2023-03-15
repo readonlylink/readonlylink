@@ -26,8 +26,8 @@ const lang = useGlobalLang()
           <Lang class="font-logo text-2xl font-semibold text-stone-800">
             <template #zh> 文章 </template>
             <template #en> Articles </template>
-          </Lang></template
-        >
+          </Lang>
+        </template>
       </FormInput>
 
       <div class="py-16"></div>
