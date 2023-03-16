@@ -24,7 +24,16 @@ export async function loadState(options: StateOptions): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
   const extensions = new ExtensionStore()
   const config = await loadBookConfig({ url })
-  const texts = await loadTexts(new URL(config.src, url), config.contents)
+
+  const texts = Object.fromEntries(
+    await Promise.all(
+      config.contents.map(async (path) => {
+        const response = await fetch(new URL(join(config.src, path), url))
+        const text = await response.text()
+        return [path, text]
+      }),
+    ),
+  )
 
   return {
     url,
@@ -34,19 +43,4 @@ export async function loadState(options: StateOptions): Promise<State> {
     config,
     texts,
   }
-}
-
-export async function loadTexts(
-  baseURL: URL,
-  paths: Array<string>,
-): Promise<Record<string, string>> {
-  return Object.fromEntries(
-    await Promise.all(
-      paths.map(async (path) => {
-        const response = await fetch(new URL(path, baseURL))
-        const text = await response.text()
-        return [path, text]
-      }),
-    ),
-  )
 }

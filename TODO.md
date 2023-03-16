@@ -1,5 +1,3 @@
-[manuals] extract `loadTexts`
-
 # subscriptions
 
 [subscriptions] `stateReactivelyUpdateList` -- sync with `localStorage`
