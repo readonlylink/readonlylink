@@ -1,37 +1,24 @@
-[articles] `ArticleEntrance` support `data:` link
-[articles] `ArticleEntrance` support editing and share `data:` link
+# subscriptions
 
-# subscription
+[subscriptions] `subscriptions/` store a list of subscriptions
 
-support subscription
+# authors
 
-# examples
+[authors] `authors/` show a list of authors -- link to homepage
+[authors] `authors/` show a list of authors -- with avatar
 
-**articles:**
+[authors] `authors/${url}` add a button to subscribe the author's `subscription`
 
-```
-http://localhost:5173/articles/https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md
-http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/persons/vladimir-voevodsky/how-i-became-interested-in-foundations-of-mathematics.md
-http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/translations/zh/how-i-became-interested-in-foundations-of-mathematics.md
-http://localhost:5173/articles/https://raw.githubusercontent.com/xieyuheng/inner/master/papers/publish/a-recursive-combinatorial-description-of-cell-complex.md
-```
-
-**books:**
-
-```
-http://localhost:5173/books/https://raw.githubusercontent.com/readonlylink/readonlylink-books/master/rework/book.json
-```
-
-**manuals:**
-
-```
-http://localhost:5173/manuals/https://readonly.link/docs/en/manual.json
-http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cicada-solo/master/manual.json
-```
+- if there is a `subscription` link in `author.json`
 
 # home
 
-home page should show official subscription
+[home] show official subscription
+
+# articles
+
+[articles] `ArticleEntrance` support `data:` link
+[articles] `ArticleEntrance` support editing and share `data:` link
 
 # history
 
