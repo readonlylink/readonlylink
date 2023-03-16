@@ -10,6 +10,13 @@ const origin = window.location.origin
     class="flex w-full flex-wrap justify-between py-1 font-sans text-stone-400"
   >
     <div class="flex flex-wrap">
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/authors">
+        <Lang>
+          <template #zh> 作者 </template>
+          <template #en> AUTHORS </template>
+        </Lang>
+      </Hyperlink>
+
       <Hyperlink
         class="pr-3 hover:text-stone-900"
         :href="`/manuals/${origin}/docs/en/manual.json`"
@@ -24,6 +31,13 @@ const origin = window.location.origin
         <Lang>
           <template #zh> 历史 </template>
           <template #en> HISTORY </template>
+        </Lang>
+      </Hyperlink>
+
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/subscriptions">
+        <Lang>
+          <template #zh> 订阅 </template>
+          <template #en> SUBSCRIPTIONS </template>
         </Lang>
       </Hyperlink>
 

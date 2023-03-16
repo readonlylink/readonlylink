@@ -8,6 +8,7 @@ import PageNotFound from './errors/PageNotFound.vue'
 import Home from './home/Home.vue'
 import Manual from './manuals/Manual.vue'
 import ManualEntrance from './manuals/ManualEntrance.vue'
+import SubscriptionList from './subscriptions/SubscriptionList.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
@@ -26,6 +27,8 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/', component: ManualEntrance },
   { path: '/manuals/:url(.*)', component: Manual },
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
+
+  { path: '/subscriptions', component: SubscriptionList },
 
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
