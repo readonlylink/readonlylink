@@ -1,8 +1,12 @@
+import { ExtensionStore } from '../../components/md/extension-store'
 import { AuthorConfig, AuthorConfigSchema } from '../authors/AuthorConfig'
+import { Activity } from './Activity'
 
 export type State = {
   list: Array<string>
   authors: Array<Author>
+  activities: Array<Activity>
+  extensions: ExtensionStore
 }
 
 export type Author = {
@@ -15,10 +19,14 @@ export type StateOptions = {}
 export async function loadState(options: {}): Promise<State> {
   const list = await loadList()
   const authors = await loadAuthors(list)
+  const extensions = new ExtensionStore()
+  const activities: Array<Activity> = []
 
   return {
     list,
     authors,
+    extensions,
+    activities,
   }
 }
 
