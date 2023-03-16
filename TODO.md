@@ -1,8 +1,8 @@
 # subscriptions
 
-[subscriptions] `stateReactive`
-[subscriptions] `stateReactivelyUpdateList`
-[subscriptions] `subscriptions/` store a list of subscriptions to `localStorage`
+[subscriptions] `SubscriptionListLoading` v.s. `SubscriptionListLoaded`
+[subscriptions] `stateReactivelyUpdateList` -- sync with `localStorage`
+[subscriptions] `subscriptions/` show the list
 
 # authors
 

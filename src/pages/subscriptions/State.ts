@@ -2,7 +2,9 @@ export type State = {
   list: Array<string>
 }
 
-export async function loadState(): Promise<State> {
+export type StateOptions = {}
+
+export async function loadState(options: {}): Promise<State> {
   return {
     list: [],
   }
