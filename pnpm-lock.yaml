@@ -18,7 +18,6 @@ specifiers:
   floating-vue: 2.0.0-beta.20
   highlight.js: ^11.7.0
   husky: ^8.0.3
-  idb-keyval: ^6.2.0
   js-base64: ^3.7.5
   js-yaml: ^4.1.0
   jsdom: ^21.1.1
@@ -51,7 +50,6 @@ dependencies:
   '@xieyuheng/ty': 0.1.22_silln3pw57har7jydmecgzoypa
   floating-vue: 2.0.0-beta.20_vue@3.2.47
   highlight.js: 11.7.0
-  idb-keyval: 6.2.0
   js-base64: 3.7.5
   js-yaml: 4.1.0
   jsdom: 21.1.1
@@ -2081,15 +2079,6 @@ packages:
     dependencies:
       safer-buffer: 2.1.2
 
-  /idb-keyval/6.2.0:
-    resolution:
-      {
-        integrity: sha512-uw+MIyQn2jl3+hroD7hF8J7PUviBU7BPKWw4f/ISf32D4LoGu98yHjrzWWJDASu9QNrX10tCJqk9YY0ClWm8Ng==,
-      }
-    dependencies:
-      safari-14-idb-fix: 3.0.0
-    dev: false
-
   /ignore/5.2.4:
     resolution:
       {
@@ -3114,13 +3103,6 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
-
-  /safari-14-idb-fix/3.0.0:
-    resolution:
-      {
-        integrity: sha512-eBNFLob4PMq8JA1dGyFn6G97q3/WzNtFK4RnzT1fnLq+9RyrGknzYiM/9B12MnKAxuj1IXr7UKYtTNtjyKMBog==,
-      }
-    dev: false
 
   /safer-buffer/2.1.2:
     resolution:
