@@ -45,7 +45,7 @@ const origin = window.location.origin
                 <template #en> Book </template>
               </Lang>
               <Hyperlink
-                :href="`/manuals/${origin}/docs/en/manual.json/-/kinds-of-renders/book.md`"
+                :href="`/manuals/${origin}/contents/manual/en.json/-/kinds-of-renders/book.md`"
               >
                 <QuestionMarkCircleIcon class="h-6 w-6 text-stone-800" />
               </Hyperlink>

@@ -26,6 +26,6 @@ http://localhost:5173/books/https://raw.githubusercontent.com/readonlylink/reado
 **manuals:**
 
 ```
-http://localhost:5173/manuals/https://readonly.link/docs/en/manual.json
+http://localhost:5173/manuals/https://readonly.link/contents/manual/en.json
 http://localhost:5173/manuals/https://raw.githubusercontent.com/cicada-lang/cicada-solo/master/manual.json
 ```
