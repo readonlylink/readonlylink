@@ -1,6 +1,6 @@
 # subscriptions
 
-[subscriptions] subscribe to `author.json` instead of activities list
+[subscriptions] `loadActivities`
 [subscriptions] `subscriptions/` show `activities`
 [subscriptions] `SubscriptionListEditor`
 
