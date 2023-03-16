@@ -1,6 +1,6 @@
 # subscriptions
 
-[subscriptions] `loadActivities`
+[subscriptions] `stateLoadActivities`
 [subscriptions] `subscriptions/` show `activities`
 [subscriptions] `SubscriptionListEditor`
 
