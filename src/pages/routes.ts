@@ -9,10 +9,13 @@ import Home from './home/Home.vue'
 import Manual from './manuals/Manual.vue'
 import ManualEntrance from './manuals/ManualEntrance.vue'
 import SubscriptionList from './subscriptions/SubscriptionList.vue'
+import AuthorList from './authors/AuthorList.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
   { path: '/about', component: About },
+
+  { path: '/authors', component: AuthorList },
 
   { path: '/articles', component: ArticleEntrance },
   { path: '/articles/', component: ArticleEntrance },

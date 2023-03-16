@@ -1,6 +1,6 @@
 # subscriptions
 
-[authors] `authors/` setup route
+[history] `history/` setup route
 [subscriptions] `subscriptions/` store a list of subscriptions
 
 # authors
