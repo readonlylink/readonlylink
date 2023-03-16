@@ -1,6 +1,7 @@
 # subscriptions
 
 [subscriptions] `stateLoadActivities`
+[subscriptions] `SubscriptionListLoaded` -- show `authors` -- like youtube
 [subscriptions] `subscriptions/` show `activities`
 [subscriptions] `SubscriptionListEditor`
 
