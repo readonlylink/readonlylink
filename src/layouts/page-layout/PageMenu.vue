@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
+
+const origin = window.location.origin
 </script>
 
 <template>
@@ -10,7 +12,7 @@ import Lang from '../../components/Lang.vue'
     <div class="flex flex-wrap">
       <Hyperlink
         class="pr-3 hover:text-stone-900"
-        href="/manuals/https://readonly.link/docs/en/manual.json"
+        :href="`/manuals/${origin}/docs/en/manual.json`"
       >
         <Lang>
           <template #zh> 文档 </template>
