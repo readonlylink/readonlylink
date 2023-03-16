@@ -1,6 +1,5 @@
 # subscriptions
 
-[subscriptions] `stateReactivelyUpdateList` -- sync with `localStorage`
 [subscriptions] `subscriptions/` show the list
 
 # authors
