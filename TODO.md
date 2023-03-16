@@ -1,6 +1,5 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListLoading` v.s. `SubscriptionListLoaded`
 [subscriptions] `stateReactivelyUpdateList` -- sync with `localStorage`
 [subscriptions] `subscriptions/` show the list
 
