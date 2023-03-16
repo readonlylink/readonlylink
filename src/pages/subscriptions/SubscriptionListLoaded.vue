@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
+import { stateReactive } from './stateReactive'
 
-defineProps<{ state: State }>()
+const props = defineProps<{ state: State }>()
+const state = stateReactive(props.state)
 </script>
 
 <template>
-  <PageLayout> subscriptionListLoaded TODO </PageLayout>
+  <PageLayout>
+    {{ state.list }}
+  </PageLayout>
 </template>

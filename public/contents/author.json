@@ -1,8 +1,5 @@
 {
-  "name": {
-    "en": "Readonly.Link",
-    "zh": "只读连接"
-  },
+  "name": { "en": "Readonly.Link", "zh": "只读连接" },
   "homepage": "",
   "subscription": "activities/index"
 }

@@ -1,6 +1,7 @@
 # subscriptions
 
-[subscriptions] `subscriptions/` show the list
+[subscriptions] `SubscriptionListLoaded` show the list
+[subscriptions] `SubscriptionListEditor`
 
 # authors
 
