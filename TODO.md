@@ -1,6 +1,7 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListLoaded` show the list
+[subscriptions] subscribe to `author.json` instead of activities list
+[subscriptions] `subscriptions/` show `activities`
 [subscriptions] `SubscriptionListEditor`
 
 # authors
