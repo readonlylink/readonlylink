@@ -2,6 +2,11 @@
 
 [subscriptions] `subscriptions/` store a list of subscriptions
 
+# docs
+
+[docs] fix `manual/en`
+[docs] fix `manual/zh`
+
 # authors
 
 [authors] `authors/` show a list of authors -- link to homepage

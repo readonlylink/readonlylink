@@ -1,9 +1,9 @@
 {
-  "title": "只读连接手册",
+  "title": "Readonly.Link Manual",
   "version": "0.0.1",
-  "authors": ["写宇恒"],
+  "authors": ["Xie Yuheng"],
   "date": "2022",
-  "src": "src",
+  "src": "en",
   "main": "introduction.md",
   "sections": {
     "default": ["introduction.md"],
