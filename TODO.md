@@ -1,11 +1,8 @@
 # subscriptions
 
-[subscriptions] `subscriptions/` store a list of subscriptions
-
-# docs
-
-[docs] fix `manual/en`
-[docs] fix `manual/zh`
+[subscriptions] `stateReactive`
+[subscriptions] `stateReactivelyUpdateList`
+[subscriptions] `subscriptions/` store a list of subscriptions to `localStorage`
 
 # authors
 
@@ -15,6 +12,11 @@
 [authors] `authors/${url}` add a button to subscribe the author's `subscription`
 
 - if there is a `subscription` link in `author.json`
+
+# docs
+
+[docs] fix `manual/en`
+[docs] fix `manual/zh`
 
 # home
 
@@ -27,7 +29,7 @@
 
 # history
 
-support history again
+[history] store visited links to `localStorage`
 
 # postmark
 
