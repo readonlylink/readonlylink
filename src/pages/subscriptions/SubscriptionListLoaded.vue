@@ -12,7 +12,7 @@ const state = stateReactive(props.state)
     <div>{{ state.list }}</div>
 
     <div v-for="(activity, index) of state.activities" :key="index">
-      {{ activity }}
+      {{ activity.author.config.name }} / {{ activity.path }}
     </div>
   </PageLayout>
 </template>
