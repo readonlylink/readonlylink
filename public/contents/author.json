@@ -1,5 +1,5 @@
 {
-  "name": { "en": "Readonly.Link", "zh": "只读连接" },
-  "homepage": "",
-  "subscription": "activities/index"
+  "name": "Readonly.Link",
+  "homepage": "README.md",
+  "activities": ["activities/2023-03-16-hello-world.md"]
 }
