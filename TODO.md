@@ -2,7 +2,6 @@
 
 [subscriptions] `stateReactivelyUpdateList` -- sync with `localStorage`
 [subscriptions] `subscriptions/` show the list
-[subscriptions] extract `loadList`
 
 # authors
 
