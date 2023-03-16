@@ -10,6 +10,7 @@ import Manual from './manuals/Manual.vue'
 import ManualEntrance from './manuals/ManualEntrance.vue'
 import SubscriptionList from './subscriptions/SubscriptionList.vue'
 import AuthorList from './authors/AuthorList.vue'
+import History from './history/History.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
@@ -30,6 +31,8 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/', component: ManualEntrance },
   { path: '/manuals/:url(.*)', component: Manual },
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
+
+  { path: '/history', component: History },
 
   { path: '/subscriptions', component: SubscriptionList },
 

@@ -3,5 +3,5 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 </script>
 
 <template>
-  <PageLayout> AuthorList </PageLayout>
+  <PageLayout> AuthorList TODO </PageLayout>
 </template>
