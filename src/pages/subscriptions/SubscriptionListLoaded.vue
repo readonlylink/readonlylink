@@ -9,6 +9,10 @@ const state = stateReactive(props.state)
 
 <template>
   <PageLayout>
-    {{ state.list }}
+    <div>{{ state.list }}</div>
+
+    <div v-for="(activity, index) of state.activities" :key="index">
+      {{ activity }}
+    </div>
   </PageLayout>
 </template>

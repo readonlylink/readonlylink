@@ -48,8 +48,9 @@ async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
       const response = await fetch(url)
       const json = await response.json()
       const config = AuthorConfigSchema.validate(json)
-
-      authors.push({ url, config })
+      const author = { url, config }
+      console.log({ who, author })
+      authors.push(author)
     } catch (error) {
       console.error({
         who,
