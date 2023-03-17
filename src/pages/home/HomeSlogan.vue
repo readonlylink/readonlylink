@@ -14,7 +14,7 @@ import Lang from '../../components/Lang.vue'
     </template>
     <template #en>
       <div class="font-logo text-2xl font-semibold text-stone-500">
-        <span class="text-stone-900">Readonly link</span>,
+        <span class="text-stone-900">Readonly link</span>s,
         <br class="md:hidden" />
         for your <span class="text-stone-900">read only</span>.
       </div>
