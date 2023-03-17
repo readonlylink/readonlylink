@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Hyperlink from '../../components/Hyperlink.vue'
-import Lang from '../../components/Lang.vue'
-import { State } from './State'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import Lang from '../../components/Lang.vue'
+import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
@@ -19,19 +18,26 @@ async function save() {
 </script>
 
 <template>
-  <div class="flex flex-col h-full">
-    <div class="flex py-1 justify-end">
-      <button
-        @click="save()"
-        class="font-sans text-stone-400 hover:text-stone-900"
-      >
-        <Lang>
-          <template #zh> 保存 </template>
-          <template #en> SAVE </template>
-        </Lang>
-      </button>
+  <div class="flex h-full flex-col">
+    <div class="flex items-baseline justify-between">
+      <Lang class="font-logo text-2xl font-semibold text-stone-800">
+        <template #zh> 订阅列表 </template>
+        <template #en> Subscriptions </template>
+      </Lang>
+
+      <div class="flex justify-end py-1">
+        <button
+          @click="save()"
+          class="font-sans text-stone-400 hover:text-stone-900"
+        >
+          <Lang>
+            <template #zh> 保存 </template>
+            <template #en> SAVE </template>
+          </Lang>
+        </button>
+      </div>
     </div>
 
-    <textarea v-model="text" class="border border-black p-3 h-full"></textarea>
+    <textarea v-model="text" class="h-full border border-black p-3"></textarea>
   </div>
 </template>
