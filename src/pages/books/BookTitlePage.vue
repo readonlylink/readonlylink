@@ -59,7 +59,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
           title="Translators"
         >
           <LanguageIcon class="w-5 pr-1" />
-          {{ attributes.translators.map(({ name }) => name).join(', ') }}
+          {{ attributes.translators.join(', ') }}
         </div>
       </div>
     </section>

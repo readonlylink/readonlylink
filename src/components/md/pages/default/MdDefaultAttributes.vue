@@ -7,7 +7,6 @@ import {
   PencilIcon,
 } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
-import SpanJoin from '../../../SpanJoin.vue'
 import { normalizeAttributes } from './normalize-attributes'
 
 const props = defineProps({ attributes: Object })
@@ -22,25 +21,11 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
       v-if="attributes.authors.length > 0"
     >
       <PencilIcon class="w-5 shrink-0 pr-1" />
-      <SpanJoin :items="attributes.authors">
-        <template #item="{ name }">
-          <span>{{ name }}</span>
-        </template>
-        <template #delimiter>
-          <span class="pr-1">,</span>
-        </template>
-      </SpanJoin>
+      <span>{{ attributes.authors.join(', ') }}</span>
     </div>
     <div class="flex items-center" v-if="attributes.translators.length > 0">
       <LanguageIcon class="w-5 shrink-0 pr-1" />
-      <SpanJoin :items="attributes.translators">
-        <template #item="{ name }">
-          <span>{{ name }}</span>
-        </template>
-        <template #delimiter>
-          <span class="pr-1">,</span>
-        </template>
-      </SpanJoin>
+      <span>{{ attributes.translators.join(', ') }}</span>
     </div>
     <div class="flex items-center" v-if="attributes.date">
       <CalendarDaysIcon class="w-5 shrink-0 pr-1" />
@@ -52,14 +37,7 @@ const attributes = computed(() => normalizeAttributes(props.attributes))
     </div>
     <div class="flex items-center" v-if="attributes.keywords.length > 0">
       <HashtagIcon class="w-5 shrink-0 pr-1" />
-      <SpanJoin :items="attributes.keywords.map((keyword) => ({ keyword }))">
-        <template #item="{ keyword }">
-          <span>{{ keyword }}</span>
-        </template>
-        <template #delimiter>
-          <span class="pr-1">,</span>
-        </template>
-      </SpanJoin>
+      <span>{{ attributes.keywords.join(', ') }}</span>
     </div>
   </div>
 </template>

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { PlayIcon, QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
-import { formSubmit, useForm } from '../../components/form'
-import FormInput from '../../components/form/FormInput.vue'
+import { useRouter } from 'vue-router'
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
+import { formSubmit, useForm } from '../../components/form'
+import FormInput from '../../components/form/FormInput.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 
@@ -15,6 +16,14 @@ const form = useForm({
 const lang = useGlobalLang()
 
 const origin = window.location.origin
+
+const router = useRouter()
+
+async function submit(event: Event) {
+  formSubmit(form, event, async ({ url }) => {
+    router.push({ path: `/manuals/${url}` })
+  })
+}
 </script>
 
 <template>
@@ -25,15 +34,7 @@ const origin = window.location.origin
         <title v-else>Manual</title>
       </Head>
 
-      <form
-        @submit.prevent="
-          (event) => {
-            formSubmit(form, event, async ({ url }) => {
-              $router.push({ path: `/manuals/${url}` })
-            })
-          }
-        "
-      >
+      <form @submit.prevent="submit">
         <FormInput name="url" type="url" :form="form">
           <template #label>
             <div

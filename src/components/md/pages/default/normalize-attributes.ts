@@ -1,8 +1,8 @@
 import { formatDate } from '../../../../utils/formatDate'
 
 type Attributes = {
-  translators: Array<{ name: string; username?: string }>
-  authors: Array<{ name: string; username?: string }>
+  translators: Array<string>
+  authors: Array<string>
   keywords: Array<string>
   venue?: string
   date?: string
@@ -10,14 +10,12 @@ type Attributes = {
 
 export function normalizeAttributes(attributes: any): Attributes {
   const translators = []
-  if (attributes.translator)
-    translators.push(normalizeUser(attributes.translator))
-  if (attributes.translators)
-    translators.push(...attributes.translators.map(normalizeUser))
+  if (attributes.translator) translators.push(attributes.translator)
+  if (attributes.translators) translators.push(...attributes.translators)
 
   const authors = []
-  if (attributes.author) authors.push(normalizeUser(attributes.author))
-  if (attributes.authors) authors.push(...attributes.authors.map(normalizeUser))
+  if (attributes.author) authors.push(attributes.author)
+  if (attributes.authors) authors.push(...attributes.authors)
 
   const keywords = []
   if (attributes.keywords) keywords.push(...attributes.keywords)
@@ -30,14 +28,6 @@ export function normalizeAttributes(attributes: any): Attributes {
   if (attributes.date) date = normalizeDate(attributes.date)
 
   return { translators, authors, keywords, venue, date }
-}
-
-export function normalizeUser(user: any): { name: string; username?: string } {
-  if (typeof user['name'] === 'string') {
-    return user
-  }
-
-  return { name: user }
 }
 
 export function normalizeDate(date: any): string | undefined {
