@@ -1,3 +1,12 @@
+/*
+
+References:
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+- https://css-tricks.com/custom-scrollbars-in-webkit/
+
+*/
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .scrollbar-hide::-webkit-scrollbar {
