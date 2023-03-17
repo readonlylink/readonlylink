@@ -1,13 +1,19 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
-import AuthorCard from './AuthorCard.vue'
 import { AuthorConfig } from './AuthorConfig'
+import AuthorListLoaded from './AuthorListLoaded.vue'
+import AuthorListLoading from './AuthorListLoading.vue'
 
 const list = useDefaultAuthorList()
 
-const authorConfigs: Array<AuthorConfig> = []
+const authorConfigs = ref<Array<AuthorConfig> | undefined>(undefined)
+
+onMounted(async () => {
+  // authorConfigs.value = await loadAuthorConfigs()
+})
 </script>
 
 <template>
@@ -20,11 +26,8 @@ const authorConfigs: Array<AuthorConfig> = []
         </Lang>
       </div>
 
-      <AuthorCard
-        v-for="(authorConfig, index) of authorConfigs"
-        :key="index"
-        :authorConfig="authorConfig"
-      />
+      <AuthorListLoaded v-if="authorConfigs" :authorConfigs="authorConfigs" />
+      <AuthorListLoading v-else :list="list" />
     </div>
   </PageLayout>
 </template>
