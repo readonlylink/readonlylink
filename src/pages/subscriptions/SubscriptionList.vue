@@ -1,38 +1,41 @@
 <script setup lang="ts">
-import { watch } from 'vue'
-import { useRoute } from 'vue-router'
-import { PencilSquareIcon } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import Lang from '../../components/Lang.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
-import SubscriptionAuthor from './SubscriptionAuthor.vue'
 import SubscriptionActivity from './SubscriptionActivity.vue'
+import SubscriptionAuthor from './SubscriptionAuthor.vue'
 
 defineProps<{ state: State }>()
 </script>
 
 <template>
   <div>
-    <div class="relative">
-      <div class="absolute z-10 right-0 top-0">
-        <Hyperlink href="/subscriptions?kind=Editor">
-          <button
-            class="border border-black opacity-90 bg-white rounded-full p-2"
-          >
-            <PencilSquareIcon class="w-5 h-5" />
-          </button>
+    <div class="flex items-baseline justify-between space-x-4">
+      <Lang class="font-logo text-2xl font-semibold text-stone-800">
+        <template #zh> 动态 </template>
+        <template #en> Activities </template>
+      </Lang>
+
+      <div>
+        <Hyperlink
+          href="/subscriptions?kind=Editor"
+          class="text-stone-400 hover:text-stone-900"
+        >
+          <Lang class="font-sans">
+            <template #zh> 编辑 </template>
+            <template #en> EDIT </template>
+          </Lang>
         </Hyperlink>
       </div>
+    </div>
 
-      <div class="flex space-x-3 py-4 overflow-x-auto pr-10">
-        <SubscriptionAuthor
-          v-for="(author, index) of state.authors"
-          :key="index"
-          :state="state"
-          :author="author"
-        />
-      </div>
+    <div class="flex space-x-3 overflow-x-auto py-2">
+      <SubscriptionAuthor
+        v-for="(author, index) of state.authors"
+        :key="index"
+        :state="state"
+        :author="author"
+      />
     </div>
 
     <div class="border-b border-black"></div>

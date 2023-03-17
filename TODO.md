@@ -4,8 +4,8 @@
 
 # subscriptions
 
-[subscriptions] add label -- `动态` and `Activities`
-[subscriptions] move edit button to `SubscriptionToolbar`
+[subscriptions] `SubscriptionEditor` add label -- `编辑动态列表` and `Edit Subscription List`
+
 [subscriptions] `SubscriptionActivity` -- fix scroll style on chrome
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes -- use `Activity` page kind
 [subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
