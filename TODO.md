@@ -7,8 +7,7 @@
 
 # authors
 
-[authors] `AuthorLoading` vs `AuthorLoaded`
-[authors] `authors/${url}` show author homepage
+[authors] `AuthorLoaded` show author homepage
 
 [authors] `authors/` show a list of authors -- link to homepage
 [authors] `authors/` show a list of authors -- with avatar
