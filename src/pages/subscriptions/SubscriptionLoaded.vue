@@ -3,9 +3,9 @@ import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
 import SubscriptionEditor from './SubscriptionEditor.vue'
 import SubscriptionList from './SubscriptionList.vue'
+import { stateReactive } from './stateReactive'
 
 const props = defineProps<{ state: State }>()
 

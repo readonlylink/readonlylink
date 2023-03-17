@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import BookLoaded from './BookLoaded.vue'
 import BookLoading from './BookLoading.vue'
-import { loadState, State } from './State'
+import { State, loadState } from './State'
 
 const route = useRoute()
 
