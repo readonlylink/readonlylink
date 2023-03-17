@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Hyperlink from '../../components/Hyperlink.vue'
 import { Author, State } from './State'
 
 const props = defineProps<{
@@ -20,7 +19,7 @@ const avatarURL = new URL(props.author.config.avatar, props.author.url)
         height="80"
       />
 
-      <div class="w-[110px] break-words text-center text-sm">
+      <div class="w-[110px] break-words py-1 text-center text-sm font-bold">
         {{ author.config.name }}
       </div>
     </div>
