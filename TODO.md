@@ -7,7 +7,7 @@
 
 # authors
 
-[authors] `loadState` & `stateReactive`
+[authors] `stateReactive`
 [authors] `AuthorLoading` vs `AuthorLoaded`
 [authors] `authors/${url}` show author homepage
 
