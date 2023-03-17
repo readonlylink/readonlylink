@@ -1,7 +1,5 @@
 # authors
 
-[authors] extract `loadAuthor`
-
 [authors] `AuthorCard` -- show a list of authors -- with avatar, link to homepage
 
 extract `reactives/useGlobalAuthorList`
