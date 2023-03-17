@@ -1,7 +1,7 @@
 # subscriptions
 
+[subscriptions] `SubscriptionListActivity` -- `MdPage` should not show attributes
 [subscriptions] `SubscriptionListEditor`
-[subscriptions] `SubscriptionListActivity` -- link to this activity article and author page
 [subscriptions] `SubscriptionListAuthor` -- click to set filter
 
 # authors

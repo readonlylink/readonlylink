@@ -13,12 +13,14 @@ const avatarURL = new URL(
   props.activity.author.config.avatar,
   props.activity.author.url,
 )
+
+const articleURL = new URL(props.activity.path, props.activity.author.url)
 </script>
 
 <template>
   <div class="flex flex-col py-3">
-    <Hyperlink :href="`/authors/${activity.author.url}`">
-      <div class="flex space-x-2 py-2">
+    <div class="flex space-x-2 py-2 items-center">
+      <Hyperlink :href="`/authors/${activity.author.url}`">
         <img
           class="object-contain"
           :src="avatarURL.href"
@@ -26,20 +28,32 @@ const avatarURL = new URL(
           width="72"
           height="72"
         />
+      </Hyperlink>
 
-        <div class="flex flex-col overflow-x-auto">
+      <div class="flex flex-col overflow-x-auto space-y-1">
+        <Hyperlink
+          :href="`/authors/${activity.author.url}`"
+          class="hover:text-stone-400"
+        >
           <div class="font-bold text-lg overflow-x-auto whitespace-pre">
             {{ activity.author.config.name }}
           </div>
+        </Hyperlink>
+        <Hyperlink
+          :href="`/authors/${activity.author.url}`"
+          class="hover:underline"
+        >
           <div class="text-xs font-mono overflow-x-auto whitespace-pre">
             {{ activity.author.url }}
           </div>
+        </Hyperlink>
+        <Hyperlink :href="`/articles/${articleURL}`" class="hover:underline">
           <div class="text-xs font-mono overflow-x-auto whitespace-pre">
             {{ activity.path }}
           </div>
-        </div>
+        </Hyperlink>
       </div>
-    </Hyperlink>
+    </div>
 
     <MdPage
       class="h-full max-h-[490px] overflow-y-auto"
