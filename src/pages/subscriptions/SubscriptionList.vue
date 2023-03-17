@@ -29,7 +29,7 @@ defineProps<{ state: State }>()
       </div>
     </div>
 
-    <div class="flex space-x-3 overflow-x-auto py-2">
+    <div class="flex space-x-2 overflow-x-auto py-2">
       <SubscriptionAuthor
         v-for="(author, index) of state.authors"
         :key="index"

@@ -10,9 +10,8 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
 
 <template>
   <div class="flex items-start space-x-2">
-    <Hyperlink :href="`/authors/${author.url}`">
+    <Hyperlink :href="`/authors/${author.url}`" class="shrink-0 object-contain">
       <img
-        class="object-contain"
         :src="avatarURL.href"
         :alt="author.config.name"
         width="95"
@@ -20,18 +19,18 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
       />
     </Hyperlink>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col overflow-x-auto">
       <Hyperlink :href="`/authors/${author.url}`" class="hover:text-stone-400">
-        <div class="text-xl font-bold">
+        <div class="overflow-x-auto whitespace-pre text-xl font-bold">
           {{ author.config.name }}
         </div>
       </Hyperlink>
       <Hyperlink :href="`/authors/${author.url}`" class="hover:underline">
-        <div class="font-mono text-base">
+        <div class="overflow-x-auto whitespace-pre font-mono text-base">
           {{ author.url }}
         </div>
       </Hyperlink>
-      <div class="font-mono text-base">
+      <div class="overflow-x-auto whitespace-pre font-mono text-base">
         <span>TODO</span>
       </div>
     </div>

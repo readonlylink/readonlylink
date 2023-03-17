@@ -14,13 +14,16 @@ const avatarURL = new URL(props.author.config.avatar, props.author.url)
   <button>
     <div class="flex flex-col items-center">
       <img
+        class="shrink-0"
         :src="avatarURL.href"
         :alt="author.config.name"
         width="80"
         height="80"
       />
 
-      <div class="w-[110px] break-words py-1 text-center text-sm font-bold">
+      <div
+        class="w-[110px] overflow-x-auto whitespace-pre break-words py-1 text-center text-sm font-bold"
+      >
         {{ author.config.name }}
       </div>
     </div>
