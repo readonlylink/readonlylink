@@ -11,7 +11,7 @@ const avatarURL = new URL(props.author.config.avatar, props.author.url)
 </script>
 
 <template>
-  <Hyperlink :href="`/authors/${author.url}`">
+  <button>
     <div class="flex flex-col items-center">
       <img
         :src="avatarURL.href"
@@ -24,5 +24,5 @@ const avatarURL = new URL(props.author.config.avatar, props.author.url)
         {{ author.config.name }}
       </div>
     </div>
-  </Hyperlink>
+  </button>
 </template>

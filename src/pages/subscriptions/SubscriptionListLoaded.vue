@@ -12,24 +12,26 @@ const state = stateReactive(props.state)
 
 <template>
   <PageLayout>
-    <div class="flex space-x-3 py-4">
-      <SubscriptionListAuthor
-        v-for="(author, index) of state.authors"
-        :key="index"
-        :state="state"
-        :author="author"
-      />
-    </div>
+    <div>
+      <div class="flex space-x-3 py-4 overflow-x-auto">
+        <SubscriptionListAuthor
+          v-for="(author, index) of state.authors"
+          :key="index"
+          :state="state"
+          :author="author"
+        />
+      </div>
 
-    <div class="border-b border-black"></div>
+      <div class="border-b border-black"></div>
 
-    <div class="flex flex-col divide-y divide-black">
-      <SubscriptionListActivity
-        v-for="(activity, index) of state.activities"
-        :key="index"
-        :state="state"
-        :activity="activity"
-      />
+      <div class="flex flex-col divide-y divide-black">
+        <SubscriptionListActivity
+          v-for="(activity, index) of state.activities"
+          :key="index"
+          :state="state"
+          :activity="activity"
+        />
+      </div>
     </div>
   </PageLayout>
 </template>
