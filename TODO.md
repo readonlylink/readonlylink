@@ -10,11 +10,6 @@
 
 # home
 
-[home] setup new slogan
-
-- 分享只读连接，只为享受阅读。
-- Readonly link, for your read only.
-
 [home] show official subscription
 
 # docs

@@ -6,17 +6,17 @@ import Lang from '../../components/Lang.vue'
   <Lang>
     <template #zh>
       <div class="font-logo text-2xl font-semibold text-stone-500">
-        <span class="text-stone-900">书籍</span>与<span class="text-stone-900"
-          >文章</span
-        >的<span class="text-stone-900">邀请</span>
+        分享<span class="text-stone-900">只读连接</span>，<span
+          class="text-stone-900"
+          >只为</span
+        >享受<span class="text-stone-900">阅读</span>。
       </div>
     </template>
     <template #en>
       <div class="font-logo text-2xl font-semibold text-stone-500">
-        An <span class="text-stone-900">invitation</span>
+        <span class="text-stone-900">Readonly link</span>,
         <br class="md:hidden" />
-        from <span class="text-stone-900">books</span> and
-        <span class="text-stone-900">articles</span>.
+        for your <span class="text-stone-900">read only</span>.
       </div>
     </template>
   </Lang>
