@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
+import MdPage from '../../components/md/MdPage.vue'
 import { Activity } from './Activity'
 import { State } from './State'
 
@@ -19,23 +20,31 @@ const avatarURL = new URL(
     <Hyperlink :href="`/authors/${activity.author.url}`">
       <div class="flex space-x-2 py-2">
         <img
+          class="object-contain"
           :src="avatarURL.href"
           :alt="activity.author.config.name"
           width="72"
           height="72"
         />
 
-        <div class="flex flex-col">
-          <div class="font-bold text-lg">
+        <div class="flex flex-col overflow-x-auto">
+          <div class="font-bold text-lg overflow-x-auto whitespace-pre">
             {{ activity.author.config.name }}
           </div>
-          <div class="text-sm font-mono">
+          <div class="text-xs font-mono overflow-x-auto whitespace-pre">
             {{ activity.author.url }}
+          </div>
+          <div class="text-xs font-mono overflow-x-auto whitespace-pre">
+            {{ activity.path }}
           </div>
         </div>
       </div>
     </Hyperlink>
 
-    <div>{{ activity.author.config.name }} / {{ activity.path }}</div>
+    <MdPage
+      class="h-full max-h-[490px] overflow-y-auto"
+      :document="activity.document"
+      :customComponents="state.extensions.components"
+    />
   </div>
 </template>

@@ -20,7 +20,7 @@ const avatarURL = new URL(props.author.config.avatar, props.author.url)
         height="80"
       />
 
-      <div style="width: 110px" class="break-words text-center text-sm">
+      <div class="w-[110px] break-words text-center text-sm">
         {{ author.config.name }}
       </div>
     </div>

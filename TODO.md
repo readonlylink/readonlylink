@@ -1,6 +1,5 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListActivity` -- show `activities`
 [subscriptions] `SubscriptionListEditor`
 
 # authors
