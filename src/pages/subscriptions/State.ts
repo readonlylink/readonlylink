@@ -19,19 +19,28 @@ export type StateOptions = {
   kind?: string
 }
 
+const defaultList = [
+  'https://readonly.link/contents/author.json',
+  'https://inner.xieyuheng.com/author.json',
+]
+
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind } = options
-  const list = await loadList()
+  let list = await loadList()
+
+  if (list.length === 0) {
+    list = defaultList
+  }
+
   const authors = await loadAuthors(list)
   const extensions = new ExtensionStore()
-  const activities: Array<Activity> = []
 
   return {
     kind,
     list,
     authors,
     extensions,
-    activities,
+    activities: [],
   }
 }
 
@@ -47,7 +56,8 @@ async function loadList(): Promise<Array<string>> {
 export async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
   const who = 'loadAuthors'
 
-  const authors: Array<Author> = []
+  const authors = []
+
   for (const url of list) {
     try {
       const response = await fetch(url)

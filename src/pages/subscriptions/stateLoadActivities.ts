@@ -3,6 +3,8 @@ import { State } from './State'
 export async function stateLoadActivities(state: State): Promise<void> {
   const who = 'stateLoadActivities'
 
+  state.activities = []
+
   for (const author of state.authors) {
     for (const path of author.config.activities) {
       try {

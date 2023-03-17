@@ -8,6 +8,7 @@ import SubscriptionList from './SubscriptionList.vue'
 import SubscriptionEditor from './SubscriptionEditor.vue'
 
 const props = defineProps<{ state: State }>()
+
 const state = stateReactive(props.state)
 
 const route = useRoute()

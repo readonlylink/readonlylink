@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
-import { loadAuthors, State } from './State'
+import { State } from './State'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -12,11 +12,9 @@ const text = ref<string>(props.state.list.join('\n'))
 const router = useRouter()
 
 async function save() {
-  const list = text.value.split('\n')
-  props.state.list = list
-  props.state.activities = []
+  const list = text.value.trim().split('\n')
+  props.state.list = list.map((url) => url.trim())
   router.push('/subscriptions')
-  props.state.authors = await loadAuthors(list)
 }
 </script>
 

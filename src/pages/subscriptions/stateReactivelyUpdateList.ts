@@ -9,6 +9,7 @@ export function stateReactivelyUpdateList(state: State) {
       window.localStorage.setItem('Subscription:list', listText)
     },
     {
+      immediate: true,
       deep: true,
     },
   )
