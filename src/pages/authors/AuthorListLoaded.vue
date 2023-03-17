@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import { Author } from './Author'
 import AuthorCard from './AuthorCard.vue'
-import { AuthorConfig } from './AuthorConfig'
 
-defineProps<{ authorConfigs: Array<AuthorConfig> }>()
+defineProps<{ authors: Array<Author> }>()
 </script>
 
 <template>
   <div>
     <AuthorCard
-      v-for="(config, index) of authorConfigs"
+      v-for="(author, index) of authors"
       :key="index"
-      :config="config"
+      :author="author"
     />
   </div>
 </template>

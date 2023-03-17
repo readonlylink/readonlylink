@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { AuthorConfig } from './AuthorConfig'
+import { Author } from './Author'
 
-defineProps<{ config: AuthorConfig }>()
+const props = defineProps<{ author: Author }>()
 </script>
 
 <template>
-  <div>{{ config }}</div>
+  <div>{{ author }}</div>
 </template>

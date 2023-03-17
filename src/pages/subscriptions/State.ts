@@ -1,6 +1,7 @@
 import { ExtensionStore } from '../../components/md/extension-store'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
-import { AuthorConfig, AuthorConfigSchema } from '../authors/AuthorConfig'
+import { Author } from '../authors/Author'
+import { AuthorConfigSchema } from '../authors/AuthorConfig'
 import { Activity } from './Activity'
 
 export type State = {
@@ -9,11 +10,6 @@ export type State = {
   authors: Array<Author>
   activities: Array<Activity>
   extensions: ExtensionStore
-}
-
-export type Author = {
-  url: string
-  config: AuthorConfig
 }
 
 export type StateOptions = {

@@ -3,17 +3,26 @@ import { onMounted, ref } from 'vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
-import { AuthorConfig } from './AuthorConfig'
+import { Author } from './Author'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
 import { loadAuthorConfig } from './State'
 
 const list = useDefaultAuthorList()
 
-const authorConfigs = ref<Array<AuthorConfig> | undefined>(undefined)
+const authors = ref<Array<Author> | undefined>(undefined)
 
 onMounted(async () => {
-  authorConfigs.value = await Promise.all(list.map(loadAuthorConfig))
+  authors.value = await Promise.all(
+    list.map(async (url) => {
+      const config = await loadAuthorConfig(url)
+
+      return {
+        url,
+        config,
+      }
+    }),
+  )
 })
 </script>
 
@@ -27,7 +36,7 @@ onMounted(async () => {
         </Lang>
       </div>
 
-      <AuthorListLoaded v-if="authorConfigs" :authorConfigs="authorConfigs" />
+      <AuthorListLoaded v-if="authors" :authors="authors" />
       <AuthorListLoading v-else :list="list" />
     </div>
   </PageLayout>
