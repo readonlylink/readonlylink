@@ -1,5 +1,6 @@
 # subscriptions
 
+back to npm -- pnpm change pnpm-lock.yaml
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes
 [subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter
