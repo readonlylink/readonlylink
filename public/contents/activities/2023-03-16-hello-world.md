@@ -1,10 +1,8 @@
 ---
-title: Hello World
-author: Readonly.Link
 date: 2023-03-16
 ---
 
-First activity of Readonly.Link.
+First activity of [Readonly.Link](https://readonly.link).
 
 # examples
 
