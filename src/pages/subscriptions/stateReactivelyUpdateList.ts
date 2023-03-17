@@ -6,7 +6,7 @@ export function stateReactivelyUpdateList(state: State) {
     () => state.list,
     (value) => {
       const listText = value.join('\n')
-      window.localStorage.setItem('SubscriptionList:list', listText)
+      window.localStorage.setItem('Subscription:list', listText)
     },
     {
       deep: true,

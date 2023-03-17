@@ -36,7 +36,7 @@ export async function loadState(options: StateOptions): Promise<State> {
 }
 
 async function loadList(): Promise<Array<string>> {
-  const listText = window.localStorage.getItem(`SubscriptionList:list`)
+  const listText = window.localStorage.getItem(`Subscription:list`)
   if (!listText) {
     return []
   }

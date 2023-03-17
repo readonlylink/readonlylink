@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import SubscriptionListLoaded from './SubscriptionListLoaded.vue'
-import SubscriptionListLoading from './SubscriptionListLoading.vue'
-import SubscriptionListEditor from './SubscriptionListEditor.vue'
+import SubscriptionLoaded from './SubscriptionLoaded.vue'
+import SubscriptionLoading from './SubscriptionLoading.vue'
+import SubscriptionEditor from './SubscriptionEditor.vue'
 import { loadState, State } from './State'
 
 const route = useRoute()
@@ -30,6 +30,6 @@ watch(
 </script>
 
 <template>
-  <SubscriptionListLoaded v-if="state" :state="state" />
-  <SubscriptionListLoading v-else :options="useStateOptions()" />
+  <SubscriptionLoaded v-if="state" :state="state" />
+  <SubscriptionLoading v-else :options="useStateOptions()" />
 </template>

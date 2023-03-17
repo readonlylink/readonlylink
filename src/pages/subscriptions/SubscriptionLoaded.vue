@@ -6,8 +6,8 @@ import Hyperlink from '../../components/Hyperlink.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
-import SubscriptionListAuthor from './SubscriptionListAuthor.vue'
-import SubscriptionListActivity from './SubscriptionListActivity.vue'
+import SubscriptionAuthor from './SubscriptionAuthor.vue'
+import SubscriptionActivity from './SubscriptionActivity.vue'
 
 const props = defineProps<{ state: State }>()
 const state = stateReactive(props.state)
@@ -41,7 +41,7 @@ watch(
         </div>
 
         <div class="flex space-x-3 py-4 overflow-x-auto pr-10">
-          <SubscriptionListAuthor
+          <SubscriptionAuthor
             v-for="(author, index) of state.authors"
             :key="index"
             :state="state"
@@ -53,7 +53,7 @@ watch(
       <div class="border-b border-black"></div>
 
       <div class="flex flex-col divide-y divide-black">
-        <SubscriptionListActivity
+        <SubscriptionActivity
           v-for="(activity, index) of state.activities"
           :key="index"
           :state="state"

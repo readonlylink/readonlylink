@@ -8,7 +8,7 @@ import PageNotFound from './errors/PageNotFound.vue'
 import Home from './home/Home.vue'
 import Manual from './manuals/Manual.vue'
 import ManualEntrance from './manuals/ManualEntrance.vue'
-import SubscriptionList from './subscriptions/SubscriptionList.vue'
+import Subscription from './subscriptions/Subscription.vue'
 import AuthorList from './authors/AuthorList.vue'
 import History from './history/History.vue'
 
@@ -34,7 +34,7 @@ export const routes: Array<RouteRecordRaw> = [
 
   { path: '/history', component: History },
 
-  { path: '/subscriptions', component: SubscriptionList },
+  { path: '/subscriptions', component: Subscription },
 
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
