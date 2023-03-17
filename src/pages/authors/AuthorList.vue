@@ -6,13 +6,14 @@ import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
 import { AuthorConfig } from './AuthorConfig'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
+import { loadAuthorConfig } from './State'
 
 const list = useDefaultAuthorList()
 
 const authorConfigs = ref<Array<AuthorConfig> | undefined>(undefined)
 
 onMounted(async () => {
-  // authorConfigs.value = await loadAuthorConfigs()
+  authorConfigs.value = await Promise.all(list.map(loadAuthorConfig))
 })
 </script>
 

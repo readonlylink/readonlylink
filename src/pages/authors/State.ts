@@ -36,7 +36,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   }
 }
 
-async function loadAuthorConfig(url: string): Promise<AuthorConfig> {
+export async function loadAuthorConfig(url: string): Promise<AuthorConfig> {
   const response = await fetch(url)
   const json = await response.json()
   const config = AuthorConfigSchema.validate(json)

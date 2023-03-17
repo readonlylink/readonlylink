@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { AuthorConfig } from './AuthorConfig'
 
-defineProps<{ authorConfig: AuthorConfig }>()
+defineProps<{ config: AuthorConfig }>()
 </script>
 
 <template>
-  <div>{{ authorConfig }}</div>
+  <div>{{ config }}</div>
 </template>

@@ -8,9 +8,9 @@ defineProps<{ authorConfigs: Array<AuthorConfig> }>()
 <template>
   <div>
     <AuthorCard
-      v-for="(authorConfig, index) of authorConfigs"
+      v-for="(config, index) of authorConfigs"
       :key="index"
-      :authorConfig="authorConfig"
+      :config="config"
     />
   </div>
 </template>
