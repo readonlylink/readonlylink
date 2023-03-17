@@ -1,7 +1,7 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListLoaded` -- show `authors` -- like youtube
-[subscriptions] `SubscriptionListLoaded` -- show `activities`
+[subscriptions] `SubscriptionListAuthor` -- show `avatar`
+[subscriptions] `SubscriptionListActivity` -- show `activities`
 [subscriptions] `SubscriptionListEditor`
 
 # authors
