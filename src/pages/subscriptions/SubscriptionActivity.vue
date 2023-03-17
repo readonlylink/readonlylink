@@ -29,12 +29,14 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
         />
       </Hyperlink>
 
-      <div class="flex flex-col space-y-1 overflow-x-auto">
+      <div class="flex flex-col space-y-1 overflow-x-auto overflow-y-hidden">
         <Hyperlink
           :href="`/authors/${activity.author.url}`"
           class="hover:text-stone-400"
         >
-          <div class="overflow-x-auto whitespace-pre text-lg font-bold">
+          <div
+            class="overflow-x-auto overflow-y-hidden whitespace-pre text-lg font-bold"
+          >
             {{ activity.author.config.name }}
           </div>
         </Hyperlink>
@@ -42,12 +44,16 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
           :href="`/authors/${activity.author.url}`"
           class="hover:underline"
         >
-          <div class="overflow-x-auto whitespace-pre font-mono text-xs">
+          <div
+            class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
+          >
             {{ activity.author.url }}
           </div>
         </Hyperlink>
         <Hyperlink :href="`/articles/${articleURL}`" class="hover:underline">
-          <div class="overflow-x-auto whitespace-pre font-mono text-xs">
+          <div
+            class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
+          >
             {{ activity.path }}
           </div>
         </Hyperlink>

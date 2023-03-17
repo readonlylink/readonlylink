@@ -9,7 +9,7 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
 </script>
 
 <template>
-  <div class="flex items-start space-x-2">
+  <div class="flex items-center space-x-2">
     <Hyperlink :href="`/authors/${author.url}`" class="shrink-0 object-contain">
       <img
         :src="avatarURL.href"
@@ -21,18 +21,22 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
 
     <div class="flex flex-col overflow-x-auto">
       <Hyperlink :href="`/authors/${author.url}`" class="hover:text-stone-400">
-        <div class="overflow-x-auto whitespace-pre text-xl font-bold">
+        <div
+          class="overflow-x-auto overflow-y-hidden whitespace-pre text-2xl font-bold"
+        >
           {{ author.config.name }}
         </div>
       </Hyperlink>
       <Hyperlink :href="`/authors/${author.url}`" class="hover:underline">
-        <div class="overflow-x-auto whitespace-pre font-mono text-base">
+        <div
+          class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-base"
+        >
           {{ author.url }}
         </div>
       </Hyperlink>
       <div
         v-if="author.config.tagline"
-        class="overflow-x-auto whitespace-pre font-serif text-lg italic"
+        class="overflow-x-auto overflow-y-hidden whitespace-pre font-serif text-lg italic"
       >
         {{ author.config.tagline }}
       </div>
