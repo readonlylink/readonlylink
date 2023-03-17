@@ -3,6 +3,7 @@ import { AuthorConfig, AuthorConfigSchema } from '../authors/AuthorConfig'
 import { Activity } from './Activity'
 
 export type State = {
+  kind?: string
   list: Array<string>
   authors: Array<Author>
   activities: Array<Activity>
@@ -14,15 +15,19 @@ export type Author = {
   config: AuthorConfig
 }
 
-export type StateOptions = {}
+export type StateOptions = {
+  kind?: string
+}
 
-export async function loadState(options: {}): Promise<State> {
+export async function loadState(options: StateOptions): Promise<State> {
+  const { kind } = options
   const list = await loadList()
   const authors = await loadAuthors(list)
   const extensions = new ExtensionStore()
   const activities: Array<Activity> = []
 
   return {
+    kind,
     list,
     authors,
     extensions,

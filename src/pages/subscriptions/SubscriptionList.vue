@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import SubscriptionListLoaded from './SubscriptionListLoaded.vue'
 import SubscriptionListLoading from './SubscriptionListLoading.vue'
+import SubscriptionListEditor from './SubscriptionListEditor.vue'
 import { loadState, State } from './State'
 
 const route = useRoute()
@@ -10,7 +11,11 @@ const route = useRoute()
 const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
-  return {}
+  const kind = route.query['kind'] ? String(route.query['kind']) : undefined
+
+  return {
+    kind,
+  }
 }
 
 watch(

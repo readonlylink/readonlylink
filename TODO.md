@@ -1,7 +1,8 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListActivity` -- `MdPage` should not show attributes
 [subscriptions] `SubscriptionListEditor`
+[subscriptions] `SubscriptionListActivity` -- `MdPage` should not show attributes
+[subscriptions] `SubscriptionListActivity` -- only use `document` that has `date`
 [subscriptions] `SubscriptionListAuthor` -- click to set filter
 
 # authors
