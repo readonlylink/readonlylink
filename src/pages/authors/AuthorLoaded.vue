@@ -16,10 +16,12 @@ const state = stateReactive(props.state)
       <title>{{ stateTitle(state) }}</title>
     </Head>
 
-    <MdPage
-      :key="state.url"
-      :document="state.homepage.document"
-      :customComponents="state.extensions.components"
-    />
+    <div class="m-6">
+      <MdPage
+        :key="state.url"
+        :document="state.homepage.document"
+        :customComponents="state.extensions.components"
+      />
+    </div>
   </div>
 </template>
