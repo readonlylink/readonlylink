@@ -1,10 +1,9 @@
 # authors
 
-[authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author's `activities`
+[authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author
 
 # subscriptions
 
-[subscriptions] `SubscriptionActivity` -- fix scroll style on chrome
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes -- use `Activity` page kind
 [subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter
