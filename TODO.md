@@ -1,8 +1,8 @@
 # authors
 
-[authors] `AuthorList` -- show a list of authors -- with avatar, link to homepage
+[authors] `AuthorCard` -- show a list of authors -- with avatar, link to homepage
 
-extract `reactives/useGlobalSubscriptionList`
+extract `reactives/useGlobalAuthorList`
 
 [authors] `AuthorLoaded` -- add a SUBSCRIBE button to subscribe a author's `activities`
 

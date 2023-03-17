@@ -1,4 +1,5 @@
 import { ExtensionStore } from '../../components/md/extension-store'
+import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
 import { AuthorConfig, AuthorConfigSchema } from '../authors/AuthorConfig'
 import { Activity } from './Activity'
 
@@ -19,17 +20,12 @@ export type StateOptions = {
   kind?: string
 }
 
-const defaultList = [
-  'https://readonly.link/contents/author.json',
-  'https://inner.xieyuheng.com/author.json',
-]
-
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind } = options
   let list = await loadList()
 
   if (list.length === 0) {
-    list = defaultList
+    list = useDefaultAuthorList()
   }
 
   const authors = await loadAuthors(list)
