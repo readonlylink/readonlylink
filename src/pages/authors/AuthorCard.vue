@@ -15,14 +15,14 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
         class="object-contain"
         :src="avatarURL.href"
         :alt="author.config.name"
-        width="85"
-        height="85"
+        width="95"
+        height="95"
       />
     </Hyperlink>
 
-    <div class="flex flex-col space-y-1">
+    <div class="flex flex-col">
       <Hyperlink :href="`/authors/${author.url}`" class="hover:text-stone-400">
-        <div class="text-2xl font-bold">
+        <div class="text-xl font-bold">
           {{ author.config.name }}
         </div>
       </Hyperlink>
@@ -31,6 +31,9 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
           {{ author.url }}
         </div>
       </Hyperlink>
+      <div class="font-mono text-base">
+        <span>TODO</span>
+      </div>
     </div>
   </div>
 </template>

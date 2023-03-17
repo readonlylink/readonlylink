@@ -7,7 +7,7 @@ import HomeSlogan from './HomeSlogan.vue'
 <template>
   <PageLayout>
     <div>
-      <HomeSlogan class="my-2" />
+      <HomeSlogan />
 
       <div class="flex items-baseline space-x-4">
         <Lang class="font-logo text-2xl font-semibold text-stone-800">

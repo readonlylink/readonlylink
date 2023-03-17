@@ -16,7 +16,7 @@ const lang = useGlobalLang()
       <title v-else>About | Readonly</title>
     </Head>
 
-    <AboutSlogan class="my-2" />
+    <AboutSlogan />
 
     <div class="flex items-baseline space-x-4">
       <div class="font-logo text-2xl font-semibold text-stone-800">

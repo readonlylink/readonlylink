@@ -1,5 +1,6 @@
 # authors
 
+[authors] `AuthorConfig` has one line description
 [authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author
 
 # subscriptions
