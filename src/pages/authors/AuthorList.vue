@@ -6,7 +6,7 @@ import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
 import { Author } from './Author'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
-import { loadAuthorConfig } from './State'
+import { loadAuthorConfig } from './loadAuthorConfig'
 
 const list = useDefaultAuthorList()
 

@@ -1,6 +1,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { ExtensionStore } from '../../components/md/extension-store'
-import { AuthorConfig, AuthorConfigSchema } from './AuthorConfig'
+import { AuthorConfig } from './AuthorConfig'
+import { loadAuthorConfig } from './loadAuthorConfig'
 
 type Homepage = {
   text: string
@@ -34,13 +35,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     extensions,
     homepage,
   }
-}
-
-export async function loadAuthorConfig(url: string): Promise<AuthorConfig> {
-  const response = await fetch(url)
-  const json = await response.json()
-  const config = AuthorConfigSchema.validate(json)
-  return config
 }
 
 async function loadHomepage(
