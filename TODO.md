@@ -1,7 +1,5 @@
 # authors
 
-extract `reactives/useGlobalAuthorList`
-
 [authors] `AuthorLoaded` -- add a SUBSCRIBE button to subscribe a author's `activities`
 
 # subscriptions

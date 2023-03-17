@@ -1,5 +1,6 @@
 import { ExtensionStore } from '../../components/md/extension-store'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
+import { useGlobalAuthorList } from '../../reactives/useGlobalAuthorList'
 import { Author } from '../authors/Author'
 import { AuthorConfigSchema } from '../authors/AuthorConfig'
 import { Activity } from './Activity'
@@ -18,7 +19,7 @@ export type StateOptions = {
 
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind } = options
-  let list = await loadList()
+  let list = await useGlobalAuthorList()
 
   if (list.length === 0) {
     list = useDefaultAuthorList()
@@ -34,15 +35,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     extensions,
     activities: [],
   }
-}
-
-async function loadList(): Promise<Array<string>> {
-  const listText = window.localStorage.getItem(`Subscription:list`)
-  if (!listText) {
-    return []
-  }
-
-  return listText.split('\n')
 }
 
 export async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
