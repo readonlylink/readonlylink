@@ -1,6 +1,6 @@
 {
   "name": "Readonly.Link",
-  "tagline": "Readonly links, for your read only",
+  "tagline": "Readonly links, for your read only.",
   "homepage": "README.md",
   "avatar": "assets/images/readonly-logo.svg",
   "activities": ["activities/2023-03-16-hello-world.md"]
