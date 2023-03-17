@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Hyperlink from '../../components/Hyperlink.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
@@ -11,7 +12,7 @@ const state = stateReactive(props.state)
 
 <template>
   <PageLayout>
-    <div class="flex">
+    <div class="flex space-x-3 py-4">
       <SubscriptionListAuthor
         v-for="(author, index) of state.authors"
         :key="index"
@@ -20,7 +21,9 @@ const state = stateReactive(props.state)
       />
     </div>
 
-    <div class="flex flex-col">
+    <div class="border-b border-black"></div>
+
+    <div class="flex flex-col divide-y divide-black">
       <SubscriptionListActivity
         v-for="(activity, index) of state.activities"
         :key="index"

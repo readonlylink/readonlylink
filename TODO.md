@@ -1,6 +1,5 @@
 # subscriptions
 
-[subscriptions] `SubscriptionListAuthor` -- show `avatar`
 [subscriptions] `SubscriptionListActivity` -- show `activities`
 [subscriptions] `SubscriptionListEditor`
 
