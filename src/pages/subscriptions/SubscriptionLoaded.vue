@@ -1,13 +1,9 @@
 <script setup lang="ts">
+import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { PencilSquareIcon } from '@heroicons/vue/24/outline'
-import Hyperlink from '../../components/Hyperlink.vue'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
-import SubscriptionAuthor from './SubscriptionAuthor.vue'
-import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionList from './SubscriptionList.vue'
 import SubscriptionEditor from './SubscriptionEditor.vue'
 
@@ -29,6 +25,8 @@ watch(
 </script>
 
 <template>
-  <SubscriptionEditor v-if="state.kind === 'Editor'" :state="state" />
-  <SubscriptionList v-else :state="state" />
+  <PageLayout>
+    <SubscriptionEditor v-if="state.kind === 'Editor'" :state="state" />
+    <SubscriptionList v-else :state="state" />
+  </PageLayout>
 </template>

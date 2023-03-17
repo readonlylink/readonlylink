@@ -13,39 +13,37 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <PageLayout>
-    <div>
-      <div class="relative">
-        <div class="absolute z-10 right-0 top-0">
-          <Hyperlink href="/subscriptions?kind=Editor">
-            <button
-              class="border border-black opacity-90 bg-white rounded-full p-2"
-            >
-              <PencilSquareIcon class="w-5 h-5" />
-            </button>
-          </Hyperlink>
-        </div>
-
-        <div class="flex space-x-3 py-4 overflow-x-auto pr-10">
-          <SubscriptionAuthor
-            v-for="(author, index) of state.authors"
-            :key="index"
-            :state="state"
-            :author="author"
-          />
-        </div>
+  <div>
+    <div class="relative">
+      <div class="absolute z-10 right-0 top-0">
+        <Hyperlink href="/subscriptions?kind=Editor">
+          <button
+            class="border border-black opacity-90 bg-white rounded-full p-2"
+          >
+            <PencilSquareIcon class="w-5 h-5" />
+          </button>
+        </Hyperlink>
       </div>
 
-      <div class="border-b border-black"></div>
-
-      <div class="flex flex-col divide-y divide-black">
-        <SubscriptionActivity
-          v-for="(activity, index) of state.activities"
+      <div class="flex space-x-3 py-4 overflow-x-auto pr-10">
+        <SubscriptionAuthor
+          v-for="(author, index) of state.authors"
           :key="index"
           :state="state"
-          :activity="activity"
+          :author="author"
         />
       </div>
     </div>
-  </PageLayout>
+
+    <div class="border-b border-black"></div>
+
+    <div class="flex flex-col divide-y divide-black">
+      <SubscriptionActivity
+        v-for="(activity, index) of state.activities"
+        :key="index"
+        :state="state"
+        :activity="activity"
+      />
+    </div>
+  </div>
 </template>
