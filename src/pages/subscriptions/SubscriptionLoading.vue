@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Lang from '../../components/Lang.vue'
-import { StateOptions } from './State'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import { StateOptions } from './loadState'
 
 defineProps<{ options: StateOptions }>()
 </script>
