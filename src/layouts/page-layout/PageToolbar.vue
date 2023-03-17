@@ -8,10 +8,6 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex">
-    <div class="mr-2 flex text-stone-400 hover:text-stone-900">
-      <PageLang />
-
-      <LanguageIcon class="w-5 p-px" />
-    </div>
+    <PageLang class="text-stone-400 hover:text-stone-900" />
   </div>
 </template>

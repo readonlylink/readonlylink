@@ -1,5 +1,7 @@
 # subscriptions
 
+[subscriptions] `SubscriptionEditor` -- be able to edit list
+[subscriptions] [maybe] `SubscriptionWelcome` -- when list is empty
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes
 [subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter

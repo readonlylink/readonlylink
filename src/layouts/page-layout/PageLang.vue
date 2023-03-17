@@ -5,6 +5,7 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/vue'
+import { LanguageIcon } from '@heroicons/vue/24/outline'
 import { ArrowsUpDownIcon, CheckIcon } from '@heroicons/vue/24/outline'
 import Lang from '../../components/Lang.vue'
 import { langTagName, useGlobalLang } from '../../reactives/useGlobalLang'
@@ -21,6 +22,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <ArrowsUpDownIcon class="h-5 w-5" />
+      <LanguageIcon class="w-5 p-px" />
     </ListboxButton>
 
     <Transition
