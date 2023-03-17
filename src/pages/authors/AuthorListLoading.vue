@@ -11,7 +11,7 @@ defineProps<{ list: Array<string> }>()
       <template #en> Loading author list ... </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre py-1 font-mono text-sm">
+    <div class="overflow-x-auto whitespace-pre py-1 font-mono text-base">
       <div v-for="(url, index) of list" :key="index">
         {{ url }}
       </div>

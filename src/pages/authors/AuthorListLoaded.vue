@@ -6,7 +6,7 @@ defineProps<{ authors: Array<Author> }>()
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col space-y-2 py-2">
     <AuthorCard
       v-for="(author, index) of authors"
       :key="index"
