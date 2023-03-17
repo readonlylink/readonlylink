@@ -5,8 +5,11 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/vue'
-import { LanguageIcon } from '@heroicons/vue/24/outline'
-import { ArrowsUpDownIcon, CheckIcon } from '@heroicons/vue/24/outline'
+import {
+  ArrowsUpDownIcon,
+  CheckIcon,
+  LanguageIcon,
+} from '@heroicons/vue/24/outline'
 import Lang from '../../components/Lang.vue'
 import { langTagName, useGlobalLang } from '../../reactives/useGlobalLang'
 

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { LanguageIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 import PageLang from './PageLang.vue'
 

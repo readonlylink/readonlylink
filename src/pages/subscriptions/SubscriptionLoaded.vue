@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
+import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
-import SubscriptionList from './SubscriptionList.vue'
 import SubscriptionEditor from './SubscriptionEditor.vue'
+import SubscriptionList from './SubscriptionList.vue'
 
 const props = defineProps<{ state: State }>()
 
