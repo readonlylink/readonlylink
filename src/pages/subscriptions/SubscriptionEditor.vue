@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
-import { State } from './State'
+import { loadAuthors, State } from './State'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps<{ state: State }>()
 
 const text = ref<string>(props.state.list.join('\n'))
 
-function save() {
-  props.state.list = text.value.split('\n')
+const router = useRouter()
+
+async function save() {
+  const list = text.value.split('\n')
+  props.state.list = list
+  props.state.activities = []
+  router.push('/subscriptions')
+  props.state.authors = await loadAuthors(list)
 }
 </script>
 

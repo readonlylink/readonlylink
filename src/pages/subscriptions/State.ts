@@ -44,7 +44,7 @@ async function loadList(): Promise<Array<string>> {
   return listText.split('\n')
 }
 
-async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
+export async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
   const who = 'loadAuthors'
 
   const authors: Array<Author> = []
