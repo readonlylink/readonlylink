@@ -31,10 +31,10 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
         </div>
       </Hyperlink>
       <div
-        v-if="author.tagline"
-        class="overflow-x-auto whitespace-pre font-serif text-base"
+        v-if="author.config.tagline"
+        class="overflow-x-auto whitespace-pre font-serif text-lg"
       >
-        {{ author.tagline }}
+        {{ author.config.tagline }}
       </div>
     </div>
   </div>
