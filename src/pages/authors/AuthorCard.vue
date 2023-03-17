@@ -32,7 +32,7 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
       </Hyperlink>
       <div
         v-if="author.config.tagline"
-        class="overflow-x-auto whitespace-pre font-serif text-lg"
+        class="overflow-x-auto whitespace-pre font-serif text-lg italic"
       >
         {{ author.config.tagline }}
       </div>
