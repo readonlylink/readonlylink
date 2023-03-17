@@ -1,6 +1,6 @@
 # authors
 
-[authors] `AuthorLoaded` -- add a SUBSCRIBE button to subscribe a author's `activities`
+[authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author's `activities`
 
 # subscriptions
 
