@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Author } from '../authors/Author'
+import { Author } from '../author/Author'
 import { State } from './State'
 
 const props = defineProps<{

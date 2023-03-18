@@ -1,6 +1,10 @@
+extract `author-list` directory
+extract `book-entrance` directory
+extract `manual-entrance` directory
+extract `article-entrance` directory
+
 # authors
 
-[authors] `AuthorConfig` has one line description
 [authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author
 
 # subscriptions

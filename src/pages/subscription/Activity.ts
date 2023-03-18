@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { Author } from '../authors/Author'
+import { Author } from '../author/Author'
 
 export type Activity = {
   author: Author

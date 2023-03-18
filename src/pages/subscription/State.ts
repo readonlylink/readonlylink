@@ -1,5 +1,5 @@
 import { ExtensionStore } from '../../components/md/extension-store'
-import { Author } from '../authors/Author'
+import { Author } from '../author/Author'
 import { Activity } from './Activity'
 
 export type State = {
