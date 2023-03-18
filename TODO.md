@@ -1,5 +1,6 @@
 # subscriptions
 
+[subscriptions] `SubscriptionWelcome`
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes -- use `Activity` page kind
 [subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter
