@@ -85,7 +85,7 @@ const lang = useGlobalLang()
 
       <Lang>
         <template #zh>
-          在设计解决方案自己用的同时，我也能作一个网络服务，让大家都能用。
+          在设计自己用的解决方案时，也能作一个网络服务让大家都能用。
         </template>
         <template #en>
           When designing a solution for myself, I can also build it as a web
@@ -95,7 +95,7 @@ const lang = useGlobalLang()
 
       <Lang>
         <template #zh> 何乐而不为呢？ </template>
-        <template #en> I am glad to just do that! </template>
+        <template #en> I am glad to do so. </template>
       </Lang>
     </main>
   </PageLayout>
