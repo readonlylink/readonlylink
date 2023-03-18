@@ -1,6 +1,6 @@
 <script setup>
-import { MdPageState as State } from '../../md-page-state'
 import MdNode from '../../MdNode.vue'
+import { MdPageState as State } from '../../MdPageState'
 
 const props = defineProps({ state: State })
 </script>

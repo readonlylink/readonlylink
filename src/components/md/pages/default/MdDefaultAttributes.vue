@@ -7,7 +7,7 @@ import {
   PencilIcon,
 } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
-import { normalizeAttributes } from './normalize-attributes'
+import { normalizeAttributes } from './normalizeAttributes'
 
 const props = defineProps({ attributes: Object })
 

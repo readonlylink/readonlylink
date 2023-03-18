@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { ExtensionStore } from '../../components/md/extension-store'
+import { ExtensionStore } from '../../components/md/ExtensionStore'
 import { AuthorConfig } from './AuthorConfig'
 import { loadAuthorConfig } from './loadAuthorConfig'
 

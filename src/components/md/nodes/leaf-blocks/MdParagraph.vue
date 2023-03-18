@@ -2,7 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
 import MdNode from '../../MdNode.vue'
-import { MdPageState as State } from '../../md-page-state'
+import { MdPageState as State } from '../../MdPageState'
 
 const props = defineProps({ state: State, node: Nodes.Paragraph })
 

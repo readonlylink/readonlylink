@@ -1,5 +1,3 @@
-fix file naming
-
 [md] support `<link-card>` -- for activity
 
 [home] add more default authors

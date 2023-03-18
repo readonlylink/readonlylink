@@ -2,7 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
-import { MdPageState as State } from '../../md-page-state'
+import { MdPageState as State } from '../../MdPageState'
 
 import MdNode from '../../MdNode.vue'
 

@@ -1,1 +1,1 @@
-export * from './render-kind'
+export * from './RenderKind'

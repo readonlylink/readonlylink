@@ -1,5 +1,5 @@
 import { join } from 'path-browserify'
-import { ExtensionStore } from '../../components/md/extension-store'
+import { ExtensionStore } from '../../components/md/ExtensionStore'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { BookConfig, loadBookConfig } from './BookConfig'
 

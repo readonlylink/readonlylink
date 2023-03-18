@@ -1,7 +1,7 @@
 <script setup>
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, reactive } from 'vue'
-import { MdPageState as State } from './md-page-state'
+import { MdPageState as State } from './MdPageState'
 
 import { components } from './pages'
 

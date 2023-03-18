@@ -1,7 +1,7 @@
 <script setup>
 import { Nodes } from '@xieyuheng/postmark'
 import MdNode from '../../MdNode.vue'
-import { MdPageState as State } from '../../md-page-state'
+import { MdPageState as State } from '../../MdPageState'
 
 defineProps({ state: State, node: Nodes.Item })
 </script>

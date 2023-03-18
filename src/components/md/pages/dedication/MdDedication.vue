@@ -1,5 +1,5 @@
 <script setup>
-import { MdPageState as State } from '../../md-page-state'
+import { MdPageState as State } from '../../MdPageState'
 
 import MdNode from '../../MdNode.vue'
 

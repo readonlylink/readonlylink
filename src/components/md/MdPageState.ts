@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { CustomComponent } from './extension-store'
+import { CustomComponent } from './ExtensionStore'
 
 export class MdPageState {
   document: Nodes.Document

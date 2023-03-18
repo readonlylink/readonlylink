@@ -1,4 +1,4 @@
-import { ExtensionStore } from '../../components/md/extension-store'
+import { ExtensionStore } from '../../components/md/ExtensionStore'
 import { Author } from '../author/Author'
 import { Activity } from './Activity'
 
