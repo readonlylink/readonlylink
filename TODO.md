@@ -1,4 +1,4 @@
-[md] support `<link-card>` -- for activity
+[md] support `<readonlylink>` -- for activity
 
 [home] add more default authors
 

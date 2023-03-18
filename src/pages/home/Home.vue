@@ -4,7 +4,6 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
 import HomeLoaded from './HomeLoaded.vue'
 import HomeLoading from './HomeLoading.vue'
-import HomeSlogan from './HomeSlogan.vue'
 import { State } from './State'
 import { loadState } from './loadState'
 
@@ -25,8 +24,6 @@ onMounted(async () => {
 
 <template>
   <PageLayout>
-    <HomeSlogan class="pb-2" />
-
     <HomeLoaded v-if="state" :state="state" />
     <HomeLoading v-else :options="useStateOptions()" />
   </PageLayout>
