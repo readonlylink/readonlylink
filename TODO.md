@@ -1,6 +1,7 @@
 # subscriptions
 
-[subscriptions] `SubscriptionActivity` -- only use `document` that has `date`
+[subscriptions] `SubscriptionActivity` -- show `date`
+[subscriptions] `stateLoadActivities` -- sort by `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter
 
 # home
