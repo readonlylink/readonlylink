@@ -9,9 +9,9 @@ const props = defineProps<{
 }>()
 
 const plugin = computed(() =>
-  props.state.customComponents.find(
+  props.state.plugins.find(
     (component) =>
-      component.kind === 'CustomBlock' &&
+      component['@kind'] === 'BlockPlugin' &&
       component.customKind === props.node.customKind,
   ),
 )
@@ -21,7 +21,7 @@ const plugin = computed(() =>
   <component
     v-if="plugin"
     :is="plugin.component"
-    v-bind="plugin.props(node)"
+    v-bind="plugin.propsFromNode(node)"
     :pageState="state"
   />
   <span

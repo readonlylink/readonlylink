@@ -1,7 +1,7 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { CustomComponent } from './CustomComponent'
+import { Plugin } from './Plugin'
 
 export type State = {
   document: Nodes.Document
-  customComponents: Array<CustomComponent>
+  plugins: Array<Plugin>
 }
