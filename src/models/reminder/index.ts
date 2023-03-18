@@ -1,1 +1,1 @@
-export * from './reminder'
+export * from './Reminder'
