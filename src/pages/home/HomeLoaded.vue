@@ -3,8 +3,11 @@ import Lang from '../../components/Lang.vue'
 import { stateActivitiesForShow } from '../subscription/stateActivitiesForShow'
 import SubscriptionActivity from '../subscription/SubscriptionActivity.vue'
 import { State } from './State'
+import { stateReactive } from './stateReactive'
 
-defineProps<{ state: State }>()
+const props = defineProps<{ state: State }>()
+
+const state = stateReactive(props.state)
 </script>
 
 <template>

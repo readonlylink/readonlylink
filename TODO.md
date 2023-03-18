@@ -1,3 +1,7 @@
+[home] `stateReactivelyUpdateActivities`
+
+- should not wait for all the activities during `loadState`
+
 [md-plugin] `ReadonlylinkLoaded` -- dispatch to different kinds
 
 [md-plugin] `ReadonlylinkArticle`
@@ -10,8 +14,6 @@
 - cicada-lang
 - fidb
 - mimor
-
-[home] should not wait for all the activities
 
 [manual] fix scroll on page change
 
