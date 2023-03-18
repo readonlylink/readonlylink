@@ -1,5 +1,3 @@
-use `@xieyuheng/x-node` package
-
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors
@@ -24,6 +22,5 @@ use `@xieyuheng/x-node` package
 
 # later
 
-[refactor] `md/` uses `lang="ts"`
 [refactor] improve `@xieyuheng/postmark` API
 [md] add katex extensions back
