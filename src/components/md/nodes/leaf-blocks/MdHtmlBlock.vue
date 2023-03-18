@@ -2,7 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { onMounted } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 
 const props = defineProps<{
   state: State

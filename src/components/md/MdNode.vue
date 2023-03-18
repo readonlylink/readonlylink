@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Node } from '@xieyuheng/postmark'
 import { computed } from 'vue'
-import { MdPageState as State } from './MdPageState'
+import { State } from './State'
 import { components } from './nodes'
 
 const props = defineProps<{

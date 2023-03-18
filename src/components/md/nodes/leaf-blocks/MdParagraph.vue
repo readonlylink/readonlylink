@@ -2,7 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
 import MdNode from '../../MdNode.vue'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 
 const props = defineProps<{
   state: State

@@ -1,7 +1,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { CustomComponent } from './ExtensionStore'
 
-export class MdPageState {
+export class State {
   document: Nodes.Document
   customComponents: Array<CustomComponent>
 

@@ -2,7 +2,7 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Nodes } from '@xieyuheng/postmark'
 import MdNode from '../../../md/MdNode.vue'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 
 defineProps<{
   state: State

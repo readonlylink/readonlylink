@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MdNode from '../../MdNode.vue'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 import MdDefaultAttributes from './MdDefaultAttributes.vue'
 import MdDefaultTitle from './MdDefaultTitle.vue'
 

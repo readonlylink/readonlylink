@@ -1,3 +1,4 @@
+[md] `State` should be just a type instead of a class
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors

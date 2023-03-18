@@ -3,7 +3,7 @@ import { Nodes } from '@xieyuheng/postmark'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
 import MdNode from '../../MdNode.vue'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 
 const props = defineProps<{
   state: State

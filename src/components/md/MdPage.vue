@@ -2,7 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, reactive } from 'vue'
 import { CustomComponent } from './ExtensionStore'
-import { MdPageState as State } from './MdPageState'
+import { State } from './State'
 import { components } from './pages'
 
 const props = defineProps<{

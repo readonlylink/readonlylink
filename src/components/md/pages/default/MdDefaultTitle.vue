@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { MdPageState as State } from '../../MdPageState'
+import { State } from '../../State'
 
 const props = defineProps<{ state: State }>()
 
