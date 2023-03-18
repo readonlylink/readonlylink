@@ -1,14 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
+import MdNode from '../../MdNode.vue'
 import { MdPageState as State } from '../../MdPageState'
 
-import MdNode from '../../MdNode.vue'
+const props = defineProps<{
+  state: State
+  node: Nodes.Headline
+}>()
 
-const props = defineProps({ state: State, node: Nodes.Headline })
-
-const headlineElement = ref(null)
+const headlineElement = ref<Element | null>(null)
 
 const headlineId = computed(() => {
   const text = props.node.children.map((child) => child.format()).join('')
@@ -27,7 +29,7 @@ watch(
   { immediate: true },
 )
 
-async function scrollForHash(hash) {
+async function scrollForHash(hash: string) {
   await nextTick()
   await nextTick()
   await nextTick()

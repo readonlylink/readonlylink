@@ -1,10 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
 import MdNode from '../../MdNode.vue'
 import { MdPageState as State } from '../../MdPageState'
 
-const props = defineProps({ state: State, node: Nodes.Paragraph })
+const props = defineProps<{
+  state: State
+  node: Nodes.Paragraph
+}>()
 
 const indent = computed(() => props.state.document.attributes.paragraph?.indent)
 </script>

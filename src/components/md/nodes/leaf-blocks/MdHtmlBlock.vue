@@ -1,9 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { MdPageState as State } from '../../MdPageState'
 
-defineProps({ state: State, node: Nodes.HtmlBlock })
+defineProps<{
+  state: State
+  node: Nodes.HtmlBlock
+}>()
 </script>
 
 <template>

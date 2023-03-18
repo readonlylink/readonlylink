@@ -4,6 +4,8 @@ date: 2023-03-16 16:43+08:00
 
 First activity of [Readonly.Link](https://readonly.link).
 
+<link-card href="https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md" />
+
 # examples
 
 **articles:**

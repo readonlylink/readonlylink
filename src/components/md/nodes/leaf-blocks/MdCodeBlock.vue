@@ -1,9 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import { Nodes } from '@xieyuheng/postmark'
+import Highlight from '../../../Highlight.vue'
 import { MdPageState as State } from '../../MdPageState'
 
-import Highlight from '../../../Highlight.vue'
-
-defineProps({ state: State, node: Object })
+defineProps<{
+  state: State
+  node: Nodes.CodeBlock
+}>()
 </script>
 
 <template>

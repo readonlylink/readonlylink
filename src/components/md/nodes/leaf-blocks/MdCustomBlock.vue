@@ -1,7 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
+import { MdPageState as State } from '../../MdPageState'
 
-const props = defineProps({ state: Object, node: Object })
+const props = defineProps<{
+  state: State
+  node: Nodes.CustomBlock<any>
+}>()
 
 const plugin = computed(() =>
   props.state.customComponents.find(
