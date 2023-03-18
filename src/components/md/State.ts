@@ -5,3 +5,10 @@ export type State = {
   document: Nodes.Document
   plugins: Array<Plugin>
 }
+
+export function createState(document: Nodes.Document): State {
+  return {
+    document,
+    plugins: [],
+  }
+}
