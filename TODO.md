@@ -11,8 +11,6 @@
 - fidb
 - mimor
 
-[manual] fix scroll on page change
-
 [docs] fix `manual/en`
 [docs] fix `manual/zh`
 
