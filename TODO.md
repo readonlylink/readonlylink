@@ -1,4 +1,4 @@
-[md-plugin] `ReadonlylinkLoaded` v.s. `ReadonlylinkLoading`
+add `kind` to all configs -- for `<readonlylink>`
 
 [md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity
 
