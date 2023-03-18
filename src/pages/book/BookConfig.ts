@@ -1,6 +1,7 @@
 import ty, { Schema } from '@xieyuheng/ty'
 
 export type BookConfig = {
+  kind: 'Book'
   title: string
   subtitle?: string
   version: string
@@ -13,6 +14,7 @@ export type BookConfig = {
 }
 
 export const BookConfigSchema: Schema<BookConfig> = ty.object({
+  kind: ty.const('Book' as const),
   title: ty.string(),
   subtitle: ty.optional(ty.string()),
   version: ty.string(),

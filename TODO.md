@@ -1,5 +1,3 @@
-add `kind` to all configs -- for `<readonlylink>`
-
 [md-plugin] `readonlylink/Config`
 
 [md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity

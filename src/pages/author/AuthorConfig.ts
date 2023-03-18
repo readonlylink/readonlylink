@@ -1,6 +1,7 @@
 import ty, { Schema } from '@xieyuheng/ty'
 
 export type AuthorConfig = {
+  kind: 'Author'
   name: string
   tagline?: string
   avatar: string
@@ -9,6 +10,7 @@ export type AuthorConfig = {
 }
 
 export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
+  kind: ty.const('Author' as const),
   name: ty.string(),
   tagline: ty.optional(ty.string()),
   avatar: ty.string(),

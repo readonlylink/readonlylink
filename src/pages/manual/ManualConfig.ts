@@ -1,6 +1,7 @@
 import ty, { Schema } from '@xieyuheng/ty'
 
 export type ManualConfig = {
+  kind: 'Manual'
   title: string
   subtitle?: string
   version: string
@@ -14,6 +15,7 @@ export type ManualConfig = {
 }
 
 export const ManualConfigSchema: Schema<ManualConfig> = ty.object({
+  kind: ty.const('Manual' as const),
   title: ty.string(),
   subtitle: ty.optional(ty.string()),
   version: ty.string(),
