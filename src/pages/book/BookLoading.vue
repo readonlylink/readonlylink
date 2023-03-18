@@ -7,7 +7,7 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <div class="px-4 py-6 font-sans text-xl text-stone-500">
-    <Lang class="font-bold">
+    <Lang class="">
       <template #zh> 书籍加载中⋯⋯ </template>
       <template #en> Loading book ... </template>
     </Lang>
