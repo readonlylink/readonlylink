@@ -11,16 +11,11 @@ const globalSubscription: Subscription = reactive({
 let initialized = false
 
 export function useGlobalSubscription(): Subscription {
-  const who = 'useGlobalSubscription'
-
   if (initialized) {
-    console.log({ who, message: 'initialized', list: globalSubscription.list })
     return globalSubscription
   }
 
   globalSubscription.list = loadList()
-
-  console.log({ who, message: 'loadList', list: globalSubscription.list })
 
   initialized = true
 
