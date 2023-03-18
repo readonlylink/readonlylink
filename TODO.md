@@ -1,4 +1,3 @@
-[book] extract `loadState`
 [manual] extract `loadState`
 
 [md-plugin] `ReadonlylinkLoaded` v.s. `ReadonlylinkLoading`
