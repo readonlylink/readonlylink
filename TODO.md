@@ -1,4 +1,4 @@
-[md-plugin] `readonlylink/Config`
+[md-plugin] `readonlylink/loadConfig`
 
 [md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity
 
