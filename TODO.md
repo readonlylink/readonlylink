@@ -1,4 +1,4 @@
-[md] support `<readonlylink>` -- for activity
+[md-plugin] `Readonlylink` -- show `<readonlylink>` as a card -- for activity
 
 [home] add more default authors
 
