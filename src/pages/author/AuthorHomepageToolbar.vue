@@ -1,27 +1,32 @@
 <script setup lang="ts">
 import { BookmarkIcon, BookmarkSlashIcon } from '@heroicons/vue/24/outline'
 import Lang from '../../components/Lang.vue'
+import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
-defineProps<{ state: State }>()
+const props = defineProps<{ state: State }>()
+
+const subscription = useGlobalSubscription()
 
 function isSubscribed() {
-  return true
+  return subscription.list.includes(props.state.url)
 }
 
-async function subscribe() {
-  //
+function subscribe() {
+  if (!isSubscribed()) {
+    subscription.list = [...subscription.list, props.state.url]
+  }
 }
 
-async function unsubscribe() {
-  //
+function unsubscribe() {
+  subscription.list = subscription.list.filter((url) => url !== props.state.url)
 }
 </script>
 
 <template>
   <div>
     <button
-      v-if="isSubscribed()"
+      v-if="!isSubscribed()"
       class="flex items-center font-sans text-xl text-stone-400 hover:text-stone-800"
       @click="subscribe()"
     >

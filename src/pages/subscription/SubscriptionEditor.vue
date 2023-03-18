@@ -2,17 +2,20 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Lang from '../../components/Lang.vue'
+import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
-const props = defineProps<{ state: State }>()
+defineProps<{ state: State }>()
 
-const text = ref<string>(props.state.list.join('\n'))
+const subscription = useGlobalSubscription()
+
+const text = ref<string>(subscription.list.join('\n'))
 
 const router = useRouter()
 
 async function save() {
   const list = text.value.trim().split('\n')
-  props.state.list = list.map((url) => url.trim())
+  subscription.list = list.map((url) => url.trim())
   router.push('/subscriptions')
 }
 </script>

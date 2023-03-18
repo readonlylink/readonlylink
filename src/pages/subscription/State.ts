@@ -4,7 +4,6 @@ import { Activity } from './Activity'
 
 export type State = {
   kind?: string
-  list: Array<string>
   authors: Array<Author>
   activities: Array<Activity>
   extensions: ExtensionStore

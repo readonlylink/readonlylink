@@ -1,7 +1,3 @@
-# authors
-
-[authors] `AuthorHomepageToolbar` -- support SUBSCRIBE and UNSUBSCRIBE to a author
-
 # subscriptions
 
 [subscriptions] `SubscriptionActivity` -- `MdPage` should not show attributes -- use `Activity` page kind
