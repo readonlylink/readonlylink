@@ -1,3 +1,4 @@
+import { isValidDate } from '../../utils/isValidDate'
 import { State } from './State'
 
 export async function stateLoadActivities(state: State): Promise<void> {
@@ -11,7 +12,7 @@ export async function stateLoadActivities(state: State): Promise<void> {
         const response = await fetch(new URL(path, author.url))
         const text = await response.text()
         const document = state.extensions.parser.parseDocument(text)
-        if (document.attributes.date) {
+        if (isValidDate(document.attributes.date)) {
           document.attributes.kind = 'Activity'
           const activity = { author, path, text, document }
           console.log({ who, activity })
@@ -19,8 +20,8 @@ export async function stateLoadActivities(state: State): Promise<void> {
         } else {
           console.log({
             who,
-            message: 'document has no date attribute',
-            attributes: document.attributes,
+            message: 'document has no valid date attribute',
+            date: document.attributes.date,
           })
         }
       } catch (error) {
