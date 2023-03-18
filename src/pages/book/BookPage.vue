@@ -21,13 +21,7 @@ watch(
 <template>
   <div class="flex h-screen flex-col px-6">
     <BookPageNav class="py-6" :state="state" />
-
-    <MdPage
-      :key="state.path"
-      :document="document"
-      :customComponents="state.extensions.components"
-    />
-
+    <MdPage :key="state.path" :document="document" />
     <BookPageNav class="py-6" :state="state" />
   </div>
 </template>

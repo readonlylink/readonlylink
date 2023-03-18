@@ -1,4 +1,3 @@
-[md] `MdPage` should only take `document` as props
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors

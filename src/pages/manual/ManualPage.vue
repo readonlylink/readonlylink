@@ -12,12 +12,7 @@ defineProps<{
 
 <template>
   <div class="flex max-w-4xl flex-col px-6 md:px-10 xl:mx-auto">
-    <MdPage
-      :key="state.path"
-      :document="document"
-      :customComponents="state.extensions.components"
-    />
-
+    <MdPage :key="state.path" :document="document" />
     <ManualPageEnding class="py-6" :state="state" />
   </div>
 </template>

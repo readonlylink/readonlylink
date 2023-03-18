@@ -64,7 +64,6 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
     <MdPage
       class="h-full max-h-[490px] overflow-y-auto"
       :document="activity.document"
-      :customComponents="state.extensions.components"
     />
   </div>
 </template>
