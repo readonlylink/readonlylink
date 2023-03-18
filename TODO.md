@@ -1,4 +1,4 @@
-[md] `State` should be just a type instead of a class
+[md] `MdPage` should only take `document` as props
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors

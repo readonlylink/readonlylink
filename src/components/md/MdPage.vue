@@ -1,21 +1,16 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, reactive } from 'vue'
-import { CustomComponent } from './ExtensionStore'
-import { State } from './State'
 import { components } from './pages'
 
 const props = defineProps<{
   document: Nodes.Document
-  customComponents: Array<CustomComponent>
 }>()
 
-const state = reactive(
-  new State({
-    document: props.document,
-    customComponents: props.customComponents || [],
-  }),
-)
+const state = reactive({
+  document: props.document,
+  customComponents: [],
+})
 
 const kind = computed(() => state.document.attributes.kind || 'Default')
 const component = computed(() => components[kind.value])
