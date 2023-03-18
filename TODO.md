@@ -6,6 +6,10 @@
 - fidb
 - mimor
 
+[home] should not wait for all the activities
+
+[manual] fix scroll on page change
+
 [docs] fix `manual/en`
 [docs] fix `manual/zh`
 

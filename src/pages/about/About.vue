@@ -97,6 +97,60 @@ const lang = useGlobalLang()
         <template #zh> 何乐而不为呢？ </template>
         <template #en> I am glad to do so. </template>
       </Lang>
+
+      <Lang>
+        <template #zh>
+          <a
+            href="https://github.com/readonlylink/readonlylink"
+            class="inline-flex items-center underline"
+            target="_blank"
+            >源代码<ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500" /></a
+          >。
+        </template>
+        <template #en>
+          <a
+            href="https://xieyuheng.com"
+            class="inline-flex items-center underline"
+            target="_blank"
+          >
+            Source code
+            <ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500"
+            /> </a
+          >.
+        </template>
+      </Lang>
+
+      <Lang>
+        <template #zh> 我们的口号是： </template>
+        <template #en> Our slogan is: </template>
+      </Lang>
+
+      <Lang class="font-logo font-semibold text-stone-500">
+        <template #zh>
+          <div>
+            分享<span class="text-stone-900">只读</span>连接，<br
+              class="md:hidden"
+            /><span class="text-stone-900">只</span>为享受阅<span
+              class="text-stone-900"
+              >读</span
+            >。
+          </div>
+        </template>
+        <template #en>
+          <div>
+            <span class="text-stone-900">Readonly</span> links,
+            <br class="md:hidden" />
+            for your <span class="text-stone-900">read only</span>.
+          </div>
+        </template>
+      </Lang>
+
+      <Lang>
+        <template #zh> 耶！ </template>
+        <template #en> Yeah! </template>
+      </Lang>
     </main>
   </PageLayout>
 </template>
