@@ -1,12 +1,13 @@
-<!-- prettier-ignore -->
-<script setup>
-import { Node } from '@xieyuheng/postmark';
-import { computed } from 'vue';
-import { MdPageState as State } from "./MdPageState";
+<script setup lang="ts">
+import { Node } from '@xieyuheng/postmark'
+import { computed } from 'vue'
+import { MdPageState as State } from './MdPageState'
+import { components } from './nodes'
 
-import { components } from './nodes';
-
-const props = defineProps({ state: State, node: Node })
+const props = defineProps<{
+  state: State
+  node: Node
+}>()
 
 const component = computed(() => components[props.node.kind])
 </script>

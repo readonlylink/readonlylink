@@ -12,7 +12,8 @@ const softLineBreakElement = ref<Element | null>(null)
 const needBreak = ref(true)
 
 const previousChar = computed(() => {
-  const previousElement = softLineBreakElement.value?.previousElementSibling
+  const previousElement: any =
+    softLineBreakElement.value?.previousElementSibling
   if (previousElement && previousElement.innerText) {
     const text = previousElement.innerText
     return text[text.length - 1]

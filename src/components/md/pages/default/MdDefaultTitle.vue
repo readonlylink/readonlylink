@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { MdPageState as State } from '../../MdPageState'
 
-const props = defineProps({ state: State })
+const props = defineProps<{ state: State }>()
 
 const title = computed(() => props.state.document.attributes.title)
 const subtitle = computed(() => props.state.document.attributes.subtitle)

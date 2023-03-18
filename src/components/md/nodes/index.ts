@@ -24,8 +24,9 @@ import Image from './inlines/MdImage.vue'
 import Code from './inlines/MdCode.vue'
 import HtmlTag from './inlines/MdHtmlTag.vue'
 import Text from './inlines/MdText.vue'
+import { Component } from 'vue'
 
-export const components = {
+export const components: Record<string, Component> = {
   Paragraph,
   Table,
   Headline,

@@ -1,14 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, reactive } from 'vue'
+import { CustomComponent } from './ExtensionStore'
 import { MdPageState as State } from './MdPageState'
-
 import { components } from './pages'
 
-const props = defineProps({
-  document: Nodes.Document,
-  customComponents: Array,
-})
+const props = defineProps<{
+  document: Nodes.Document
+  customComponents: Array<CustomComponent>
+}>()
 
 const state = reactive(
   new State({
