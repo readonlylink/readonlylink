@@ -3,5 +3,5 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 </script>
 
 <template>
-  <PageLayout> History TODO </PageLayout>
+  <PageLayout> TODO </PageLayout>
 </template>
