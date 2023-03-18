@@ -1,11 +1,11 @@
 import { reactive } from 'vue'
 import { State } from './State'
-import { stateReactivelyUpdateActivities } from './stateReactivelyUpdateActivities'
+import { stateLoadActivitiesOnce } from './stateLoadActivitiesOnce'
 
 export function stateReactive(state: State): State {
   state = reactive(state) as State
 
-  stateReactivelyUpdateActivities(state)
+  stateLoadActivitiesOnce(state)
 
   return state
 }

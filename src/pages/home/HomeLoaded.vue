@@ -17,15 +17,24 @@ const state = stateReactive(props.state)
       <template #en> Authors' activities </template>
     </Lang>
 
-    <div class="border-b border-black pb-1"></div>
+    <div class="border-b border-stone-600 pb-1"></div>
 
-    <div class="flex flex-col divide-y divide-black">
+    <div class="flex flex-col divide-y divide-stone-600">
       <SubscriptionActivity
         v-for="activity of stateActivitiesForShow(state.subscriptionState)"
         :key="activity.author.url + ' ' + activity.path"
         :state="state.subscriptionState"
         :activity="activity"
       />
+    </div>
+
+    <div v-if="state.isLoadingActivities">
+      <Lang class="border-t border-stone-500 py-3 font-sans text-stone-500">
+        <template #zh> 作者动态逐渐加载中⋯⋯ </template>
+        <template #en>
+          Loading authors' activities, little by little ...
+        </template>
+      </Lang>
     </div>
   </div>
 </template>
