@@ -1,5 +1,3 @@
-[manual] extract `loadState`
-
 [md-plugin] `ReadonlylinkLoaded` v.s. `ReadonlylinkLoading`
 
 [md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity
