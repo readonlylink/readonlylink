@@ -20,7 +20,7 @@ export type CustomComponent =
       props: (node: Nodes.CustomItem<any>) => any
     }
 
-export type Extension<T> =
+type Extension<T> =
   | (BlockPlugin<T> & {
       component: Component
       props: (node: Nodes.CustomBlock<T>) => any
