@@ -8,13 +8,26 @@ const props = defineProps<{
 }>()
 
 const avatarURL = new URL(props.author.config.avatar, props.author.url)
+
+function isCurrentAuthor() {
+  return props.state.currentAuthor?.url === props.author.url
+}
+
+function toggle() {
+  if (isCurrentAuthor()) {
+    props.state.currentAuthor = undefined
+  } else {
+    props.state.currentAuthor = props.author
+  }
+}
 </script>
 
 <template>
-  <button>
+  <button @click="toggle()">
     <div class="flex flex-col items-center">
       <img
         class="shrink-0"
+        :class="[isCurrentAuthor() && 'ring-4 ring-rose-300']"
         :src="avatarURL.href"
         :alt="author.config.name"
         width="80"

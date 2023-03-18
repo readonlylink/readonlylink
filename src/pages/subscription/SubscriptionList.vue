@@ -2,7 +2,7 @@
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
 import { State } from './State'
-import { stateActivitiesSorted } from './stateActivitiesSorted'
+import { stateActivitiesForShow } from './stateActivitiesForShow'
 import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionAuthor from './SubscriptionAuthor.vue'
 
@@ -44,7 +44,7 @@ defineProps<{ state: State }>()
 
       <div class="flex flex-col divide-y divide-black">
         <SubscriptionActivity
-          v-for="(activity, index) of stateActivitiesSorted(state)"
+          v-for="(activity, index) of stateActivitiesForShow(state)"
           :key="activity.author.url + ' ' + activity.path"
           :state="state"
           :activity="activity"

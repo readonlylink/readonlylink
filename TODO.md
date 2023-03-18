@@ -1,6 +1,4 @@
-[subscriptions] `SubscriptionAuthor` -- click to set filter
-
-[home] show official subscription
+[home] show official subscription -- reuse `SubscriptionState`
 [home] add more default authors
 
 [md] support `<link-card>` -- for activity
