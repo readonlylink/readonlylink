@@ -1,4 +1,6 @@
-[md-plugin] `Readonlylink` -- show `<readonlylink>` as a card -- for activity
+[md-plugin] `ReadonlylinkLoaded` v.s. `ReadonlylinkLoading`
+
+[md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity
 
 [home] add more default authors
 

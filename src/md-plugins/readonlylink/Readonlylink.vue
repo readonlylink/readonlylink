@@ -3,11 +3,15 @@ import { XElement } from '@xieyuheng/x-node'
 
 const props = defineProps<{ element: XElement }>()
 
-const href = props.element.attributes.href
+function useStateOptions() {
+  const url = props.element.attributes.href
+
+  return { url }
+}
 </script>
 
 <template>
   <div>
-    {{ element }}
+    {{ useStateOptions() }}
   </div>
 </template>
