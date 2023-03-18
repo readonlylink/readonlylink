@@ -1,12 +1,9 @@
-# subscriptions
-
 [subscriptions] `SubscriptionAuthor` -- click to set filter
 
-# home
-
 [home] show official subscription
+[home] add more default authors
 
-# docs
+[md] support `<link-card>` -- for activity
 
 [docs] fix `manual/en`
 [docs] fix `manual/zh`
@@ -20,10 +17,10 @@
 
 [history] store visited links to `localStorage`
 
-# postmark
+# later
 
-`md/` uses `lang="ts"`
+[refactor] `md/` uses `lang="ts"`
 
-improve `@xieyuheng/postmark` API
+[refactor] improve `@xieyuheng/postmark` API
 
-add katex extensions back
+[md] add katex extensions back

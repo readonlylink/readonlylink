@@ -8,7 +8,8 @@ export function stateReactivelyUpdateAuthors(state: State) {
 
   watch(
     () => subscription.list,
-    async () => {
+    async (value) => {
+      state.list = value
       await stateLoadAuthors(state)
     },
     {

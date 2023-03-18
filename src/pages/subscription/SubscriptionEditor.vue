@@ -5,7 +5,7 @@ import Lang from '../../components/Lang.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
-defineProps<{ state: State }>()
+const props = defineProps<{ state: State }>()
 
 const subscription = useGlobalSubscription()
 
@@ -14,8 +14,12 @@ const text = ref<string>(subscription.list.join('\n'))
 const router = useRouter()
 
 async function save() {
-  const list = text.value.trim().split('\n')
-  subscription.list = list.map((url) => url.trim())
+  const list = text.value
+    .trim()
+    .split('\n')
+    .map((url) => url.trim())
+  props.state.list = list
+  subscription.list = list
   router.push('/subscriptions')
 }
 </script>
