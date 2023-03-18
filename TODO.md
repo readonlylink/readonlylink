@@ -1,7 +1,16 @@
+fix file naming
+
 [md] support `<link-card>` -- for activity
+
 [home] add more default authors
+
+- cicada-lang
+- fidb
+- mimor
+
 [docs] fix `manual/en`
 [docs] fix `manual/zh`
+
 [history] store visited links to `localStorage`
 
 # articles
