@@ -1,3 +1,5 @@
+use `@xieyuheng/x-node` package
+
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors

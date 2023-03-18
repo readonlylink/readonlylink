@@ -45,6 +45,6 @@ async function save() {
       </div>
     </div>
 
-    <textarea v-model="text" class="h-full border border-black p-3"></textarea>
+    <textarea v-model="text" class="h-full border border-black p-2"></textarea>
   </div>
 </template>
