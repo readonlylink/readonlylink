@@ -6,6 +6,10 @@ First activity of [Readonly.Link](https://readonly.link).
 
 <readonlylink href="https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md" />
 
+<readonlylink href="https://raw.githubusercontent.com/cicada-lang/cicada/master/README.md">
+  Example readonlylink.
+</readonlylink>
+
 # examples
 
 **articles:**
