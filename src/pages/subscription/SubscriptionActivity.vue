@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
+import { formatDateTime } from '../../utils/formatDate'
 import { Activity } from './Activity'
 import { State } from './State'
 
@@ -54,7 +55,7 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
           <div
             class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
           >
-            {{ activity.path }}
+            {{ formatDateTime(activity.document.attributes.date) }}
           </div>
         </Hyperlink>
       </div>
