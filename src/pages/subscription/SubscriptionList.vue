@@ -30,9 +30,9 @@ defineProps<{ state: State }>()
       </div>
     </div>
 
-    <div class="flex space-x-2 overflow-x-auto py-2">
+    <div class="flex space-x-2 overflow-x-auto py-1">
       <SubscriptionAuthor
-        v-for="(author, index) of state.authors"
+        v-for="author of state.authors"
         :key="author.url"
         :state="state"
         :author="author"
@@ -44,7 +44,7 @@ defineProps<{ state: State }>()
 
       <div class="flex flex-col divide-y divide-black">
         <SubscriptionActivity
-          v-for="(activity, index) of stateActivitiesForShow(state)"
+          v-for="activity of stateActivitiesForShow(state)"
           :key="activity.author.url + ' ' + activity.path"
           :state="state"
           :activity="activity"

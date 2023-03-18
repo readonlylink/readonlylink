@@ -19,8 +19,8 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
 </script>
 
 <template>
-  <div class="flex flex-col py-3">
-    <div class="flex items-center space-x-2 py-2">
+  <div class="flex flex-col">
+    <div class="flex items-center space-x-2 py-1">
       <Hyperlink :href="`/authors/${activity.author.url}`" class="shrink-0">
         <img
           :src="avatarURL.href"

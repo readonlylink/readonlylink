@@ -1,4 +1,3 @@
-[home] `HomeLoaded` show official subscription -- reuse `SubscriptionState`
 [md] support `<link-card>` -- for activity
 [home] add more default authors
 [docs] fix `manual/en`
