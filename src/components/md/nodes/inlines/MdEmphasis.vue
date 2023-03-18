@@ -1,9 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { Node } from '@xieyuheng/postmark'
 import MdNode from '../../MdNode.vue'
 import { MdPageState as State } from '../../MdPageState'
 
-defineProps({ state: State, node: Node })
+defineProps<{
+  state: State
+  node: Node
+}>()
 </script>
 
 <template>

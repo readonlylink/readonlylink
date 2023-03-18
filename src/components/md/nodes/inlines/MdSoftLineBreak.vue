@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed, ref, watch } from 'vue'
 import { MdPageState as State } from '../../MdPageState'
 
-defineProps({ state: State, node: Nodes.SoftLineBreak })
+defineProps<{
+  state: State
+  node: Nodes.SoftLineBreak
+}>()
 
-const softLineBreakElement = ref(null)
+const softLineBreakElement = ref<Element | null>(null)
 const needBreak = ref(true)
 
 const previousChar = computed(() => {
@@ -29,7 +32,7 @@ watch(
   { immediate: true },
 )
 
-function isCJKAndFullwidthPunctuation(char) {
+function isCJKAndFullwidthPunctuation(char: string) {
   // NOTE https://en.wikipedia.org/wiki/CJK_Symbols_and_Punctuation
   if (/[\u3000-\u303F]/u.test(char)) return true
   // NOTE https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block)
