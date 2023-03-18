@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
+import { onMounted } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { MdPageState as State } from '../../MdPageState'
 
-defineProps<{
+const props = defineProps<{
   state: State
   node: Nodes.HtmlTag
 }>()
+
+const who = 'MdHtmlTag'
+
+onMounted(() => console.log({ who, node: props.node }))
 </script>
 
 <template>
