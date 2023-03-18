@@ -11,6 +11,7 @@ export async function stateLoadActivities(state: State): Promise<void> {
         const response = await fetch(new URL(path, author.url))
         const text = await response.text()
         const document = state.extensions.parser.parseDocument(text)
+        document.attributes.kind = 'Activity'
         const activity = { author, path, text, document }
         console.log({ who, activity })
         state.activities.push(activity)
