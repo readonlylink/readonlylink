@@ -1,4 +1,3 @@
-[author] extract `loadState`
 [book] extract `loadState`
 [manual] extract `loadState`
 

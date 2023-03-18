@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Lang from '../../components/Lang.vue'
-import { StateOptions } from './State'
+import { StateOptions } from './loadState'
 
 defineProps<{ options: StateOptions }>()
 </script>
