@@ -9,7 +9,7 @@ const props = defineProps<{
 
 const state = reactive({
   document: props.document,
-  customComponents: [],
+  plugins: [],
 })
 
 const kind = computed(() => state.document.attributes.kind || 'Default')

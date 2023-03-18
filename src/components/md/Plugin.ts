@@ -1,7 +1,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { Component } from 'vue'
 
-export type Plugin = BlockPlugin | ItemPlugin
+export type Plugin = BlockPlugin | ItemPlugin | ElementPlugin
 
 export type BlockPlugin = {
   '@kind': 'BlockPlugin'
@@ -40,5 +40,22 @@ export function ItemPlugin(
     customKind,
     component,
     propsFromNode,
+  }
+}
+
+export type ElementPlugin = {
+  '@kind': 'ElementPlugin'
+  tag: string
+  component: Component
+}
+
+export function ElementPlugin(
+  tag: string,
+  component: Component,
+): ElementPlugin {
+  return {
+    '@kind': 'ElementPlugin',
+    tag,
+    component,
   }
 }

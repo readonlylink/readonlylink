@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
-import { onMounted } from 'vue'
+import { isElement, parseNodes } from '@xieyuheng/x-node'
+import { computed } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { State } from '../../State'
 
@@ -9,11 +10,19 @@ const props = defineProps<{
   node: Nodes.HtmlBlock
 }>()
 
-const who = 'MdHtmlBlock'
+const [element] = parseNodes(props.node.text)
 
-onMounted(() => console.log({ who, node: props.node }))
+const plugin = computed(() =>
+  props.state.plugins.find(
+    (plugin) =>
+      plugin['@kind'] === 'ElementPlugin' &&
+      isElement(element) &&
+      plugin.tag === element.tag,
+  ),
+)
 </script>
 
 <template>
-  <div v-html="safeHtml(node.text)"></div>
+  <component v-if="plugin" :is="plugin.component" :element="element" />
+  <div v-else v-html="safeHtml(node.text)"></div>
 </template>

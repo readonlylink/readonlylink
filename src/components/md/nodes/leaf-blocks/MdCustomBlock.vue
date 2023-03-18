@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
+import { BlockPlugin } from '../../Plugin'
 import { State } from '../../State'
 
 const props = defineProps<{
@@ -8,12 +9,13 @@ const props = defineProps<{
   node: Nodes.CustomBlock<any>
 }>()
 
-const plugin = computed(() =>
-  props.state.plugins.find(
-    (component) =>
-      component['@kind'] === 'BlockPlugin' &&
-      component.customKind === props.node.customKind,
-  ),
+const plugin = computed(
+  () =>
+    (props.state.plugins.find(
+      (plugin) =>
+        plugin['@kind'] === 'BlockPlugin' &&
+        plugin.customKind === props.node.customKind,
+    ) as BlockPlugin) || undefined,
 )
 </script>
 
