@@ -1,4 +1,3 @@
-[md-plugin] `readonlylink/loadConfig` -- fix title for `Article`
 [md-plugin] `ReadonlylinkLoaded` -- show `<readonlylink>` as a card -- for activity
 
 [home] add more default authors

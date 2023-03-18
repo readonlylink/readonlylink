@@ -1,4 +1,5 @@
 import { parseMarkdown } from '../../components/md/parseMarkdown'
+import { documentTitle } from '../../utils/postmark/documentTitle'
 import { Config } from './Config'
 
 export async function loadConfig(url: string): Promise<Config> {
@@ -9,7 +10,7 @@ export async function loadConfig(url: string): Promise<Config> {
 
     return {
       kind: 'Article',
-      title: '',
+      title: documentTitle(document) || url,
       attributes: document.attributes,
     }
   }
