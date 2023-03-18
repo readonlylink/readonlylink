@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
+import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionAuthor from './SubscriptionAuthor.vue'
+
+const subscription = useGlobalSubscription()
 
 defineProps<{ state: State }>()
 </script>
@@ -38,15 +41,24 @@ defineProps<{ state: State }>()
       />
     </div>
 
-    <div class="border-b border-black"></div>
+    <template v-if="subscription.list.length > 0">
+      <div class="border-b border-black"></div>
 
-    <div class="flex flex-col divide-y divide-black">
-      <SubscriptionActivity
-        v-for="(activity, index) of state.activities"
-        :key="index"
-        :state="state"
-        :activity="activity"
-      />
-    </div>
+      <div class="flex flex-col divide-y divide-black">
+        <SubscriptionActivity
+          v-for="(activity, index) of state.activities"
+          :key="index"
+          :state="state"
+          :activity="activity"
+        />
+      </div>
+    </template>
+
+    <template v-else>
+      <Lang>
+        <template #zh> 还未订阅任何作者。 </template>
+        <template #en> Not subscribed to any author yet. </template>
+      </Lang>
+    </template>
   </div>
 </template>
