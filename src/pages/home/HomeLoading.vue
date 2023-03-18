@@ -10,12 +10,14 @@ defineProps<{ options: StateOptions }>()
   <div class="font-sans text-xl text-stone-500">
     <HomeSlogan />
 
+    <div class="py-1"></div>
+
     <Lang class="font-bold">
       <template #zh> 作者动态加载中⋯⋯ </template>
       <template #en> Loading authors' activities ... </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre font-mono text-sm">
+    <div class="overflow-x-auto whitespace-pre py-1 font-mono text-sm">
       {{ options }}
     </div>
   </div>

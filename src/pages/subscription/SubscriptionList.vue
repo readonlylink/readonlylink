@@ -42,7 +42,7 @@ defineProps<{ state: State }>()
     <template v-if="state.list.length > 0">
       <div class="border-b border-black"></div>
 
-      <div class="flex flex-col divide-y divide-black">
+      <div class="flex flex-col divide-y divide-stone-600">
         <SubscriptionActivity
           v-for="activity of stateActivitiesForShow(state)"
           :key="activity.author.url + ' ' + activity.path"
