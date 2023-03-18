@@ -1,6 +1,6 @@
 # authors
 
-[authors] `AuthorHomepage` -- add a SUBSCRIBE button to subscribe a author
+[authors] `AuthorHomepageToolbar` -- support SUBSCRIBE and UNSUBSCRIBE to a author
 
 # subscriptions
 

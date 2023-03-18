@@ -17,7 +17,7 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <Listbox as="div" class="relative flex" v-model="lang.tag">
+  <Listbox as="div" class="relative flex font-sans" v-model="lang.tag">
     <ListboxButton class="flex items-center">
       <Lang>
         <template #zh>语言</template>
