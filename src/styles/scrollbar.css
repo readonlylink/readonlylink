@@ -29,11 +29,11 @@ References:
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #000;
+    background: #666;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #aaa;
   }
 }
 
@@ -57,9 +57,9 @@ References:
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #666;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #aaa;
 }
