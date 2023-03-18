@@ -3,6 +3,7 @@ import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
+import { stateActivitiesSorted } from './stateActivitiesSorted'
 import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionAuthor from './SubscriptionAuthor.vue'
 
@@ -46,7 +47,7 @@ defineProps<{ state: State }>()
 
       <div class="flex flex-col divide-y divide-black">
         <SubscriptionActivity
-          v-for="(activity, index) of state.activities"
+          v-for="(activity, index) of stateActivitiesSorted(state)"
           :key="index"
           :state="state"
           :activity="activity"

@@ -1,7 +1,5 @@
 # subscriptions
 
-[subscriptions] `SubscriptionActivity` -- show `date`
-[subscriptions] `stateLoadActivities` -- sort by `date`
 [subscriptions] `SubscriptionAuthor` -- click to set filter
 
 # home
