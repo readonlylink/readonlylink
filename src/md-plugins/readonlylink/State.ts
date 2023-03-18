@@ -1,7 +1,6 @@
-import { Nodes } from '@xieyuheng/postmark'
+import { Config } from './Config'
 
 export type State = {
   url: string
-  text: string
-  document: Nodes.Document
+  config: Config
 }

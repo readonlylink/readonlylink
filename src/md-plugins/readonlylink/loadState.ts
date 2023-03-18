@@ -1,4 +1,4 @@
-import { parseMarkdown } from '../../components/md/parseMarkdown'
+import { loadConfig } from './loadConfig'
 import { State } from './State'
 
 export type StateOptions = {
@@ -7,14 +7,10 @@ export type StateOptions = {
 
 export async function loadState(options: StateOptions): Promise<State> {
   const { url } = options
-
-  const response = await fetch(url)
-  const text = await response.text()
-  const document = parseMarkdown(text)
+  const config = await loadConfig(url)
 
   return {
     url,
-    text,
-    document,
+    config,
   }
 }
