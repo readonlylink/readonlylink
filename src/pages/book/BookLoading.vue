@@ -12,7 +12,7 @@ defineProps<{ options: StateOptions }>()
       <template #en> Loading book ... </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre font-mono text-lg">
+    <div class="overflow-x-auto whitespace-pre font-mono text-sm">
       {{ options }}
     </div>
   </div>

@@ -1,24 +1,17 @@
-[home] show official subscription -- reuse `SubscriptionState`
-[home] add more default authors
-
+[home] `HomeLoaded` show official subscription -- reuse `SubscriptionState`
 [md] support `<link-card>` -- for activity
-
+[home] add more default authors
 [docs] fix `manual/en`
 [docs] fix `manual/zh`
+[history] store visited links to `localStorage`
 
 # articles
 
 [articles] `ArticleEntrance` support `data:` link
 [articles] `ArticleEntrance` support editing and share `data:` link
 
-# history
-
-[history] store visited links to `localStorage`
-
 # later
 
 [refactor] `md/` uses `lang="ts"`
-
 [refactor] improve `@xieyuheng/postmark` API
-
 [md] add katex extensions back
