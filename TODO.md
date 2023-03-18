@@ -1,3 +1,5 @@
+[md] rename `CustomComponent` to `Plugin`
+
 [md] support `<readonlylink>` -- for activity
 
 [home] add more default authors

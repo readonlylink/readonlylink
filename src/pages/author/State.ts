@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { ExtensionStore } from '../../components/md/ExtensionStore'
+import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { AuthorConfig } from './AuthorConfig'
 import { loadAuthorConfig } from './loadAuthorConfig'
 
@@ -12,7 +12,6 @@ export type State = {
   url: string
   config: AuthorConfig
   homepage: Homepage
-  extensions: ExtensionStore
 }
 
 export type StateOptions = {
@@ -23,27 +22,20 @@ export async function loadState(options: StateOptions): Promise<State> {
   const { url } = options
 
   const config = await loadAuthorConfig(url)
-
-  const extensions = new ExtensionStore()
-
   const homepageURL = new URL(config.homepage, url)
-  const homepage = await loadHomepage(homepageURL, extensions)
+  const homepage = await loadHomepage(homepageURL)
 
   return {
     url,
     config,
-    extensions,
     homepage,
   }
 }
 
-async function loadHomepage(
-  homepageURL: URL,
-  extensions: ExtensionStore,
-): Promise<Homepage> {
+async function loadHomepage(homepageURL: URL): Promise<Homepage> {
   const response = await fetch(homepageURL)
   const text = await response.text()
-  const document = extensions.parser.parseDocument(text)
+  const document = parseMarkdown(text)
 
   return {
     text,

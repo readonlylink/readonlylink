@@ -1,5 +1,5 @@
 import { Nodes } from '@xieyuheng/postmark'
-import { CustomComponent } from './ExtensionStore'
+import { CustomComponent } from './CustomComponent'
 
 export type State = {
   document: Nodes.Document

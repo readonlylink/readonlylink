@@ -1,13 +1,12 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { join } from 'path-browserify'
-import { ExtensionStore } from '../../components/md/ExtensionStore'
+import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadManualConfig, ManualConfig } from './ManualConfig'
 
 export type State = {
   url: string
   path?: string
-  extensions: ExtensionStore
   config: ManualConfig
   texts: Record<string, string>
   documents: Record<string, Nodes.Document>
@@ -20,7 +19,6 @@ export type StateOptions = {
 
 export async function loadState(options: StateOptions): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
-  const extensions = new ExtensionStore()
   const config = await loadManualConfig({ url })
   const path = options.path || config.main
 
@@ -37,16 +35,12 @@ export async function loadState(options: StateOptions): Promise<State> {
   )
 
   const documents = Object.fromEntries(
-    Object.entries(texts).map(([path, text]) => [
-      path,
-      extensions.parser.parseDocument(text),
-    ]),
+    Object.entries(texts).map(([path, text]) => [path, parseMarkdown(text)]),
   )
 
   return {
     url,
     path,
-    extensions,
     config,
     texts,
     documents,

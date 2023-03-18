@@ -1,3 +1,4 @@
+import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { isValidDate } from '../../utils/isValidDate'
 import { State } from './State'
 
@@ -11,7 +12,7 @@ export async function stateLoadActivities(state: State): Promise<void> {
       try {
         const response = await fetch(new URL(path, author.url))
         const text = await response.text()
-        const document = state.extensions.parser.parseDocument(text)
+        const document = parseMarkdown(text)
         if (isValidDate(document.attributes.date)) {
           document.attributes.kind = 'Activity'
           const activity = { author, path, text, document }

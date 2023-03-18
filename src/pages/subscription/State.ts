@@ -1,4 +1,3 @@
-import { ExtensionStore } from '../../components/md/ExtensionStore'
 import { Author } from '../author/Author'
 import { Activity } from './Activity'
 
@@ -8,5 +7,4 @@ export type State = {
   authors: Array<Author>
   currentAuthor?: Author
   activities: Array<Activity>
-  extensions: ExtensionStore
 }

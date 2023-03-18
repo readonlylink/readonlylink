@@ -1,6 +1,7 @@
 import { Nodes } from '@xieyuheng/postmark'
+import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { State } from './State'
 
 export function stateDocument(state: State): Nodes.Document {
-  return state.extensions.parser.parseDocument(state.text)
+  return parseMarkdown(state.text)
 }

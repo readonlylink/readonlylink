@@ -1,5 +1,4 @@
 import { join } from 'path-browserify'
-import { ExtensionStore } from '../../components/md/ExtensionStore'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { BookConfig, loadBookConfig } from './BookConfig'
 
@@ -7,7 +6,6 @@ export type State = {
   url: string
   path?: string
   frontMatter?: string
-  extensions: ExtensionStore
   config: BookConfig
   texts: Record<string, string>
 }
@@ -22,7 +20,6 @@ export async function loadState(options: StateOptions): Promise<State> {
   const { path, frontMatter } = options
 
   const url = stringTrimEnd(options.url, '/')
-  const extensions = new ExtensionStore()
   const config = await loadBookConfig({ url })
 
   const texts = Object.fromEntries(
@@ -39,7 +36,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     url,
     path,
     frontMatter,
-    extensions,
     config,
     texts,
   }
