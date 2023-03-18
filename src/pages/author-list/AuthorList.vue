@@ -3,10 +3,10 @@ import { onMounted, ref } from 'vue'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
-import { Author } from './Author'
+import { Author } from '../author/Author'
+import { loadAuthor } from '../author/loadAuthor'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
-import { loadAuthor } from './loadAuthor'
 
 const list = useDefaultAuthorList()
 

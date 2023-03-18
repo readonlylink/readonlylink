@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Author } from './Author'
+import { Author } from '../author/Author'
 import AuthorCard from './AuthorCard.vue'
 
 defineProps<{ authors: Array<Author> }>()

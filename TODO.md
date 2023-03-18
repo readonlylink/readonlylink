@@ -1,4 +1,3 @@
-extract `author-list` directory
 extract `book-entrance` directory
 extract `manual-entrance` directory
 extract `article-entrance` directory

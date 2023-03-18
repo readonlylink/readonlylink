@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
-import { Author } from './Author'
+import { Author } from '../author/Author'
 
 const props = defineProps<{ author: Author }>()
 
