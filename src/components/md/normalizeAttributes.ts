@@ -1,6 +1,8 @@
 import { formatDate } from '../../utils/formatDate'
 
-type Attributes = {
+export type Attributes = {
+  title?: string
+  subtitle?: string
   translators: Array<string>
   authors: Array<string>
   keywords: Array<string>
@@ -9,6 +11,12 @@ type Attributes = {
 }
 
 export function normalizeAttributes(attributes: any): Attributes {
+  let title = undefined
+  if (typeof attributes.title === 'string') title = attributes.title
+
+  let subtitle = undefined
+  if (typeof attributes.subtitle === 'string') title = attributes.subtitle
+
   const translators = []
   if (attributes.translator) translators.push(attributes.translator)
   if (attributes.translators) translators.push(...attributes.translators)
@@ -27,7 +35,15 @@ export function normalizeAttributes(attributes: any): Attributes {
   if (attributes.year) date = attributes.year
   if (attributes.date) date = normalizeDate(attributes.date)
 
-  return { translators, authors, keywords, venue, date }
+  return {
+    title,
+    subtitle,
+    translators,
+    authors,
+    keywords,
+    venue,
+    date,
+  }
 }
 
 export function normalizeDate(date: any): string | undefined {

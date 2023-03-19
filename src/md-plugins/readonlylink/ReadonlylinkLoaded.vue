@@ -15,10 +15,10 @@ const state = stateReactive(props.state)
 <template>
   <!-- prettier-ignore -->
   <div>
-    <ReadonlylinkArticle v-if="state.config.kind === 'Article'" :state="state" />
-    <ReadonlylinkBook v-else-if="state.config.kind === 'Book'" :state="state" />
-    <ReadonlylinkManual v-else-if="state.config.kind === 'Manual'" :state="state" />
-    <ReadonlylinkAuthor v-else-if="state.config.kind === 'Author'" :state="state" />
-    <ReadonlylinkUnknown v-else :state="state" />
+    <ReadonlylinkArticle v-if="state.config.kind === 'Article'" :state="state" :config="state.config" />
+    <ReadonlylinkBook v-else-if="state.config.kind === 'Book'" :state="state" :config="state.config" />
+    <ReadonlylinkManual v-else-if="state.config.kind === 'Manual'" :state="state" :config="state.config" />
+    <ReadonlylinkAuthor v-else-if="state.config.kind === 'Author'" :state="state" :config="state.config" />
+    <ReadonlylinkUnknown v-else :state="state" :config="state.config" />
   </div>
 </template>

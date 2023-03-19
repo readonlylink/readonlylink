@@ -9,7 +9,7 @@ import {
 import { computed } from 'vue'
 import { normalizeAttributes } from '../../normalizeAttributes'
 
-const props = defineProps({ attributes: Object })
+const props = defineProps<{ attributes: Object }>()
 
 const attributes = computed(() => normalizeAttributes(props.attributes))
 </script>

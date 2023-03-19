@@ -1,4 +1,3 @@
-[md-plugin] `ReadonlylinkArticle`
 [md-plugin] `ReadonlylinkBook`
 [md-plugin] `ReadonlylinkManual`
 [md-plugin] `ReadonlylinkAuthor`
