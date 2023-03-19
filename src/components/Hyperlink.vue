@@ -4,7 +4,8 @@
 </script>
 
 <template>
-  <span
+  <a
+    class="cursor-pointer"
     @click="
       () => {
         if (typeof $attrs.href === 'string') {
@@ -16,6 +17,6 @@
         }
       }
     "
-    ><a class="cursor-pointer"><slot /></a
-  ></span>
+    ><slot
+  /></a>
 </template>
