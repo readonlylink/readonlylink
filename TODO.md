@@ -1,9 +1,8 @@
-[md-plugin] `ReadonlylinkLoaded` -- dispatch to different kinds
-
 [md-plugin] `ReadonlylinkArticle`
 [md-plugin] `ReadonlylinkBook`
 [md-plugin] `ReadonlylinkManual`
 [md-plugin] `ReadonlylinkAuthor`
+[md-plugin] `ReadonlylinkUnknown`
 
 [home] add more default authors
 
