@@ -20,7 +20,7 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
 
 <template>
   <div class="flex flex-col py-1.5">
-    <div class="flex items-center space-x-2 py-1">
+    <div class="flex items-center space-x-2 py-2">
       <Hyperlink :href="`/authors/${activity.author.url}`" class="shrink-0">
         <img
           :src="avatarURL.href"
