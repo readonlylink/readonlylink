@@ -1,5 +1,3 @@
-[md-plugin] extract `ReadonlylinkAttributes`
-[md-plugin] `ReadonlylinkManual`
 [md-plugin] `ReadonlylinkAuthor`
 
 [home] add more default authors
