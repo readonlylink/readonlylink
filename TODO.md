@@ -1,6 +1,3 @@
-[md-plugin] `ReadonlylinkAuthor` -- show `url`
-[md-plugin] `ReadonlylinkAuthor` -- show `avatar`
-
 [home] add more default authors
 
 - cicada-lang
