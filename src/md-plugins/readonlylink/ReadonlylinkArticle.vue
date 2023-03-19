@@ -9,6 +9,7 @@ import {
 import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
+import { normalizeAttributes } from '../../components/md/normalizeAttributes'
 import { ArticleConfig } from './Config'
 import { State } from './State'
 
@@ -17,7 +18,7 @@ const props = defineProps<{
   config: ArticleConfig
 }>()
 
-const attributes = computed(() => props.config.attributes)
+const attributes = computed(() => normalizeAttributes(props.config.attributes))
 </script>
 
 <template>
