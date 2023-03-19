@@ -1,4 +1,4 @@
-[md-plugin] `ReadonlylinkBook`
+[md-plugin] extract `ReadonlylinkAttributes`
 [md-plugin] `ReadonlylinkManual`
 [md-plugin] `ReadonlylinkAuthor`
 
