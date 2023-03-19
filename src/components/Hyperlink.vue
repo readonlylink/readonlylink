@@ -6,7 +6,7 @@
 <template>
   <a
     class="cursor-pointer"
-    @click="
+    @click.prevent="
       () => {
         if (typeof $attrs.href === 'string') {
           if ($attrs.mode === 'replace') {
