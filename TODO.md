@@ -1,11 +1,15 @@
+[docs] setup route
+
+- should not just link to manual, we need to say something about en v.s. zh and RFC
+
+[docs] fix `manual/en`
+[docs] fix `manual/zh`
+
 [home] add more default authors
 
 - cicada-lang
 - fidb
 - mimor
-
-[docs] fix `manual/en`
-[docs] fix `manual/zh`
 
 [history] store visited links to `localStorage`
 

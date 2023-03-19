@@ -17,10 +17,7 @@ const origin = window.location.origin
         </Lang>
       </Hyperlink>
 
-      <Hyperlink
-        class="pr-3 hover:text-stone-900"
-        :href="`/manuals/${origin}/contents/manual/en.json`"
-      >
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/docs">
         <Lang>
           <template #zh> 文档 </template>
           <template #en> DOCS </template>

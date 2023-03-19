@@ -6,6 +6,7 @@ import AuthorList from './author-list/AuthorList.vue'
 import Author from './author/Author.vue'
 import BookEntrance from './book-entrance/BookEntrance.vue'
 import Book from './book/Book.vue'
+import Docs from './docs/Docs.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import History from './history/History.vue'
 import Home from './home/Home.vue'
@@ -16,6 +17,7 @@ import Subscription from './subscription/Subscription.vue'
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
   { path: '/about', component: About },
+  { path: '/docs', component: Docs },
 
   { path: '/authors', component: AuthorList },
   { path: '/authors/', component: AuthorList },
