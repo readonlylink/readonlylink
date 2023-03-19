@@ -1,28 +1,27 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
-import { isElement, parseNodes } from '@xieyuheng/x-node'
-import { computed } from 'vue'
-import { safeHtml } from '../../../../utils/safeHtml'
+import { parseNodes } from '@xieyuheng/x-node'
 import { State } from '../../State'
+import MdHtmlBlockElement from './MdHtmlBlockElement.vue'
 
 const props = defineProps<{
   state: State
   node: Nodes.HtmlBlock
 }>()
 
-const [element] = parseNodes(props.node.text)
+const who = 'MdHtmlBlock'
 
-const plugin = computed(() =>
-  props.state.plugins.find(
-    (plugin) =>
-      plugin['@kind'] === 'ElementPlugin' &&
-      isElement(element) &&
-      plugin.tag === element.tag,
-  ),
-)
+const elements = parseNodes(props.node.text)
+
+console.log({ who, node: props.node })
 </script>
 
 <template>
-  <component v-if="plugin" :is="plugin.component" :element="element" />
-  <div v-else v-html="safeHtml(node.text)"></div>
+  <MdHtmlBlockElement
+    v-for="(element, index) of elements"
+    :key="index"
+    :state="state"
+    :node="node"
+    :element="element"
+  />
 </template>
