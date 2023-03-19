@@ -27,10 +27,10 @@ defineProps<{
     <Hyperlink :href="`/books/${state.url}`">
       <div class="py-1 font-sans hover:text-stone-500">
         <div class="font-bold">
-          {{ state.config.title }}
+          {{ config.title }}
         </div>
         <div v-if="state.config.subtitle" class="text-base font-bold">
-          {{ state.config.subtitle }}
+          {{ config.subtitle }}
         </div>
       </div>
     </Hyperlink>
