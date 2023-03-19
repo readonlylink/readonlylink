@@ -1,7 +1,6 @@
 [md-plugin] `ReadonlylinkBook`
 [md-plugin] `ReadonlylinkManual`
 [md-plugin] `ReadonlylinkAuthor`
-[md-plugin] `ReadonlylinkUnknown`
 
 [home] add more default authors
 

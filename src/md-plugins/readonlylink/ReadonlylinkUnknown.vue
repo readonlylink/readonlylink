@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Lang from '../../components/Lang.vue'
 import { Config } from './Config'
 import { State } from './State'
 
@@ -9,5 +10,14 @@ defineProps<{
 </script>
 
 <template>
-  <div>ReadonlylinkUnknown</div>
+  <div>
+    <Lang class="font-sans text-base text-stone-500">
+      <template #zh> 未知 </template>
+      <template #en> Unknown </template>
+    </Lang>
+
+    <div class="overflow-x-auto whitespace-pre font-mono text-sm">
+      {{ config }}
+    </div>
+  </div>
 </template>
