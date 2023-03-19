@@ -29,7 +29,7 @@ watch(
 </script>
 
 <template>
-  <div class="max-w-[640px] border border-black p-3">
+  <div class="mb-1.5 max-w-[640px] border border-black p-3">
     <ReadonlylinkLoaded v-if="state" :state="state" />
     <ReadonlylinkLoading v-else :options="useStateOptions()" />
   </div>

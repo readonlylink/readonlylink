@@ -13,7 +13,7 @@ First activity of [Readonly.Link](https://readonly.link).
 
 **books:**
 
-<readonlylink href="https://readonlylink-books.vercel.app/rework/book.json" />
+<readonlylink href="https://readonlylink-books.netlify.app/rework/book.json" />
 
 **manuals:**
 
