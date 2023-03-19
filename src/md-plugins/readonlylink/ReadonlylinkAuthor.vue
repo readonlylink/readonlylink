@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { MapPinIcon } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/Lang.vue'
 import { AuthorConfig } from '../../pages/author/AuthorConfig'
@@ -29,11 +28,6 @@ defineProps<{
     <div class="flex flex-col font-sans text-base text-stone-700">
       <div class="flex items-center" v-if="config.tagline">
         {{ config.tagline }}
-      </div>
-
-      <div class="flex items-center" v-if="config.venue">
-        <MapPinIcon class="w-5 shrink-0 pr-1" />
-        {{ config.venue }}
       </div>
     </div>
   </div>
