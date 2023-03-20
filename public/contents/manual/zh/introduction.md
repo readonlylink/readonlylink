@@ -1,15 +1,13 @@
 ---
-title: Introduction
+title: 引子
 ---
 
-[**Readonly.Link**](https://readonly.link) is a document rendering tool.
+[**Readonly.Link**](https://readonly.link) 是一个文档渲染工具。
 
-When your contents are rendered successfully,
-we will not display any extra contents (such as Ads).
+在渲染时，我们不会夹杂额外的内容（比如广告等等）。
 
-# Source Code
+# 源代码
 
-Source code of this manual is available at
-[github.com/readonlylink/readonlylink](https://github.com/readonlylink/readonlylink).
+这个手册的源代码在 [github.com/readonlylink/readonlylink](https://github.com/readonlylink/readonlylink/tree/master/public/contents/manual)。
 
-Welcame to give feedback.
+欢迎反馈～
