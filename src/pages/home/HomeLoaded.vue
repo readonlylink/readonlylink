@@ -17,7 +17,7 @@ const state = stateReactive(props.state)
       <template #en> Authors' activities </template>
     </Lang>
 
-    <div class="border-b border-stone-600 pb-1"></div>
+    <div class="border-b border-stone-500 pb-1"></div>
 
     <div class="flex flex-col divide-y divide-stone-600">
       <SubscriptionActivity
@@ -29,7 +29,7 @@ const state = stateReactive(props.state)
     </div>
 
     <div v-if="state.isLoadingActivities">
-      <Lang class="border-t border-stone-500 py-3 font-sans text-stone-500">
+      <Lang class="border-t border-stone-500 py-2 font-sans text-stone-500">
         <template #zh> 作者动态逐渐加载中⋯⋯ </template>
         <template #en>
           Loading authors' activities, little by little ...
