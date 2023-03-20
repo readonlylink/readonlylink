@@ -1,16 +1,28 @@
+# docs
+
 [docs] say something about en v.s. zh and manual and rfc
 
-[docs] `/public/contents/rfc/`
 [docs] `public/contents/manual/en`
 [docs] `public/contents/manual/zh`
 
+[docs] `public/contents/rfc` -- as a manual
+
+# md
+
 [md] change inline code bg
 
-[home] add more default authors
+# home
 
-- cicada-lang
-- fidb
-- mimor
+[home] new author cicada-lang
+[home] new author fidb
+[home] new author mimor
+
+# author
+
+[author] `AuthorHomepage` support `tabs`
+[author] `AuthorHomepage` show `avatar`
+
+# history
 
 [history] store visited links to `localStorage`
 
@@ -22,4 +34,5 @@
 # later
 
 [refactor] improve `@xieyuheng/postmark` API
+
 [md] add katex extensions back

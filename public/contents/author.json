@@ -5,8 +5,9 @@
   "homepage": "README.md",
   "avatar": "assets/images/readonly-logo.svg",
   "activities": [
-    "activities/2023-03-18-rework.md",
-    "activities/2023-03-17-manual.md",
+    "activities/2023-03-18-rework-olivia-han.md",
+    "activities/2023-03-17-readonlylink-manual.zh.md",
+    "activities/2023-03-17-readonlylink-manual.en.md",
     "activities/2023-03-16-hello-world.md"
   ]
 }
