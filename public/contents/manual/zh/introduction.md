@@ -8,6 +8,6 @@ title: 引子
 
 # 源代码
 
-这个手册的源代码在 [github.com/readonlylink/readonlylink](https://github.com/readonlylink/readonlylink/tree/master/public/contents/manual)。
+这个手册的源代码在 [GitHub](https://github.com/readonlylink/readonlylink/tree/master/public/contents/manual)。
 
 欢迎反馈～
