@@ -24,27 +24,42 @@ const lang = useGlobalLang()
       <Lang>
         <template #zh>
           <a
-            href="https://xieyuheng.com"
+            href="https://readonly.link/manuals/https://readonly.link/contents/manual/en.json"
             class="inline-flex items-center underline"
             target="_blank"
-          >
-            Readonly.Link Manual
-            <ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500"
-            /> </a
+            >只读连接手册（英文）<ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500" /></a
           >。
         </template>
         <template #en>
-          The project was founded by
           <a
-            href="https://xieyuheng.com"
+            href="https://readonly.link/manuals/https://readonly.link/contents/manual/en.json"
             class="inline-flex items-center underline"
             target="_blank"
-          >
-            Xie Yuheng
-            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
-          </a>
-          at the end of 2021.
+            >Readonly.Link Manual<ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500" /></a
+          >.
+        </template>
+      </Lang>
+
+      <Lang>
+        <template #zh>
+          <a
+            href="https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json"
+            class="inline-flex items-center underline"
+            target="_blank"
+            >只读连接手册<ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500" /></a
+          >。
+        </template>
+        <template #en>
+          <a
+            href="https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json"
+            class="inline-flex items-center underline"
+            target="_blank"
+            >Readonly.Link Manual (Chinese)<ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500" /></a
+          >.
         </template>
       </Lang>
     </main>

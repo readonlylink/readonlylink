@@ -1,8 +1,5 @@
 # docs
 
-[readonlylink] fix manual link
-[docs] say something about en and zh manual
-
 [docs] `public/contents/manual/en`
 [docs] `public/contents/manual/zh`
 
