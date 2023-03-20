@@ -25,24 +25,20 @@ const lang = useGlobalLang()
     </div>
 
     <main class="space-y-3 py-4">
-      <Lang>
+      <Lang class="inline-flex flex-wrap items-baseline text-stone-900">
         <template #zh>
-          <div class="inline-flex flex-wrap items-baseline text-stone-900">
-            <div class="pr-1 font-logo font-semibold text-stone-900">
-              只读链接
-            </div>
-            <div>是一个文档渲染工具，</div>
-            <div>文字创作者的社区。</div>
+          <div class="pr-1 font-logo font-semibold text-stone-900">
+            只读链接
           </div>
+          <div>是一个文档渲染工具，</div>
+          <div>文字创作者的社区。</div>
         </template>
         <template #en>
-          <div class="inline-flex flex-wrap items-baseline text-stone-900">
-            <div class="pr-1 font-logo font-semibold text-stone-900">
-              Readonly.Link
-            </div>
-            <div class="pr-1">is a document rendering tool,</div>
-            <div>and a community for authors.</div>
+          <div class="pr-1 font-logo font-semibold text-stone-900">
+            Readonly.Link
           </div>
+          <div class="pr-1">is a document rendering tool,</div>
+          <div>and a community for authors.</div>
         </template>
       </Lang>
 

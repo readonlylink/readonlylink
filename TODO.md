@@ -1,9 +1,12 @@
 # docs
 
-[docs] say something about en v.s. zh and manual and rfc
+[readonlylink] fix manual link
+[docs] say something about en and zh manual
 
 [docs] `public/contents/manual/en`
 [docs] `public/contents/manual/zh`
+
+[docs] say something about rfc
 
 [docs] `public/contents/rfc` -- as a manual
 
