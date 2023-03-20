@@ -1,9 +1,10 @@
-[docs] setup route
+[docs] say something about en v.s. zh and manual and rfc
 
-- should not just link to manual, we need to say something about en v.s. zh and RFC
+[docs] `/public/contents/rfc/`
+[docs] `public/contents/manual/en`
+[docs] `public/contents/manual/zh`
 
-[docs] fix `manual/en`
-[docs] fix `manual/zh`
+[md] change inline code bg
 
 [home] add more default authors
 
