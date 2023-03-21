@@ -5,10 +5,6 @@
 [docs] `public/contents/manual/en` -- manual
 [docs] `public/contents/manual/en` -- author
 
-[docs] say something about rfc
-
-[docs] `public/contents/rfc` -- as a manual
-
 # home
 
 [home] new author cicada-lang
