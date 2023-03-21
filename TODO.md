@@ -1,5 +1,3 @@
-`ManualLoaded` fix 404 error
-
 # docs
 
 [docs] `public/contents/manual/zh` -- author
