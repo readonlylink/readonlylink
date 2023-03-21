@@ -1,7 +1,9 @@
 # Readonly.Link Website
 
 [ [WEBSITE](https://readonly.link)
-| [ABOUT](https://readonly.link/about) ]
+| [ABOUT](https://readonly.link/about)
+| [ENGLISH MANUAL](https://readonly.link/manuals/https://readonly.link/contents/manual/en.json)
+| [中文手册](https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json) ]
 
 ## Development
 
