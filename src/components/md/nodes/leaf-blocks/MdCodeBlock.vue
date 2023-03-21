@@ -9,7 +9,7 @@ const props = defineProps<{
 }>()
 
 function noHighlight() {
-  if (props.node.info === undefined) {
+  if (!props.node.info) {
     return true
   }
 
