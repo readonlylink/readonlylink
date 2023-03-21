@@ -39,7 +39,29 @@ venue: 泰国，第九届亚洲科学营
 
 <readonlylink href="https://inner.xieyuheng.com/translations/zh/how-i-became-interested-in-foundations-of-mathematics.md" />
 
-如果文章有多个作者或者译者，也可以写成数组：
+日期 `date` 的格式是：
+
+```
+年
+年-月
+年-月-日
+年-月-日 时:分
+年-月-日 时:分+时区
+```
+
+比如：
+
+```
+date: 2023
+date: 2023-03
+date: 2023-03-17
+date: 2023-03-17 16:43
+date: 2023-03-17 16:43+08:00
+```
+
+注意我们中国的时区是 `08:00`。
+
+如果文章有多个作者或者译者，也可以用 `authors` 和 `translators`：
 
 ```yaml
 ---
