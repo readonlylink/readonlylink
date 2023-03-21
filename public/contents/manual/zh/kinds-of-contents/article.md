@@ -42,6 +42,8 @@ venue: 泰国，第九届亚洲科学营
 如果文章有多个作者或者译者，也可以写成数组：
 
 ```yaml
+---
 authors: [Vladimir Voevodsky, ...]
 translators: [谢宇恒, ...]
+---
 ```
