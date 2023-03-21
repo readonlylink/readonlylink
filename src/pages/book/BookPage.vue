@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
-import { watch } from 'vue'
+import { join } from 'path-browserify'
+import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import BookPageNav from './BookPageNav.vue'
 import { State } from './State'
@@ -16,12 +17,23 @@ watch(
     window.scrollTo(0, 0)
   },
 )
+
+const url = computed(() => {
+  if (props.state.path === undefined) {
+    return undefined
+  }
+
+  return new URL(
+    join(props.state.config.src, props.state.path),
+    props.state.url,
+  )
+})
 </script>
 
 <template>
   <div class="flex h-screen flex-col px-6">
     <BookPageNav class="py-6" :state="state" />
-    <MdPage :key="state.path" :document="document" />
+    <MdPage :key="state.path" :document="document" :url="url" />
     <BookPageNav class="py-6" :state="state" />
   </div>
 </template>

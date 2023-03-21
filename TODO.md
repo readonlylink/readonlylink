@@ -1,11 +1,11 @@
+[article] pass `url` as props `MdPage`
+[manual] pass `url` as props `MdPage`
+[author] pass `url` as props `MdPage`
+
 # docs
 
 [docs] `public/contents/manual/en` -- manual
 [docs] `public/contents/manual/en` -- author
-
-# md
-
-[md] support relative path for image
 
 # home
 
