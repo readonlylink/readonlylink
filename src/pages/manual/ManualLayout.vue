@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Bars3Icon } from '@heroicons/vue/24/outline'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import ManualPageNav from './ManualPageNav.vue'
 import { State } from './State'
 
@@ -8,7 +8,24 @@ const props = defineProps<{ state: State }>()
 
 const showNav = ref(false)
 
-const log = console.log
+const slotElement = ref<HTMLElement | undefined>(undefined)
+const slotElementMobile = ref<HTMLElement | undefined>(undefined)
+
+watch(
+  () => props.state.path,
+  () => {
+    if (slotElement.value) {
+      slotElement.value.scrollTo(0, 0)
+    }
+
+    if (slotElementMobile.value) {
+      slotElementMobile.value.scrollTo(0, 0)
+    }
+  },
+  {
+    immediate: true,
+  },
+)
 </script>
 
 <template>
@@ -21,7 +38,7 @@ const log = console.log
           style="width: 420px"
         />
 
-        <div class="w-full overflow-y-auto">
+        <div ref="slotElement" class="w-full overflow-y-auto">
           <slot />
         </div>
       </div>
@@ -35,7 +52,7 @@ const log = console.log
           class="fixed z-20 h-full w-5/6 overflow-y-auto bg-white"
         />
 
-        <div class="w-full overflow-y-auto">
+        <div ref="slotElementMobile" class="w-full overflow-y-auto">
           <slot />
         </div>
       </div>

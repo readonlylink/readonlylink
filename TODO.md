@@ -11,6 +11,10 @@
 
 [docs] `public/contents/rfc` -- as a manual
 
+# manual
+
+`ManualLoaded` fix 404 error
+
 # home
 
 [home] new author cicada-lang

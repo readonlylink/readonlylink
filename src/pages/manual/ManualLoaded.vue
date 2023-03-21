@@ -17,6 +17,8 @@ const router = useRouter()
 
 stateReactivelyUpdateRoute(state, router)
 
+const who = 'ManualLoaded'
+
 const currentDocument = computed(() => stateCurrentDocument(state))
 
 watch(
@@ -38,6 +40,8 @@ watch(
       :state="state"
       :document="currentDocument"
     />
-    <div v-else>Error, no currentDocument</div>
+    <div v-else>
+      <div class="p-3">Error, no currentDocument.</div>
+    </div>
   </ManualLayout>
 </template>
