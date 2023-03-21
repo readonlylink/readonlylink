@@ -25,7 +25,7 @@ const currentDocument = computed(() => stateCurrentDocument(state))
 watch(
   () => route.params.path,
   (value) => {
-    state.path = value ? String(value) : undefined
+    state.path = value ? String(value) : state.config.main
   },
 )
 </script>

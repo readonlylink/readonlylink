@@ -73,4 +73,4 @@ The following properties are required:
 
 Where `src` denotes the directory of contents (I often just use `src/` as the directory).
 
-Files in `src` can be listed in `contents`.
+The files listed in `contents` must be in the directory denoted by `src`.

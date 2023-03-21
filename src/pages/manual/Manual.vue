@@ -14,7 +14,10 @@ function useStateOptions() {
   const url = String(route.params.url)
   const path = route.params.path ? String(route.params.path) : undefined
 
-  return { url, path }
+  return {
+    url,
+    path,
+  }
 }
 
 watch(
