@@ -1,6 +1,5 @@
 # docs
 
-[docs] `public/contents/manual/zh` -- manual
 [docs] `public/contents/manual/zh` -- author
 
 [docs] `public/contents/manual/en` -- article

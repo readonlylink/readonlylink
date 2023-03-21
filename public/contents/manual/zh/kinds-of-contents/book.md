@@ -14,7 +14,7 @@ title: 书籍
 https://readonly.link/books/:link
 ```
 
-你也可以在 [**readonly.link/books**](https://readonly.link/articles) 页面直接输入连接。
+你也可以在 [**readonly.link/books**](https://readonly.link/books) 页面直接输入连接。
 
 ## 书籍的配置文件
 
