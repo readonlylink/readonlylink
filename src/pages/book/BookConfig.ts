@@ -9,7 +9,7 @@ export type BookConfig = {
   translators?: Array<string>
   year?: string
   date?: string
-  src?: string
+  src: string
   contents: Array<string>
 }
 
@@ -22,7 +22,7 @@ export const BookConfigSchema: Schema<BookConfig> = ty.object({
   translators: ty.optional(ty.array(ty.string())),
   year: ty.optional(ty.string()),
   date: ty.optional(ty.string()),
-  src: ty.optional(ty.string()),
+  src: ty.string(),
   contents: ty.array(ty.string()),
 })
 

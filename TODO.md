@@ -1,4 +1,5 @@
-[manual] `ManualConfig` -- making `src` optional
+[book] `BookConfig` quit using `src` -- `contents` is enough
+[manual] `ManualConfig` quit using `src` -- `contents` is enough
 
 # docs
 

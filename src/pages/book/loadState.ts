@@ -18,7 +18,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const texts = Object.fromEntries(
     await Promise.all(
       config.contents.map(async (path) => {
-        const response = await fetch(new URL(join(config.src || '', path), url))
+        const response = await fetch(new URL(join(config.src, path), url))
         const text = await response.text()
         return [path, text]
       }),
