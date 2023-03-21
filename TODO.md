@@ -1,9 +1,9 @@
 # docs
 
+[docs] use zguide as example book -- instead of a Chinese translation of rework.
+
 [docs] `public/contents/manual/en` -- manual
 [docs] `public/contents/manual/en` -- author
-
-[docs] use zguide as example book -- instead of a Chinese translation of rework.
 
 # home
 
