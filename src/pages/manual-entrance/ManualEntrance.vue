@@ -46,7 +46,11 @@ async function submit(event: Event) {
                 <template #en> Manual </template>
               </Lang>
               <Hyperlink
-                :href="`/manuals/${origin}/contents/manual/en.json/-/kinds-of-renders/manual.md`"
+                :href="
+                  lang.isZh()
+                    ? `/manuals/${origin}/contents/manual/zh.json/-/kinds-of-contents/manual.md`
+                    : `/manuals/${origin}/contents/manual/en.json/-/kinds-of-contents/manual.md`
+                "
               >
                 <QuestionMarkCircleIcon class="h-6 w-6 text-stone-800" />
               </Hyperlink>
