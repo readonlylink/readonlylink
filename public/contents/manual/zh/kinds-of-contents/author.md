@@ -63,13 +63,17 @@ https://readonly.link/authors/:link
 - 作为动态的 Markdown 文件，必须带有 `date` 属性，这将作为排序的依据。
 - 建议写简短的动态 Markdown 文件，长的动态在显示的时候会带有滚动条。
 
-在动态 Markdown 文件中，你可以用下面的格式来显示一个连接。
+## 动态中的只读连接
+
+在动态 Markdown 文件中，你可以用下面的格式来显示一个只读连接。
 
 比如，下面这个连接，就连接到了这个手册：
 
 ```xml
 <readonlylink href="https://readonly.link/contents/manual/zh.json" />
 ```
+
+## 订阅作者动态
 
 你可以以动态的方式，介绍你新写的文章和书籍，等等。
 
