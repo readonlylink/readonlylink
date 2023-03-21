@@ -30,23 +30,24 @@ https://readonly.link/books/:link
   "authors": ["37signals"],
   "translators": ["Olivia Han"],
   "year": "2010",
+  "src": "src",
   "contents": [
-    "src/00.0.md",
-    "src/00.9.md",
-    "src/01.md",
-    "src/02.md",
-    "src/03.md",
-    "src/04.md",
-    "src/05.md",
-    "src/06.md",
-    "src/07.md",
-    "src/08.md",
-    "src/09.md",
-    "src/10.md",
-    "src/11.md",
-    "src/12.md",
-    "src/13.md",
-    "src/14.md"
+    "00.0.md",
+    "00.9.md",
+    "01.md",
+    "02.md",
+    "03.md",
+    "04.md",
+    "05.md",
+    "06.md",
+    "07.md",
+    "08.md",
+    "09.md",
+    "10.md",
+    "11.md",
+    "12.md",
+    "13.md",
+    "14.md"
   ]
 }
 ```
@@ -54,6 +55,8 @@ https://readonly.link/books/:link
 效果如下：
 
 <readonlylink href="https://readonlylink-books.netlify.app/rework/book.json" />
+
+配置文件的文件名是无所谓的，但是我通常会用 `book.json`。
 
 在配置文件中，下面的属性是必填的：
 
@@ -63,6 +66,11 @@ https://readonly.link/books/:link
   title: string
   version: string
   authors: Array<string>
+  src: string
   contents: Array<string>
 }
 ```
+
+其中 `src` 代表内容文件所在的文件夹（我通常就用 `src/` 这个文件夹）。
+
+`contents` 中的文件，都是在这个文件夹中的。
