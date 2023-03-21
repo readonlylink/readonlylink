@@ -3,16 +3,28 @@ import { Nodes } from '@xieyuheng/postmark'
 import Highlight from '../../../Highlight.vue'
 import { State } from '../../State'
 
-defineProps<{
+const props = defineProps<{
   state: State
   node: Nodes.CodeBlock
 }>()
+
+function noHighlight() {
+  if (props.node.info === undefined) {
+    return true
+  }
+
+  if (props.node.info.startsWith('plaintext')) {
+    return true
+  }
+
+  return false
+}
 </script>
 
 <template>
   <div>
     <pre
-      v-if="!node.info"
+      v-if="noHighlight()"
       class="mx-4 overflow-x-auto text-base"
     ><code>{{ node.text }}</code></pre>
 
