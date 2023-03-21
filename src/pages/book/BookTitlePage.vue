@@ -43,20 +43,25 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     </div>
 
     <section class="py-4">
-      <div v-if="attributes.authors.length > 0">
+      <div
+        v-if="attributes.authors.length > 0"
+        class="flex flex-col items-center py-1.5"
+      >
         <div
-          class="py-1 text-center font-sans font-bold"
-          v-for="({ name }, index) in attributes.authors"
+          class="py-1 font-sans font-bold"
+          v-for="(name, index) in attributes.authors"
           :key="index"
         >
           {{ name }}
         </div>
       </div>
 
-      <div v-if="attributes.translators.length > 0">
+      <div
+        v-if="attributes.translators.length > 0"
+        class="flex flex-col items-center"
+      >
         <div
-          class="flex items-center text-center font-sans text-xl font-bold"
-          title="Translators"
+          class="flex items-center pr-3 text-center font-sans text-xl font-bold"
         >
           <LanguageIcon class="w-5 pr-1" />
           {{ attributes.translators.join(', ') }}
