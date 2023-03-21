@@ -35,7 +35,7 @@ venue: The 9th Asian Science Camp, Thailand
 
 Result:
 
-<readonlylink href="https://inner.xieyuheng.com/translations/zh/how-i-became-interested-in-foundations-of-mathematics.md" />
+<readonlylink href="https://inner.xieyuheng.com/persons/vladimir-voevodsky/how-i-became-interested-in-foundations-of-mathematics.md" />
 
 The formats of `date` are:
 
