@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
+import { documentTitle } from '../../utils/postmark/documentTitle'
 import { State } from './State'
 import { stateDocuments } from './stateDocuments'
 
@@ -21,7 +22,7 @@ onMounted(() => {
           :href="`/books/${state.url}/-/${path}`"
           class="font-sans hover:text-stone-500"
         >
-          {{ document.attributes.title }}
+          {{ documentTitle(document) }}
         </Hyperlink>
 
         <div
