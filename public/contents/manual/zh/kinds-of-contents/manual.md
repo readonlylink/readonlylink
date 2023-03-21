@@ -2,7 +2,7 @@
 title: 手册
 ---
 
-在一个文件夹内的多个 Markdown 文件，外加一个 `manual.json` 配置文件，会被渲染成手册。
+在一个文件夹内的多个 Markdown 文件，外加一个 `manual.json` 配置文件，会被渲染成一本手册。
 
 ## 使用方式
 

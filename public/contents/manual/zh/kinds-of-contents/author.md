@@ -2,7 +2,7 @@
 title: 作者
 ---
 
-一个 `author.json` 配置文件，会被渲染成作者。
+一个 `author.json` 配置文件，会被渲染成一名作者。
 
 ## 使用方式
 
@@ -74,3 +74,6 @@ https://readonly.link/authors/:link
 你可以以动态的方式，介绍你新写的文章和书籍，等等。
 
 你的读者可以通过将你的作者 `author.json` 连接加入 [订阅列表](https://readonly.link/subscriptions?kind=Editor) 的方式，来订阅你发布的动态。
+
+在你的作者主页的右上角，也会有一个 `订阅` 按钮，
+你的读者在访问你的作者主页时，也可以直接点击这个按钮来订阅你的动态。
