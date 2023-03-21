@@ -59,7 +59,7 @@ https://readonly.link/authors/:link
 
 注意：
 
-- Markdown 文件连接要使用就 `author.json` 而言的相对路径，而不是 URL。
+- Markdown 文件连接要是就 `author.json` 而言的相对路径，而不是 URL。
 - 作为动态的 Markdown 文件，必须带有 `date` 属性，这将作为排序的依据。
 - 建议写简短的动态 Markdown 文件，长的动态在显示的时候会带有滚动条。
 
