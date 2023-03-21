@@ -1,3 +1,5 @@
+`ManualLoaded` fix 404 error
+
 # docs
 
 [docs] `public/contents/manual/zh` -- author
@@ -10,10 +12,6 @@
 [docs] say something about rfc
 
 [docs] `public/contents/rfc` -- as a manual
-
-# manual
-
-`ManualLoaded` fix 404 error
 
 # home
 

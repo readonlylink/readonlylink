@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { useRoute } from 'vue-router'
 import Lang from '../../components/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useGlobalLang } from '../../reactives/useGlobalLang'
 
 const lang = useGlobalLang()
+
+const route = useRoute()
 </script>
 
 <template>
@@ -14,7 +17,7 @@ const lang = useGlobalLang()
       <title v-else>404 | Readonly</title>
     </Head>
 
-    <div class="space-y-2 py-4">
+    <div class="space-y-2 overflow-x-auto py-4">
       <div class="font-mono text-2xl">404</div>
       <div>
         <Lang>
@@ -22,6 +25,7 @@ const lang = useGlobalLang()
           <template #en> Page not found. </template>
         </Lang>
       </div>
+      <div class="overflow-x-auto font-mono text-sm">{{ route.fullPath }}</div>
     </div>
   </PageLayout>
 </template>
