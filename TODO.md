@@ -13,10 +13,6 @@
 
 [docs] `public/contents/rfc` -- as a manual
 
-# md
-
-[md] change inline code bg
-
 # home
 
 [home] new author cicada-lang
