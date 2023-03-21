@@ -1,4 +1,5 @@
 import { join } from 'path-browserify'
+import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadBookConfig } from './BookConfig'
 import { State } from './State'
@@ -15,7 +16,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
   const config = await loadBookConfig({ url })
 
-  const texts = Object.fromEntries(
+  const texts: Record<string, string> = Object.fromEntries(
     await Promise.all(
       config.contents.map(async (path) => {
         const response = await fetch(new URL(join(config.src, path), url))
@@ -25,11 +26,16 @@ export async function loadState(options: StateOptions): Promise<State> {
     ),
   )
 
+  const documents = Object.fromEntries(
+    Object.entries(texts).map(([path, text]) => [path, parseMarkdown(text)]),
+  )
+
   return {
     url,
     path,
     frontMatter,
     config,
     texts,
+    documents,
   }
 }

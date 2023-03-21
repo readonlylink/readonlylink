@@ -3,7 +3,6 @@ import { onMounted } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import { documentTitle } from '../../utils/postmark/documentTitle'
 import { State } from './State'
-import { stateDocuments } from './stateDocuments'
 
 defineProps<{ state: State }>()
 
@@ -16,7 +15,7 @@ onMounted(() => {
   <div
     class="flex min-h-screen flex-col justify-center px-6 py-12 font-serif text-2xl"
   >
-    <div v-for="(document, path) in stateDocuments(state)" :key="path">
+    <div v-for="(document, path) in state.documents" :key="path">
       <div>
         <Hyperlink
           :href="`/books/${state.url}/-/${path}`"
