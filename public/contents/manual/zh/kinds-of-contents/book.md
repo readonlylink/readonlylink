@@ -1,5 +1,5 @@
 ---
-title: Book
+title: 书籍
 ---
 
 A repository of Markdown files, and a `book.json` config file, can be viewed as a book.

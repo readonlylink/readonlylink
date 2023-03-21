@@ -8,15 +8,11 @@
   "main": "introduction.md",
   "sections": {
     "default": ["introduction.md"],
-    "Kinds of Renders": [
-      "kinds-of-renders/article.md",
-      "kinds-of-renders/book.md",
-      "kinds-of-renders/manual.md"
-    ],
-    "Kinds of Pages": [
-      "kinds-of-pages/default-page.md",
-      "kinds-of-pages/dedication-page.md"
-    ],
-    "Code Block Extensions": ["code-block-extensions/katex-code-block.md"]
+    "Kinds of Contents": [
+      "kinds-of-contents/article.md",
+      "kinds-of-contents/book.md",
+      "kinds-of-contents/manual.md",
+      "kinds-of-contents/author.md"
+    ]
   }
 }

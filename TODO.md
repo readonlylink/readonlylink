@@ -1,7 +1,13 @@
 # docs
 
-[docs] `public/contents/manual/en`
-[docs] `public/contents/manual/zh`
+[docs] `public/contents/manual/zh` -- manual
+[docs] `public/contents/manual/zh` -- book
+[docs] `public/contents/manual/zh` -- author
+
+[docs] `public/contents/manual/en` -- article
+[docs] `public/contents/manual/en` -- manual
+[docs] `public/contents/manual/en` -- book
+[docs] `public/contents/manual/en` -- author
 
 [docs] say something about rfc
 

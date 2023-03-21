@@ -1,5 +1,5 @@
 ---
-title: Manual
+title: 手册
 ---
 
 A repository of Markdown files, and a manual.json config file, can be viewed as a manual.
