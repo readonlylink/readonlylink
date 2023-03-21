@@ -20,41 +20,40 @@ You can also enter link directly in [**readonly.link/books**](https://readonly.l
 
 We can specify a book's title, author, date, contents and so on in its book config file.
 
-Take [Olivia's translation of Rework](https://github.com/readonlylink/readonlylink-books/tree/master/rework) as an example:
+Take Pieter Hintjens's ["The Great ØMQ Guide"](https://github.com/readonlylink/readonlylink-books/tree/master/zguide) as an example:
 
 ```json
 {
   "kind": "Book",
-  "title": "REWORK",
-  "version": "0.0.2",
-  "authors": ["37signals"],
-  "translators": ["Olivia Han"],
-  "year": "2010",
+  "title": "ZeroMQ",
+  "subtitle": "Messaging for Many Applications",
+  "version": "0.0.1",
+  "authors": ["Pieter Hintjens"],
+  "date": "2013-03-11",
   "src": "src",
   "contents": [
-    "00.0.md",
-    "00.9.md",
-    "01.md",
-    "02.md",
-    "03.md",
-    "04.md",
-    "05.md",
-    "06.md",
-    "07.md",
-    "08.md",
-    "09.md",
-    "10.md",
-    "11.md",
-    "12.md",
-    "13.md",
-    "14.md"
+    "frontispiece.md",
+    "dedication.md",
+    "dedication.md",
+    "preface.md",
+    "part1.md",
+    "chapter1.md",
+    "chapter2.md",
+    "chapter3.md",
+    "chapter4.md",
+    "chapter5.md",
+    "part2.md",
+    "chapter6.md",
+    "chapter7.md",
+    "chapter8.md",
+    "postface.md"
   ]
 }
 ```
 
 Result:
 
-<readonlylink href="https://readonlylink-books.netlify.app/rework/book.json" />
+<readonlylink href="https://readonlylink-books.netlify.app/zguide/book.json" />
 
 The name of the config file does not matter,
 I often just use `book.json`.
