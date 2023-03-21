@@ -20,7 +20,7 @@ https://readonly.link/books/:link
 
 我们可以在书籍的配置文件中，声明书籍的标题、作者、日期、目录，等等。
 
-比如 [Olivia 所翻译的 Rework](https://github.com/readonlylink/readonlylink-books/tree/master/rework) 这本书的配置如下：
+比如 [Olivia 翻译的 Rework](https://github.com/readonlylink/readonlylink-books/tree/master/rework) 这本书的配置如下：
 
 ```json
 {
