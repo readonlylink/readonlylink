@@ -1,10 +1,12 @@
-[home] improve activities loading
-
 # docs
 
 [article] pass `url` as props `MdPage`
 [manual] pass `url` as props `MdPage`
 [author] pass `url` as props `MdPage`
+
+# activities
+
+[activities] improve activities loading
 
 # author
 
