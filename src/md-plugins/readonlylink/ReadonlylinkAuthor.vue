@@ -24,7 +24,11 @@ const avatarURL = new URL(props.config.avatar, props.state.url)
         :href="`/authors/${state.url}`"
         class="shrink-0 object-contain"
       >
-        <img :alt="config.name" :src="avatarURL.href" width="95" height="95" />
+        <img
+          :alt="config.name"
+          :src="avatarURL.href"
+          class="h-[5rem] w-[5rem]"
+        />
       </Hyperlink>
 
       <div class="overflow-x-auto">

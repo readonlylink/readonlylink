@@ -14,8 +14,7 @@ const homepageURL = new URL(props.author.config.homepage, props.author.url)
       <img
         :src="avatarURL.href"
         :alt="author.config.name"
-        width="95"
-        height="95"
+        class="h-[5rem] w-[5rem]"
       />
     </Hyperlink>
 

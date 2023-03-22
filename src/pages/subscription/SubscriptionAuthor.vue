@@ -26,12 +26,10 @@ function toggle() {
   <button @click="toggle()">
     <div class="flex flex-col items-center">
       <img
-        class="shrink-0"
+        class="h-[5rem] w-[5rem] shrink-0"
         :class="[isCurrentAuthor() && 'ring-4 ring-rose-300']"
         :src="avatarURL.href"
         :alt="author.config.name"
-        width="80"
-        height="80"
       />
 
       <div

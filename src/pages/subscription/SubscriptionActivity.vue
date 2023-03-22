@@ -25,8 +25,7 @@ const articleURL = new URL(props.activity.path, props.activity.author.url)
         <img
           :src="avatarURL.href"
           :alt="activity.author.config.name"
-          width="72"
-          height="72"
+          class="h-[4.2rem] w-[4.2rem]"
         />
       </Hyperlink>
 

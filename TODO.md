@@ -1,5 +1,3 @@
-should not use px for <img> size -- chrome and firefox are different
-
 [home] improve activities loading
 
 # docs
