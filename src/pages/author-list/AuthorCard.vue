@@ -1,11 +1,17 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import { Author } from '../author/Author'
 
 const props = defineProps<{ author: Author }>()
 
-const avatarURL = new URL(props.author.config.avatar, props.author.url)
-const homepageURL = new URL(props.author.config.homepage, props.author.url)
+const avatarURL = computed(
+  () => new URL(props.author.config.avatar, props.author.url),
+)
+
+const homepageURL = computed(
+  () => new URL(props.author.config.homepage, props.author.url),
+)
 </script>
 
 <template>

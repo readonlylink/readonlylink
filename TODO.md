@@ -1,5 +1,3 @@
-# docs
-
 [author] pass `url` as props `MdPage`
 
 # activities

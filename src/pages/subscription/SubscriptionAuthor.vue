@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Author } from '../author/Author'
 import { State } from './State'
 
@@ -7,7 +8,9 @@ const props = defineProps<{
   author: Author
 }>()
 
-const avatarURL = new URL(props.author.config.avatar, props.author.url)
+const avatarURL = computed(
+  () => new URL(props.author.config.avatar, props.author.url),
+)
 
 function isCurrentAuthor() {
   return props.state.currentAuthor?.url === props.author.url

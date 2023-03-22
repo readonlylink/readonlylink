@@ -21,8 +21,6 @@ const url = computed(() => {
     props.state.url,
   )
 })
-
-console.log(url.value.href)
 </script>
 
 <template>

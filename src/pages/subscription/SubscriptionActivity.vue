@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { formatDateTime } from '../../utils/formatDate'
@@ -10,12 +11,13 @@ const props = defineProps<{
   activity: Activity
 }>()
 
-const avatarURL = new URL(
-  props.activity.author.config.avatar,
-  props.activity.author.url,
+const avatarURL = computed(
+  () => new URL(props.activity.author.config.avatar, props.activity.author.url),
 )
 
-const articleURL = new URL(props.activity.path, props.activity.author.url)
+const articleURL = computed(
+  () => new URL(props.activity.path, props.activity.author.url),
+)
 </script>
 
 <template>

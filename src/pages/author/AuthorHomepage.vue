@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
 import AuthorHomepageToolbar from './AuthorHomepageToolbar.vue'
@@ -6,7 +7,9 @@ import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
-const avatarURL = new URL(props.state.config.avatar, props.state.url)
+const avatarURL = computed(
+  () => new URL(props.state.config.avatar, props.state.url),
+)
 </script>
 
 <template>
