@@ -1,7 +1,3 @@
-# activities
-
-[activities] improve activities loading
-
 # author
 
 [author] `AuthorHomepage` support `tabs`
