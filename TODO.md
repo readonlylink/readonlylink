@@ -1,6 +1,9 @@
 # author
 
-[author] an author can have many pages -- not just homepage
+> An author can have many pages -- not just homepage.
+
+[author] `State` has `path`
+[author] `AuthorConfig` has optional `src`
 
 # history
 
