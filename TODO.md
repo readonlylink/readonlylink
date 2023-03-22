@@ -1,18 +1,16 @@
+[author] `AuthorHomepage` show `avatar`
+
+[home] improve activities loading
+
 # docs
 
 [article] pass `url` as props `MdPage`
 [manual] pass `url` as props `MdPage`
 [author] pass `url` as props `MdPage`
 
-# home
-
-[home] new author fidb
-[home] new author mimor
-
 # author
 
 [author] `AuthorHomepage` support `tabs`
-[author] `AuthorHomepage` show `avatar`
 
 # history
 
@@ -20,9 +18,11 @@
 
 # md-plugin
 
-[md-plugin] `<dialog>`
+> For https://readonly.link/books/https://cicada-monologues.netlify.app/book.json
+
 [md-plugin] `<poem-vertical>`
-[md-plugin] `<reminder>`
+[md-plugin] `<question>`
+[md-plugin] `<answer>`
 
 # later
 
