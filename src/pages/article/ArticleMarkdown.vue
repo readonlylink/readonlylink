@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
 import { stateDocument } from './stateDocument'
@@ -12,8 +12,10 @@ watch(
     window.scrollTo(0, 0)
   },
 )
+
+const url = computed(() => new URL(props.state.url))
 </script>
 
 <template>
-  <MdPage class="m-6" :document="stateDocument(state)" :url="state.url" />
+  <MdPage class="m-6" :document="stateDocument(state)" :url="url" />
 </template>
