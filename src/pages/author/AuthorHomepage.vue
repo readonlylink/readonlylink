@@ -10,6 +10,8 @@ const props = defineProps<{ state: State }>()
 const avatarURL = computed(
   () => new URL(props.state.config.avatar, props.state.url),
 )
+
+const url = computed(() => new URL(props.state.url))
 </script>
 
 <template>
@@ -34,7 +36,7 @@ const avatarURL = computed(
     />
 
     <div class="mx-5 mb-5 md:m-6">
-      <MdPage :key="state.url" :document="state.homepage.document" />
+      <MdPage :key="state.url" :document="state.homepage.document" :url="url" />
     </div>
   </div>
 </template>

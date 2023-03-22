@@ -1,5 +1,3 @@
-[author] pass `url` as props `MdPage`
-
 # activities
 
 [activities] improve activities loading
