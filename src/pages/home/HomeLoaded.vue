@@ -21,7 +21,7 @@ const state = stateReactive(props.state)
 
     <div v-if="state.isLoadingActivities">
       <Lang
-        class="border-y border-dashed border-stone-500 py-2 font-sans text-stone-500"
+        class="border-b border-dashed border-stone-500 py-2 font-sans text-stone-500"
       >
         <template #zh> 作者动态逐渐加载中⋯⋯ </template>
         <template #en>
