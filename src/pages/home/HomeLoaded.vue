@@ -19,6 +19,17 @@ const state = stateReactive(props.state)
 
     <div class="border-b border-stone-500 pb-1"></div>
 
+    <div v-if="state.isLoadingActivities">
+      <Lang
+        class="border-y border-dashed border-stone-500 py-2 font-sans text-stone-500"
+      >
+        <template #zh> 作者动态逐渐加载中⋯⋯ </template>
+        <template #en>
+          Loading authors' activities, little by little ...
+        </template>
+      </Lang>
+    </div>
+
     <div class="flex flex-col divide-y divide-stone-600">
       <SubscriptionActivity
         v-for="activity of stateActivitiesForShow(state.subscriptionState)"
@@ -26,15 +37,6 @@ const state = stateReactive(props.state)
         :state="state.subscriptionState"
         :activity="activity"
       />
-    </div>
-
-    <div v-if="state.isLoadingActivities">
-      <Lang class="border-t border-stone-500 py-2 font-sans text-stone-500">
-        <template #zh> 作者动态逐渐加载中⋯⋯ </template>
-        <template #en>
-          Loading authors' activities, little by little ...
-        </template>
-      </Lang>
     </div>
   </div>
 </template>
