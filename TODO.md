@@ -18,6 +18,12 @@
 
 [history] store visited links to `localStorage`
 
+# md-plugin
+
+[md-plugin] `<dialog>`
+[md-plugin] `<poem-vertical>`
+[md-plugin] `<reminder>`
+
 # later
 
 [refactor] improve `@xieyuheng/postmark` API
