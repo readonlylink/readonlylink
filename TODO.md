@@ -1,6 +1,5 @@
 # docs
 
-[article] pass `url` as props `MdPage`
 [manual] pass `url` as props `MdPage`
 [author] pass `url` as props `MdPage`
 

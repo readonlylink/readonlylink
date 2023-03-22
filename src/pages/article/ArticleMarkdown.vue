@@ -15,5 +15,5 @@ watch(
 </script>
 
 <template>
-  <MdPage class="m-6" :document="stateDocument(state)" />
+  <MdPage class="m-6" :document="stateDocument(state)" :url="state.url" />
 </template>
