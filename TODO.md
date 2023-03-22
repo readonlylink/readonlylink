@@ -6,7 +6,6 @@
 
 # home
 
-[home] new author cicada-lang
 [home] new author fidb
 [home] new author mimor
 
@@ -18,11 +17,6 @@
 # history
 
 [history] store visited links to `localStorage`
-
-# articles
-
-[articles] `ArticleEntrance` support `data:` link
-[articles] `ArticleEntrance` support editing and share `data:` link
 
 # later
 
