@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import AuthorHomepage from './AuthorHomepage.vue'
+import AuthorPage from './AuthorPage.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
 import { stateTitle } from './stateTitle'
@@ -15,5 +15,5 @@ const state = stateReactive(props.state)
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <AuthorHomepage :state="state" />
+  <AuthorPage :state="state" />
 </template>

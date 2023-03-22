@@ -1,6 +1,6 @@
 # author
 
-[author] `AuthorHomepage` support `tabs`
+[author] an author can have many pages -- not just homepage
 
 # history
 

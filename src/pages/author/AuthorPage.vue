@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
-import AuthorHomepageToolbar from './AuthorHomepageToolbar.vue'
+import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
@@ -25,15 +25,12 @@ const url = computed(() => new URL(props.state.url))
 
     <Hyperlink
       :href="`/authors/${state.url}`"
-      class="absolute top-7 -left-16 hidden h-[4.5rem] w-[4.5rem] shrink-0 object-contain md:block"
+      class="absolute top-7 -left-[4.3rem] hidden h-[4.5rem] w-[4.5rem] shrink-0 object-contain md:block"
     >
       <img :src="avatarURL.href" :alt="state.config.name" />
     </Hyperlink>
 
-    <AuthorHomepageToolbar
-      class="absolute top-0 right-0 p-2 md:p-3"
-      :state="state"
-    />
+    <AuthorToolbar class="absolute top-0 right-0 p-2 md:p-3" :state="state" />
 
     <div class="mx-5 mb-5 md:m-6">
       <MdPage :key="state.url" :document="state.homepage.document" :url="url" />
