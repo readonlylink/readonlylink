@@ -8,7 +8,7 @@ title: 文章
 
 ## 使用方式
 
-你可以在浏览器的地址栏输入 Markdown 文件的连接。
+你可以在浏览器的地址栏输入 Markdown 文件的链接。
 
 格式如下：
 
@@ -16,7 +16,7 @@ title: 文章
 https://readonly.link/articles/:link
 ```
 
-你也可以在 [**readonly.link/articles**](https://readonly.link/articles) 页面直接输入连接。
+你也可以在 [**readonly.link/articles**](https://readonly.link/articles) 页面直接输入链接。
 
 ## 文章的属性
 

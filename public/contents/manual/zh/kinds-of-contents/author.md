@@ -6,7 +6,7 @@ title: 作者
 
 ## 使用方式
 
-你可以在浏览器的地址栏输入 `author.json` 配置文件的连接。
+你可以在浏览器的地址栏输入 `author.json` 配置文件的链接。
 
 格式如下：
 
@@ -55,19 +55,19 @@ https://readonly.link/authors/:link
 
 你可以通过作者配置文件中的 `activities` 属性，来发布动态。
 
-只要在这个数组中填写一些代表动态的 Markdown 文件连接就可以。
+只要在这个数组中填写一些代表动态的 Markdown 文件链接就可以。
 
 注意：
 
-- Markdown 文件连接要是就 `author.json` 而言的相对路径，而不是 URL。
+- Markdown 文件链接要是就 `author.json` 而言的相对路径，而不是 URL。
 - 作为动态的 Markdown 文件，必须带有 `date` 属性，这将作为排序的依据。
 - 建议写简短的动态 Markdown 文件，长的动态在显示的时候会带有滚动条。
 
-## 动态中的只读连接
+## 动态中的只读链接
 
-在动态 Markdown 文件中，你可以用下面的格式来显示一个只读连接。
+在动态 Markdown 文件中，你可以用下面的格式来显示一个只读链接。
 
-比如，下面这个连接，就连接到了这个手册：
+比如，下面这个链接，就链接到了这个手册：
 
 ```xml
 <readonlylink href="https://readonly.link/contents/manual/zh.json" />
@@ -77,7 +77,7 @@ https://readonly.link/authors/:link
 
 你可以以动态的方式，介绍你新写的文章和书籍，等等。
 
-你的读者可以通过将你的作者 `author.json` 连接加入 [订阅列表](https://readonly.link/subscriptions?kind=Editor) 的方式，来订阅你发布的动态。
+你的读者可以通过将你的作者 `author.json` 链接加入 [订阅列表](https://readonly.link/subscriptions?kind=Editor) 的方式，来订阅你发布的动态。
 
 在你的作者主页的右上角，也会有一个 `订阅` 按钮，
 你的读者在访问你的作者主页时，也可以直接点击这个按钮来订阅你的动态。

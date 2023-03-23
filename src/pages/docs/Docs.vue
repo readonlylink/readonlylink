@@ -27,7 +27,7 @@ const lang = useGlobalLang()
             href="https://readonly.link/manuals/https://readonly.link/contents/manual/en.json"
             class="inline-flex items-center underline"
             target="_blank"
-            >只读连接手册（英文）<ArrowTopRightOnSquareIcon
+            >只读链接手册（英文）<ArrowTopRightOnSquareIcon
               class="w-4 shrink-0 text-stone-500" /></a
           >。
         </template>
@@ -48,7 +48,7 @@ const lang = useGlobalLang()
             href="https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json"
             class="inline-flex items-center underline"
             target="_blank"
-            >只读连接手册<ArrowTopRightOnSquareIcon
+            >只读链接手册<ArrowTopRightOnSquareIcon
               class="w-4 shrink-0 text-stone-500" /></a
           >。
         </template>

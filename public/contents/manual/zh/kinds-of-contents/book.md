@@ -6,7 +6,7 @@ title: 书籍
 
 ## 使用方式
 
-你可以在浏览器的地址栏输入 `book.json` 配置文件的连接。
+你可以在浏览器的地址栏输入 `book.json` 配置文件的链接。
 
 格式如下：
 
@@ -14,7 +14,7 @@ title: 书籍
 https://readonly.link/books/:link
 ```
 
-你也可以在 [**readonly.link/books**](https://readonly.link/books) 页面直接输入连接。
+你也可以在 [**readonly.link/books**](https://readonly.link/books) 页面直接输入链接。
 
 ## 书籍的配置文件
 

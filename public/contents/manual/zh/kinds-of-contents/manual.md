@@ -6,7 +6,7 @@ title: 手册
 
 ## 使用方式
 
-你可以在浏览器的地址栏输入 `manual.json` 配置文件的连接。
+你可以在浏览器的地址栏输入 `manual.json` 配置文件的链接。
 
 格式如下：
 
@@ -14,18 +14,18 @@ title: 手册
 https://readonly.link/manuals/:link
 ```
 
-你也可以在 [**readonly.link/manuals**](https://readonly.link/manuals) 页面直接输入连接。
+你也可以在 [**readonly.link/manuals**](https://readonly.link/manuals) 页面直接输入链接。
 
 ## 手册的配置文件
 
 我们可以在手册的配置文件中，声明书籍的标题、作者、日期、目录，等等。
 
-比如当前这个 [只读连接手册](https://github.com/readonlylink/readonlylink/tree/master/public/contents/manual) 的配置如下：
+比如当前这个 [只读链接手册](https://github.com/readonlylink/readonlylink/tree/master/public/contents/manual) 的配置如下：
 
 ```json
 {
   "kind": "Manual",
-  "title": "只读连接手册",
+  "title": "只读链接手册",
   "version": "0.0.1",
   "authors": ["谢宇恒"],
   "date": "2022",
