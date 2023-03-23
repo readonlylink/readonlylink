@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import {
   CalendarDaysIcon,
-  HashtagIcon,
   LanguageIcon,
-  MapPinIcon,
   PencilIcon,
 } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
@@ -29,9 +27,6 @@ defineProps<{
         <div class="font-bold">
           {{ config.title }}
         </div>
-        <div v-if="state.config.subtitle" class="text-base font-bold">
-          {{ config.subtitle }}
-        </div>
       </div>
     </Hyperlink>
 
@@ -55,19 +50,6 @@ defineProps<{
       <div class="flex items-center" v-if="config.date">
         <CalendarDaysIcon class="w-5 shrink-0 pr-1" />
         {{ config.date }}
-      </div>
-
-      <div class="flex items-center" v-if="config.venue">
-        <MapPinIcon class="w-5 shrink-0 pr-1" />
-        {{ config.venue }}
-      </div>
-
-      <div
-        class="flex items-center"
-        v-if="config.keywords && config.keywords.length > 0"
-      >
-        <HashtagIcon class="w-5 shrink-0 pr-1" />
-        <span>{{ config.keywords.join(', ') }}</span>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/postmark'
-import { isElement, XElement } from '@xieyuheng/x-node'
+import { XNode, isElement } from '@xieyuheng/x-node'
 import { computed } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { State } from '../../State'
@@ -8,7 +8,7 @@ import { State } from '../../State'
 const props = defineProps<{
   state: State
   node: Nodes.HtmlBlock
-  element: XElement
+  element: XNode
 }>()
 
 const who = 'MdHtmlBlockElement'
