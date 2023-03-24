@@ -1,3 +1,7 @@
+[manual] fix mobile scroll
+
+[md] support footnote
+
 # author
 
 > An author can have many pages -- not just homepage.
