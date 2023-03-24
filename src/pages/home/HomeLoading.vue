@@ -12,7 +12,7 @@ defineProps<{ options: StateOptions }>()
 
     <div class="py-1"></div>
 
-    <Lang class="">
+    <Lang>
       <template #zh> 作者动态加载中⋯⋯ </template>
       <template #en> Loading authors' activities ... </template>
     </Lang>

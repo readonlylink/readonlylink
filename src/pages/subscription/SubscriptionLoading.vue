@@ -9,7 +9,7 @@ defineProps<{ options: StateOptions }>()
 <template>
   <PageLayout>
     <div class="font-sans text-xl text-stone-500">
-      <Lang class="">
+      <Lang>
         <template #zh> 订阅列表加载中⋯⋯ </template>
         <template #en> Loading subscriptions ... </template>
       </Lang>

@@ -6,7 +6,7 @@ defineProps<{ list: Array<string> }>()
 
 <template>
   <div class="py-3 font-sans text-xl text-stone-500">
-    <Lang class="">
+    <Lang>
       <template #zh> 作者列表加载中⋯⋯ </template>
       <template #en> Loading author list ... </template>
     </Lang>

@@ -7,7 +7,7 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <div class="font-sans text-xl text-stone-500">
-    <Lang class="">
+    <Lang>
       <template #zh> 只读链接加载中⋯⋯ </template>
       <template #en> Loading readonlylink ... </template>
     </Lang>
