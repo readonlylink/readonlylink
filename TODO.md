@@ -1,4 +1,6 @@
-[mimor] support <mimor>
+[mimor] support <mimor> -- `mimor.app/mimors/:url` should support `data:` url
+
+- current markdown parser can not handle this
 
 [md] support footnote
 

@@ -11,6 +11,10 @@ const props = defineProps<{
   element: XNode
 }>()
 
+const who = 'MdHtmlBlockNode'
+
+console.log({ who, element: props.element })
+
 const plugin = computed(() =>
   props.state.plugins.find(
     (plugin) =>

@@ -9,7 +9,11 @@ const props = defineProps<{
   node: Nodes.HtmlBlock
 }>()
 
+const who = 'MdHtmlBlock'
+
 const elements = parseNodes(props.node.text)
+
+console.log({ who, node: props.node })
 </script>
 
 <template>
