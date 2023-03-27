@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
-    "@types/lodash": "^4.14.191",
+    "@types/lodash": "^4.14.192",
     "@types/path-browserify": "^1.0.0",
     "@types/qs": "^6.9.7",
     "@types/sanitize-html": "^2.9.0",
