@@ -44,7 +44,7 @@ watch(
       </div>
     </div>
 
-    <div class="flex flex-col md:hidden">
+    <div class="flex h-full flex-col md:hidden">
       <div class="flex overflow-y-auto">
         <ManualPageNav
           v-if="showNav"

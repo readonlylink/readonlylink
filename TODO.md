@@ -1,4 +1,4 @@
-[manual] fix mobile scroll
+[mimor] support <mimor>
 
 [md] support footnote
 
