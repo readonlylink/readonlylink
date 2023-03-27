@@ -20,7 +20,6 @@
     "@xieyuheng/postmark": "^0.2.22",
     "@xieyuheng/ty": "^0.1.22",
     "@xieyuheng/x-node": "^0.0.1",
-    "floating-vue": "2.0.0-beta.20",
     "highlight.js": "^11.7.0",
     "js-base64": "^3.7.5",
     "js-yaml": "^4.1.0",
