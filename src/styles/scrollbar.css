@@ -18,23 +18,6 @@ References:
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: #eee;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #aaa;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: #999;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -42,24 +25,6 @@ References:
   height: 2px;
 }
 
-::-webkit-scrollbar:horizontal {
-  width: 2px;
-  height: 2px;
-}
-
-::-webkit-scrollbar:vertical {
-  width: 2px;
-  height: 2px;
-}
-
-::-webkit-scrollbar-track {
-  background: #eee;
-}
-
 ::-webkit-scrollbar-thumb {
   background: #aaa;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #999;
 }
