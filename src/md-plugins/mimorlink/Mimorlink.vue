@@ -29,7 +29,7 @@ watch(
 <template>
   <iframe
     v-if="state"
-    class="h-[36rem] md:w-[30rem]"
+    class="h-[36rem] w-full md:w-[36rem]"
     :src="`https://mimor.app/mimors/${state.url}`"
   />
 </template>
