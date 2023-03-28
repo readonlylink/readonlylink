@@ -115,14 +115,12 @@ const lang = useGlobalLang()
         </template>
         <template #en>
           <a
-            href="https://xieyuheng.com"
+            href="https://github.com/readonlylink/readonlylink"
             class="inline-flex items-center underline"
             target="_blank"
           >
             Source code
-            <ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500"
-            /> </a
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" /></a
           >.
         </template>
       </Lang>
