@@ -5,5 +5,6 @@ export function useDefaultAuthorList(): Array<string> {
     'https://shadowrz.github.io/author.json',
     'https://cdn.cic.run/docs/author.json',
     'https://cdn.fidb.dev/docs/author.json',
+    'https://mimor.app/contents/author.json',
   ]
 }
