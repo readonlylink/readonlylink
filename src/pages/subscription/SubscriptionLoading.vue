@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { StateOptions } from './loadState'
 

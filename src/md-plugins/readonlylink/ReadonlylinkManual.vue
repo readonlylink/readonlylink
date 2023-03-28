@@ -5,7 +5,7 @@ import {
   PencilIcon,
 } from '@heroicons/vue/24/outline'
 import Hyperlink from '../../components/Hyperlink.vue'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { ManualConfig } from '../../pages/manual/ManualConfig'
 import { State } from './State'
 

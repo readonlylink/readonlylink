@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { Config } from './Config'
 import { State } from './State'
 

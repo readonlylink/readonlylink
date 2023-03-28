@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 

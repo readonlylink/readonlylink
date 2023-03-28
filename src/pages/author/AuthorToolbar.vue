@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BookmarkIcon, BookmarkSlashIcon } from '@heroicons/vue/24/outline'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 

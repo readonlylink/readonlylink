@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useGlobalLang } from '../reactives/useGlobalLang'
+import { useGlobalLang } from './useGlobalLang'
 
 const lang = useGlobalLang()
 </script>

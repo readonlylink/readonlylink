@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import HomeSlogan from './HomeSlogan.vue'
 import { StateOptions } from './loadState'
 

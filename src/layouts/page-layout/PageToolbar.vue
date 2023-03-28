@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useGlobalLang } from '../../reactives/useGlobalLang'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLang from './PageLang.vue'
 
 const lang = useGlobalLang()

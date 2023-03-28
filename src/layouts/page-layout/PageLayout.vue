@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { useGlobalLang } from '../../reactives/useGlobalLang'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageHead from './PageHead.vue'
 
 const lang = useGlobalLang()

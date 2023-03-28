@@ -3,11 +3,11 @@ import { PlayIcon, QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
 import { useRouter } from 'vue-router'
 import Hyperlink from '../../components/Hyperlink.vue'
-import Lang from '../../components/Lang.vue'
 import { formSubmit, useForm } from '../../components/form'
 import FormInput from '../../components/form/FormInput.vue'
+import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { useGlobalLang } from '../../reactives/useGlobalLang'
 
 const form = useForm({
   url: '',

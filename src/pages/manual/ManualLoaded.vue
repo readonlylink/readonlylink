@@ -2,7 +2,7 @@
 import { Head } from '@vueuse/head'
 import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import ManualLayout from './ManualLayout.vue'
 import ManualPage from './ManualPage.vue'
 import { State } from './State'

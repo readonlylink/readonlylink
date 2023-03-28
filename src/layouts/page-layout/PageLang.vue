@@ -10,8 +10,8 @@ import {
   CheckIcon,
   LanguageIcon,
 } from '@heroicons/vue/24/outline'
-import Lang from '../../components/Lang.vue'
-import { langTagName, useGlobalLang } from '../../reactives/useGlobalLang'
+import Lang from '../../components/lang/Lang.vue'
+import { langTagName, useGlobalLang } from '../../components/lang/useGlobalLang'
 
 const lang = useGlobalLang()
 </script>

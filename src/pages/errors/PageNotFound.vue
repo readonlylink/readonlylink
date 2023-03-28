@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
 import { useRoute } from 'vue-router'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { useGlobalLang } from '../../reactives/useGlobalLang'
 
 const lang = useGlobalLang()
 

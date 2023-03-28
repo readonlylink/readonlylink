@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Hyperlink from '../../components/Hyperlink.vue'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { State } from './State'
 import { stateActivitiesForShow } from './stateActivitiesForShow'
 import SubscriptionActivity from './SubscriptionActivity.vue'

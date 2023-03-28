@@ -8,7 +8,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { normalizeAttributes } from '../../components/md/normalizeAttributes'
 import { ArticleConfig } from './Config'
 import { State } from './State'

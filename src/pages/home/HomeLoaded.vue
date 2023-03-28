@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Lang from '../../components/Lang.vue'
+import Lang from '../../components/lang/Lang.vue'
 import { stateActivitiesForShow } from '../subscription/stateActivitiesForShow'
 import SubscriptionActivity from '../subscription/SubscriptionActivity.vue'
 import { State } from './State'
