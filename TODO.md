@@ -2,6 +2,10 @@
 
 [bug] `/authors` should handle http error
 
+[bug] fix list style on mobile:
+
+- example https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
+
 # author
 
 > An author can have many pages -- not just homepage.
