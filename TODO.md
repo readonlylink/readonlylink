@@ -1,5 +1,3 @@
-[article] state has `document`
-
 [docs] manual/zh/custom-elements/mimor.md
 
 [docs] manual/en/custom-elements/

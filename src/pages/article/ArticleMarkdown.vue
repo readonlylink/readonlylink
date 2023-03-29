@@ -2,7 +2,6 @@
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
-import { stateDocument } from './stateDocument'
 
 const props = defineProps<{ state: State }>()
 
@@ -17,5 +16,5 @@ const url = computed(() => new URL(props.state.url))
 </script>
 
 <template>
-  <MdPage class="m-6" :document="stateDocument(state)" :url="url" />
+  <MdPage class="m-6" :document="state.document" :url="url" />
 </template>
