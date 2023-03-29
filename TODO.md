@@ -1,5 +1,3 @@
-[bug] `/authors` should handle http error
-
 [md] support footnote
 
 # author

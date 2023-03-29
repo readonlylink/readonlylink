@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
@@ -8,12 +8,25 @@ import { loadAuthor } from '../author/loadAuthor'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
 
-const list = useDefaultAuthorList()
+const list = reactive(useDefaultAuthorList())
 
-const authors = ref<Array<Author> | undefined>(undefined)
+const authors = ref<Array<Author>>([])
+
+const who = 'AuthorList'
 
 onMounted(async () => {
-  authors.value = await Promise.all(list.map(loadAuthor))
+  while (true) {
+    const url = list.shift()
+    if (url === undefined) {
+      return
+    }
+
+    try {
+      authors.value.push(await loadAuthor(url))
+    } catch (error) {
+      console.error({ who, error })
+    }
+  }
 })
 </script>
 
@@ -27,8 +40,8 @@ onMounted(async () => {
         </Lang>
       </div>
 
-      <AuthorListLoaded v-if="authors" :authors="authors" />
-      <AuthorListLoading v-else :list="list" />
+      <AuthorListLoading v-if="list.length > 0" :list="list" />
+      <AuthorListLoaded :authors="authors" />
     </div>
   </PageLayout>
 </template>
