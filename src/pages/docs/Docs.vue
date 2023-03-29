@@ -4,6 +4,7 @@ import { Head } from '@vueuse/head'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
 
 const lang = useGlobalLang()
 </script>
@@ -24,7 +25,7 @@ const lang = useGlobalLang()
       <Lang>
         <template #zh>
           <a
-            href="https://readonly.link/manuals/https://readonly.link/contents/manual/en.json"
+            :href="`${useCurrentOrigin()}/manuals/${useCurrentOrigin()}/contents/manual/en.json`"
             class="inline-flex items-center underline"
             target="_blank"
             >只读链接手册（英文）<ArrowTopRightOnSquareIcon
@@ -33,7 +34,7 @@ const lang = useGlobalLang()
         </template>
         <template #en>
           <a
-            href="https://readonly.link/manuals/https://readonly.link/contents/manual/en.json"
+            :href="`${useCurrentOrigin()}/manuals/${useCurrentOrigin()}/contents/manual/en.json`"
             class="inline-flex items-center underline"
             target="_blank"
             >Readonly.Link Manual<ArrowTopRightOnSquareIcon
@@ -45,7 +46,7 @@ const lang = useGlobalLang()
       <Lang>
         <template #zh>
           <a
-            href="https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json"
+            :href="`${useCurrentOrigin()}/manuals/${useCurrentOrigin()}/contents/manual/zh.json`"
             class="inline-flex items-center underline"
             target="_blank"
             >只读链接手册<ArrowTopRightOnSquareIcon
@@ -54,7 +55,7 @@ const lang = useGlobalLang()
         </template>
         <template #en>
           <a
-            href="https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json"
+            :href="`${useCurrentOrigin()}/manuals/${useCurrentOrigin()}/contents/manual/zh.json`"
             class="inline-flex items-center underline"
             target="_blank"
             >Readonly.Link Manual (Chinese)<ArrowTopRightOnSquareIcon

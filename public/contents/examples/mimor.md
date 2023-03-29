@@ -1,5 +1,5 @@
 ---
-title: Mimor Tests
+title: <mimor>
 ---
 
 Testing `<mimor>`

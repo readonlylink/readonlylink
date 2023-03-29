@@ -1,12 +1,23 @@
-rename <mimor> to <mimor>
+[docs] manual/zh -- 定制元素
+[docs] manual/en -- Custom Elements
 
-[md] support footnote
+<mimor> and <readonlylink> -- resolve relative url before passing to <iframe>
 
-[bug] `/authors` should handle http error
+- http://localhost:5173/articles/http://localhost:5173/contents/examples/mimor.md
+
+- md-plugin takes url
+
+[docs] about <mimor>
 
 [bug] fix list style on mobile:
 
 - example https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
+
+[]
+
+[md] support footnote
+
+[bug] `/authors` should handle http error
 
 # author
 
