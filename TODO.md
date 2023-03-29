@@ -1,6 +1,3 @@
-[docs] manual/zh/custom-elements/mimor.md
-
-[docs] manual/en/custom-elements/
 [docs] manual/en/custom-elements/readonlylink.md
 [docs] manual/en/custom-elements/mimor.md
 

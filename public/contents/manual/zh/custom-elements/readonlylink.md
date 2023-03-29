@@ -2,7 +2,7 @@
 title: <readonlylink>
 ---
 
-`<readonlylink>` 这个 Markdown 定制元素，可以显示出来一个只读链接。
+召唤 `<readonlylink>` 这个 Markdown 定制元素，可以显示出来一个只读链接。
 
 比如，下面这个链接，就链接到了这个手册：
 
