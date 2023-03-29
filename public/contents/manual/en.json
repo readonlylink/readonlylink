@@ -13,6 +13,10 @@
       "kinds-of-contents/book.md",
       "kinds-of-contents/manual.md",
       "kinds-of-contents/author.md"
+    ],
+    "Custom Elements": [
+      "custom-elements/readonlylink.md",
+      "custom-elements/mimor.md"
     ]
   }
 }

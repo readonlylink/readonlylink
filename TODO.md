@@ -1,9 +1,16 @@
-[docs] manual/zh/custom-elements/readonlylink.md
+[article] state has `document`
+
 [docs] manual/zh/custom-elements/mimor.md
 
 [docs] manual/en/custom-elements/
 [docs] manual/en/custom-elements/readonlylink.md
 [docs] manual/en/custom-elements/mimor.md
+
+[manual] relative link should not reload page
+
+- example:
+
+  http://localhost:5173/manuals/http://localhost:5173/contents/manual/zh.json/-/kinds-of-contents/author.md
 
 <mimor> -- resolve relative url before passing to <iframe>
 

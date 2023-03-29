@@ -62,16 +62,7 @@ https://readonly.link/authors/:link
 - Markdown 文件链接要是就 `author.json` 而言的相对路径，而不是 URL。
 - 作为动态的 Markdown 文件，必须带有 `date` 属性，这将作为排序的依据。
 - 建议写简短的动态 Markdown 文件，长的动态在显示的时候会带有滚动条。
-
-## 动态中的只读链接
-
-在动态 Markdown 文件中，你可以用下面的格式来显示一个只读链接。
-
-比如，下面这个链接，就链接到了这个手册：
-
-```xml
-<readonlylink href="https://readonly.link/contents/manual/zh.json" />
-```
+- 动态中很适合使用 [`<readonlylink>`](../custom-elements/readonlylink.md) 这个定制元素。
 
 ## 订阅作者动态
 
