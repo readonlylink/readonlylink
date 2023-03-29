@@ -1,9 +1,3 @@
-[manual] relative link should not reload page
-
-- example:
-
-  http://localhost:5173/manuals/http://localhost:5173/contents/manual/zh.json/-/kinds-of-contents/author.md
-
 <mimor> -- resolve relative url before passing to <iframe>
 
 - http://localhost:5173/articles/http://localhost:5173/contents/examples/mimor.md

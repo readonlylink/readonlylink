@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Nodes } from '@xieyuheng/postmark'
+import Hyperlink from '../../../Hyperlink.vue'
 import MdNode from '../../../md/MdNode.vue'
 import { State } from '../../State'
 import { isExternalLink } from '../../isExternalLink'
@@ -13,10 +14,11 @@ defineProps<{
 
 <template>
   <a
+    v-if="isExternalLink(node.href)"
     class="break-words underline decoration-stone-400"
     :href="node.href"
     :title="node.title"
-    :target="isExternalLink(node.href) ? '_blank' : '_self'"
+    target="_blank"
   >
     <MdNode
       v-for="(child, index) in node.children"
@@ -25,9 +27,20 @@ defineProps<{
       :node="child"
     />
 
-    <ArrowTopRightOnSquareIcon
-      v-if="isExternalLink(node.href)"
-      class="inline w-4 shrink-0 text-stone-500"
-    />
+    <ArrowTopRightOnSquareIcon class="inline w-4 shrink-0 text-stone-500" />
   </a>
+
+  <Hyperlink
+    v-else
+    class="break-words underline decoration-stone-400"
+    :href="node.href"
+    :title="node.title"
+  >
+    <MdNode
+      v-for="(child, index) in node.children"
+      :key="index"
+      :state="state"
+      :node="child"
+    />
+  </Hyperlink>
 </template>
