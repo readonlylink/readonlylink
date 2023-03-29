@@ -1,7 +1,7 @@
-export function isExternalLink(path: string) {
+export function isExternalLink(link: string) {
   return (
-    path.startsWith('http://') ||
-    path.startsWith('https://') ||
-    path.startsWith('mailto:')
+    link.startsWith('http://') ||
+    link.startsWith('https://') ||
+    link.startsWith('mailto:')
   )
 }

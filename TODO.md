@@ -1,9 +1,3 @@
-extract function to resolve of relative url
-
-- used by:
-
-  - components/md/nodes/inlines/MdImage.vue
-
 pass `pageState: MdPageState` to component of md-plugin
 
 <readonlylink> -- resolve relative url
