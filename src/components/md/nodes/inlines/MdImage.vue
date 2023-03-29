@@ -2,6 +2,7 @@
 import { Nodes } from '@xieyuheng/postmark'
 import { computed } from 'vue'
 import { State } from '../../State'
+import { isExternalLink } from '../../isExternalLink'
 
 const props = defineProps<{
   state: State
@@ -9,10 +10,7 @@ const props = defineProps<{
 }>()
 
 const src = computed(() => {
-  if (
-    props.node.href.startsWith('http://') ||
-    props.node.href.startsWith('https://')
-  ) {
+  if (isExternalLink(props.node.href)) {
     return props.node.href
   }
 

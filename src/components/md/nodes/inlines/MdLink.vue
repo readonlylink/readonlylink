@@ -3,23 +3,15 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Nodes } from '@xieyuheng/postmark'
 import MdNode from '../../../md/MdNode.vue'
 import { State } from '../../State'
+import { isExternalLink } from '../../isExternalLink'
 
 defineProps<{
   state: State
   node: Nodes.Link
 }>()
-
-function isExternalLink(path: string) {
-  return (
-    path.startsWith('http://') ||
-    path.startsWith('https://') ||
-    path.startsWith('mailto:')
-  )
-}
 </script>
 
 <template>
-  <!-- NOTE A link starts with `http` is viewed as an external link. -->
   <a
     class="break-words underline decoration-stone-400"
     :href="node.href"
