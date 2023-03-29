@@ -28,6 +28,6 @@ watch(
 </script>
 
 <template>
-  <ArticleLoaded v-if="state" :state="state" />
+  <ArticleLoaded v-if="state" :state="state" :key="state.url" />
   <ArticleLoading v-else :options="useStateOptions()" />
 </template>
