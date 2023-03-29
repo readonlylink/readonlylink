@@ -1,11 +1,3 @@
-<mimor> -- resolve relative url before passing to <iframe>
-
-- http://localhost:5173/articles/http://localhost:5173/contents/examples/mimor.md
-
-- md-plugin takes url
-
-[docs] about <mimor>
-
 [bug] fix list style on mobile:
 
 - example https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md

@@ -2,6 +2,7 @@
 import { XElement } from '@xieyuheng/x-node'
 import { ref, watch } from 'vue'
 import { State as PageState } from '../../components/md/State'
+import { stateResolveLink as pageStateResolveLink } from '../../components/md/stateResolveLink'
 import { State } from './State'
 import { loadState } from './loadState'
 
@@ -13,7 +14,10 @@ const props = defineProps<{
 const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
-  const url = props.element.attributes.src
+  const url = pageStateResolveLink(
+    props.pageState,
+    props.element.attributes.src,
+  )
 
   return { url }
 }
