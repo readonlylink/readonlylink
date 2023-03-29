@@ -1,4 +1,3 @@
-[docs] manual/en/custom-elements/readonlylink.md
 [docs] manual/en/custom-elements/mimor.md
 
 [manual] relative link should not reload page

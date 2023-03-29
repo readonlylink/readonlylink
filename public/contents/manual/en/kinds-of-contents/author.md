@@ -63,16 +63,7 @@ Notes:
 - A path to a Markdown file is relative to `author.json`, NOT full URL.
 - A Markdown file must have `date` attribute, which will be used for orderring the activities.
 - It is adviced to write short activity Markdown file, for a long activity will show a scrollbar.
-
-## <readonlylink> in Activity
-
-In an activity Markdown file, you can use the following format to show a readonlylink.
-
-For example, the following `<readonlylink>` element links to this manual:
-
-```xml
-<readonlylink href="https://readonly.link/contents/manual/en.json" />
-```
+- The custom element [`<readonlylink>`](../custom-elements/readonlylink.md) can be used when writing activity.
 
 ## Subscribe to Author's Activities
 
