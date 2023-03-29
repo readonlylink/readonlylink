@@ -1,5 +1,9 @@
-[docs] manual/zh -- 定制元素
-[docs] manual/en -- Custom Elements
+[docs] manual/zh/custom-elements/readonlylink.md
+[docs] manual/zh/custom-elements/mimor.md
+
+[docs] manual/en/custom-elements/
+[docs] manual/en/custom-elements/readonlylink.md
+[docs] manual/en/custom-elements/mimor.md
 
 <readonlylink> -- resolve relative url
 
