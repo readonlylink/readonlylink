@@ -9,10 +9,6 @@ const props = defineProps<{
 }>()
 
 const src = computed(() => {
-  if (props.state.url === undefined) {
-    return props.node.href
-  }
-
   if (
     props.node.href.startsWith('http://') ||
     props.node.href.startsWith('https://')

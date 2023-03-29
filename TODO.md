@@ -1,11 +1,19 @@
+extract function to resolve of relative url
+
+- used by:
+
+  - components/md/nodes/inlines/MdImage.vue
+
+pass `pageState: MdPageState` to component of md-plugin
+
+<readonlylink> -- resolve relative url
+
 [docs] manual/zh/custom-elements/readonlylink.md
 [docs] manual/zh/custom-elements/mimor.md
 
 [docs] manual/en/custom-elements/
 [docs] manual/en/custom-elements/readonlylink.md
 [docs] manual/en/custom-elements/mimor.md
-
-<readonlylink> -- resolve relative url
 
 <mimor> -- resolve relative url before passing to <iframe>
 

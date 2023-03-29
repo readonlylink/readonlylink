@@ -6,7 +6,7 @@ import { components } from './pages'
 import { stateReactive } from './stateReactive'
 
 const props = defineProps<{
-  url?: URL
+  url: URL
   document: Nodes.Document
 }>()
 

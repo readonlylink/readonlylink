@@ -3,13 +3,13 @@ import { plugins } from '../../md-plugins'
 import { Plugin } from './Plugin'
 
 export type State = {
-  url?: URL
+  url: URL
   document: Nodes.Document
   plugins: Array<Plugin>
 }
 
 export type StateOptions = {
-  url?: URL
+  url: URL
   document: Nodes.Document
 }
 
