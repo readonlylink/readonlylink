@@ -1,8 +1,8 @@
 ---
-title: <mimor>
+title: <mimor> element
 ---
 
-Testing `<mimor>`
+# Test `<mimor>`
 
 ```
 <mimor src="https://mimor.app/contents/examples/sisuo.mimor" />

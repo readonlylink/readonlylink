@@ -1,7 +1,9 @@
 [docs] manual/zh -- 定制元素
 [docs] manual/en -- Custom Elements
 
-<mimor> and <readonlylink> -- resolve relative url before passing to <iframe>
+<readonlylink> -- resolve relative url
+
+<mimor> -- resolve relative url before passing to <iframe>
 
 - http://localhost:5173/articles/http://localhost:5173/contents/examples/mimor.md
 
@@ -13,11 +15,9 @@
 
 - example https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
 
-[]
+[bug] `/authors` should handle http error
 
 [md] support footnote
-
-[bug] `/authors` should handle http error
 
 # author
 
