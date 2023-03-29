@@ -1,7 +1,3 @@
-[bug] fix list style on mobile (chrome firefox difference):
-
-- example: http://localhost:5173/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
-
 [bug] `/authors` should handle http error
 
 [md] support footnote

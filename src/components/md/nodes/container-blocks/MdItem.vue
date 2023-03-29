@@ -10,11 +10,13 @@ defineProps<{
 </script>
 
 <template>
-  <li
-    class="marker ml-5 marker:flex marker:items-center marker:text-xl"
-    style="list-style-type: square"
-  >
-    <div class="py-1.5" v-for="(child, index) in node.children" :key="index">
+  <li class="ml-5">
+    <div
+      class="relative py-1.5"
+      v-for="(child, index) in node.children"
+      :key="index"
+    >
+      <div class="absolute -left-[1.25rem] font-mono">-</div>
       <MdNode :state="state" :node="child" />
     </div>
   </li>
