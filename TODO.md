@@ -1,4 +1,6 @@
-<readonlylink> -- resolve relative url
+[article] update document on url change
+
+- http://localhost:5173/articles/http://localhost:5173/contents/tests/mimor-element.md
 
 [docs] manual/zh/custom-elements/readonlylink.md
 [docs] manual/zh/custom-elements/mimor.md
