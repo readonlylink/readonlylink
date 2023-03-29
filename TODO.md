@@ -1,6 +1,6 @@
-[bug] fix list style on mobile:
+[bug] fix list style on mobile (chrome firefox difference):
 
-- example https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
+- example: http://localhost:5173/manuals/https://mimor.app/contents/manual/zh.json/-/intro.md
 
 [bug] `/authors` should handle http error
 
