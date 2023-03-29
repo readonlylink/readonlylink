@@ -1,5 +1,3 @@
-pass `pageState: MdPageState` to component of md-plugin
-
 <readonlylink> -- resolve relative url
 
 [docs] manual/zh/custom-elements/readonlylink.md

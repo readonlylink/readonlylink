@@ -26,6 +26,12 @@ const plugin = computed(() =>
 </script>
 
 <template>
-  <component v-if="plugin" :is="plugin.component" :element="element" />
+  <component
+    v-if="plugin"
+    :is="plugin.component"
+    :element="element"
+    :pageState="state"
+  />
+
   <div v-else v-html="safeHtml(node.text)"></div>
 </template>

@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { XElement } from '@xieyuheng/x-node'
 import { ref, watch } from 'vue'
+import { State as PageState } from '../../components/md/State'
 import { State } from './State'
 import { loadState } from './loadState'
 
-const props = defineProps<{ element: XElement }>()
+const props = defineProps<{
+  element: XElement
+  pageState: PageState
+}>()
 
 const state = ref<State | undefined>(undefined)
 
