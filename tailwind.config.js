@@ -3,6 +3,11 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    extend: {
+      listStyleType: {
+        square: 'square',
+      },
+    },
     fontFamily: {
       sans: [
         'Linux Biolinum O',
