@@ -1,3 +1,5 @@
+rename <mimor> to <mimor>
+
 [md] support footnote
 
 [bug] `/authors` should handle http error

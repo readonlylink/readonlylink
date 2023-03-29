@@ -2,16 +2,16 @@
 title: Mimor Tests
 ---
 
-Testing `<mimorlink>`
+Testing `<mimor>`
 
 ```
-<mimorlink href="https://mimor.app/contents/examples/sisuo.mimor" />
+<mimor src="https://mimor.app/contents/examples/sisuo.mimor" />
 ```
 
-<mimorlink href="https://mimor.app/contents/examples/sisuo.mimor" />
+<mimor src="https://mimor.app/contents/examples/sisuo.mimor" />
 
 ```
-<mimorlink href="https://mimor.app/contents/examples/do-not-forget.mimor" />
+<mimor src="https://mimor.app/contents/examples/do-not-forget.mimor" />
 ```
 
-<mimorlink href="https://mimor.app/contents/examples/do-not-forget.mimor" />
+<mimor src="https://mimor.app/contents/examples/do-not-forget.mimor" />

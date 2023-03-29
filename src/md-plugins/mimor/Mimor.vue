@@ -9,7 +9,7 @@ const props = defineProps<{ element: XElement }>()
 const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
-  const url = props.element.attributes.href
+  const url = props.element.attributes.src
 
   return { url }
 }
