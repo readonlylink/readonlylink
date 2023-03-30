@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'

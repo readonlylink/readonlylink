@@ -1,4 +1,3 @@
-[md] use `@readonlylink/x-markdown`
 [md] support footnote
 
 # author

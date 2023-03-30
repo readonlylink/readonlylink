@@ -15,11 +15,11 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
     "@heroicons/vue": "^2.0.16",
+    "@readonlylink/x-markdown": "^0.0.3",
+    "@readonlylink/x-node": "^0.0.3",
     "@vueuse/core": "^9.13.0",
     "@vueuse/head": "^1.1.23",
-    "@xieyuheng/postmark": "^0.2.22",
     "@xieyuheng/ty": "^0.1.22",
-    "@readonlylink/x-node": "^0.0.3",
     "highlight.js": "^11.7.0",
     "js-base64": "^3.7.5",
     "js-yaml": "^4.1.0",

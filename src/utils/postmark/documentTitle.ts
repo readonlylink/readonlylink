@@ -1,4 +1,4 @@
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 
 export function documentTitle(document: Nodes.Document): string | undefined {
   if (document.attributes.title) {

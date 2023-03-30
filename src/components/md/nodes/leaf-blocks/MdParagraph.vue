@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { computed } from 'vue'
 import MdNode from '../../MdNode.vue'
 import { State } from '../../State'

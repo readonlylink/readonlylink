@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
 import MdNode from '../../MdNode.vue'
@@ -59,10 +59,10 @@ function scrollIntoView() {
     @mouseover="hovered = true"
     @mouseleave="hovered = false"
     :class="{
-      'pt-4 pb-2': node.level === 1,
-      'pt-3 pb-2': node.level === 2,
-      'pt-2 pb-2': node.level === 3 || node.level === 4 || node.level === 5,
-      'pt-1 pb-2': node.level === 6,
+      'pb-2 pt-4': node.level === 1,
+      'pb-2 pt-3': node.level === 2,
+      'pb-2 pt-2': node.level === 3 || node.level === 4 || node.level === 5,
+      'pb-2 pt-1': node.level === 6,
     }"
   >
     <div

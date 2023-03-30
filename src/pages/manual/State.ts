@@ -1,4 +1,4 @@
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { ManualConfig } from './ManualConfig'
 
 export type State = {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { State } from '../../State'
 
 defineProps<{
@@ -9,5 +9,5 @@ defineProps<{
 </script>
 
 <template>
-  <div class="mt-4 mb-8 border-b-2 border-stone-400"></div>
+  <div class="mb-8 mt-4 border-b-2 border-stone-400"></div>
 </template>

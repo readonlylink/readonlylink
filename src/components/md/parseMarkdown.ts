@@ -1,7 +1,5 @@
-import Postmark, { Nodes } from '@xieyuheng/postmark'
-
-const parser = Postmark.createParser()
+import { Nodes, parseDocument } from '@readonlylink/x-markdown'
 
 export function parseMarkdown(text: string): Nodes.Document {
-  return parser.parseDocument(text)
+  return parseDocument(text)
 }

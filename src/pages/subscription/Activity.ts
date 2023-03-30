@@ -1,4 +1,4 @@
-import { Nodes } from '@xieyuheng/postmark'
+import { Nodes } from '@readonlylink/x-markdown'
 import { Author } from '../author/Author'
 
 export type Activity = {
