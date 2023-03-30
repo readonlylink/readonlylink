@@ -6,14 +6,12 @@ import Headline from './leaf-blocks/MdHeadline.vue'
 import ThematicBreak from './leaf-blocks/MdThematicBreak.vue'
 import HtmlBlock from './leaf-blocks/MdHtmlBlock.vue'
 import CodeBlock from './leaf-blocks/MdCodeBlock.vue'
-import CustomBlock from './leaf-blocks/MdCustomBlock.vue'
 
 import BlockQuote from './container-blocks/MdBlockQuote.vue'
 import List from './container-blocks/MdList.vue'
 import Item from './container-blocks/MdItem.vue'
 import OrderedList from './container-blocks/MdOrderedList.vue'
 import OrderedItem from './container-blocks/MdOrderedItem.vue'
-import CustomItem from './container-blocks/MdCustomItem.vue'
 
 import Emphasis from './inlines/MdEmphasis.vue'
 import Strong from './inlines/MdStrong.vue'
@@ -33,14 +31,12 @@ export const components: Record<string, Component> = {
   ThematicBreak,
   HtmlBlock,
   CodeBlock,
-  CustomBlock,
 
   BlockQuote,
   List,
   Item,
   OrderedList,
   OrderedItem,
-  CustomItem,
 
   Emphasis,
   Strong,
