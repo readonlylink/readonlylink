@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { XNode, isElement } from '@readonlylink/x-node'
 import { Nodes } from '@xieyuheng/postmark'
-import { XNode, isElement } from '@xieyuheng/x-node'
 import { computed } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { State } from '../../State'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { parseNodes } from '@readonlylink/x-node'
 import { Nodes } from '@xieyuheng/postmark'
-import { parseNodes } from '@xieyuheng/x-node'
 import { State } from '../../State'
 import MdHtmlBlockNode from './MdHtmlBlockNode.vue'
 
