@@ -13,6 +13,7 @@ defineProps<{ state: State }>()
     <div class="w-1/2 border border-stone-300" v-if="statePrevPath(state)">
       <Hyperlink
         :href="`/manuals/${state.url}/-/${statePrevPath(state)}`"
+        :key="`/manuals/${state.url}/-/${statePrevPath(state)}`"
         title="Previous Page"
       >
         <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
@@ -36,6 +37,7 @@ defineProps<{ state: State }>()
     <div class="w-1/2 border border-stone-300" v-if="stateNextPath(state)">
       <Hyperlink
         :href="`/manuals/${state.url}/-/${stateNextPath(state)}`"
+        :key="`/manuals/${state.url}/-/${stateNextPath(state)}`"
         title="Next Page"
       >
         <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
