@@ -1,5 +1,5 @@
+import { documentTitle } from '../../components/md/documentTitle'
 import { parseMarkdown } from '../../components/md/parseMarkdown'
-import { documentTitle } from '../../utils/postmark/documentTitle'
 import { Config } from './Config'
 
 export async function loadConfig(url: string): Promise<Config> {

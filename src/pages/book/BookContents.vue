@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import Hyperlink from '../../components/Hyperlink.vue'
-import { documentTitle } from '../../utils/postmark/documentTitle'
+import { documentTitle } from '../../components/md/documentTitle'
 import { State } from './State'
 
 defineProps<{ state: State }>()
