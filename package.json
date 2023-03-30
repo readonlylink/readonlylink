@@ -19,7 +19,7 @@
     "@vueuse/head": "^1.1.23",
     "@xieyuheng/postmark": "^0.2.22",
     "@xieyuheng/ty": "^0.1.22",
-    "@xieyuheng/x-node": "^0.0.1",
+    "@readonlylink/x-node": "^0.0.3",
     "highlight.js": "^11.7.0",
     "js-base64": "^3.7.5",
     "js-yaml": "^4.1.0",
