@@ -15,7 +15,7 @@ const avatarURL = computed(
   () => new URL(props.activity.author.config.avatar, props.activity.author.url),
 )
 
-const articleURL = computed(
+const activityURL = computed(
   () => new URL(props.activity.path, props.activity.author.url),
 )
 </script>
@@ -52,7 +52,7 @@ const articleURL = computed(
             {{ activity.author.url }}
           </div>
         </Hyperlink>
-        <Hyperlink :href="`/articles/${articleURL}`" class="hover:underline">
+        <Hyperlink :href="`/articles/${activityURL}`" class="hover:underline">
           <div
             class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
           >
@@ -65,6 +65,7 @@ const articleURL = computed(
     <MdPage
       class="h-full max-h-[490px] overflow-y-auto"
       :document="activity.document"
+      :url="activityURL"
     />
   </div>
 </template>
