@@ -2,6 +2,16 @@ update x-markdown -- rename `1Nodex.Table` `header` to `head` and `rows` to `bod
 
 update x-markdown -- support footnote
 
+give up using vue-tsc
+
+[diary] 2023 04 01 give up using vue-tsc
+
+vue-tsc --noEmit --watch can not catch errors that can be catched by vue-tsc --noEmit
+https://github.com/vuejs/language-tools/issues/2543
+
+vue-tsc behavior inconsistent with Volar
+https://github.com/vuejs/language-tools/issues/2360
+
 # author
 
 > An author can have many pages -- not just homepage.
