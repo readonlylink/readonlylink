@@ -20,7 +20,7 @@ import SoftLineBreak from './inlines/MdSoftLineBreak.vue'
 import Link from './inlines/MdLink.vue'
 import Image from './inlines/MdImage.vue'
 import Code from './inlines/MdCode.vue'
-import HtmlTag from './inlines/MdHtmlTag.vue'
+import HtmlInline from './inlines/MdHtmlInline.vue'
 import Text from './inlines/MdText.vue'
 import { Component } from 'vue'
 
@@ -45,6 +45,6 @@ export const components: Record<string, Component> = {
   Link,
   Image,
   Code,
-  HtmlTag,
+  HtmlInline,
   Text,
 }

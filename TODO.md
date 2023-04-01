@@ -1,4 +1,8 @@
-[md] support footnote
+`SubscriptionActivity` -- pass `activityURL` to `MdPage`
+
+update x-markdown -- rename `1Nodex.Table` `header` to `head` and `rows` to `body`
+
+update x-markdown -- support footnote
 
 # author
 

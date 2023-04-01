@@ -6,10 +6,10 @@ import { State } from '../../State'
 
 const props = defineProps<{
   state: State
-  node: Nodes.HtmlTag
+  node: Nodes.HtmlInline
 }>()
 
-const who = 'MdHtmlTag'
+const who = 'MdHtmlInline'
 
 onMounted(() => console.log({ who, node: props.node }))
 </script>

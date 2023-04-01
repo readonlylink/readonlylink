@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Nodes } from '@readonlylink/x-markdown'
-import { parseNodes } from '@readonlylink/x-node'
+import { parse } from '@readonlylink/x-node'
 import { State } from '../../State'
 import MdHtmlBlockNode from './MdHtmlBlockNode.vue'
 
@@ -11,7 +11,7 @@ const props = defineProps<{
 
 const who = 'MdHtmlBlock'
 
-const elements = parseNodes(props.node.text)
+const elements = parse(props.node.text)
 
 console.log({ who, node: props.node })
 </script>
