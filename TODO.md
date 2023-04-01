@@ -1,5 +1,3 @@
-update x-markdown -- rename `1Nodex.Table` `header` to `head` and `rows` to `body`
-
 update x-markdown -- support footnote
 
 give up using vue-tsc

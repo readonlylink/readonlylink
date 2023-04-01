@@ -14,7 +14,7 @@ defineProps<{
     <thead>
       <tr>
         <th
-          v-for="(children, index) in node.header"
+          v-for="(children, index) in node.head"
           :key="index"
           class="border-2 border-stone-300 px-2 py-1 font-bold"
           :align="node.alignments[index] || 'left'"
@@ -29,7 +29,7 @@ defineProps<{
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(row, index) in node.rows" :key="index">
+      <tr v-for="(row, index) in node.body" :key="index">
         <td
           v-for="(data, index) in row"
           :key="index"
