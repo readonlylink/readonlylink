@@ -2,6 +2,7 @@
 import MdNode from '../../MdNode.vue'
 import { State } from '../../State'
 import MdDefaultAttributes from './MdDefaultAttributes.vue'
+import MdDefaultFootnotes from './MdDefaultFootnotes.vue'
 import MdDefaultTitle from './MdDefaultTitle.vue'
 
 const props = defineProps<{ state: State }>()
@@ -26,16 +27,12 @@ function showAttributes() {
 <template>
   <div class="flex flex-col text-xl">
     <MdDefaultTitle
-      class="my-6"
+      class="my-4"
       v-if="state.document.attributes.title"
       :state="state"
     />
 
-    <MdDefaultAttributes
-      v-if="showAttributes()"
-      class="mb-6"
-      :attributes="state.document.attributes"
-    />
+    <MdDefaultAttributes v-if="showAttributes()" class="mb-4" :state="state" />
 
     <div
       class="my-2 font-serif"
@@ -43,6 +40,13 @@ function showAttributes() {
       :key="index"
     >
       <MdNode :state="state" :node="child" />
+    </div>
+
+    <div
+      v-if="state.document.footnotes.length > 0"
+      class="ml-3 mt-6 border-t border-black pt-3"
+    >
+      <MdDefaultFootnotes :state="state" />
     </div>
   </div>
 </template>

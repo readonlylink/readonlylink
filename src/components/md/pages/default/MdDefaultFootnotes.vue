@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import MdNode from '../../MdNode.vue'
+import { State } from '../../State'
+
+const props = defineProps<{ state: State }>()
+</script>
+
+<template>
+  <div class="flex flex-col space-y-3 font-serif">
+    <div
+      v-for="footnote of state.document.footnotes"
+      :key="footnote.id"
+      class="flex flex-col md:flex-row"
+    >
+      <div
+        class="pb-0.5 pr-2 text-stone-500 hover:text-black hover:underline md:pb-0"
+      >
+        [^{{ footnote.name }}]
+      </div>
+
+      <div class="pl-4 md:pl-0">
+        <MdNode
+          v-for="(node, index) in footnote.nodes"
+          :key="index"
+          :state="state"
+          :node="node"
+        />
+      </div>
+    </div>
+  </div>
+</template>

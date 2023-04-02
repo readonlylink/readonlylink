@@ -1,4 +1,8 @@
-support footnote
+[md] `pages/default/MdDefaultFootnotes` -- link to ref
+[md] `nodes/inlines/MdFootnoteRef` -- show
+[md] `nodes/inlines/MdFootnoteRef` -- link to definition
+
+[book] fix page title
 
 # author
 
@@ -20,7 +24,5 @@ support footnote
 [md-plugin] `<answer>`
 
 # later
-
-[refactor] improve `@xieyuheng/postmark` API
 
 [md] add katex extensions back
