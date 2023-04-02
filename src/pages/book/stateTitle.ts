@@ -1,3 +1,4 @@
+import { documentTitle } from '../../components/md/documentTitle'
 import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
 
@@ -8,5 +9,10 @@ export function stateTitle(state: State): string {
     return state.config.title
   }
 
-  return [document.attributes.title, state.config.title].join(' | ')
+  const subtitle = documentTitle(document)
+  if (subtitle === undefined) {
+    return state.config.title
+  }
+
+  return [subtitle, state.config.title].join(' | ')
 }

@@ -1,5 +1,3 @@
-[book] fix page title
-
 [md] `nodes/inlines/MdFootnoteRef` -- hover show preview
 
 # author
