@@ -18,6 +18,7 @@ import Strong from './inlines/MdStrong.vue'
 import HardLineBreak from './inlines/MdHardLineBreak.vue'
 import SoftLineBreak from './inlines/MdSoftLineBreak.vue'
 import Link from './inlines/MdLink.vue'
+import FootnoteRef from './inlines/MdFootnoteRef.vue'
 import Image from './inlines/MdImage.vue'
 import Code from './inlines/MdCode.vue'
 import HtmlInline from './inlines/MdHtmlInline.vue'
@@ -43,6 +44,7 @@ export const components: Record<string, Component> = {
   HardLineBreak,
   SoftLineBreak,
   Link,
+  FootnoteRef,
   Image,
   Code,
   HtmlInline,

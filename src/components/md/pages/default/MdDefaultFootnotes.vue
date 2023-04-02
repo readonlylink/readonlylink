@@ -12,9 +12,7 @@ const props = defineProps<{ state: State }>()
       :key="footnote.id"
       class="flex flex-col md:flex-row"
     >
-      <div
-        class="pb-0.5 pr-2 text-stone-500 hover:text-black hover:underline md:pb-0"
-      >
+      <div class="pb-0.5 pr-2 text-blue-600 hover:underline md:pb-0">
         [^{{ footnote.name }}]
       </div>
 
