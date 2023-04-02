@@ -1,4 +1,4 @@
-import { parseMarkdown } from '../../components/md/parseMarkdown'
+import { parseDocument } from '@readonlylink/x-markdown'
 import { State } from './State'
 import { loadAuthorConfig } from './loadAuthorConfig'
 
@@ -14,7 +14,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const homepageURL = new URL(config.homepage, url)
   const response = await fetch(homepageURL)
   const text = await response.text()
-  const document = parseMarkdown(text)
+  const document = parseDocument(text)
 
   return {
     url,

@@ -1,5 +1,5 @@
+import { parseDocument } from '@readonlylink/x-markdown'
 import { join } from 'path-browserify'
-import { parseMarkdown } from '../../components/md/parseMarkdown'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadBookConfig } from './BookConfig'
 import { State } from './State'
@@ -27,7 +27,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   )
 
   const documents = Object.fromEntries(
-    Object.entries(texts).map(([path, text]) => [path, parseMarkdown(text)]),
+    Object.entries(texts).map(([path, text]) => [path, parseDocument(text)]),
   )
 
   return {

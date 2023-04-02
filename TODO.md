@@ -1,6 +1,3 @@
-use parseDocument instead of parseMarkdown
-remove documentFirstHeadline
-remove documentTitle
 support footnote
 
 # author
