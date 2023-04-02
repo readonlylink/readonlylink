@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@readonlylink/x-markdown'
+import { formatNode, Nodes } from '@readonlylink/x-markdown'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
 import MdNode from '../../MdNode.vue'
@@ -13,7 +13,7 @@ const props = defineProps<{
 const headlineElement = ref<Element | null>(null)
 
 const headlineId = computed(() => {
-  const text = props.node.children.map((child) => child.format()).join('')
+  const text = props.node.children.map(formatNode).join('')
   return slug(text)
 })
 

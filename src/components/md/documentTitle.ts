@@ -1,22 +1,20 @@
-import { Nodes } from '@readonlylink/x-markdown'
+import { Document, Nodes, formatNode } from '@readonlylink/x-markdown'
 
-export function documentTitle(document: Nodes.Document): string | undefined {
+export function documentTitle(document: Document): string | undefined {
   if (document.attributes.title) {
     return document.attributes.title
   }
 
   const firstHeadline = documentFirstHeadline(document)
   if (firstHeadline !== undefined) {
-    return firstHeadline.formatBody()
+    return formatNode(firstHeadline)
   }
 
   return undefined
 }
 
-function documentFirstHeadline(
-  document: Nodes.Document,
-): Nodes.Headline | undefined {
-  return document.children.find((node) => node instanceof Nodes.Headline) as
+function documentFirstHeadline(document: Document): Nodes.Headline | undefined {
+  return document.children.find((node) => node.kind === 'Headline') as
     | Nodes.Headline
     | undefined
 }

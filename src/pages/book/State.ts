@@ -1,4 +1,4 @@
-import { Nodes } from '@readonlylink/x-markdown'
+import { Document } from '@readonlylink/x-markdown'
 import { BookConfig } from './BookConfig'
 
 export type State = {
@@ -7,5 +7,5 @@ export type State = {
   frontMatter?: string
   config: BookConfig
   texts: Record<string, string>
-  documents: Record<string, Nodes.Document>
+  documents: Record<string, Document>
 }

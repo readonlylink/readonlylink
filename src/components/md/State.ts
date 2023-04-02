@@ -1,16 +1,16 @@
-import { Nodes } from '@readonlylink/x-markdown'
+import { Document } from '@readonlylink/x-markdown'
 import { plugins } from '../../md-plugins'
 import { Plugin } from './Plugin'
 
 export type State = {
   url: URL
-  document: Nodes.Document
+  document: Document
   plugins: Array<Plugin>
 }
 
 export type StateOptions = {
   url: URL
-  document: Nodes.Document
+  document: Document
 }
 
 export function createState(options: StateOptions): State {
