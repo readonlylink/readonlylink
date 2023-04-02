@@ -14,3 +14,16 @@ And I can not understand [the codebase](https://github.com/vuejs/language-tools/
 
 We should only use more stable `tsc`, to only check `.ts` files,
 and leave the `.vue` files for the IDE (such as vscode).
+
+# Principle
+
+I almost quit using vue because of this problem.
+
+Remember that these are just tools,
+made by other programmers like you,
+open source for free.
+
+When a tool does not work well,
+and you can not fix it,
+just put it down,
+and do not have bad feelings about it.
