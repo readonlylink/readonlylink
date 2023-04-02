@@ -1,5 +1,3 @@
-[md] `nodes/inlines/MdFootnoteRef` -- hover show preview
-
 # author
 
 > An author can have many pages -- not just homepage.

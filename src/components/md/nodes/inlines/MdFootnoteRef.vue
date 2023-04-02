@@ -13,6 +13,6 @@ const props = defineProps<{
     :href="`#-footnote-${node.id}`"
     :id="`-footnote-ref-${node.id}`"
     class="align-text-top text-sm text-blue-600 hover:underline"
-    >[^{{ node.name || '#' + node.id }}]</a
+    >[{{ node.name || '#' + node.id }}]</a
   >
 </template>
