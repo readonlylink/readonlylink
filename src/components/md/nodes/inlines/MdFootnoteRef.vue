@@ -9,7 +9,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <span class="align-text-top text-sm text-blue-600 hover:underline"
-    >[^{{ node.name || '#' + node.id }}]</span
+  <a
+    :href="`#-footnote-${node.id}`"
+    :id="`-footnote-ref-${node.id}`"
+    class="align-text-top text-sm text-blue-600 hover:underline"
+    >[^{{ node.name || '#' + node.id }}]</a
   >
 </template>

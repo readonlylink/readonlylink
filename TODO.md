@@ -1,7 +1,6 @@
-[md] `nodes/inlines/MdFootnoteRef` -- link to definition
-[md] `pages/default/MdDefaultFootnotes` -- link to ref
-
 [book] fix page title
+
+[md] `nodes/inlines/MdFootnoteRef` -- hover show preview
 
 # author
 
