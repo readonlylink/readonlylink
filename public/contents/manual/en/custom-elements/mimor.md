@@ -7,12 +7,12 @@ Summoning the custom element `<mimor>` can render a mimor.
 For example:
 
 ```xml
-<mimor src="https://inner.xieyuheng.com/mimors/debug.mimor" />
+<mimor src="https://mimor.app/contents/examples/debug.mimor" />
 ```
 
 Result:
 
-<mimor src="https://inner.xieyuheng.com/mimors/debug.mimor" />
+<mimor src="https://mimor.app/contents/examples/debug.mimor" />
 
 What is mimor?
 
