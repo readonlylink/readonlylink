@@ -3,7 +3,7 @@ import Lang from '../../components/lang/Lang.vue'
 </script>
 
 <template>
-  <Lang class="font-logo text-2xl font-semibold text-stone-500">
+  <Lang class="font-logo text-2xl font-bold text-stone-500">
     <template #zh>
       <div>
         分享<span class="text-stone-900">只读</span>链接，<br

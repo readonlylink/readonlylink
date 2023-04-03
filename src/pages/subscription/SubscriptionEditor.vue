@@ -27,7 +27,7 @@ async function save() {
 <template>
   <div class="flex h-full flex-col">
     <div class="flex items-baseline justify-between">
-      <Lang class="font-logo text-2xl font-semibold text-stone-800">
+      <Lang class="font-logo text-2xl font-bold text-stone-800">
         <template #zh> 订阅列表 </template>
         <template #en> Subscriptions </template>
       </Lang>

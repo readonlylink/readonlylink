@@ -4,7 +4,7 @@ import Lang from '../../components/lang/Lang.vue'
 
 <template>
   <div>
-    <div class="relative hidden font-logo text-4xl font-semibold md:block">
+    <div class="relative hidden font-logo text-4xl font-bold md:block">
       <span class="absolute -left-20 -top-0.5 tracking-tighter"> -r-- </span>
       <Lang>
         <template #zh> 只读链接 </template>
@@ -12,7 +12,7 @@ import Lang from '../../components/lang/Lang.vue'
       </Lang>
     </div>
 
-    <div class="flex flex-col font-logo text-4xl font-semibold md:hidden">
+    <div class="flex flex-col font-logo text-4xl font-bold md:hidden">
       <Lang>
         <template #zh> 只读 </template>
         <template #en> -r-- </template>

@@ -16,7 +16,7 @@ const lang = useGlobalLang()
     </Head>
 
     <div class="flex items-baseline space-x-4">
-      <div class="font-logo text-2xl font-semibold text-stone-800">
+      <div class="font-logo text-2xl font-bold text-stone-800">
         <Lang>
           <template #zh> 关于 </template>
           <template #en> About </template>
@@ -27,14 +27,12 @@ const lang = useGlobalLang()
     <main class="space-y-3 py-4">
       <Lang class="inline-flex flex-wrap items-baseline text-stone-900">
         <template #zh>
-          <div class="pr-1 font-logo font-semibold text-stone-900">
-            只读链接
-          </div>
+          <div class="pr-1 font-logo font-bold text-stone-900">只读链接</div>
           <div>是一个文档渲染工具，</div>
           <div>文字创作者的社区。</div>
         </template>
         <template #en>
-          <div class="pr-1 font-logo font-semibold text-stone-900">
+          <div class="pr-1 font-logo font-bold text-stone-900">
             Readonly.Link
           </div>
           <div class="pr-1">is a document rendering tool,</div>
@@ -95,7 +93,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <div class="flex items-baseline space-x-4">
-        <div class="font-logo text-2xl font-semibold text-stone-800">
+        <div class="font-logo text-2xl font-bold text-stone-800">
           <Lang>
             <template #zh> 开源 </template>
             <template #en> Open source </template>
@@ -126,7 +124,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <div class="flex items-baseline space-x-4">
-        <div class="font-logo text-2xl font-semibold text-stone-800">
+        <div class="font-logo text-2xl font-bold text-stone-800">
           <Lang>
             <template #zh> 口号 </template>
             <template #en> Slogan </template>
@@ -139,7 +137,7 @@ const lang = useGlobalLang()
         <template #en> Our slogan is: </template>
       </Lang>
 
-      <Lang class="font-logo font-semibold text-stone-500">
+      <Lang class="font-logo font-bold text-stone-500">
         <template #zh>
           <div>
             分享<span class="text-stone-900">只读</span>链接，<br
