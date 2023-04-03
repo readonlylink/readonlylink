@@ -9,21 +9,10 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: [
-        'Linux Biolinum O',
-        // 'Source Han Serif SC',
-        'LXGW New Clear Gothic',
-        'LXGW Clear Gothic',
-        'sans-serif',
-      ],
-      serif: ['Linux Libertine O', 'LXGW WenKai Lite', 'serif'],
-      mono: [
-        'Fira Code',
-        // NOTE One Chinese character should equal to two English characters.
-        // 'LXGW WenKai Larger',
-        'LXGW WenKai Mono Lite',
-        'monospace',
-      ],
+      sans: ['Linux Biolinum O', 'sans-serif'],
+      serif: ['Linux Libertine O', 'LXGW WenKai', 'serif'],
+      // NOTE One Chinese character should equal to two English characters.
+      mono: ['Fira Code', 'LXGW WenKai Larger', 'monospace'],
       logo: ['Bodoni Moda', 'Source Han Serif SC', 'serif'],
     },
   },
