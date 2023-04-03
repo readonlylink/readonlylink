@@ -1,3 +1,5 @@
+diary -- a template of friend
+
 # author
 
 > An author can have many pages -- not just homepage.
