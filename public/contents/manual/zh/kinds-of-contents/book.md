@@ -54,7 +54,7 @@ https://readonly.link/books/:link
 
 效果如下：
 
-<readonlylink href="https://readonlylink-books.netlify.app/rework/book.json" />
+<readonlylink href="https://books.readonly.link/rework/book.json" />
 
 配置文件的文件名是无所谓的，但是我通常会用 `book.json`。
 

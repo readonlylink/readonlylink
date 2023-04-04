@@ -2,8 +2,6 @@ import less font
 
 show iframe loading
 
-try iframe fullscreen
-
 diary -- a template of friend
 
 # author

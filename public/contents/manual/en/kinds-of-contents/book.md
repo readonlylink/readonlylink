@@ -53,7 +53,7 @@ Take Pieter Hintjens's ["The Great ØMQ Guide"](https://github.com/readonlylink/
 
 Result:
 
-<readonlylink href="https://readonlylink-books.netlify.app/zguide/book.json" />
+<readonlylink href="https://books.readonly.link/zguide/book.json" />
 
 The name of the config file does not matter,
 I often just use `book.json`.
