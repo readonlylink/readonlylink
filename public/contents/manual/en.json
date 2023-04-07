@@ -7,7 +7,7 @@
   "src": "en",
   "main": "introduction.md",
   "sections": {
-    "default": ["introduction.md"],
+    "default": ["faq.md", "introduction.md"],
     "Kinds of Contents": [
       "kinds-of-contents/article.md",
       "kinds-of-contents/book.md",
