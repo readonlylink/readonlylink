@@ -1,4 +1,4 @@
-# Readonly.Link Website
+# Readonly.Link
 
 [ [WEBSITE](https://readonly.link)
 | [MANUAL](https://readonly.link/manuals/https://readonly.link/contents/manual/en.json)
