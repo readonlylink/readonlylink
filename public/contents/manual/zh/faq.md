@@ -3,8 +3,22 @@ title: 常见问题
 ---
 
 - **问：** 为什么不像其他基于 Markdown 的文档生成器那样，生成静态的 HTML？
-  -- 比如 [hexojs](https://hexo.io) 和 [mdbook](https://rust-lang.github.io/mdBook)
+  -- 比如 [hexojs](https://hexo.io) 和 [mdbook](https://rust-lang.github.io/mdBook)。
 
-- **答：** 生成静态的 HTML 需要一个预先的构建步骤（build step），
-  而我的目的之一就是，发现我可以纯动态地解析 Markdown 内容，
-  并渲染出来前端视图，因此我想试试如果取消这个构建步骤，会有什么后果。
+- **答：** 因为生成静态的 HTML 需要一个预先的构建步骤（build step），
+  而我的目的之一就是，通过在前端动态地解析 Markdown 内容，尝试取消这个构建步骤。
+  我想看看这样会有什么后果。
+
+  好处：
+
+  - 取消构建步骤之后，使用起来感觉轻松了很多，只需要写纯内容就可以了。
+
+  坏处：
+
+  - 访问的时候需要运行前端的代码才能看到内容，不如直接看到静态的 HTML 速度快。
+
+  可以说对渲染 Markdown 这个问题，
+  有两大不同的解法空间（solution space），
+  而在这样项目中我所想要探索的，
+  是「运行时同态解析」这一空间，
+  而不是「编译时静态构建」这一空间。
