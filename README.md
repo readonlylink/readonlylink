@@ -1,11 +1,10 @@
 # Readonly.Link Website
 
 [ [WEBSITE](https://readonly.link)
-| [ABOUT](https://readonly.link/about)
-| [ENGLISH MANUAL](https://readonly.link/manuals/https://readonly.link/contents/manual/en.json)
-| [中文手册](https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json) ]
+| [MANUAL](https://readonly.link/manuals/https://readonly.link/contents/manual/en.json)
+| [手册](https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json) ]
 
-> Readonly links, for your read only.
+Readonly links, for your read only.
 
 ## Development
 
