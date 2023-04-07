@@ -20,4 +20,4 @@ title: FAQ
   We can say, for the problem of rendering Markdown,
   there are two main solution spaces,
   I want to explore the space of "runtime dynamicly interpreting",
-  instead of "compile-time building".
+  instead of the space of "compile-time building static files".
