@@ -25,12 +25,12 @@ const url = computed(() => new URL(props.state.url))
 
     <Hyperlink
       :href="`/authors/${state.url}`"
-      class="absolute top-[1.5rem] -left-[3.8rem] hidden h-[4rem] w-[4rem] shrink-0 object-contain md:block"
+      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4rem] w-[4rem] shrink-0 object-contain md:block"
     >
       <img :src="avatarURL.href" :alt="state.config.name" />
     </Hyperlink>
 
-    <AuthorToolbar class="absolute top-0 right-0 p-2 md:p-3" :state="state" />
+    <AuthorToolbar class="absolute right-0 top-0 p-2 md:p-3" :state="state" />
 
     <div class="mx-5 mb-5 md:m-6">
       <div class="text-3xl font-bold">

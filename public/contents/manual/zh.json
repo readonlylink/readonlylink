@@ -7,7 +7,7 @@
   "src": "zh",
   "main": "introduction.md",
   "sections": {
-    "default": ["introduction.md"],
+    "default": ["faq.md", "introduction.md"],
     "内容类型": [
       "kinds-of-contents/article.md",
       "kinds-of-contents/book.md",

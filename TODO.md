@@ -1,5 +1,7 @@
 import less font
 
+[manual] show version close to the name
+
 show iframe loading
 
 diary -- a template of friend

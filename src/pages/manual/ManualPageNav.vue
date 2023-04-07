@@ -8,7 +8,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex flex-col overflow-y-auto border-r border-stone-300 px-6 pt-6 pb-10 font-sans"
+    class="flex flex-col overflow-y-auto border-r border-stone-300 px-6 pb-10 pt-6 font-sans"
   >
     <div class="text-xl font-bold">
       {{ state.config.title }}
