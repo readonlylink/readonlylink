@@ -4,7 +4,7 @@ title: FAQ
 
 - **Q:** Why not build static HTML from Markdown like [hexojs](https://hexo.io) and [mdbook](https://rust-lang.github.io/mdBook).
 
-- **A:** Becasue one of my aim is to remove this build step,
+  **A:** Becasue one of my aim is to remove this build step,
   by interpreting Markdown content purely at frontend.
   I want to experience the trade off.
 
