@@ -13,13 +13,16 @@ export function safeHtml(html: string): string {
       "em", "i", "kbd", "mark", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp",
       "small", "span", "strong", "sub", "sup", "time", "u", "var", "wbr", "caption",
       "col", "colgroup", "table", "tbody", "td", "tfoot", "th", "thead", "tr", "img",
-      "svg", "path",
+      "svg", "path", 'video', 'source', 'iframe'
     ],
     disallowedTagsMode: "discard",
     allowedAttributes: {
-      "*": [ "class", "style" ],
+      "*": [ "class", "style", 'width', 'height' ],
       a: [ "href", "name", "target" ],
       img: [ "src", "srcset", "alt", "title", "width", "height", "loading" ],
+      source: [ "src", 'type'],
+      video: ["controls",  "class", "style", 'width', 'height'  ],
+      iframe: [ "src", 'frameborder', 'scrolling' ],
       svg: [
         "xmlns",
         "width",
