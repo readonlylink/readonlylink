@@ -20,7 +20,7 @@ const avatarURL = computed(() => new URL(props.config.avatar, props.state.url))
       <template #en> Author </template>
     </Lang>
 
-    <div class="flex items-center space-x-2">
+    <div class="flex items-center space-x-2 pt-1">
       <Hyperlink
         :href="`/authors/${state.url}`"
         class="shrink-0 object-contain"
