@@ -12,6 +12,7 @@ const props = defineProps<{
 }>()
 
 const state = ref<State | undefined>(undefined)
+const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
 function useStateOptions() {
   const url = pageStateResolveLink(
@@ -36,8 +37,10 @@ watch(
 
 <template>
   <iframe
+    ref="iframeElement"
     v-if="state"
     class="h-[36rem] w-full md:w-[36rem]"
+    allow="fullscreen"
     :src="`https://mimor.app/mimors/${state.url}`"
   />
 </template>
