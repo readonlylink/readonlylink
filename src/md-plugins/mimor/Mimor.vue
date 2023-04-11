@@ -14,8 +14,6 @@ const props = defineProps<{
 
 const state = ref<State | undefined>(undefined)
 
-const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
-
 function useStateOptions() {
   const url = pageStateResolveLink(
     props.pageState,
@@ -23,49 +21,6 @@ function useStateOptions() {
   )
 
   return { url }
-}
-
-const who = 'Mimor / <iframe>'
-
-window.addEventListener('message', async (event: MessageEvent) => {
-  const data = event.data
-
-  console.log({ who, data })
-
-  if (data.message === 'fullscreen-enter') {
-    await iframeElement.value?.requestFullscreen()
-  }
-
-  if (data.message === 'fullscreen-exit') {
-    document.exitFullscreen()
-  }
-})
-
-document.addEventListener('fullscreenchange', () => {
-  if (document.fullscreenElement) {
-    iframeElement.value?.contentWindow?.postMessage(
-      {
-        message: 'fullscreen-entered',
-      },
-      '*',
-    )
-  } else {
-    iframeElement.value?.contentWindow?.postMessage(
-      {
-        message: 'fullscreen-exited',
-      },
-      '*',
-    )
-  }
-})
-
-function supportFullscreen() {
-  iframeElement.value?.contentWindow?.postMessage(
-    {
-      message: 'fullscreen-supported',
-    },
-    '*',
-  )
 }
 
 watch(
@@ -94,14 +49,12 @@ watch(
     </div>
 
     <iframe
-      ref="iframeElement"
       v-if="state"
       title="An embedded mimor."
       class="relative z-20 h-[36rem] w-full md:w-[36rem]"
       allow="fullscreen"
       allowfullscreen
       :src="`https://mimor.app/mimors/${state.url}`"
-      @ready="supportFullscreen()"
     />
   </div>
 </template>
