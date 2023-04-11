@@ -1,5 +1,3 @@
-iframe support fullscreen
-
 # author
 
 > An author can have many pages -- not just homepage.

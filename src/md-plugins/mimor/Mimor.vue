@@ -13,6 +13,7 @@ const props = defineProps<{
 }>()
 
 const state = ref<State | undefined>(undefined)
+
 const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
 function useStateOptions() {
@@ -22,6 +23,49 @@ function useStateOptions() {
   )
 
   return { url }
+}
+
+const who = 'Mimor / <iframe>'
+
+window.addEventListener('message', async (event: MessageEvent) => {
+  const data = event.data
+
+  console.log({ who, data })
+
+  if (data.message === 'fullscreen-enter') {
+    await iframeElement.value?.requestFullscreen()
+  }
+
+  if (data.message === 'fullscreen-exit') {
+    document.exitFullscreen()
+  }
+})
+
+document.addEventListener('fullscreenchange', () => {
+  if (document.fullscreenElement) {
+    iframeElement.value?.contentWindow?.postMessage(
+      {
+        message: 'fullscreen-entered',
+      },
+      '*',
+    )
+  } else {
+    iframeElement.value?.contentWindow?.postMessage(
+      {
+        message: 'fullscreen-exited',
+      },
+      '*',
+    )
+  }
+})
+
+function supportFullscreen() {
+  iframeElement.value?.contentWindow?.postMessage(
+    {
+      message: 'fullscreen-supported',
+    },
+    '*',
+  )
 }
 
 watch(
@@ -34,20 +78,10 @@ watch(
     immediate: true,
   },
 )
-
-async function fullscreen() {
-  if (iframeElement.value) {
-    await iframeElement.value.requestFullscreen()
-  }
-}
 </script>
 
 <template>
   <div class="relative">
-    <!-- <button @click="fullscreen()" class="border border-red-300 p-1">
-       fullscreen
-       </button> -->
-
     <!-- Using one element as background for loading view. -->
 
     <div
@@ -67,6 +101,7 @@ async function fullscreen() {
       allow="fullscreen"
       allowfullscreen
       :src="`https://mimor.app/mimors/${state.url}`"
+      @ready="supportFullscreen()"
     />
   </div>
 </template>
