@@ -22,9 +22,9 @@ defineProps<{ state: State }>()
           </div>
 
           <div
-            class="flex w-4/5 items-center justify-center overflow-x-auto text-xl font-bold"
+            class="flex w-4/5 items-center overflow-x-auto px-1 text-xl font-bold"
           >
-            <div>
+            <div class="w-full text-center">
               {{
                 state.documents[statePrevPath(state) as string].attributes.title
               }}
@@ -42,9 +42,9 @@ defineProps<{ state: State }>()
       >
         <div class="flex h-full p-3 text-stone-700 hover:text-stone-400">
           <div
-            class="flex w-4/5 items-center justify-center overflow-x-auto text-xl font-bold"
+            class="flex w-4/5 items-center overflow-x-auto px-1 text-center text-xl font-bold"
           >
-            <div>
+            <div class="w-full text-center">
               {{
                 state.documents[stateNextPath(state) as string].attributes.title
               }}
