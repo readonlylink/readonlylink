@@ -13,7 +13,7 @@ const props = defineProps<{
 
 const url = computed(() => {
   if (props.state.path === undefined) {
-    return undefined
+    return new URL(props.state.url)
   }
 
   return new URL(
