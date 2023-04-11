@@ -1,8 +1,9 @@
-[manual] show version close to the name
-
 show iframe loading
+diary -- the template of an author
 
-diary -- a template of friend
+- 2023-04-11-the-template-of-an-author.md
+  [manual] show `version` close to the name
+  [book] show `version`
 
 # author
 
