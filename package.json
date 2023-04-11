@@ -4,7 +4,7 @@
     "dev": "vite",
     "build": "vite build",
     "check:vue": "vue-tsc --noEmit",
-    "check:watch:vue": "while true; do vue-tsc --noEmit --watch && break; done",
+    "check:vue:watch": "while true; do vue-tsc --noEmit --watch && break; done",
     "check": "tsc --noEmit",
     "check:watch": "tsc --noEmit --watch",
     "test:ts": "vitest --dir src --threads false --run",

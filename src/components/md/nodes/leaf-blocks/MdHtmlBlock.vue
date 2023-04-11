@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/x-markdown'
-import { isElement, parse } from '@xieyuheng/x-node'
-import { computed } from 'vue'
+import { format, isElement, parse, XElement } from '@xieyuheng/x-node'
 import { safeHtml } from '../../../../utils/safeHtml'
+import { Plugin } from '../../Plugin'
 import { State } from '../../State'
 
 const props = defineProps<{
@@ -12,28 +12,33 @@ const props = defineProps<{
 
 const who = 'MdHtmlBlock'
 
-const elements = parse(props.node.text)
-const element = elements[0]
+const nodes = parse(props.node.text)
 
-console.log({ who, node: props.node, element })
+console.log({ who, node: props.node, nodes })
 
-const plugin = computed(() =>
-  props.state.plugins.find(
+function elementPlugin(element: XElement): Plugin | undefined {
+  return props.state.plugins.find(
     (plugin) =>
       plugin['@kind'] === 'ElementPlugin' &&
       isElement(element) &&
       plugin.tag === element.tag,
-  ),
-)
+  )
+}
 </script>
 
 <template>
-  <component
-    v-if="plugin"
-    :is="plugin.component"
-    :element="element"
-    :pageState="state"
-  />
+  <template v-for="(node, index) of nodes" :key="index">
+    <templage v-if="isElement(node)">
+      <component
+        v-if="elementPlugin(node)"
+        :is="elementPlugin(node)?.component"
+        :element="node"
+        :pageState="state"
+      />
 
-  <div v-else v-html="safeHtml(node.text)"></div>
+      <div v-else v-html="safeHtml(format([node]))"></div>
+    </templage>
+
+    <div v-else>{{ node }}</div>
+  </template>
 </template>
