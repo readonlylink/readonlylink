@@ -1,5 +1,3 @@
-import less font
-
 [manual] show version close to the name
 
 show iframe loading
