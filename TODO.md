@@ -1,5 +1,4 @@
-show iframe loading
-show iframe loading
+iframe support fullscreen
 
 # author
 
