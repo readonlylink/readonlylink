@@ -21,8 +21,8 @@ const plugin = computed(() =>
   props.state.plugins.find(
     (plugin) =>
       plugin['@kind'] === 'ElementPlugin' &&
-      isElement(props.element) &&
-      plugin.tag === props.element.tag,
+      isElement(element) &&
+      plugin.tag === element.tag,
   ),
 )
 </script>
