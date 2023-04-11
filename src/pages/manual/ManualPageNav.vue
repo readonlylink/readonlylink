@@ -10,8 +10,14 @@ defineProps<{ state: State }>()
   <div
     class="flex flex-col overflow-y-auto border-r border-stone-300 px-6 pb-10 pt-6 font-sans"
   >
-    <div class="text-xl font-bold">
-      {{ state.config.title }}
+    <div class="flex items-start space-x-1">
+      <div class="text-xl font-bold">
+        {{ state.config.title }}
+      </div>
+
+      <div v-if="state.config.version" class="text-sm">
+        {{ state.config.version }}
+      </div>
     </div>
 
     <div class="mb-3 border-b border-stone-400 pb-3"></div>

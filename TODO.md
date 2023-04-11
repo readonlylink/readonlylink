@@ -1,4 +1,3 @@
-[manual] show `version` close to the name
 [book] show `version`
 show iframe loading
 
