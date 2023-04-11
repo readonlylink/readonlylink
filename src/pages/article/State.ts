@@ -1,4 +1,4 @@
-import { Document } from '@readonlylink/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 
 export type State = {
   url: string

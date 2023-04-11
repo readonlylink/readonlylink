@@ -1,4 +1,4 @@
-import { Document } from '@readonlylink/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { plugins } from '../../md-plugins'
 import { Plugin } from './Plugin'
 

@@ -1,4 +1,4 @@
-import { parseDocument } from '@readonlylink/x-markdown'
+import { parseDocument } from '@xieyuheng/x-markdown'
 import { State } from './State'
 import { loadAuthorConfig } from './loadAuthorConfig'
 

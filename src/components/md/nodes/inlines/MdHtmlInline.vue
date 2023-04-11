@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@readonlylink/x-markdown'
+import { Nodes } from '@xieyuheng/x-markdown'
 import { onMounted } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { State } from '../../State'

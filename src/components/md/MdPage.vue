@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@readonlylink/x-markdown'
+import { Nodes } from '@xieyuheng/x-markdown'
 import { computed } from 'vue'
 import { createState } from './State'
 import { components } from './pages'

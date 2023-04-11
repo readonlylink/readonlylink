@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Node } from '@readonlylink/x-markdown'
+import { Node } from '@xieyuheng/x-markdown'
 import MdNode from '../../MdNode.vue'
 import { State } from '../../State'
 

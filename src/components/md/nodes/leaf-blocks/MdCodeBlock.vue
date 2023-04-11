@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@readonlylink/x-markdown'
+import { Nodes } from '@xieyuheng/x-markdown'
 import Highlight from '../../../Highlight.vue'
 import { State } from '../../State'
 

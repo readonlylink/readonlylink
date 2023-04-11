@@ -1,4 +1,4 @@
-import { parseDocument } from '@readonlylink/x-markdown'
+import { parseDocument } from '@xieyuheng/x-markdown'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'
 

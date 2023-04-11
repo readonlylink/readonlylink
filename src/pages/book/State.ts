@@ -1,4 +1,4 @@
-import { Document } from '@readonlylink/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { BookConfig } from './BookConfig'
 
 export type State = {

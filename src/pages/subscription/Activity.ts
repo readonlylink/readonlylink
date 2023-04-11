@@ -1,4 +1,4 @@
-import { Document } from '@readonlylink/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { Author } from '../author/Author'
 
 export type Activity = {

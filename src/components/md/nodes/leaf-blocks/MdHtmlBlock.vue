@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Nodes } from '@readonlylink/x-markdown'
-import { isElement, parse } from '@readonlylink/x-node'
+import { Nodes } from '@xieyuheng/x-markdown'
+import { isElement, parse } from '@xieyuheng/x-node'
 import { computed } from 'vue'
 import { safeHtml } from '../../../../utils/safeHtml'
 import { State } from '../../State'

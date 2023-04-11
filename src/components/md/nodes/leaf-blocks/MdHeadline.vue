@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatNode, Nodes } from '@readonlylink/x-markdown'
+import { formatNode, Nodes } from '@xieyuheng/x-markdown'
 import { computed, nextTick, ref, watch } from 'vue'
 import { slug } from '../../../../utils/slug'
 import MdNode from '../../MdNode.vue'

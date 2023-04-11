@@ -1,4 +1,4 @@
-import { parseDocument } from '@readonlylink/x-markdown'
+import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadManualConfig } from './ManualConfig'

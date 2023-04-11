@@ -1,4 +1,4 @@
-import { Document, Nodes, formatNode } from '@readonlylink/x-markdown'
+import { Document, Nodes, formatNode } from '@xieyuheng/x-markdown'
 
 export function documentTitle(document: Document): string | undefined {
   if (document.attributes.title) {

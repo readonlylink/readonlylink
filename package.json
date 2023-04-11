@@ -15,8 +15,8 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
     "@heroicons/vue": "^2.0.17",
-    "@readonlylink/x-markdown": "^0.1.3",
-    "@readonlylink/x-node": "^0.0.6",
+    "@xieyuheng/x-markdown": "^0.1.3",
+    "@xieyuheng/x-node": "^0.0.6",
     "@vueuse/core": "^9.13.0",
     "@vueuse/head": "^1.1.23",
     "@xieyuheng/ty": "^0.1.22",

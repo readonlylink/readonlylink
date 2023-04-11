@@ -1,4 +1,4 @@
-import { parseDocument } from '@readonlylink/x-markdown'
+import { parseDocument } from '@xieyuheng/x-markdown'
 import { documentTitle } from '../../components/md/documentTitle'
 import { Config } from './Config'
 
