@@ -1,4 +1,3 @@
-[book] show `version`
 show iframe loading
 
 # author

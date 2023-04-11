@@ -16,21 +16,23 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     class="flex h-screen flex-col items-center justify-between py-12 font-serif text-2xl"
   >
     <div
-      class="flex flex-col items-center py-4 font-sans text-3xl font-bold md:text-4xl"
+      class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl md:text-4xl"
     >
-      <h1 class="text-center">
-        <span class="px-2">{{ state.config.title }}</span>
-      </h1>
+      <div class="px-2 font-bold">
+        {{ state.config.title }}
+      </div>
 
-      <h2
-        class="px-2 py-2 text-center font-sans text-xl font-normal md:text-2xl"
-      >
-        <span>{{ state.config.subtitle }}</span>
-      </h2>
+      <div class="px-2 text-center font-sans text-xl md:text-2xl">
+        {{ state.config.subtitle }}
+      </div>
+
+      <div v-if="state.config.version" class="px-2 text-lg">
+        {{ state.config.version }}
+      </div>
 
       <Hyperlink :href="`/books/${state.url}?front-matter=contents`">
         <div
-          class="flex items-center space-x-1.5 py-4 text-stone-400 hover:text-stone-900"
+          class="flex items-center space-x-1.5 py-2 font-bold text-stone-400 hover:text-stone-900"
         >
           <BookOpenIcon class="w-5 pb-0.5" />
 
