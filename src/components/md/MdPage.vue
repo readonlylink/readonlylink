@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { computed } from 'vue'
 import { createState } from './State'
 import { components } from './pages'
@@ -7,7 +7,7 @@ import { stateReactive } from './stateReactive'
 
 const props = defineProps<{
   url: URL
-  document: Nodes.Document
+  document: Document
 }>()
 
 const state = stateReactive(

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Nodes } from '@xieyuheng/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { computed } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
@@ -8,7 +8,7 @@ import { State } from './State'
 
 const props = defineProps<{
   state: State
-  document: Nodes.Document
+  document: Document
 }>()
 
 const url = computed(() => {
