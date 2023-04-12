@@ -20,26 +20,36 @@ const attributes = computed(() =>
 <template>
   <div class="flex flex-col font-sans text-stone-700">
     <div
-      class="flex items-center font-bold"
+      class="flex items-center space-x-2"
       v-if="attributes.authors.length > 0"
     >
-      <PencilIcon class="w-5 shrink-0 pr-1" />
-      <span>{{ attributes.authors.join(', ') }}</span>
+      <PencilIcon class="w-4 shrink-0" />
+      <span class="font-bold">{{ attributes.authors.join(', ') }}</span>
     </div>
-    <div class="flex items-center" v-if="attributes.translators.length > 0">
-      <LanguageIcon class="w-5 shrink-0 pr-1" />
+
+    <div
+      class="flex items-center space-x-2"
+      v-if="attributes.translators.length > 0"
+    >
+      <LanguageIcon class="w-4 shrink-0" />
       <span>{{ attributes.translators.join(', ') }}</span>
     </div>
-    <div class="flex items-center" v-if="attributes.date">
-      <CalendarDaysIcon class="w-5 shrink-0 pr-1" />
-      {{ attributes.date }}
+
+    <div class="flex items-center space-x-2" v-if="attributes.date">
+      <CalendarDaysIcon class="w-4 shrink-0" />
+      <span>{{ attributes.date }}</span>
     </div>
-    <div class="flex items-center" v-if="attributes.venue">
-      <MapPinIcon class="w-5 shrink-0 pr-1" />
-      {{ attributes.venue }}
+
+    <div class="flex items-center space-x-2" v-if="attributes.venue">
+      <MapPinIcon class="w-4 shrink-0" />
+      <span> {{ attributes.venue }}</span>
     </div>
-    <div class="flex items-center" v-if="attributes.keywords.length > 0">
-      <HashtagIcon class="w-5 shrink-0 pr-1" />
+
+    <div
+      class="flex items-center space-x-2"
+      v-if="attributes.keywords.length > 0"
+    >
+      <HashtagIcon class="w-4 shrink-0" />
       <span>{{ attributes.keywords.join(', ') }}</span>
     </div>
   </div>
