@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { XElement } from '@xieyuheng/x-node'
+import 'mimor'
 import { ref, watch } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { State as PageState } from '../../components/md/State'
@@ -48,13 +49,11 @@ watch(
       </Lang>
     </div>
 
-    <iframe
-      v-if="state"
-      title="An embedded mimor."
+    <div
       class="relative z-20 h-[36rem] w-full md:w-[36rem]"
-      allow="fullscreen"
-      allowfullscreen
-      :src="`https://mimor.app/mimors/${state.url}`"
-    />
+      title="An embedded mimor."
+    >
+      <x-mimor v-if="state" class="h-full" :url="state.url" />
+    </div>
   </div>
 </template>

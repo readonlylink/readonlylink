@@ -7,5 +7,15 @@ export default defineConfig({
   server: { host: '0.0.0.0' },
   test: { environment: 'jsdom' },
   build: { sourcemap: true },
-  plugins: [vue(), splitVendorChunkPlugin(), pluginRewriteAll()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('x-'),
+        },
+      },
+    }),
+    splitVendorChunkPlugin(),
+    pluginRewriteAll(),
+  ],
 })
