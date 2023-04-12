@@ -1,3 +1,5 @@
+[md-plugin] `Mimor` remove loading view
+
 # author
 
 [author] `State` has `path`
