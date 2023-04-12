@@ -9,14 +9,11 @@
 
 [history] store visited links to `localStorage`
 
-# md-plugin
+# md
 
 > For https://readonly.link/books/https://cicada-monologues.netlify.app/book.json
 
-[md-plugin] `<poem-vertical>`
-[md-plugin] `<question>`
-[md-plugin] `<answer>`
-
-# later
-
-[md] add katex extensions back
+[md] <poem-vertical>
+[md] <question>
+[md] <answer>
+[md] <katex>
