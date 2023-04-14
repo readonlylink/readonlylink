@@ -27,7 +27,7 @@ defineProps<{
       :node="child"
     />
 
-    <ArrowTopRightOnSquareIcon class="inline w-4 shrink-0 text-stone-500" />
+    <ArrowTopRightOnSquareIcon class="mb-1 inline h-4 w-4 shrink-0" />
   </a>
 
   <Hyperlink
