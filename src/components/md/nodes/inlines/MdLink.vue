@@ -15,7 +15,7 @@ defineProps<{
 <template>
   <a
     v-if="isExternalLink(node.href)"
-    class="break-words text-sky-600 underline decoration-sky-600 visited:text-purple-600 visited:decoration-purple-600"
+    class="break-words text-sky-700 underline decoration-sky-700 visited:text-purple-700 visited:decoration-purple-700"
     :href="node.href"
     :title="node.title"
     target="_blank"
@@ -32,7 +32,7 @@ defineProps<{
 
   <Hyperlink
     v-else
-    class="break-words text-sky-600 underline decoration-sky-600 visited:text-purple-600 visited:decoration-purple-600"
+    class="break-words text-sky-700 underline decoration-sky-700 visited:text-purple-700 visited:decoration-purple-700"
     :href="node.href"
     :title="node.title"
   >
