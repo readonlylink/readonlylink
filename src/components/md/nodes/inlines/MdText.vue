@@ -9,5 +9,5 @@ defineProps<{
 </script>
 
 <template>
-  <span class="break-words">{{ node.text }}</span>
+  <span class="hyphens-auto break-words">{{ node.text }}</span>
 </template>
