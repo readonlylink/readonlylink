@@ -1,13 +1,13 @@
 import { State } from './State'
 
 export type StateOptions = {
-  url: string
+  src: string
 }
 
 export async function loadState(options: StateOptions): Promise<State> {
-  const { url } = options
+  const { src } = options
 
   return {
-    url,
+    src,
   }
 }

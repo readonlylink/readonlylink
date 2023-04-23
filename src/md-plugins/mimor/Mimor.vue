@@ -15,12 +15,12 @@ const props = defineProps<{
 const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
-  const url = pageStateResolveLink(
+  const src = pageStateResolveLink(
     props.pageState,
     props.element.attributes.src,
   )
 
-  return { url }
+  return { src }
 }
 
 watch(
@@ -37,6 +37,6 @@ watch(
 
 <template>
   <div class="h-[36rem] w-full md:w-[36rem]" title="An embedded mimor.">
-    <x-mimor v-if="state" class="h-full" :url="state.url" />
+    <x-mimor v-if="state" class="h-full" :src="state.src" />
   </div>
 </template>
