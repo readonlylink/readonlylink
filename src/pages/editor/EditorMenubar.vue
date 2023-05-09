@@ -4,4 +4,4 @@ import { State } from './State'
 defineProps<{ state: State }>()
 </script>
 
-<template>EditorMenubar</template>
+<template><div>EditorMenubar</div></template>
