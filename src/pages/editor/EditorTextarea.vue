@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <textarea
-    class="h-full w-full resize-none"
+    class="h-full w-full resize-none font-mono"
     spellcheck="false"
     v-model="tab.text"
   />
