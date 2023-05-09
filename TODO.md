@@ -2,6 +2,15 @@
 
 > Learn file system access API.
 
+[editor] `EditorTab` -- has `EditorTextarea` & `EditorModeline`
+
+[editor] `EditorTextarea`
+[editor] `EditorModeline`
+
+[editor] `EditorMenubar`
+[editor] `EditorToolbar`
+[editor] `EditorEchoarea`
+
 # article
 
 [article] support url encoding
