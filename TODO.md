@@ -2,8 +2,6 @@
 
 > Learn file system access API.
 
-[editor] `loadState`
-
 # article
 
 [article] support url encoding
