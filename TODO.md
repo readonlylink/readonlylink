@@ -2,8 +2,6 @@
 
 > Learn file system access API.
 
-[editor] `EditorTab` -- has `EditorTextarea` & `EditorModeline`
-
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { State } from './State'
+import { Tab } from './Tab'
 
 defineProps<{
   state: State
-  currentText: string
+  tab: Tab
 }>()
 </script>
 
@@ -12,6 +13,6 @@ defineProps<{
     class="h-full w-full resize-none"
     placeholder="text..."
     spellcheck="false"
-    v-model="state.currentText"
+    v-model="tab.text"
   />
 </template>
