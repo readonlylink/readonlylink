@@ -4,7 +4,6 @@
 
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
-
 [editor] `EditorMenubar`
 [editor] `EditorToolbar`
 [editor] `EditorEchoarea`

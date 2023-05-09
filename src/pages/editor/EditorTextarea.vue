@@ -11,7 +11,6 @@ defineProps<{
 <template>
   <textarea
     class="h-full w-full resize-none"
-    placeholder="text..."
     spellcheck="false"
     v-model="tab.text"
   />
