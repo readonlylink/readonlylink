@@ -2,8 +2,6 @@
 
 > Learn file system access API.
 
-[editor] `EditorHelp` vs `EditorTab`
-
 [editor] `EditorTab` -- has `EditorTextarea` & `EditorModeline`
 
 [editor] `EditorTextarea`

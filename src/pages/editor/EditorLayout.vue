@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import EditorEchoarea from './EditorEchoarea.vue'
+import EditorHelp from './EditorHelp.vue'
 import EditorMenubar from './EditorMenubar.vue'
 import EditorTab from './EditorTab.vue'
 import EditorToolbar from './EditorToolbar.vue'
@@ -11,8 +12,17 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex h-screen w-screen flex-col">
     <EditorMenubar :state="state" />
+
     <EditorToolbar :state="state" />
-    <EditorTab :state="state" />
+
+    <EditorTab
+      v-if="state.currentFile"
+      :state="state"
+      :currentFile="state.currentFile"
+    />
+
+    <EditorHelp v-else :state="state" />
+
     <EditorEchoarea :state="state" />
   </div>
 </template>
