@@ -7,8 +7,12 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div>
-    <EditorTextarea :state="state" />
+  <div class="flex h-full flex-col">
+    <EditorTextarea
+      v-if="state.currentText"
+      :state="state"
+      :currentText="currentText"
+    />
     <EditorModeline :state="state" />
   </div>
 </template>

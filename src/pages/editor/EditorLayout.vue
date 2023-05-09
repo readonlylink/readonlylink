@@ -9,7 +9,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div>
+  <div class="flex h-screen w-screen flex-col">
     <EditorMenubar :state="state" />
     <EditorToolbar :state="state" />
     <EditorTab :state="state" />
