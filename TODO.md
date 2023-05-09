@@ -1,3 +1,7 @@
+# editor
+
+[editor] learn file access api
+
 # article
 
 [article] support url encoding

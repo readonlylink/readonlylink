@@ -7,6 +7,7 @@ import Author from './author/Author.vue'
 import BookEntrance from './book-entrance/BookEntrance.vue'
 import Book from './book/Book.vue'
 import Docs from './docs/Docs.vue'
+import Editor from './editor/Editor.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import History from './history/History.vue'
 import Home from './home/Home.vue'
@@ -38,6 +39,8 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
 
   { path: '/history', component: History },
+
+  { path: '/editor', component: Editor },
 
   { path: '/subscriptions', component: Subscription },
 
