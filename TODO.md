@@ -1,6 +1,8 @@
 # editor
 
-[editor] learn file access api
+> Learn file system access API.
+
+[editor] `loadState`
 
 # article
 

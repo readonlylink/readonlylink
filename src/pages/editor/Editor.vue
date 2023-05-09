@@ -1,18 +1,17 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import EditorLoaded from './EditorLoaded.vue'
+import EditorLoading from './EditorLoading.vue'
 import { State } from './State'
 
-defineProps<{ state: State }>()
+const state = ref<State | undefined>(undefined)
 
-async function open() {
-  const [fileHandle] = await window.showOpenFilePicker()
-  const file = await fileHandle.getFile()
-  const text = await file.text()
-  console.log(text)
-}
+onMounted(() => {
+  state.value = {}
+})
 </script>
 
 <template>
-  <div class="px-3 pt-3">
-    <button @click="open()">Open</button>
-  </div>
+  <EditorLoaded v-if="state" :state="state" />
+  <EditorLoading v-else />
 </template>
