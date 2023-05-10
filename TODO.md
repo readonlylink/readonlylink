@@ -1,6 +1,6 @@
 # editor
 
-[editor] [maybe] `EditorLinenumber` -- `syncScroll`
+[editor] `EditorLinenumber` -- `syncScroll`
 [editor] support delete file
 [editor] support rename file
 [editor] support directory

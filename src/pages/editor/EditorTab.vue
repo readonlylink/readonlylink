@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EditorLinenumber from './EditorLinenumber.vue'
 import EditorModeline from './EditorModeline.vue'
 import EditorTextarea from './EditorTextarea.vue'
 import { State } from './State'
@@ -12,7 +13,10 @@ defineProps<{
 
 <template>
   <div class="flex h-full flex-col overflow-auto">
-    <EditorTextarea :state="state" :tab="tab" />
+    <div class="flex h-full w-full overflow-auto">
+      <EditorLinenumber :state="state" :tab="tab" />
+      <EditorTextarea :state="state" :tab="tab" />
+    </div>
     <EditorModeline :state="state" :tab="tab" />
   </div>
 </template>
