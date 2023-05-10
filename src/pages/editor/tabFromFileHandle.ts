@@ -11,5 +11,6 @@ export async function tabFromFileHandle(
     text,
     originalText: text,
     isProcessing: false,
+    scrollTop: 0,
   }
 }

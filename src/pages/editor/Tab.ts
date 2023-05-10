@@ -4,4 +4,5 @@ export type Tab = {
   text: string
   originalText: string
   isProcessing: boolean
+  scrollTop: number
 }

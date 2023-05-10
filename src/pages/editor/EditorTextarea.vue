@@ -1,18 +1,37 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import { State } from './State'
 import { Tab } from './Tab'
 
-defineProps<{
+const props = defineProps<{
   state: State
   tab: Tab
 }>()
+
+const rootElement = ref<HTMLElement | undefined>(undefined)
+
+watch(
+  () => props.tab.scrollTop,
+  (value) => {
+    if (rootElement.value) {
+      rootElement.value.scrollTop = value
+    }
+  },
+  { immediate: true },
+)
+
+function setScroll(event: Event, tab: Tab) {
+  const element = event.target as HTMLTextAreaElement
+  tab.scrollTop = element.scrollTop
+}
 </script>
 
 <template>
   <textarea
+    ref="rootElement"
     class="h-full w-full resize-none whitespace-pre px-3 py-2 font-mono caret-red-500 focus:outline-none"
     spellcheck="false"
     v-model="tab.text"
-    @scroll="syncScroll($event)"
+    @scroll="setScroll($event, tab)"
   />
 </template>
