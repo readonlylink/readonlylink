@@ -2,6 +2,7 @@
 
 > Learn file system access API.
 
+[editor] `EditorToolbar` -- save button
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
 [editor] `EditorMenubar`

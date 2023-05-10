@@ -1,22 +1,13 @@
 <script setup lang="ts">
-import { onMounted, reactive } from 'vue'
 import EditorModeline from './EditorModeline.vue'
 import EditorTextarea from './EditorTextarea.vue'
 import { State } from './State'
 import { Tab } from './Tab'
 
-const props = defineProps<{
+defineProps<{
   state: State
-  currentFile: File
+  tab: Tab
 }>()
-
-const tab: Tab = reactive({
-  text: '',
-})
-
-onMounted(async () => {
-  tab.text = await props.currentFile.text()
-})
 </script>
 
 <template>

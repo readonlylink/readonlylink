@@ -15,11 +15,7 @@ defineProps<{ state: State }>()
 
     <EditorToolbar :state="state" />
 
-    <EditorTab
-      v-if="state.currentFile"
-      :state="state"
-      :currentFile="state.currentFile"
-    />
+    <EditorTab v-if="state.currentTab" :state="state" :tab="state.currentTab" />
 
     <EditorHelp v-else :state="state" />
 
