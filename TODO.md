@@ -1,8 +1,5 @@
 # editor
 
-> Learn file system access API.
-
-[editor] `EditorTabbarTab` -- confirm for unsaved changes
 [editor] `EditorTabbarTab` -- show saving state -- `state.saving`
 
 [editor] `EditorMenubar`

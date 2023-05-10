@@ -3,6 +3,7 @@ import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { State } from './State'
 import { Tab } from './Tab'
 import { stateTabClose } from './stateTabClose'
+import { stateTabCloseAfterConfirming } from './stateTabCloseAfterConfirming'
 import { tabIsModified } from './tabIsModified'
 
 defineProps<{
@@ -24,7 +25,11 @@ defineProps<{
     </button>
 
     <button
-      @click="stateTabClose(state, tab)"
+      @click="
+        tabIsModified(tab)
+          ? stateTabCloseAfterConfirming(state, tab)
+          : stateTabClose(state, tab)
+      "
       class="rounded-full hover:bg-stone-300"
       :class="{ 'bg-black': tabIsModified(tab) }"
     >
