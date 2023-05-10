@@ -6,6 +6,6 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex h-full flex-col items-center justify-center">
-    <div class="text-stone-300">Welcome X Editor</div>
+    <div class="text-stone-300">Welcome to X Editor</div>
   </div>
 </template>

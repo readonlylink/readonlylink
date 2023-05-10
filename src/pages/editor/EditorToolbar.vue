@@ -9,7 +9,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex justify-between bg-stone-200 px-3">
+  <div class="flex justify-between bg-stone-200 px-3 py-0.5">
     <div class="flex space-x-4">
       <button class="hover:underline" @click="stateCreateFile(state)">
         Create
