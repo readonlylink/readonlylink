@@ -6,7 +6,7 @@ export async function stateCreateFile(state: State): Promise<void> {
       {
         description: 'Create File',
         accept: {
-          'text/plain': ['.txt'],
+          'text/*': [],
         },
       },
     ],

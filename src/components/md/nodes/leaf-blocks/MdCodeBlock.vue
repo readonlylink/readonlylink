@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Nodes } from '@xieyuheng/x-markdown'
-import Highlight from '../../../Highlight.vue'
+import Highlight from '../../../highlight/Highlight.vue'
 import { State } from '../../State'
 
 const props = defineProps<{

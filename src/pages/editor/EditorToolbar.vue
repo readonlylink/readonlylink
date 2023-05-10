@@ -42,8 +42,8 @@ defineProps<{ state: State }>()
     <div class="flex space-x-4">
       <Hyperlink class="hover:underline" href="/" target="_blank">
         <Lang>
-          <template #zh>只读链接</template>
-          <template #en>Readonly.Link</template>
+          <template #zh>主页</template>
+          <template #en>Home</template>
         </Lang>
       </Hyperlink>
 
