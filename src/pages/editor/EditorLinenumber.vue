@@ -30,7 +30,7 @@ function setScroll(event: Event, tab: Tab) {
 <template>
   <div
     ref="rootElement"
-    class="scrollbar-w-0 flex h-full flex-col items-end overflow-y-auto overflow-x-scroll px-3 py-2 font-mono"
+    class="scrollbar-w-0 scrollbar-h-8 flex h-full flex-col items-end overflow-y-auto overflow-x-scroll px-3 py-2 font-mono"
     @scroll="setScroll($event, tab)"
   >
     <div
