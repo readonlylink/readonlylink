@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
 import { stateCreateFile } from './stateCreateFile'
@@ -38,6 +39,15 @@ defineProps<{ state: State }>()
       </button>
     </div>
 
-    <div class="flex space-x-4"><EditorToolbarLang :state="state" /></div>
+    <div class="flex space-x-4">
+      <Hyperlink class="hover:underline" href="/" target="_blank">
+        <Lang>
+          <template #zh>只读链接</template>
+          <template #en>Readonly.Link</template>
+        </Lang>
+      </Hyperlink>
+
+      <EditorToolbarLang :state="state" />
+    </div>
   </div>
 </template>

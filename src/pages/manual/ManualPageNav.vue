@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Hyperlink from '../../components/Hyperlink.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 
 import { State } from './State'
 

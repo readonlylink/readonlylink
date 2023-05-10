@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { Nodes } from '@xieyuheng/x-markdown'
-import Hyperlink from '../../../Hyperlink.vue'
 import MdNode from '../../../md/MdNode.vue'
+import Hyperlink from '../../../utils/Hyperlink.vue'
 import { State } from '../../State'
 import { isExternalLink } from '../../isExternalLink'
 

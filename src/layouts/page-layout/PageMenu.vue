@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/lang/Lang.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 
 const origin = window.location.origin
 </script>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 

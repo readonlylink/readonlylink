@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import Hyperlink from '../../components/Hyperlink.vue'
 import MdPage from '../../components/md/MdPage.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { formatDateTime } from '../../utils/formatDate'
 import { Activity } from './Activity'
 import { State } from './State'

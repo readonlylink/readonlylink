@@ -4,8 +4,8 @@ import {
   LanguageIcon,
   PencilIcon,
 } from '@heroicons/vue/24/outline'
-import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/lang/Lang.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { BookConfig } from '../../pages/book/BookConfig'
 import { State } from './State'
 

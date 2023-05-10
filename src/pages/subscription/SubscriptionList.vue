@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/lang/Lang.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
-import { stateActivitiesForShow } from './stateActivitiesForShow'
 import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionAuthor from './SubscriptionAuthor.vue'
+import { stateActivitiesForShow } from './stateActivitiesForShow'
 
 defineProps<{ state: State }>()
 </script>

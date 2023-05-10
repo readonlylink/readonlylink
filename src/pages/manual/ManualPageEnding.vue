@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/vue/24/outline'
-import Hyperlink from '../../components/Hyperlink.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
 import { stateNextPath } from './stateNextPath'
 import { statePrevPath } from './statePrevPath'

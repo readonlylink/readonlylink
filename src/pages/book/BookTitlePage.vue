@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { BookOpenIcon, LanguageIcon } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
-import Hyperlink from '../../components/Hyperlink.vue'
 import Lang from '../../components/lang/Lang.vue'
 import { normalizeAttributes } from '../../components/md/normalizeAttributes'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
