@@ -25,7 +25,7 @@ defineProps<{
     </button>
 
     <button
-      :disabled="tab.isSaving"
+      :disabled="tab.isProcessing"
       @click="
         tabIsModified(tab)
           ? stateTabCloseAfterConfirming(state, tab)
@@ -33,11 +33,11 @@ defineProps<{
       "
       class="rounded-full hover:bg-stone-300"
       :class="{
-        'bg-black': tabIsModified(tab) && !tab.isSaving,
-        'animate-spin': tab.isSaving,
+        'bg-black': tabIsModified(tab) && !tab.isProcessing,
+        'animate-spin': tab.isProcessing,
       }"
     >
-      <ArrowPathIcon v-if="tab.isSaving" class="h-4 w-4" />
+      <ArrowPathIcon v-if="tab.isProcessing" class="h-4 w-4" />
       <XMarkIcon v-else class="h-4 w-4" />
     </button>
   </div>

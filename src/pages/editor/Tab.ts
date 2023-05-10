@@ -3,5 +3,5 @@ export type Tab = {
   file: File
   text: string
   originalText: string
-  isSaving: boolean
+  isProcessing: boolean
 }
