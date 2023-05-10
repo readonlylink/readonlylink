@@ -2,8 +2,8 @@
 
 > Learn file system access API.
 
-[editor] `EditorTextarea`
-[editor] `EditorModeline`
+[editor] `EditorModeline` -- show modified or not
+
 [editor] `EditorMenubar`
 [editor] `EditorToolbar`
 [editor] `EditorEchoarea`

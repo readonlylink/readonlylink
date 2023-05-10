@@ -13,6 +13,6 @@ defineProps<{
 <template>
   <div class="flex h-full flex-col">
     <EditorTextarea :state="state" :tab="tab" />
-    <EditorModeline :state="state" />
+    <EditorModeline :state="state" :tab="tab" />
   </div>
 </template>
