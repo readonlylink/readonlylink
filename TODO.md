@@ -1,5 +1,7 @@
 # editor
 
+[editor] `EditorTextarea` fix scroll
+[editor] [maybe] `EditorLinenumber` -- `syncScroll`
 [editor] support delete file
 [editor] support rename file
 [editor] support directory
