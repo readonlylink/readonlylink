@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { State } from './State'
 import { Tab } from './Tab'
+import { tabIsModified } from './tabIsModified'
 
 defineProps<{
   state: State
@@ -15,9 +16,17 @@ defineProps<{
       <span>{ </span>
       <span>line: </span>
       <span class="font-bold">{{ tab.text.split('\n').length }}</span>
+
       <span>, </span>
       <span>length: </span>
       <span class="font-bold">{{ tab.text.length }}</span>
+
+      <template v-if="tabIsModified(tab)">
+        <span>, </span>
+        <span>isModified: </span>
+        <span class="font-bold">true</span>
+      </template>
+
       <span> }</span>
     </div>
   </div>

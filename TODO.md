@@ -3,8 +3,8 @@
 > Learn file system access API.
 
 [editor] `EditorTabbarTab` -- confirm for unsaved changes
-[editor] `state.saving`
-[editor] `EditorModeline` -- show modified or not
+[editor] `EditorTabbarTab` -- show saving state -- `state.saving`
+
 [editor] `EditorMenubar`
 [editor] `EditorToolbar`
 [editor] `EditorEchoarea`
