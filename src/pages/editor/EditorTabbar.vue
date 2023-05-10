@@ -8,7 +8,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex items-center">
-    <div class="px-3 py-0.5 font-logo">
+    <div class="px-3 py-1 font-logo">
       <Lang>
         <template #zh>只读文本编辑器</template>
         <template #en>Readonly Text Editor</template>

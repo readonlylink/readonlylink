@@ -2,10 +2,8 @@
 
 > Learn file system access API.
 
-[editor] `EditorTabbarTab` show unsaved changes
-
+[editor] `EditorTabbarTab` -- show unsaved changes
 [editor] `EditorModeline` -- show modified or not
-
 [editor] `EditorMenubar`
 [editor] `EditorToolbar`
 [editor] `EditorEchoarea`
