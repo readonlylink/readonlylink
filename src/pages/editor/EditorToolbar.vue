@@ -3,8 +3,8 @@ import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
-import { stateCreateFile } from './stateCreateFile'
-import { stateOpenFile } from './stateOpenFile'
+import { stateFileCreate } from './stateFileCreate'
+import { stateFileOpen } from './stateFileOpen'
 import { tabSave } from './tabSave'
 
 defineProps<{ state: State }>()
@@ -13,14 +13,14 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex justify-between bg-stone-200 px-3 py-0.5">
     <div class="flex space-x-4">
-      <button class="hover:underline" @click="stateCreateFile(state)">
+      <button class="hover:underline" @click="stateFileCreate(state)">
         <Lang>
           <template #zh>创建</template>
           <template #en>Create</template>
         </Lang>
       </button>
 
-      <button class="hover:underline" @click="stateOpenFile(state)">
+      <button class="hover:underline" @click="stateFileOpen(state)">
         <Lang>
           <template #zh>打开</template>
           <template #en>Open</template>

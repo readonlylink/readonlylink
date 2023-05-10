@@ -3,7 +3,7 @@ import { formatDate } from '../../utils/formatDate'
 import { State } from './State'
 import { tabFromFileHandle } from './tabFromFileHandle'
 
-export async function stateCreateFile(state: State): Promise<void> {
+export async function stateFileCreate(state: State): Promise<void> {
   const now = Date.now()
   const lang = useGlobalLang()
 
