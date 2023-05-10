@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex h-full flex-col">
+  <div class="flex h-full flex-col overflow-auto">
     <EditorTextarea :state="state" :tab="tab" />
     <EditorModeline :state="state" :tab="tab" />
   </div>

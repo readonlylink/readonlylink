@@ -14,7 +14,7 @@ function syncScroll(event: Event) {
 </script>
 
 <template>
-  <div class="flex h-full w-full overflow-y-auto">
+  <div class="flex h-full w-full overflow-auto">
     <div
       class="flex h-full flex-col items-end overflow-y-auto px-3 py-2 font-mono"
     >
@@ -30,7 +30,7 @@ function syncScroll(event: Event) {
     </div>
 
     <textarea
-      class="h-full w-full resize-none overflow-y-auto px-3 py-2 font-mono caret-red-500 focus:outline-none"
+      class="h-full w-full resize-none whitespace-pre px-3 py-2 font-mono caret-red-500 focus:outline-none"
       spellcheck="false"
       v-model="tab.text"
       @scroll="syncScroll($event)"
