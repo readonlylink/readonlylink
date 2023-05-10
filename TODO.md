@@ -2,7 +2,7 @@
 
 > Learn file system access API.
 
-[editor] `EditorToolbar` -- `Lang` button
+[editor] use `Lang` to support Chinese
 [editor] `EditorToolbar` -- `Create` button -- `stateCreateFile`
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
