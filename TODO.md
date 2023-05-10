@@ -2,7 +2,8 @@
 
 > Learn file system access API.
 
-[editor] `EditorToolbar` -- `New File` button
+[editor] `EditorToolbar` -- `Create` button
+[editor] `EditorToolbar` -- `Lang` button
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
 [editor] `EditorMenubar`

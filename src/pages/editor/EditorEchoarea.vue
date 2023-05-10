@@ -5,5 +5,5 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div>EditorEchoarea</div>
+  <div class="flex px-3"><div>EditorEchoarea</div></div>
 </template>

@@ -5,7 +5,9 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex h-full flex-col items-center justify-center">
-    <div class="text-stone-300">Welcome X Editor</div>
+  <div class="flex px-3">
+    <div v-for="(tab, index) of state.tabs" :key="index">
+      {{ tab.file.name }}
+    </div>
   </div>
 </template>

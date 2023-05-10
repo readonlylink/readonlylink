@@ -3,11 +3,12 @@ import { onMounted, ref } from 'vue'
 import EditorLoaded from './EditorLoaded.vue'
 import EditorLoading from './EditorLoading.vue'
 import { State } from './State'
+import { loadState } from './loadState'
 
 const state = ref<State | undefined>(undefined)
 
-onMounted(() => {
-  state.value = {}
+onMounted(async () => {
+  state.value = await loadState({})
 })
 </script>
 

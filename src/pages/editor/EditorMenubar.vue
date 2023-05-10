@@ -5,7 +5,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex space-x-2 bg-stone-200">
+  <div class="flex space-x-3 px-3">
     <div>EditorMenubar</div>
   </div>
 </template>
