@@ -2,7 +2,6 @@
 
 > Learn file system access API.
 
-[editor] `EditorToolbar` -- `Create` button -- `stateCreateFile`
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
 [editor] `EditorMenubar`

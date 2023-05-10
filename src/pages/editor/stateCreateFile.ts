@@ -1,4 +1,5 @@
 import { State } from './State'
+import { tabFromFileHandle } from './tabFromFileHandle'
 
 export async function stateCreateFile(state: State): Promise<void> {
   const fileHandle = await window.showSaveFilePicker({
@@ -6,11 +7,13 @@ export async function stateCreateFile(state: State): Promise<void> {
       {
         description: 'Create File',
         accept: {
-          'text/*': [],
+          'text/*': ['.md', '.txt'],
         },
       },
     ],
   })
 
-  console.log(fileHandle)
+  const tab = await tabFromFileHandle(fileHandle)
+  state.tabs.push(tab)
+  state.currentTab = tab
 }
