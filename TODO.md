@@ -2,6 +2,9 @@
 
 > Learn file system access API.
 
+[editor] `EditorTabbarTab` support close table
+[editor] `EditorTabbarTab` show unsaved changes
+
 [editor] `EditorModeline` -- show modified or not
 
 [editor] `EditorMenubar`
