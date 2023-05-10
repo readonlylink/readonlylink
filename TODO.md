@@ -1,6 +1,6 @@
 # editor
 
-[editor] `EditorTabbarTab` -- show saving state -- `state.saving`
+[editor] `EditorTabbarTab` -- show saving state
 
 [editor] `EditorMenubar`
 [editor] `EditorToolbar`
