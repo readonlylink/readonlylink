@@ -2,8 +2,9 @@
 
 > Learn file system access API.
 
-[editor] `EditorToolbar` -- `Create` button
+[editor] show empty tabbar when there is no tab
 [editor] `EditorToolbar` -- `Lang` button
+[editor] `EditorToolbar` -- `Create` button -- `stateCreateFile`
 [editor] `EditorTextarea`
 [editor] `EditorModeline`
 [editor] `EditorMenubar`
