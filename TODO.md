@@ -2,8 +2,6 @@
 
 > Learn file system access API.
 
-[editor] `stateTabClose`
-
 [editor] `EditorTabbarTab` show unsaved changes
 
 [editor] `EditorModeline` -- show modified or not
