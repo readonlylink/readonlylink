@@ -1,10 +1,9 @@
 # editor
 
-[editor] `EditorTabbarTab` -- show saving state
-
-[editor] `EditorMenubar`
-[editor] `EditorToolbar`
-[editor] `EditorEchoarea`
+[editor] support delete file
+[editor] support rename file
+[editor] support directory
+[editor] `EditorEchoarea` -- show message about saving
 
 # article
 

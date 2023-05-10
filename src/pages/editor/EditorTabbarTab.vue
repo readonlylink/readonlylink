@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { XMarkIcon } from '@heroicons/vue/24/outline'
+import { ArrowPathIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { State } from './State'
 import { Tab } from './Tab'
 import { stateTabClose } from './stateTabClose'
@@ -25,15 +25,20 @@ defineProps<{
     </button>
 
     <button
+      :disabled="tab.isSaving"
       @click="
         tabIsModified(tab)
           ? stateTabCloseAfterConfirming(state, tab)
           : stateTabClose(state, tab)
       "
       class="rounded-full hover:bg-stone-300"
-      :class="{ 'bg-black': tabIsModified(tab) }"
+      :class="{
+        'bg-black': tabIsModified(tab) && !tab.isSaving,
+        'animate-spin': tab.isSaving,
+      }"
     >
-      <XMarkIcon class="h-4 w-4" />
+      <ArrowPathIcon v-if="tab.isSaving" class="h-4 w-4" />
+      <XMarkIcon v-else class="h-4 w-4" />
     </button>
   </div>
 </template>
