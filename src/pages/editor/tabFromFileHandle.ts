@@ -9,5 +9,6 @@ export async function tabFromFileHandle(
     fileHandle,
     file,
     text,
+    originalText: text,
   }
 }
