@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Lang from '../../components/lang/Lang.vue'
 import { State } from './State'
 
 defineProps<{ state: State }>()
@@ -6,8 +7,11 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex">
-    <div v-if="state.tabs.length === 0" class="px-3 py-0.5 text-stone-500">
-      X Editor
+    <div class="px-3 py-0.5 font-logo">
+      <Lang>
+        <template #zh>只读文本编辑器</template>
+        <template #en>Readonly Text Editor</template>
+      </Lang>
     </div>
 
     <div

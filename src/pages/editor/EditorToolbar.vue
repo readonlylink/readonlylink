@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Lang from '../../components/lang/Lang.vue'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
 import { stateCreateFile } from './stateCreateFile'
@@ -12,11 +13,17 @@ defineProps<{ state: State }>()
   <div class="flex justify-between bg-stone-200 px-3 py-0.5">
     <div class="flex space-x-4">
       <button class="hover:underline" @click="stateCreateFile(state)">
-        Create
+        <Lang>
+          <template #zh>创建</template>
+          <template #en>Create</template>
+        </Lang>
       </button>
 
       <button class="hover:underline" @click="stateOpenFile(state)">
-        Open
+        <Lang>
+          <template #zh>打开</template>
+          <template #en>Open</template>
+        </Lang>
       </button>
 
       <button
@@ -24,7 +31,10 @@ defineProps<{ state: State }>()
         :disabled="!state.currentTab"
         @click="state.currentTab && tabSave(state.currentTab)"
       >
-        Save
+        <Lang>
+          <template #zh>保存</template>
+          <template #en>Save</template>
+        </Lang>
       </button>
     </div>
 

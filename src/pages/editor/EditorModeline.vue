@@ -5,5 +5,5 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="bg-black px-3 text-white"><div>EditorModeline</div></div>
+  <div class="bg-stone-200 px-3"><div>EditorModeline</div></div>
 </template>
