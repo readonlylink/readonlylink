@@ -4,6 +4,11 @@
 [editor] support delete file
 [editor] support rename file
 
+[editor] `EditorWelcome` -- big buttons about open and create
+[editor] `EditorWelcome` -- about this project
+[editor] `EditorWelcome` -- recent files
+[editor] `EditorWelcome` -- recent directories
+
 # article
 
 [article] support url encoding

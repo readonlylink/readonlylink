@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import EditorEchoarea from './EditorEchoarea.vue'
-import EditorHelp from './EditorHelp.vue'
 import EditorTab from './EditorTab.vue'
 import EditorTabbar from './EditorTabbar.vue'
 import EditorToolbar from './EditorToolbar.vue'
+import EditorWelcome from './EditorWelcome.vue'
 import { State } from './State'
 
 defineProps<{ state: State }>()
@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
     <EditorTabbar :state="state" />
     <EditorToolbar :state="state" />
     <EditorTab v-if="state.currentTab" :state="state" :tab="state.currentTab" />
-    <EditorHelp v-else :state="state" />
+    <EditorWelcome v-else :state="state" />
     <EditorEchoarea :state="state" />
   </div>
 </template>
