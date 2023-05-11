@@ -1,7 +1,5 @@
 # editor
 
-[editor] `stateFileRemove` -- handle errors
-
 [editor] `workspaceFromDirectoryHandle` -- file handles
 [editor] `EditorWorkspace` -- show file list
 
