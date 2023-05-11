@@ -1,7 +1,5 @@
 # editor
 
-[editor] `EditorWelcome` -- about this project
-
 [editor] `workspaceFromDirectoryHandle` -- file handles
 [editor] `EditorWorkspace` -- show file list
 
