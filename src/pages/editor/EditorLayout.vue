@@ -11,7 +11,10 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex h-screen w-screen flex-col text-xl">
+  <div
+    class="flex w-screen flex-col text-xl"
+    style="height: 100vh; height: 100dvh"
+  >
     <div class="flex h-full w-full overflow-auto">
       <div
         v-if="state.currentWorkspace"
