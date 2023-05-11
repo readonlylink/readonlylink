@@ -1,7 +1,5 @@
 # editor
 
-[editor] `stateFileRemoveIsSupported`
-
 [editor] extract `formatReportMessage`
 
 [editor] `stateFileRemove` -- handle errors

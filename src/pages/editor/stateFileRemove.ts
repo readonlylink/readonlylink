@@ -1,4 +1,5 @@
 import { State } from './State'
+import { stateFileRemoveIsSupported } from './stateFileRemoveIsSupported'
 
 export async function stateFileRemove(state: State): Promise<void> {
   const who = 'stateFileRemove'
@@ -7,8 +8,8 @@ export async function stateFileRemove(state: State): Promise<void> {
     return
   }
 
-  const remove = (state.currentTab.fileHandle as any).remove
-  if (typeof remove === 'function') {
+  const remove = stateFileRemoveIsSupported(state)
+  if (remove) {
     await remove()
   } else {
     state.message = `[${who}] <> removing file is not supported`

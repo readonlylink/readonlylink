@@ -7,6 +7,7 @@ import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
 import { stateFileRemove } from './stateFileRemove'
+import { stateFileRemoveIsSupported } from './stateFileRemoveIsSupported'
 import { tabIsModified } from './tabIsModified'
 import { tabSave } from './tabSave'
 
@@ -60,6 +61,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
+        v-if="stateFileRemoveIsSupported(state)"
         class="whitespace-pre hover:underline"
         @click="stateFileRemove(state)"
       >
