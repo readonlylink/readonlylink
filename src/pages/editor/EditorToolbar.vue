@@ -20,7 +20,7 @@ defineProps<{ state: State }>()
   >
     <div class="flex space-x-4 overflow-x-auto">
       <button
-        class="whitespace-pre hover:underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateFileCreate(state)"
       >
         <Lang>
@@ -30,7 +30,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="whitespace-pre hover:underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateFileOpen(state)"
       >
         <Lang>
@@ -40,7 +40,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="whitespace-pre hover:underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateDirectoryOpen(state)"
       >
         <Lang>
@@ -51,7 +51,11 @@ defineProps<{ state: State }>()
 
       <button
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
-        :disabled="!state.currentTab || !tabIsModified(state.currentTab)"
+        :disabled="
+          !state.currentTab ||
+          state.currentTab.isProcessing ||
+          !tabIsModified(state.currentTab)
+        "
         @click="state.currentTab && tabSave(state.currentTab, state)"
       >
         <Lang>
@@ -62,7 +66,8 @@ defineProps<{ state: State }>()
 
       <button
         v-if="stateFileRemoveIsSupported(state)"
-        class="whitespace-pre hover:underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        :disabled="!state.currentTab || state.currentTab.isProcessing"
         @click="stateFileRemove(state)"
       >
         <Lang>
@@ -74,7 +79,7 @@ defineProps<{ state: State }>()
 
     <div class="flex grow justify-end space-x-4">
       <Hyperlink
-        class="whitespace-pre hover:underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         href="/"
         target="_blank"
       >

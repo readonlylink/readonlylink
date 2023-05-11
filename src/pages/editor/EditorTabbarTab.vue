@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ArrowPathIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import { State } from './State'
 import { Tab } from './Tab'
 import { stateTabClose } from './stateTabClose'
-import { stateTabCloseAfterConfirming } from './stateTabCloseAfterConfirming'
 import { tabIsModified } from './tabIsModified'
+
+const lang = useGlobalLang()
 
 defineProps<{
   state: State
@@ -27,9 +30,12 @@ defineProps<{
     <button
       :disabled="tab.isProcessing"
       @click="
-        tabIsModified(tab)
-          ? stateTabCloseAfterConfirming(state, tab)
-          : stateTabClose(state, tab)
+        callWithConfirm(() => stateTabClose(state, tab), {
+          message: lang.isZh()
+            ? `确认要关闭这个标签吗？\n有未保存的修改哦！\n${tab.file.name}`
+            : `Are you sure to close this tab?\nThere are unsaved changes!\n${tab.file.name}`,
+          when: tabIsModified(tab),
+        })
       "
       class="rounded-full hover:bg-stone-300"
       :class="{
