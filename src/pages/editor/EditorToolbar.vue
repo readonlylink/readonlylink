@@ -13,23 +13,34 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex justify-between bg-stone-200 px-3 py-0.5">
-    <div class="flex space-x-4">
-      <button class="hover:underline" @click="stateFileCreate(state)">
+  <div
+    class="flex flex-wrap items-center justify-between bg-stone-200 px-3 py-0.5"
+  >
+    <div class="flex space-x-4 overflow-x-auto">
+      <button
+        class="whitespace-pre hover:underline"
+        @click="stateFileCreate(state)"
+      >
         <Lang>
           <template #zh>创建</template>
           <template #en>Create</template>
         </Lang>
       </button>
 
-      <button class="hover:underline" @click="stateFileOpen(state)">
+      <button
+        class="whitespace-pre hover:underline"
+        @click="stateFileOpen(state)"
+      >
         <Lang>
           <template #zh>打开</template>
           <template #en>Open</template>
         </Lang>
       </button>
 
-      <button class="hover:underline" @click="stateDirectoryOpen(state)">
+      <button
+        class="whitespace-pre hover:underline"
+        @click="stateDirectoryOpen(state)"
+      >
         <Lang>
           <template #zh>打开文件夹</template>
           <template #en>Open Directory</template>
@@ -37,7 +48,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="hover:underline disabled:text-stone-500"
+        class="whitespace-pre hover:underline disabled:text-stone-500"
         :disabled="!state.currentTab || !tabIsModified(state.currentTab)"
         @click="state.currentTab && tabSave(state.currentTab, state)"
       >
@@ -48,15 +59,19 @@ defineProps<{ state: State }>()
       </button>
     </div>
 
-    <div class="flex space-x-4">
-      <Hyperlink class="hover:underline" href="/" target="_blank">
+    <div class="flex grow justify-end space-x-4 overflow-x-auto">
+      <Hyperlink
+        class="whitespace-pre hover:underline"
+        href="/"
+        target="_blank"
+      >
         <Lang>
           <template #zh>主页</template>
           <template #en>Home</template>
         </Lang>
       </Hyperlink>
 
-      <EditorToolbarLang :state="state" />
+      <EditorToolbarLang class="z-20" :state="state" />
     </div>
   </div>
 </template>
