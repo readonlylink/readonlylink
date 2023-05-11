@@ -5,4 +5,5 @@ export type Tab = {
   originalText: string
   isProcessing: boolean
   scrollTop: number
+  isHeightOverflow?: boolean
 }

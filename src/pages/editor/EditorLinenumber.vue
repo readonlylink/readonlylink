@@ -21,7 +21,7 @@ watch(
   { immediate: true },
 )
 
-function setScroll(event: Event, tab: Tab) {
+function handleScroll(event: Event, tab: Tab) {
   const element = event.target as HTMLTextAreaElement
   tab.scrollTop = element.scrollTop
 }
@@ -30,8 +30,9 @@ function setScroll(event: Event, tab: Tab) {
 <template>
   <div
     ref="rootElement"
-    class="scrollbar-w-0 scrollbar-h-8 flex h-full flex-col items-end overflow-y-auto overflow-x-scroll px-3 py-2 font-mono"
-    @scroll="setScroll($event, tab)"
+    class="scrollbar-w-0 scrollbar-h-8 flex h-full flex-col items-end overflow-y-auto px-3 py-2 font-mono"
+    :class="{ 'overflow-x-scroll': tab.isHeightOverflow }"
+    @scroll="handleScroll($event, tab)"
   >
     <div
       v-for="n of arrayFromRange({

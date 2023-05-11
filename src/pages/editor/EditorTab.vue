@@ -17,6 +17,7 @@ defineProps<{
       <EditorLinenumber :state="state" :tab="tab" />
       <EditorTextarea :state="state" :tab="tab" />
     </div>
+
     <EditorModeline :state="state" :tab="tab" />
   </div>
 </template>

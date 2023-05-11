@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex flex-wrap items-center justify-between bg-stone-200 px-3 py-0.5"
+    class="flex flex-wrap items-center justify-between space-x-4 bg-stone-200 px-3 py-0.5"
   >
     <div class="flex space-x-4 overflow-x-auto">
       <button
@@ -59,7 +59,7 @@ defineProps<{ state: State }>()
       </button>
     </div>
 
-    <div class="flex grow justify-end space-x-4 overflow-x-auto">
+    <div class="flex grow justify-end space-x-4">
       <Hyperlink
         class="whitespace-pre hover:underline"
         href="/"

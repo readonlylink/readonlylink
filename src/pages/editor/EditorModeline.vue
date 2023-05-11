@@ -10,7 +10,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex items-baseline space-x-3 bg-stone-200 px-3">
+  <div
+    class="flex items-baseline space-x-3 overflow-x-auto overflow-y-hidden whitespace-pre bg-stone-200 px-3"
+  >
     <div class="font-bold">{{ tab.file.name }}</div>
     <div>
       <span>{ </span>

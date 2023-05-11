@@ -7,8 +7,10 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex items-center">
-    <div class="px-3 py-1 font-logo">
+  <div
+    class="scrollbar-h-0 flex items-center overflow-x-auto overflow-y-hidden"
+  >
+    <div class="whitespace-pre px-3 py-1 font-logo">
       <Lang>
         <template #zh>只读编辑器</template>
         <template #en>Readonly Editor</template>

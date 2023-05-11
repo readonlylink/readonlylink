@@ -20,9 +20,14 @@ watch(
   { immediate: true },
 )
 
-function setScroll(event: Event, tab: Tab) {
+function handleScroll(event: Event, tab: Tab) {
   const element = event.target as HTMLTextAreaElement
   tab.scrollTop = element.scrollTop
+}
+
+function handleInput(event: Event, tab: Tab) {
+  const element = event.target as HTMLTextAreaElement
+  tab.isHeightOverflow = element.scrollHeight > element.clientHeight
 }
 </script>
 
@@ -32,6 +37,7 @@ function setScroll(event: Event, tab: Tab) {
     class="scrollbar-w-8 scrollbar-h-8 h-full w-full resize-none whitespace-pre px-3 py-2 font-mono caret-red-500 focus:outline-none"
     spellcheck="false"
     v-model="tab.text"
-    @scroll="setScroll($event, tab)"
+    @scroll="handleScroll($event, tab)"
+    @input="handleInput($event, tab)"
   />
 </template>
