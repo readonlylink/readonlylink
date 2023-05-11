@@ -1,8 +1,8 @@
 import { Workspace } from './Workspace'
 
-export function workspaceFromDirectoryHandle(
+export async function workspaceFromDirectoryHandle(
   directoryHandle: FileSystemDirectoryHandle,
-): Workspace {
+): Promise<Workspace> {
   return {
     directoryHandle,
   }
