@@ -20,7 +20,7 @@ defineProps<{ state: State }>()
       <template #en>Welcome to use <b>Readonly Editor</b> :)</template>
     </Lang>
 
-    <div class="flex flex-col space-y-3">
+    <div class="flex flex-col space-y-4">
       <Lang class="text-3xl font-bold">
         <template #zh>开始</template>
         <template #en>Start</template>
@@ -62,7 +62,7 @@ defineProps<{ state: State }>()
       </div>
     </div>
 
-    <div class="flex flex-col space-y-3">
+    <div class="flex flex-col space-y-4">
       <Lang class="text-3xl font-bold">
         <template #zh>关于</template>
         <template #en>About</template>

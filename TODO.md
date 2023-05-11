@@ -1,9 +1,8 @@
 # editor
 
-[editor] `workspaceFromDirectoryHandle` -- file handles
-[editor] `EditorWorkspace` -- show file list
+[editor] `workspaceFromDirectoryHandle` -- load first level nodes
+[editor] `EditorWorkspace` -- show first level nodes
 
-[editor] support delete file
 [editor] support rename file
 
 [editor] `EditorWelcome` -- recent files
