@@ -3,7 +3,6 @@
 [editor] support directory
 [editor] support delete file
 [editor] support rename file
-[editor] `EditorEchoarea` -- show message about saving
 
 # article
 

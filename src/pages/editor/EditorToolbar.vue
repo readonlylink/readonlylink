@@ -31,7 +31,7 @@ defineProps<{ state: State }>()
       <button
         class="hover:underline disabled:text-stone-500"
         :disabled="!state.currentTab || !tabIsModified(state.currentTab)"
-        @click="state.currentTab && tabSave(state.currentTab)"
+        @click="state.currentTab && tabSave(state.currentTab, state)"
       >
         <Lang>
           <template #zh>保存</template>
