@@ -1,6 +1,9 @@
 # editor
 
-[editor] support directory
+[editor] `EditorLayout` -- show workspace
+
+[editor] `workspaceFromDirectoryHandle` -- file handles
+
 [editor] support delete file
 [editor] support rename file
 

@@ -3,6 +3,7 @@ import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
+import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
 import { tabIsModified } from './tabIsModified'
@@ -25,6 +26,13 @@ defineProps<{ state: State }>()
         <Lang>
           <template #zh>打开</template>
           <template #en>Open</template>
+        </Lang>
+      </button>
+
+      <button class="hover:underline" @click="stateDirectoryOpen(state)">
+        <Lang>
+          <template #zh>打开文件夹</template>
+          <template #en>Open Directory</template>
         </Lang>
       </button>
 
