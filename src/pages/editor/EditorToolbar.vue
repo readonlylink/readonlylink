@@ -48,7 +48,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="whitespace-pre hover:underline disabled:text-stone-500"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         :disabled="!state.currentTab || !tabIsModified(state.currentTab)"
         @click="state.currentTab && tabSave(state.currentTab, state)"
       >
