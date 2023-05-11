@@ -29,7 +29,7 @@ watch(
 </script>
 
 <template>
-  <div class="flex h-screen flex-col">
+  <div class="h-screen-dynamic flex flex-col">
     <div class="hidden h-full overflow-y-auto md:block">
       <div class="flex h-full overflow-y-auto">
         <ManualPageNav

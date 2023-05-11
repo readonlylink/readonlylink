@@ -13,7 +13,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
 <template>
   <div
-    class="flex h-screen flex-col items-center justify-between py-12 font-serif text-2xl"
+    class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-serif text-2xl"
   >
     <div
       class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl md:text-4xl"

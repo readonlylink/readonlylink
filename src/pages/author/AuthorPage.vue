@@ -15,7 +15,7 @@ const url = computed(() => new URL(props.state.url))
 </script>
 
 <template>
-  <div class="relative mx-auto flex h-screen max-w-3xl flex-col">
+  <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
     <Hyperlink
       :href="`/authors/${state.url}`"
       class="block h-[3.5rem] w-[3.5rem] shrink-0 object-contain p-2 md:hidden"

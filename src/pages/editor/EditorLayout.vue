@@ -12,8 +12,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex w-screen flex-col text-xl"
-    style="height: 100vh; height: 100dvh"
+    class="h-screen-dynamic h-screen-dynamic-dynamic flex w-screen flex-col text-xl"
   >
     <div class="flex h-full w-full overflow-auto">
       <div

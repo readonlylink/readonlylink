@@ -31,7 +31,7 @@ const url = computed(() => {
 </script>
 
 <template>
-  <div class="flex h-screen flex-col px-6">
+  <div class="h-screen-dynamic flex flex-col px-6">
     <BookPageNav class="py-6" :state="state" />
     <MdPage :key="state.path" :document="document" :url="url" />
     <BookPageNav class="py-6" :state="state" />
