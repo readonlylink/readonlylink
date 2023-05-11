@@ -1,9 +1,5 @@
 # editor
 
-[editor] `State` has `currentWorkspace`
-
-- `Workspace` has `directoryHandle`
-
 [editor] `stateDirectoryOpen`
 
 [editor] support directory
