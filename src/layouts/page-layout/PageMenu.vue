@@ -38,6 +38,13 @@ const origin = window.location.origin
         </Lang>
       </Hyperlink>
 
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/editor">
+        <Lang>
+          <template #zh> 编辑器 </template>
+          <template #en> EDITOR </template>
+        </Lang>
+      </Hyperlink>
+
       <Hyperlink class="pr-3 hover:text-stone-900" href="/about">
         <Lang>
           <template #zh> 关于 </template>

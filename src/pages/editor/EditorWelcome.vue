@@ -8,8 +8,8 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex h-full flex-col items-center justify-center">
     <Lang class="text-stone-500">
-      <template #zh>欢迎使用只读文本编辑器</template>
-      <template #en>Welcome to Readonly Text Editor</template>
+      <template #zh>欢迎使用只读编辑器</template>
+      <template #en>Welcome to Readonly Editor</template>
     </Lang>
   </div>
 </template>

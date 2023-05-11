@@ -28,7 +28,7 @@ function elementPlugin(element: XElement): Plugin | undefined {
 
 <template>
   <template v-for="(node, index) of nodes" :key="index">
-    <templage v-if="isElement(node)">
+    <template v-if="isElement(node)">
       <component
         v-if="elementPlugin(node)"
         :is="elementPlugin(node)?.component"
@@ -37,7 +37,7 @@ function elementPlugin(element: XElement): Plugin | undefined {
       />
 
       <div v-else v-html="safeHtml(format([node]))"></div>
-    </templage>
+    </template>
 
     <div v-else>{{ node }}</div>
   </template>

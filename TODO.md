@@ -1,5 +1,11 @@
 # editor
 
+[editor] `State` has `currentWorkspace`
+
+- `Workspace` has `directoryHandle`
+
+[editor] `stateDirectoryOpen`
+
 [editor] support directory
 [editor] support delete file
 [editor] support rename file
@@ -8,6 +14,10 @@
 [editor] `EditorWelcome` -- about this project
 [editor] `EditorWelcome` -- recent files
 [editor] `EditorWelcome` -- recent directories
+
+[editor] fallback when there is no file system access api
+
+- https://github.com/GoogleChromeLabs/browser-fs-access
 
 # article
 
