@@ -1,5 +1,5 @@
-import { formatDateTime } from '../../utils/formatDate'
 import { Tab } from './Tab'
+import { formatReportMessage } from './formatReportMessage'
 
 export async function tabSave(
   tab: Tab,
@@ -7,15 +7,15 @@ export async function tabSave(
 ): Promise<void> {
   const who = 'tabSave'
   tab.isProcessing = true
-  report.message = `[${who}] <${formatDateTime(Date.now())}> ${tab.file.name}`
+  report.message = formatReportMessage({ who, data: { file: tab.file.name } })
   try {
     const writable = await tab.fileHandle.createWritable()
     await writable.write(tab.text)
     await writable.close()
     tab.originalText = tab.text
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error)
-    report.message = `[${who}] <${formatDateTime(Date.now())}> ${errorMessage}`
+    const message = error instanceof Error ? error.message : String(error)
+    report.message = formatReportMessage({ who, message })
   }
 
   tab.isProcessing = false

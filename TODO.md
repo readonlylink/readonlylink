@@ -1,7 +1,5 @@
 # editor
 
-[editor] extract `formatReportMessage`
-
 [editor] `stateFileRemove` -- handle errors
 
 [editor] `workspaceFromDirectoryHandle` -- file handles
