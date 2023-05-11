@@ -6,6 +6,7 @@ import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
+import { stateFileRemove } from './stateFileRemove'
 import { tabIsModified } from './tabIsModified'
 import { tabSave } from './tabSave'
 
@@ -55,6 +56,16 @@ defineProps<{ state: State }>()
         <Lang>
           <template #zh>保存</template>
           <template #en>Save</template>
+        </Lang>
+      </button>
+
+      <button
+        class="whitespace-pre hover:underline"
+        @click="stateFileRemove(state)"
+      >
+        <Lang>
+          <template #zh>删除</template>
+          <template #en>Remove</template>
         </Lang>
       </button>
     </div>

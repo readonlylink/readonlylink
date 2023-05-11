@@ -1,5 +1,11 @@
 # editor
 
+[editor] `stateFileRemoveIsSupported`
+
+[editor] extract `formatReportMessage`
+
+[editor] `stateFileRemove` -- handle errors
+
 [editor] `workspaceFromDirectoryHandle` -- file handles
 [editor] `EditorWorkspace` -- show file list
 
