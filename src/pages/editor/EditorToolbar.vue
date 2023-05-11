@@ -5,6 +5,7 @@ import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
+import { tabIsModified } from './tabIsModified'
 import { tabSave } from './tabSave'
 
 defineProps<{ state: State }>()
@@ -28,8 +29,8 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="hover:underline"
-        :disabled="!state.currentTab"
+        class="hover:underline disabled:text-stone-500"
+        :disabled="!state.currentTab || !tabIsModified(state.currentTab)"
         @click="state.currentTab && tabSave(state.currentTab)"
       >
         <Lang>
