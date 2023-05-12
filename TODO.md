@@ -1,9 +1,5 @@
 # editor
 
-[editor] extract `workspaceLoadNodes`
-
-[editor] `WorkspaceNodeFile` has `relativePath`
-
 [editor] `stateWorkspaceNodeIsCurrentTab` -- must not be async
 
 [editor] `EditorWorkspaceNodeFile` -- show active style if file is `currentTab`

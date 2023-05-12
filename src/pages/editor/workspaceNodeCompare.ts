@@ -13,14 +13,14 @@ export function workspaceNodeCompare(
   }
 
   if (x.kind === 'WorkspaceNodeFile' && y.kind === 'WorkspaceNodeFile') {
-    return x.fileHandle.name > y.fileHandle.name ? 1 : -1
+    return x.handle.name > y.handle.name ? 1 : -1
   }
 
   if (
     x.kind === 'WorkspaceNodeDirectory' &&
     y.kind === 'WorkspaceNodeDirectory'
   ) {
-    return x.directoryHandle.name > y.directoryHandle.name ? 1 : -1
+    return x.handle.name > y.handle.name ? 1 : -1
   }
 
   return 0

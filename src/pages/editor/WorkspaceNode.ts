@@ -2,33 +2,33 @@ export type WorkspaceNode = WorkspaceNodeFile | WorkspaceNodeDirectory
 
 export type WorkspaceNodeFile = {
   kind: 'WorkspaceNodeFile'
-  fileHandle: FileSystemFileHandle
+  handle: FileSystemFileHandle
   relativePath?: string
 }
 
 export function WorkspaceNodeFile(
-  fileHandle: FileSystemFileHandle,
+  handle: FileSystemFileHandle,
 ): WorkspaceNodeFile {
   return {
     kind: 'WorkspaceNodeFile',
-    fileHandle,
+    handle,
   }
 }
 
 export type WorkspaceNodeDirectory = {
   kind: 'WorkspaceNodeDirectory'
-  directoryHandle: FileSystemDirectoryHandle
+  handle: FileSystemDirectoryHandle
   children: Array<WorkspaceNode>
   isLoaded: boolean
   relativePath?: string
 }
 
 export function WorkspaceNodeDirectory(
-  directoryHandle: FileSystemDirectoryHandle,
+  handle: FileSystemDirectoryHandle,
 ): WorkspaceNodeDirectory {
   return {
     kind: 'WorkspaceNodeDirectory',
-    directoryHandle,
+    handle,
     children: [],
     isLoaded: false,
   }

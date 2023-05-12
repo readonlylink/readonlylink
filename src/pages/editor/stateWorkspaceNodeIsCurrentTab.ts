@@ -13,7 +13,7 @@ export async function stateWorkspaceNodeIsCurrentTab(
   }
 
   const parts = await state.currentWorkspace.directoryHandle.resolve(
-    node.fileHandle,
+    node.handle,
   )
 
   const relativePath = parts ? parts.join('/') : undefined

@@ -16,6 +16,6 @@ defineProps<{
     class="flex shrink-0 items-center space-x-1 overflow-x-auto whitespace-pre px-3 hover:bg-stone-200"
   >
     <FolderIcon class="h-4 w-4" />
-    <span>{{ node.directoryHandle.name }}<span class="font-bold">/</span></span>
+    <span>{{ node.handle.name }}<span class="font-bold">/</span></span>
   </div>
 </template>
