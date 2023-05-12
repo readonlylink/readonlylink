@@ -1,7 +1,5 @@
 # editor
 
-[editor] fix `relativePath`
-
 [editor] support rename file
 
 [editor] `EditorWelcome` -- recent files

@@ -24,7 +24,7 @@ defineProps<{
     }"
   >
     <button @click="state.currentTab = tab">
-      {{ tab.file.name }}
+      {{ tab.relativePath || tab.file.name }}
     </button>
 
     <button
