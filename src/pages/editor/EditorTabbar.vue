@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Lang from '../../components/lang/Lang.vue'
 import EditorTabbarTab from './EditorTabbarTab.vue'
 import { State } from './State'
 
@@ -8,12 +7,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="scrollbar-h-0 flex items-center overflow-x-auto overflow-y-clip">
-    <div class="whitespace-pre px-3 py-1 font-logo">
-      <Lang>
-        <template #zh>只读编辑器</template>
-        <template #en>Readonly Editor</template>
-      </Lang>
-    </div>
+    <div v-if="state.tabs.length === 0">&nbsp;</div>
 
     <EditorTabbarTab
       :key="index"
