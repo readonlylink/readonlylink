@@ -1,8 +1,9 @@
 # editor
 
-[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
+[editor] `EditorLayout` -- be able to resize `EditorWorkspace`
 
-[editor] `EditorWorkspaceNode*` -- click to open tab
+[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
+[editor] `EditorWorkspaceNodeFile` -- click file to open tab
 
 [editor] support rename file
 

@@ -10,15 +10,21 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex h-full w-full flex-col overflow-auto pr-3">
-    <div class="px-3 py-1 font-bold">{{ workspace.directoryHandle.name }}</div>
+  <div
+    class="flex h-full w-full flex-col overflow-auto border-b border-r border-black"
+  >
+    <div class="border-b border-black px-3 py-px font-bold">
+      {{ workspace.directoryHandle.name }}
+    </div>
 
-    <EditorWorkspaceNode
-      v-for="(node, index) of workspace.nodes"
-      :key="index"
-      :state="state"
-      :workspace="workspace"
-      :node="node"
-    />
+    <div class="flex h-full w-full flex-col overflow-x-auto">
+      <EditorWorkspaceNode
+        v-for="(node, index) of workspace.nodes"
+        :key="index"
+        :state="state"
+        :workspace="workspace"
+        :node="node"
+      />
+    </div>
   </div>
 </template>

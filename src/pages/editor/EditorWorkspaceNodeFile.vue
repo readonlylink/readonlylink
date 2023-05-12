@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="overflow-x-auto whitespace-pre px-3 py-px">
+  <div class="shrink-0 overflow-x-auto whitespace-pre px-3 hover:bg-stone-200">
     <span>{{ node.fileHandle.name }}</span>
   </div>
 </template>
