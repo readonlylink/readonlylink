@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
-import { workspaceNodeName } from './workspaceNodeName'
 
 defineProps<{
   state: State
@@ -12,12 +12,13 @@ defineProps<{
 <template>
   <div class="flex h-full w-full flex-col overflow-auto pr-3">
     <div class="px-3 py-1 font-bold">{{ workspace.directoryHandle.name }}</div>
-    <div
-      class="overflow-x-auto whitespace-pre px-3 py-px"
+
+    <EditorWorkspaceNode
       v-for="(node, index) of workspace.nodes"
       :key="index"
-    >
-      {{ workspaceNodeName(node) }}
-    </div>
+      :state="state"
+      :workspace="workspace"
+      :node="node"
+    />
   </div>
 </template>

@@ -1,6 +1,8 @@
 # editor
 
-[editor] `EditorWorkspace` -- show first level nodes
+[editor] `EditorWorkspaceNodeFile` vs `EditorWorkspaceNodeDirectory`
+[editor] `EditorWorkspaceNode` -- show nodes
+[editor] `EditorWorkspaceNode` -- click directory to load `children`
 
 [editor] support rename file
 
