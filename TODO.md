@@ -1,6 +1,6 @@
 # editor
 
-[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
+[editor] `stateWorkspaceNodeDirectoryOpen` -- load `children`
 
 [editor] support rename file
 

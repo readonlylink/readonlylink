@@ -19,7 +19,7 @@ export type WorkspaceNodeDirectory = {
   kind: 'WorkspaceNodeDirectory'
   handle: FileSystemDirectoryHandle
   children: Array<WorkspaceNode>
-  isLoaded: boolean
+  isOpen: boolean
   relativePath?: string
 }
 
@@ -30,6 +30,6 @@ export function WorkspaceNodeDirectory(
     kind: 'WorkspaceNodeDirectory',
     handle,
     children: [],
-    isLoaded: false,
+    isOpen: false,
   }
 }
