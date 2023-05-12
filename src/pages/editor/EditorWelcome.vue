@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex h-full flex-col space-y-10 overflow-auto p-12">
+  <div class="flex h-full flex-col space-y-6 overflow-auto p-8">
     <Lang class="text-3xl text-stone-500">
       <template #zh>欢迎使用<b>只读编辑器</b> *^-^*/</template>
       <template #en>Welcome to use <b>Readonly Editor</b> :)</template>

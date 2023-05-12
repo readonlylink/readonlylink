@@ -31,9 +31,9 @@
     "qs": "^6.11.1",
     "sanitize-html": "^2.10.0",
     "splitpanes": "^3.1.5",
-    "vue": "^3.2.47",
+    "vue": "^3.3.1",
     "vue-meta": "^2.4.0",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.2.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
@@ -42,7 +42,7 @@
     "@types/sanitize-html": "^2.9.0",
     "@types/splitpanes": "^2.2.1",
     "@types/wicg-file-system-access": "^2020.9.6",
-    "@vitejs/plugin-vue": "^4.2.1",
+    "@vitejs/plugin-vue": "^4.2.2",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "postcss": "^8.4.23",
