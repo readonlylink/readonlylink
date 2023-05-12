@@ -1,6 +1,8 @@
 # editor
 
-[editor] `stateWorkspaceNodeDirectoryOpen` -- load `children`
+[editor] `EditorWorkspaceNodeDirectory` toggle to close directory
+
+[editor] fix `relativePath`
 
 [editor] support rename file
 

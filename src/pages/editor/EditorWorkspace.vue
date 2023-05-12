@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <div class="flex h-full w-full flex-col overflow-auto border-r border-black">
     <div class="border-b border-black px-3 py-1 font-bold">
-      {{ workspace.directoryHandle.name }}
+      {{ workspace.handle.name }}
     </div>
 
     <div class="flex h-full w-full flex-col overflow-x-auto">
