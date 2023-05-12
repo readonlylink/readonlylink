@@ -16,8 +16,16 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex h-full flex-col space-y-6 overflow-auto p-8">
     <Lang class="text-3xl text-stone-500">
-      <template #zh>欢迎使用<b>只读编辑器</b> *^-^*/</template>
-      <template #en>Welcome to use <b>Readonly Editor</b> :)</template>
+      <template #zh>
+        <span>欢迎使用</span>
+        <br class="block md:hidden" />
+        <span><b>只读编辑器</b></span>
+      </template>
+      <template #en>
+        <span>Welcome to use</span>
+        <br class="block md:hidden" />
+        <span><b>Readonly Editor</b></span>
+      </template>
     </Lang>
 
     <div class="flex flex-col space-y-4">

@@ -50,11 +50,10 @@ defineProps<{ state: State }>()
       </button>
 
       <button
+        v-if="state.currentTab"
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         :disabled="
-          !state.currentTab ||
-          state.currentTab.isProcessing ||
-          !tabIsModified(state.currentTab)
+          state.currentTab.isProcessing || !tabIsModified(state.currentTab)
         "
         @click="state.currentTab && tabSave(state.currentTab, state)"
       >
