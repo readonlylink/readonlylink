@@ -20,6 +20,6 @@ defineProps<{
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
     <DocumentTextIcon class="h-4 w-4 shrink-0" />
-    <span>{{ node.handle.name }}</span>
+    <span class="overflow-x-auto">{{ node.handle.name }}</span>
   </button>
 </template>

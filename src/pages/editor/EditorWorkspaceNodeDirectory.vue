@@ -29,7 +29,9 @@ defineProps<{
     >
       <FolderOpenIcon v-if="node.isOpen" class="h-4 w-4 shrink-0" />
       <FolderIcon v-else class="h-4 w-4 shrink-0" />
-      <span>{{ node.handle.name }}<span class="font-bold">/</span></span>
+      <span class="overflow-x-auto"
+        >{{ node.handle.name }}<span class="font-bold">/</span></span
+      >
     </button>
 
     <div
