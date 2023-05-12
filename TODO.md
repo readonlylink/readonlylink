@@ -1,8 +1,10 @@
 # editor
 
 [editor] `EditorWorkspaceNodeFile` vs `EditorWorkspaceNodeDirectory`
-[editor] `EditorWorkspaceNode` -- show nodes
-[editor] `EditorWorkspaceNode` -- click directory to load `children`
+
+- `EditorWorkspaceNodeDirectory` -- with `/` postfix
+
+[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 
 [editor] support rename file
 
