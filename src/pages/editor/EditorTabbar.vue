@@ -7,7 +7,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="scrollbar-h-0 flex items-center overflow-x-auto overflow-y-clip">
-    <div v-if="state.tabs.length === 0">&nbsp;</div>
+    <div v-if="state.tabs.length === 0" class="py-1">&nbsp;</div>
 
     <EditorTabbarTab
       :key="index"
