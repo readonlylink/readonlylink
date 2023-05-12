@@ -1,6 +1,5 @@
 # editor
 
-[editor] `workspaceNodeName`
 [editor] `EditorWorkspace` -- show first level nodes
 
 [editor] support rename file
