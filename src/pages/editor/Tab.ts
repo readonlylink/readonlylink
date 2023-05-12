@@ -6,4 +6,5 @@ export type Tab = {
   isProcessing: boolean
   scrollTop: number
   isHeightOverflow?: boolean
+  relativePath?: string
 }

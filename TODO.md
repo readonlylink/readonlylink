@@ -1,7 +1,5 @@
 # editor
 
-[editor] `stateWorkspaceNodeFileOpen` do not open dup tab
-
 [editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 
 [editor] `EditorWorkspaceNode*` -- show active style if file is `currentTab`

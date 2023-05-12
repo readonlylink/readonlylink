@@ -7,6 +7,24 @@ export async function stateWorkspaceNodeFileOpen(
   node: WorkspaceNodeFile,
 ): Promise<void> {
   const tab = await tabFromFileHandle(node.fileHandle)
-  state.tabs.push(tab)
-  state.currentTab = tab
+
+  if (state.currentWorkspace) {
+    const parts = await state.currentWorkspace.directoryHandle.resolve(
+      node.fileHandle,
+    )
+    if (parts) {
+      tab.relativePath = parts.join('/')
+    }
+  }
+
+  const foundTab = state.tabs.find(
+    (exitingTab) => exitingTab.relativePath === tab.relativePath,
+  )
+
+  if (foundTab) {
+    state.currentTab = foundTab
+  } else {
+    state.tabs.push(tab)
+    state.currentTab = tab
+  }
 }
