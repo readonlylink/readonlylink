@@ -4,6 +4,7 @@ import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
+import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab'
 
 defineProps<{
   state: State
@@ -15,6 +16,7 @@ defineProps<{
 <template>
   <button
     class="flex shrink-0 items-center space-x-1 overflow-x-auto whitespace-pre px-3 hover:bg-stone-200"
+    :class="{ 'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node) }"
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
     <DocumentTextIcon class="h-4 w-4" />

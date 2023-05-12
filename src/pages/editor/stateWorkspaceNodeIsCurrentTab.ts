@@ -1,10 +1,10 @@
 import { State } from './State'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 
-export async function stateWorkspaceNodeIsCurrentTab(
+export function stateWorkspaceNodeIsCurrentTab(
   state: State,
   node: WorkspaceNodeFile,
-): Promise<boolean> {
+): boolean {
   if (!state.currentTab) {
     return false
   }
@@ -12,11 +12,5 @@ export async function stateWorkspaceNodeIsCurrentTab(
     return false
   }
 
-  const parts = await state.currentWorkspace.directoryHandle.resolve(
-    node.handle,
-  )
-
-  const relativePath = parts ? parts.join('/') : undefined
-
-  return relativePath === state.currentTab.relativePath
+  return node.relativePath === state.currentTab.relativePath
 }
