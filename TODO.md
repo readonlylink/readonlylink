@@ -1,6 +1,7 @@
 # editor
 
-[editor] support rename file
+[editor] rename file
+[editor] delete directory
 
 [editor] `EditorWelcome` -- recent files
 [editor] `EditorWelcome` -- recent directories

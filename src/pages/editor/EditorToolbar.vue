@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
@@ -12,6 +14,8 @@ import { tabIsModified } from './tabIsModified'
 import { tabSave } from './tabSave'
 
 defineProps<{ state: State }>()
+
+const lang = useGlobalLang()
 </script>
 
 <template>
@@ -67,7 +71,23 @@ defineProps<{ state: State }>()
         v-if="stateFileRemoveIsSupported(state)"
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         :disabled="!state.currentTab || state.currentTab.isProcessing"
-        @click="stateFileRemove(state)"
+        @click="
+          () => {
+            if (!state.currentTab) {
+              return
+            }
+
+            callWithConfirm(() => stateFileRemove(state), {
+              message: lang.isZh()
+                ? `确认要删除这个文件吗？\n${
+                    state.currentTab.relativePath || state.currentTab.file.name
+                  }`
+                : `Are you sure to remove this file?\n${
+                    state.currentTab.relativePath || state.currentTab.file.name
+                  }`,
+            })
+          }
+        "
       >
         <Lang>
           <template #zh>删除</template>
