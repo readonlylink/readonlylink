@@ -1,6 +1,6 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` -- click file to open tab
+[editor] `stateWorkspaceNodeFileOpen` do not open dup tab
 
 [editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 
