@@ -1,18 +1,23 @@
 # editor
 
-[editor] rename file
-[editor] delete directory
+[editor] `EditorWorkspaceNodeFile` -- rename file
+[editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
-[editor] `EditorWelcome` -- recent files
-[editor] `EditorWelcome` -- recent directories
+[editor] `EditorWorkspaceNodeFile` -- delete file
+[editor] `EditorWorkspaceNodeDirectory` -- delete directory
 
-[editor] fallback when there is no file system access api
-
-- https://github.com/GoogleChromeLabs/browser-fs-access
+[editor] `EditorWelcome` -- show recent files
+[editor] `EditorWelcome` -- show recent directories
 
 # article
 
 [article] support url encoding
+
+# editor-fallback
+
+[editor-fallback] fallback when there is no file system access api
+
+- https://github.com/GoogleChromeLabs/browser-fs-access
 
 # author
 
