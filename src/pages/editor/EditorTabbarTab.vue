@@ -17,7 +17,7 @@ defineProps<{
 
 <template>
   <div
-    class="flex items-center space-x-3 overflow-x-auto whitespace-pre px-3 py-1"
+    class="flex max-w-min items-center space-x-0.5 overflow-x-auto whitespace-pre py-1 pl-3 pr-1.5"
     :title="tab.relativePath || tab.file.name"
     :class="{
       'bg-stone-200': tab === state.currentTab,
@@ -26,7 +26,7 @@ defineProps<{
   >
     <button
       @click="state.currentTab = tab"
-      class="shrink grow basis-0 overflow-x-auto"
+      class="scrollbar-h-0 shrink grow basis-0 overflow-x-auto text-start"
     >
       {{ tab.file.name }}
     </button>
