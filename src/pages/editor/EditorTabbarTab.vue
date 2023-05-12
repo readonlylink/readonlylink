@@ -43,7 +43,7 @@ defineProps<{
       "
       class="rounded-full hover:bg-stone-300"
       :class="{
-        'bg-black': tabIsModified(tab) && !tab.isProcessing,
+        'bg-stone-400 text-stone-400': tabIsModified(tab) && !tab.isProcessing,
         'animate-spin': tab.isProcessing,
       }"
     >
