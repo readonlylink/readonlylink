@@ -14,8 +14,10 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex h-full flex-col space-y-6 overflow-auto p-8">
-    <Lang class="text-3xl text-stone-500">
+  <div
+    class="flex h-full flex-col space-y-4 overflow-auto p-4 md:space-y-6 md:p-8"
+  >
+    <Lang class="text-2xl text-stone-500 md:text-3xl">
       <template #zh>
         <span>欢迎使用</span>
         <br class="block md:hidden" />
@@ -29,12 +31,12 @@ defineProps<{ state: State }>()
     </Lang>
 
     <div class="flex flex-col space-y-4">
-      <Lang class="text-3xl font-bold">
+      <Lang class="text-2xl font-bold md:text-3xl">
         <template #zh>开始</template>
         <template #en>Start</template>
       </Lang>
 
-      <div class="flex flex-col items-start space-y-2 text-2xl">
+      <div class="flex flex-col items-start space-y-2 text-xl md:text-2xl">
         <button
           class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
           @click="stateFileCreate(state)"
@@ -71,12 +73,14 @@ defineProps<{ state: State }>()
     </div>
 
     <div class="flex flex-col space-y-4">
-      <Lang class="text-3xl font-bold">
+      <Lang class="text-2xl font-bold md:text-3xl">
         <template #zh>关于</template>
         <template #en>About</template>
       </Lang>
 
-      <div class="flex max-w-md flex-col items-start space-y-2 text-2xl">
+      <div
+        class="flex max-w-md flex-col items-start space-y-2 text-xl md:text-2xl"
+      >
         <Lang>
           <!-- prettier-ignore -->
           <template #zh>
