@@ -1,7 +1,5 @@
 # editor
 
-[editor] `WorkspaceNodeCompare`
-
 [editor] `EditorWorkspaceNodeFile` -- click file to open tab
 
 [editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
