@@ -6,10 +6,13 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="scrollbar-h-0 flex items-center overflow-x-auto overflow-y-clip">
-    <div v-if="state.tabs.length === 0" class="py-1">&nbsp;</div>
-
+  <div v-if="state.tabs.length === 0" class="py-1">&nbsp;</div>
+  <div
+    v-else
+    class="scrollbar-h-0 flex w-full items-center overflow-x-auto overflow-y-clip"
+  >
     <EditorTabbarTab
+      class="shrink grow basis-0"
       :key="index"
       v-for="(tab, index) of state.tabs"
       :state="state"

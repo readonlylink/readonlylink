@@ -17,14 +17,18 @@ defineProps<{
 
 <template>
   <div
-    class="flex items-center space-x-3 whitespace-pre px-3 py-1"
+    class="flex items-center space-x-3 overflow-x-auto whitespace-pre px-3 py-1"
+    :title="tab.relativePath || tab.file.name"
     :class="{
       'bg-stone-200': tab === state.currentTab,
       'bg-white hover:bg-stone-100': tab !== state.currentTab,
     }"
   >
-    <button @click="state.currentTab = tab">
-      {{ tab.relativePath || tab.file.name }}
+    <button
+      @click="state.currentTab = tab"
+      class="shrink grow basis-0 overflow-x-auto"
+    >
+      {{ tab.file.name }}
     </button>
 
     <button
