@@ -1,8 +1,8 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` -- click file to open tab
+[editor] `WorkspaceNodeCompare`
 
-[editor] `EditorWorkspaceNode*` -- try icons
+[editor] `EditorWorkspaceNodeFile` -- click file to open tab
 
 [editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 

@@ -2,7 +2,7 @@
 import {
   DocumentPlusIcon,
   DocumentTextIcon,
-  FolderOpenIcon,
+  FolderIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { State } from './State'
@@ -63,7 +63,7 @@ defineProps<{ state: State }>()
           class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
           @click="stateDirectoryOpen(state)"
         >
-          <FolderOpenIcon class="h-7 w-7" />
+          <FolderIcon class="h-7 w-7" />
           <Lang>
             <template #zh>打开文件夹</template>
             <template #en>Open Directory</template>
