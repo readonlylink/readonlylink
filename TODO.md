@@ -1,7 +1,12 @@
 # editor
 
-[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 [editor] `EditorWorkspaceNodeFile` -- click file to open tab
+
+[editor] `EditorWorkspaceNode*` -- try icons
+
+[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
+
+[editor] `EditorWorkspaceNode*` -- show active style if file is `currentTab`
 
 [editor] support rename file
 
