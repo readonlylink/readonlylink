@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLocalStorage } from '@vueuse/core'
+import { Pane, Splitpanes } from 'splitpanes'
 import EditorEchoarea from './EditorEchoarea.vue'
 import EditorTab from './EditorTab.vue'
 import EditorTabbar from './EditorTabbar.vue'
@@ -8,21 +10,28 @@ import EditorWorkspace from './EditorWorkspace.vue'
 import { State } from './State'
 
 defineProps<{ state: State }>()
+
+const splitpanesSize = useLocalStorage('ManagerLayout.splitpanesSize', 24)
 </script>
 
 <template>
   <div
     class="h-screen-dynamic h-screen-dynamic-dynamic flex w-screen flex-col text-xl"
   >
-    <div class="flex h-full w-full overflow-auto">
-      <div
+    <Splitpanes
+      class="splitter-6 md:splitter-3 flex h-full w-full overflow-auto"
+      @resized="splitpanesSize = $event[0].size"
+    >
+      <Pane
         v-if="state.currentWorkspace"
         class="flex h-full w-full max-w-[24rem] flex-col overflow-auto"
+        min-size="8"
+        :size="splitpanesSize"
       >
         <EditorWorkspace :state="state" :workspace="state.currentWorkspace" />
-      </div>
+      </Pane>
 
-      <div class="flex h-full w-full flex-col overflow-auto">
+      <Pane class="flex h-full w-full flex-col overflow-auto">
         <EditorTabbar :state="state" />
         <EditorToolbar :state="state" />
         <EditorTab
@@ -31,8 +40,8 @@ defineProps<{ state: State }>()
           :tab="state.currentTab"
         />
         <EditorWelcome v-else :state="state" />
-      </div>
-    </div>
+      </Pane>
+    </Splitpanes>
 
     <EditorEchoarea :state="state" />
   </div>

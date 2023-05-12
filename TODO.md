@@ -1,7 +1,5 @@
 # editor
 
-[editor] `EditorLayout` -- be able to resize `EditorWorkspace`
-
 [editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 [editor] `EditorWorkspaceNodeFile` -- click file to open tab
 

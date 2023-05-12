@@ -13,7 +13,7 @@ defineProps<{
   <div
     class="flex h-full w-full flex-col overflow-auto border-b border-r border-black"
   >
-    <div class="border-b border-black px-3 py-px font-bold">
+    <div class="border-b border-black px-3 py-1 font-bold">
       {{ workspace.directoryHandle.name }}
     </div>
 
