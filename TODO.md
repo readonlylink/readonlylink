@@ -1,8 +1,14 @@
 # editor
 
-[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
+[editor] extract `workspaceLoadNodes`
 
-[editor] `EditorWorkspaceNode*` -- show active style if file is `currentTab`
+[editor] `WorkspaceNodeFile` has `relativePath`
+
+[editor] `stateWorkspaceNodeIsCurrentTab` -- must not be async
+
+[editor] `EditorWorkspaceNodeFile` -- show active style if file is `currentTab`
+
+[editor] `EditorWorkspaceNodeDirectory` -- click directory to load `children`
 
 [editor] support rename file
 

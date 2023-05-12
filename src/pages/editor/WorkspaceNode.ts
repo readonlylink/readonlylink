@@ -3,6 +3,7 @@ export type WorkspaceNode = WorkspaceNodeFile | WorkspaceNodeDirectory
 export type WorkspaceNodeFile = {
   kind: 'WorkspaceNodeFile'
   fileHandle: FileSystemFileHandle
+  relativePath?: string
 }
 
 export function WorkspaceNodeFile(
@@ -19,6 +20,7 @@ export type WorkspaceNodeDirectory = {
   directoryHandle: FileSystemDirectoryHandle
   children: Array<WorkspaceNode>
   isLoaded: boolean
+  relativePath?: string
 }
 
 export function WorkspaceNodeDirectory(
