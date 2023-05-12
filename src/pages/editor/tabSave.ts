@@ -6,16 +6,25 @@ export async function tabSave(
   report: { message?: string },
 ): Promise<void> {
   const who = 'tabSave'
+
+  report.message = formatReportMessage({
+    who,
+    data: { file: tab.file.name },
+  })
+
   tab.isProcessing = true
-  report.message = formatReportMessage({ who, data: { file: tab.file.name } })
+
   try {
     const writable = await tab.fileHandle.createWritable()
     await writable.write(tab.text)
     await writable.close()
     tab.originalText = tab.text
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error)
-    report.message = formatReportMessage({ who, message })
+    report.message = formatReportMessage({
+      who,
+      message: error instanceof Error ? error.message : String(error),
+      data: { file: tab.file.name },
+    })
   }
 
   tab.isProcessing = false

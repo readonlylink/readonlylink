@@ -1,6 +1,5 @@
 # editor
 
-[editor] extract `workspaceNodeFromHandle`
 [editor] `workspaceNodeName`
 [editor] `EditorWorkspace` -- show first level nodes
 

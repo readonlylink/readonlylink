@@ -1,22 +1,12 @@
 import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
 import { Workspace } from './Workspace'
-import { WorkspaceNodeDirectory, WorkspaceNodeFile } from './WorkspaceNode'
+import { workspaceNodeFromHandle } from './workspaceNodeFromHandle'
 
 export async function workspaceFromDirectoryHandle(
   directoryHandle: FileSystemDirectoryHandle,
 ): Promise<Workspace> {
   const handles = await arrayFromAsyncIterable(directoryHandle.values())
-  const nodes = handles.map((handle) => {
-    switch (handle.kind) {
-      case 'file': {
-        return WorkspaceNodeFile(handle)
-      }
-
-      case 'directory': {
-        return WorkspaceNodeDirectory(handle)
-      }
-    }
-  })
+  const nodes = handles.map(workspaceNodeFromHandle)
 
   return {
     directoryHandle,
