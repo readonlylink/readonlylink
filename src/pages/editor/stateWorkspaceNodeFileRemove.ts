@@ -1,5 +1,6 @@
 import { State } from './State'
 import { WorkspaceNodeFile } from './WorkspaceNode'
+import { stateTabClose } from './stateTabClose'
 
 export async function stateWorkspaceNodeFileRemove(
   state: State,
@@ -13,5 +14,9 @@ export async function stateWorkspaceNodeFileRemove(
         node.parent.children.splice(index, 1)
       }
     }
+  }
+
+  if (node.tab) {
+    await stateTabClose(state, node.tab)
   }
 }
