@@ -2,12 +2,13 @@
 
 [editor] `EditorWelcome` -- show recent files
 [editor] `EditorWelcome` -- show recent directories
+[editor] `EditorWelcomeWorkspace` -- show recent files in this directory
 
 # article
 
 [article] support data url
-
 [editor] link to article data url
+[editor] link to https://mimor.app/mimors data url
 
 # editor-fallback
 
