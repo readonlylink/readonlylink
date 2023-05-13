@@ -1,7 +1,5 @@
 # editor
 
-[editor] `EditorWorkspaceNode*` -- use color to show modified
-
 [editor] `EditorWorkspaceNodeFile` -- delete file
 
 [editor] `workspaceNodeFileRemove`

@@ -20,7 +20,10 @@ defineProps<{
 <template>
   <button
     class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
-    :class="{ 'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node) }"
+    :class="{
+      'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node),
+      'text-amber-600': workspaceNodeIsModified(node),
+    }"
     @mouseover="node.isHovered = true"
     @mouseleave="node.isHovered = false"
     @click="stateWorkspaceNodeFileOpen(state, node)"
@@ -41,7 +44,7 @@ defineProps<{
       <button
         v-if="workspaceNodeIsModified(node)"
         :title="lang.isZh() ? '这个文件修改过' : 'This file is modified'"
-        class="rounded-full bg-stone-400 p-2"
+        class="rounded-full bg-amber-500 p-2"
       ></button>
     </div>
   </button>
