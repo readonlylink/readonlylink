@@ -2,7 +2,9 @@
 
 [editor] `EditorWorkspaceRoot` -- create file
 [editor] `EditorWorkspaceRoot` -- create directory
-[editor] `EditorWorkspaceNodeDirectory` -- create file and directory
+
+[editor] `EditorWorkspaceNodeDirectory` -- create file
+[editor] `EditorWorkspaceNodeDirectory` -- create directory
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory

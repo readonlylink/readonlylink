@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import {
+  DocumentPlusIcon,
   FolderIcon,
   FolderOpenIcon,
+  FolderPlusIcon,
   TrashIcon,
 } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
@@ -54,6 +56,22 @@ defineProps<{
       </div>
 
       <div class="flex items-center space-x-1">
+        <button
+          v-if="node.isHovered"
+          @click.stop=""
+          :title="lang.isZh() ? '创建文件' : 'Create File'"
+        >
+          <DocumentPlusIcon class="h-5 w-5" />
+        </button>
+
+        <button
+          v-if="node.isHovered"
+          @click.stop=""
+          :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
+        >
+          <FolderPlusIcon class="h-5 w-5" />
+        </button>
+
         <button
           v-if="node.isHovered"
           :title="lang.isZh() ? '删除这个文件夹' : 'Remove this directory'"
