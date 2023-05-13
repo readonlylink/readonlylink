@@ -39,12 +39,12 @@ defineProps<{ state: State }>()
       <div class="flex flex-col items-start space-y-2 text-xl md:text-2xl">
         <button
           class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
-          @click="stateFileCreate(state)"
+          @click="stateDirectoryOpen(state)"
         >
-          <DocumentPlusIcon class="h-7 w-7" />
+          <FolderIcon class="h-7 w-7" />
           <Lang>
-            <template #zh>创建文件</template>
-            <template #en>Create File</template>
+            <template #zh>打开文件夹</template>
+            <template #en>Open Directory</template>
           </Lang>
         </button>
 
@@ -61,12 +61,12 @@ defineProps<{ state: State }>()
 
         <button
           class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
-          @click="stateDirectoryOpen(state)"
+          @click="stateFileCreate(state)"
         >
-          <FolderIcon class="h-7 w-7" />
+          <DocumentPlusIcon class="h-7 w-7" />
           <Lang>
-            <template #zh>打开文件夹</template>
-            <template #en>Open Directory</template>
+            <template #zh>创建文件</template>
+            <template #en>Create File</template>
           </Lang>
         </button>
       </div>

@@ -1,7 +1,5 @@
 [editor] `EditorWorkspaceRoot` a toggle to show hidden files
 
-[editor] `EditorToolbar` -- to open a directory you must close all file tabs first
-
 # editor welcome
 
 [editor] `EditorWelcome` -- show recent files

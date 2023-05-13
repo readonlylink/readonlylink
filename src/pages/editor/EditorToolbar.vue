@@ -46,7 +46,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        v-if="!state.currentWorkspace"
+        v-if="!state.currentWorkspace && state.tabs.length === 0"
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateDirectoryOpen(state)"
       >
