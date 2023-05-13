@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { DocumentTextIcon } from '@heroicons/vue/24/outline'
+import { DocumentTextIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
 import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab'
-import { tabIsModified } from './tabIsModified'
+import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
 defineProps<{
   state: State
@@ -25,9 +25,15 @@ defineProps<{
       <span class="overflow-x-auto">{{ node.handle.name }}</span>
     </div>
 
-    <button
-      v-if="node.tab && tabIsModified(node.tab)"
-      class="rounded-full bg-stone-400 p-2"
-    ></button>
+    <div class="flex items-center space-x-1">
+      <button v-if="stateWorkspaceNodeIsCurrentTab(state, node)">
+        <TrashIcon class="h-4 w-4" />
+      </button>
+
+      <button
+        v-if="workspaceNodeIsModified(node)"
+        class="rounded-full bg-stone-400 p-2"
+      ></button>
+    </div>
   </button>
 </template>

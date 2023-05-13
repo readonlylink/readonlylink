@@ -23,6 +23,7 @@ export type WorkspaceNodeDirectory = {
   handle: FileSystemDirectoryHandle
   children: Array<WorkspaceNode>
   isOpen: boolean
+  isLoaded: boolean
   relativePath?: string
 }
 
@@ -34,5 +35,6 @@ export function WorkspaceNodeDirectory(
     handle,
     children: [],
     isOpen: false,
+    isLoaded: false,
   }
 }

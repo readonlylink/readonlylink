@@ -4,7 +4,8 @@ import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
-import { stateWorkspaceNodeDirectoryOpen } from './stateWorkspaceNodeDirectoryOpen'
+import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
+import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
 defineProps<{
   state: State
@@ -16,13 +17,16 @@ defineProps<{
 <template>
   <div class="flex shrink-0 flex-col overflow-auto">
     <button
-      class="flex w-full shrink-0 items-center space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
+      class="flex w-full shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
       @click="
         () => {
           if (node.isOpen) {
             node.isOpen = false
           } else {
-            stateWorkspaceNodeDirectoryOpen(state, node)
+            node.isOpen = true
+            if (!node.isLoaded) {
+              stateWorkspaceNodeDirectoryLoad(state, node)
+            }
           }
         }
       "
@@ -33,6 +37,13 @@ defineProps<{
         <span class="overflow-x-auto"
           >{{ node.handle.name }}<span class="font-bold">/</span></span
         >
+      </div>
+
+      <div class="flex items-center space-x-1">
+        <button
+          v-if="workspaceNodeIsModified(node)"
+          class="rounded-full bg-stone-400 p-2"
+        ></button>
       </div>
     </button>
 

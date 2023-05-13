@@ -1,10 +1,10 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` -- rename file
-[editor] `EditorWorkspaceNodeDirectory` -- rename directory
-
 [editor] `EditorWorkspaceNodeFile` -- delete file
 [editor] `EditorWorkspaceNodeDirectory` -- delete directory
+
+[editor] `EditorWorkspaceNodeFile` -- rename file
+[editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
 [editor] `EditorWelcome` -- show recent files
 [editor] `EditorWelcome` -- show recent directories

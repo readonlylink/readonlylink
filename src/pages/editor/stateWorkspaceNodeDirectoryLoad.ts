@@ -2,7 +2,7 @@ import { State } from './State'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
 import { loadWorkspaceNodes } from './loadWorkspaceNodes'
 
-export async function stateWorkspaceNodeDirectoryOpen(
+export async function stateWorkspaceNodeDirectoryLoad(
   state: State,
   node: WorkspaceNodeDirectory,
 ): Promise<void> {
@@ -15,5 +15,5 @@ export async function stateWorkspaceNodeDirectoryOpen(
     node.handle,
   )
 
-  node.isOpen = true
+  node.isLoaded = true
 }
