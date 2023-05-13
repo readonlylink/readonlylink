@@ -1,6 +1,6 @@
 import { State } from './State'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
-import { loadWorkspaceNodes } from './loadWorkspaceNodes'
+import { workspaceNodeDirectoryLoadChildren } from './workspaceNodeDirectoryLoadChildren'
 
 export async function stateWorkspaceNodeDirectoryLoad(
   state: State,
@@ -10,6 +10,9 @@ export async function stateWorkspaceNodeDirectoryLoad(
     return
   }
 
-  node.children = await loadWorkspaceNodes(state.currentWorkspace.root, node)
+  node.children = await workspaceNodeDirectoryLoadChildren(
+    state.currentWorkspace.root,
+    node,
+  )
   node.isLoaded = true
 }

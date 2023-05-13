@@ -3,6 +3,7 @@ import { DocumentPlusIcon, FolderPlusIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { State } from './State'
 import { Workspace } from './Workspace'
+import { stateWorkspaceNodeDirectoryCreate } from './stateWorkspaceNodeDirectoryCreate'
 
 defineProps<{
   state: State
@@ -16,7 +17,12 @@ const lang = useGlobalLang()
   <div class="flex justify-between space-x-2 py-1 pl-3 pr-1">
     <div class="font-bold">{{ workspace.root.handle.name }}</div>
     <div class="flex space-x-1">
-      <button @click.stop="" :title="lang.isZh() ? '创建文件' : 'Create File'">
+      <button
+        @click.stop="
+          stateWorkspaceNodeDirectoryCreate(state, workspace.root, 'hi')
+        "
+        :title="lang.isZh() ? '创建文件' : 'Create File'"
+      >
         <DocumentPlusIcon class="h-5 w-5" />
       </button>
 
