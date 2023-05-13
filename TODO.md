@@ -1,6 +1,6 @@
 # editor
 
-[editor] `workspaceNodeFileRemove` remove node should also remove tab
+[editor] `stateWorkspaceNodeFileRemove` remove node should also remove tab
 
 [editor] `stateCurrentTabFileRemove` remove tab should also remove node
 
