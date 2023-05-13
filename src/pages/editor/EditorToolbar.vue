@@ -9,7 +9,7 @@ import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
 import { stateFileRemove } from './stateFileRemove'
-import { stateFileRemoveIsSupported } from './stateFileRemoveIsSupported'
+import { tabFileRemoveIsSupported } from './tabFileRemoveIsSupported'
 import { tabFileSave } from './tabFileSave'
 import { tabIsModified } from './tabIsModified'
 
@@ -68,7 +68,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        v-if="stateFileRemoveIsSupported(state)"
+        v-if="state.currentTab && tabFileRemoveIsSupported(state.currentTab)"
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         :disabled="!state.currentTab || state.currentTab.isProcessing"
         @click="
