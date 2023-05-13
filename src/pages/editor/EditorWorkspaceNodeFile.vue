@@ -6,6 +6,7 @@ import { Workspace } from './Workspace'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
 import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab'
+import { workspaceNodeFileRemove } from './workspaceNodeFileRemove'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
 const lang = useGlobalLang()
@@ -37,7 +38,7 @@ defineProps<{
       <button
         v-if="node.isHovered"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
-        @click=""
+        @click="workspaceNodeFileRemove(node)"
       >
         <TrashIcon class="h-4 w-4" />
       </button>

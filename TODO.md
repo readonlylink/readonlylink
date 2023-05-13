@@ -1,8 +1,11 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` -- remove file
+[editor] rename `tab.fileHandle` to `tab.handle`
 
-- `workspaceNodeFileRemove`
+[editor] `workspaceNodeFileRemove`
+
+[editor] `EditorWorkspaceNodeFile` show button by only when supported
+
 - `workspaceNodeFileRemoveIsSupported`
 
 [editor] `EditorWorkspaceNodeDirectory` -- remove directory
