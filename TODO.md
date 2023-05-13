@@ -1,6 +1,7 @@
 # editor
 
-[editor] `tabFileRemove` instead of `stateFileRemove`
+[editor] `workspaceNodeFileRemove`
+[editor] `workspaceNodeFileRemoveIsSupported`
 
 [editor] `EditorTabbarTab` -- use color to show modified
 [editor] `EditorWorkspaceNode*` -- use color to show modified

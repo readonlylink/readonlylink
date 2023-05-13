@@ -2,8 +2,8 @@ import { State } from './State'
 import { formatReportMessage } from './formatReportMessage'
 import { stateTabClose } from './stateTabClose'
 
-export async function stateFileRemove(state: State): Promise<void> {
-  const who = 'stateFileRemove'
+export async function stateCurrentTabFileRemove(state: State): Promise<void> {
+  const who = 'stateCurrentTabFileRemove'
 
   if (!state.currentTab) {
     return
