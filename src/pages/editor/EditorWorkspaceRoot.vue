@@ -25,8 +25,11 @@ const window = useWindow()
       <button
         :title="lang.isZh() ? '创建文件' : 'Create file'"
         @click.stop="
-          callWithPrompt(
-            async (name) => {
+          callWithPrompt({
+            message: lang.isZh()
+              ? `创建文件\n${workspace.root.handle.name}:`
+              : `Create file\n${workspace.root.handle.name}:`,
+            action: async (name) => {
               if (
                 (
                   await arrayFromAsyncIterable(workspace.root.handle.keys())
@@ -41,12 +44,7 @@ const window = useWindow()
                 await stateWorkspaceNodeFileCreate(state, workspace.root, name)
               }
             },
-            {
-              message: lang.isZh()
-                ? `创建文件\n${workspace.root.handle.name}:`
-                : `Create file\n${workspace.root.handle.name}:`,
-            },
-          )
+          })
         "
       >
         <DocumentPlusIcon class="h-5 w-5" />
@@ -55,8 +53,11 @@ const window = useWindow()
       <button
         :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
         @click.stop="
-          callWithPrompt(
-            async (name) => {
+          callWithPrompt({
+            message: lang.isZh()
+              ? `创建文件夹\n${workspace.root.handle.name}:`
+              : `Create directory\n${workspace.root.handle.name}:`,
+            action: async (name) => {
               if (
                 (
                   await arrayFromAsyncIterable(workspace.root.handle.keys())
@@ -75,12 +76,7 @@ const window = useWindow()
                 )
               }
             },
-            {
-              message: lang.isZh()
-                ? `创建文件夹\n${workspace.root.handle.name}:`
-                : `Create directory\n${workspace.root.handle.name}:`,
-            },
-          )
+          })
         "
       >
         <FolderPlusIcon class="h-5 w-5" />
