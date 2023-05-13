@@ -8,6 +8,7 @@ export type WorkspaceNodeFile = {
   relativePath?: string
   tab?: Tab
   isHovered?: boolean
+  parent?: WorkspaceNodeDirectory
 }
 
 export function WorkspaceNodeFile(
@@ -27,6 +28,7 @@ export type WorkspaceNodeDirectory = {
   isLoaded: boolean
   relativePath?: string
   isHovered?: boolean
+  parent?: WorkspaceNodeDirectory
 }
 
 export function WorkspaceNodeDirectory(

@@ -10,10 +10,6 @@ export async function stateWorkspaceNodeDirectoryLoad(
     return
   }
 
-  node.children = await loadWorkspaceNodes(
-    state.currentWorkspace.root.handle,
-    node.handle,
-  )
-
+  node.children = await loadWorkspaceNodes(state.currentWorkspace.root, node)
   node.isLoaded = true
 }

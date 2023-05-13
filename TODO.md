@@ -1,7 +1,5 @@
 # editor
 
-[editor] `WorkspaceNode` -- take `parent?: WorkspaceNodeDirectory`
-
 [editor] `EditorWorkspaceNodeFile` -- remove file
 
 - `workspaceNodeFileRemove`
