@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { DocumentPlusIcon, FolderPlusIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { useWindow } from '../../reactives/useWindow'
+import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
 import { callWithPrompt } from '../../utils/browser/callWithPrompt'
 import { State } from './State'
 import { Workspace } from './Workspace'
@@ -13,6 +15,7 @@ defineProps<{
 }>()
 
 const lang = useGlobalLang()
+const window = useWindow()
 </script>
 
 <template>
@@ -23,7 +26,21 @@ const lang = useGlobalLang()
         :title="lang.isZh() ? '创建文件' : 'Create file'"
         @click.stop="
           callWithPrompt(
-            (name) => stateWorkspaceNodeFileCreate(state, workspace.root, name),
+            async (name) => {
+              if (
+                (
+                  await arrayFromAsyncIterable(workspace.root.handle.keys())
+                ).includes(name)
+              ) {
+                window.alert(
+                  lang.isZh()
+                    ? `文件或文件夹已经存在：${name}:`
+                    : `File or directory alreay exists: ${name}`,
+                )
+              } else {
+                await stateWorkspaceNodeFileCreate(state, workspace.root, name)
+              }
+            },
             {
               message: lang.isZh()
                 ? `创建文件\n${workspace.root.handle.name}:`
@@ -39,8 +56,25 @@ const lang = useGlobalLang()
         :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
         @click.stop="
           callWithPrompt(
-            (name) =>
-              stateWorkspaceNodeDirectoryCreate(state, workspace.root, name),
+            async (name) => {
+              if (
+                (
+                  await arrayFromAsyncIterable(workspace.root.handle.keys())
+                ).includes(name)
+              ) {
+                window.alert(
+                  lang.isZh()
+                    ? `文件或文件夹已经存在：${name}:`
+                    : `File or directory alreay exists: ${name}`,
+                )
+              } else {
+                await stateWorkspaceNodeDirectoryCreate(
+                  state,
+                  workspace.root,
+                  name,
+                )
+              }
+            },
             {
               message: lang.isZh()
                 ? `创建文件夹\n${workspace.root.handle.name}:`
