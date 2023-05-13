@@ -1,6 +1,8 @@
 # editor
 
-[editor] `workspaceNodeFileRemove`
+[editor] `EditorWorkspaceNodeFile` -- `callWithConfirm` for `workspaceNodeFileRemove`
+
+[editor] Create should add new node to workspace
 
 [editor] `EditorWorkspaceNodeFile` show button by only when supported
 
