@@ -48,8 +48,8 @@ defineProps<{
       "
     >
       <div class="flex items-center space-x-1 overflow-auto">
-        <FolderOpenIcon v-if="node.isOpen" class="h-4 w-4 shrink-0" />
-        <FolderIcon v-else class="h-4 w-4 shrink-0" />
+        <FolderOpenIcon v-if="node.isOpen" class="h-5 w-5 shrink-0" />
+        <FolderIcon v-else class="h-5 w-5 shrink-0" />
         <span class="overflow-x-auto"
           >{{ node.handle.name }}<span class="font-bold">/</span></span
         >

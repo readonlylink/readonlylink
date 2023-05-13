@@ -32,7 +32,7 @@ const lang = useGlobalLang()
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
     <div class="flex items-center space-x-1 overflow-auto">
-      <DocumentTextIcon class="h-4 w-4 shrink-0" />
+      <DocumentTextIcon class="h-5 w-5 shrink-0" />
       <span class="overflow-x-auto">{{ node.handle.name }}</span>
     </div>
 
