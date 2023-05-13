@@ -1,7 +1,5 @@
 # editor
 
-[editor] `stateWorkspaceNodeDirectoryCreate` -- open directory after created
-
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
