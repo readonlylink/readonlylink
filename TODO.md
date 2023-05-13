@@ -1,4 +1,6 @@
-[editor] `EditorWorkspaceRoot` a toggle to show hidden files
+[editor] `stateWorkspaceFilterNodes` -- based on `state.showDotFiles`
+
+- and do sort in a single place
 
 # editor welcome
 

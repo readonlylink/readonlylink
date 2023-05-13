@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { DocumentPlusIcon, FolderPlusIcon } from '@heroicons/vue/24/outline'
+import {
+  DocumentPlusIcon,
+  EyeIcon,
+  EyeSlashIcon,
+  FolderPlusIcon,
+} from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { useWindow } from '../../reactives/useWindow'
 import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
@@ -22,6 +27,18 @@ const window = useWindow()
   <div class="flex justify-between space-x-2 py-1 pl-3 pr-1">
     <div class="font-bold">{{ workspace.root.handle.name }}</div>
     <div class="flex space-x-1">
+      <button
+        :title="
+          lang.isZh()
+            ? '是否显示以「.」开头的隐藏文件'
+            : `Show hidden files (start with a dot '.') or not`
+        "
+        @click.stop="state.showDotFiles = !state.showDotFiles"
+      >
+        <EyeIcon v-if="state.showDotFiles" class="h-5 w-5" />
+        <EyeSlashIcon v-else class="h-5 w-5" />
+      </button>
+
       <button
         :title="lang.isZh() ? '创建文件' : 'Create file'"
         @click.stop="

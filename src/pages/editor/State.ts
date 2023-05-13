@@ -6,4 +6,5 @@ export type State = {
   currentWorkspace?: Workspace
   tabs: Array<Tab>
   message?: string
+  showDotFiles?: boolean
 }
