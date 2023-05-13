@@ -27,6 +27,7 @@ defineProps<{
     <button
       @click="state.currentTab = tab"
       class="scrollbar-h-0 shrink grow basis-0 overflow-x-auto text-start"
+      :class="{ 'text-amber-600': tabIsModified(tab) }"
     >
       {{ tab.file.name }}
     </button>
@@ -43,7 +44,8 @@ defineProps<{
       "
       class="rounded-full hover:bg-stone-300"
       :class="{
-        'bg-stone-400 text-stone-400': tabIsModified(tab) && !tab.isProcessing,
+        'bg-amber-500 text-amber-500 hover:bg-amber-300':
+          tabIsModified(tab) && !tab.isProcessing,
         'animate-spin': tab.isProcessing,
       }"
     >

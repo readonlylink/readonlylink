@@ -1,6 +1,5 @@
 # editor
 
-[editor] `EditorTabbarTab` -- use color to show modified
 [editor] `EditorWorkspaceNode*` -- use color to show modified
 
 [editor] `EditorWorkspaceNodeFile` -- delete file
