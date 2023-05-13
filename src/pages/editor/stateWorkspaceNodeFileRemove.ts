@@ -1,7 +1,7 @@
 import { State } from './State'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateTabClose } from './stateTabClose'
-import { stateWorkspaceNodeFileClose } from './stateWorkspaceNodeFileClose'
+import { stateWorkspaceNodeClose } from './stateWorkspaceNodeClose'
 
 export async function stateWorkspaceNodeFileRemove(
   state: State,
@@ -9,7 +9,7 @@ export async function stateWorkspaceNodeFileRemove(
 ): Promise<void> {
   if ('remove' in node.handle && typeof node.handle.remove === 'function') {
     await node.handle.remove()
-    await stateWorkspaceNodeFileClose(state, node)
+    await stateWorkspaceNodeClose(state, node)
   }
 
   if (node.tab) {

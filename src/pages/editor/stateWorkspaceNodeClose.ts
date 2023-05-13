@@ -1,9 +1,9 @@
 import { State } from './State'
-import { WorkspaceNodeFile } from './WorkspaceNode'
+import { WorkspaceNode } from './WorkspaceNode'
 
-export async function stateWorkspaceNodeFileClose(
+export async function stateWorkspaceNodeClose(
   state: State,
-  node: WorkspaceNodeFile,
+  node: WorkspaceNode,
 ): Promise<void> {
   if (node.parent) {
     const index = node.parent.children.indexOf(node)

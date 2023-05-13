@@ -4,6 +4,8 @@
 
 - recursively close tab
 
+- `stateWorkspaceNodeDirectoryRemove`
+
 [editor] `EditorWorkspaceRoot` -- create file and directory
 [editor] `EditorWorkspaceNodeDirectory` -- create sub file and sub directory
 
