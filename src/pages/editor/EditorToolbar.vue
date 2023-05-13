@@ -80,21 +80,19 @@ const lang = useGlobalLang()
               return
             }
 
-            callWithConfirm(
-              () =>
+            callWithConfirm({
+              message: lang.isZh()
+                ? `确认要删除这个文件吗？\n${
+                    state.currentTab.node?.relativePath ||
+                    state.currentTab.file.name
+                  }`
+                : `Are you sure to remove this file?\n${
+                    state.currentTab.node?.relativePath ||
+                    state.currentTab.file.name
+                  }`,
+              action: () =>
                 state.currentTab && stateTabFileRemove(state, state.currentTab),
-              {
-                message: lang.isZh()
-                  ? `确认要删除这个文件吗？\n${
-                      state.currentTab.node?.relativePath ||
-                      state.currentTab.file.name
-                    }`
-                  : `Are you sure to remove this file?\n${
-                      state.currentTab.node?.relativePath ||
-                      state.currentTab.file.name
-                    }`,
-              },
-            )
+            })
           }
         "
       >

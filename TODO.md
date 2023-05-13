@@ -1,7 +1,5 @@
 # editor
 
-improve `callWithConfirm` interface
-
 [editor] `EditorWorkspaceNodeDirectory` -- create file
 [editor] `EditorWorkspaceNodeDirectory` -- create directory
 

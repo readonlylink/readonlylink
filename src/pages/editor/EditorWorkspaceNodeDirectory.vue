@@ -76,14 +76,12 @@ defineProps<{
           v-if="node.isHovered"
           :title="lang.isZh() ? '删除这个文件夹' : 'Remove this directory'"
           @click.stop="
-            callWithConfirm(
-              () => stateWorkspaceNodeDirectoryRemove(state, node),
-              {
-                message: lang.isZh()
-                  ? `确认要删除这个文件夹吗？\n${node.relativePath}`
-                  : `Are you sure to remove this directory?\n${node.relativePath}`,
-              },
-            )
+            callWithConfirm({
+              message: lang.isZh()
+                ? `确认要删除这个文件夹吗？\n${node.relativePath}`
+                : `Are you sure to remove this directory?\n${node.relativePath}`,
+              action: () => stateWorkspaceNodeDirectoryRemove(state, node),
+            })
           "
         >
           <TrashIcon class="h-5 w-5" />
