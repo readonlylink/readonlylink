@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { DocumentPlusIcon, FolderPlusIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { callWithPrompt } from '../../utils/browser/callWithPrompt'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { stateWorkspaceNodeFileCreate } from './stateWorkspaceNodeFileCreate'
@@ -18,7 +19,16 @@ const lang = useGlobalLang()
     <div class="font-bold">{{ workspace.root.handle.name }}</div>
     <div class="flex space-x-1">
       <button
-        @click.stop="stateWorkspaceNodeFileCreate(state, workspace.root, 'hi')"
+        @click.stop="
+          callWithPrompt(
+            (name) => stateWorkspaceNodeFileCreate(state, workspace.root, name),
+            {
+              message: lang.isZh()
+                ? `创建文件\n${workspace.root.handle.name}:`
+                : `Create File\n${workspace.root.handle.name}:`,
+            },
+          )
+        "
         :title="lang.isZh() ? '创建文件' : 'Create File'"
       >
         <DocumentPlusIcon class="h-5 w-5" />
