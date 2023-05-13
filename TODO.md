@@ -1,7 +1,7 @@
 # editor
 
 [editor] `EditorWorkspaceRoot` -- create file and directory
-[editor] `EditorWorkspaceNodeDirectory` -- create sub file and sub directory
+[editor] `EditorWorkspaceNodeDirectory` -- create file and directory
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory

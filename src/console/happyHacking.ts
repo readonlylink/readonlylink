@@ -1,22 +1,4 @@
 export function happyHacking(): void {
-  console.log(
-    '██████╗ ███████╗ █████╗ ██████╗  ██████╗ ███╗   ██╗██╗  ██╗   ██╗',
-  )
-  console.log(
-    '██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝',
-  )
-  console.log(
-    '██████╔╝█████╗  ███████║██║  ██║██║   ██║██╔██╗ ██║██║   ╚████╔╝ ',
-  )
-  console.log(
-    '██╔══██╗██╔══╝  ██╔══██║██║  ██║██║   ██║██║╚██╗██║██║    ╚██╔╝  ',
-  )
-  console.log(
-    '██║  ██║███████╗██║  ██║██████╔╝╚██████╔╝██║ ╚████║███████╗██║   ',
-  )
-  console.log(
-    '╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝   ',
-  )
   console.group('From readonly.link developers:')
   console.log(`Welcome to the console of readonly.link :)`)
   console.log(`This project is open source.`)
