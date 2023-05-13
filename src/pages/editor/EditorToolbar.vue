@@ -5,10 +5,10 @@ import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
-import { stateCurrentTabFileRemove } from './stateCurrentTabFileRemove'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
+import { stateTabFileRemove } from './stateTabFileRemove'
 import { tabFileRemoveIsSupported } from './tabFileRemoveIsSupported'
 import { tabFileSave } from './tabFileSave'
 import { tabIsModified } from './tabIsModified'
@@ -79,15 +79,21 @@ const lang = useGlobalLang()
               return
             }
 
-            callWithConfirm(() => stateCurrentTabFileRemove(state), {
-              message: lang.isZh()
-                ? `确认要删除这个文件吗？\n${
-                    state.currentTab.relativePath || state.currentTab.file.name
-                  }`
-                : `Are you sure to remove this file?\n${
-                    state.currentTab.relativePath || state.currentTab.file.name
-                  }`,
-            })
+            callWithConfirm(
+              () =>
+                state.currentTab && stateTabFileRemove(state, state.currentTab),
+              {
+                message: lang.isZh()
+                  ? `确认要删除这个文件吗？\n${
+                      state.currentTab.relativePath ||
+                      state.currentTab.file.name
+                    }`
+                  : `Are you sure to remove this file?\n${
+                      state.currentTab.relativePath ||
+                      state.currentTab.file.name
+                    }`,
+              },
+            )
           }
         "
       >
