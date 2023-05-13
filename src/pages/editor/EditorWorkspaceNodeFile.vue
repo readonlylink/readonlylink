@@ -16,7 +16,7 @@ defineProps<{
 
 <template>
   <button
-    class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 hover:bg-stone-200"
+    class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
     :class="{ 'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node) }"
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
