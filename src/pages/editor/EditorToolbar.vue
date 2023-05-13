@@ -10,8 +10,8 @@ import { stateFileCreate } from './stateFileCreate'
 import { stateFileOpen } from './stateFileOpen'
 import { stateFileRemove } from './stateFileRemove'
 import { stateFileRemoveIsSupported } from './stateFileRemoveIsSupported'
+import { tabFileSave } from './tabFileSave'
 import { tabIsModified } from './tabIsModified'
-import { tabSave } from './tabSave'
 
 defineProps<{ state: State }>()
 
@@ -59,7 +59,7 @@ const lang = useGlobalLang()
         :disabled="
           state.currentTab.isProcessing || !tabIsModified(state.currentTab)
         "
-        @click="state.currentTab && tabSave(state.currentTab, state)"
+        @click="state.currentTab && tabFileSave(state.currentTab, state)"
       >
         <Lang>
           <template #zh>保存</template>

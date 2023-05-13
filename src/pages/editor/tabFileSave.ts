@@ -1,11 +1,11 @@
 import { Tab } from './Tab'
 import { formatReportMessage } from './formatReportMessage'
 
-export async function tabSave(
+export async function tabFileSave(
   tab: Tab,
   report: { message?: string },
 ): Promise<void> {
-  const who = 'tabSave'
+  const who = 'tabFileSave'
 
   report.message = formatReportMessage({
     who,

@@ -1,5 +1,11 @@
 # editor
 
+[editor] `tabFileRemove` instead of `stateFileRemove`
+[editor] `tabFileRemoveIsSupported` instead of `stateFileRemoveIsSupported`
+
+[editor] `EditorTabbarTab` -- use color to show modified
+[editor] `EditorWorkspaceNode*` -- use color to show modified
+
 [editor] `EditorWorkspaceNodeFile` -- delete file
 [editor] `EditorWorkspaceNodeDirectory` -- delete directory
 
@@ -11,7 +17,9 @@
 
 # article
 
-[article] support url encoding
+[article] support data url
+
+[editor] link to article data url
 
 # editor-fallback
 
