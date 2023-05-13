@@ -68,7 +68,7 @@ defineProps<{
             )
           "
         >
-          <TrashIcon class="h-4 w-4" />
+          <TrashIcon class="h-5 w-5" />
         </button>
 
         <button
