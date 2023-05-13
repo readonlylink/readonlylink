@@ -24,7 +24,7 @@ const splitpanesSize = useLocalStorage('ManagerLayout.splitpanesSize', 24)
     >
       <Pane
         v-if="state.currentWorkspace"
-        class="flex h-full w-full max-w-[24rem] flex-col overflow-auto"
+        class="flex h-full w-full flex-col overflow-auto"
         min-size="8"
         :size="splitpanesSize"
       >
