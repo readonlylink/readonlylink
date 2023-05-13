@@ -11,7 +11,7 @@ export async function stateWorkspaceNodeDirectoryLoad(
   }
 
   node.children = await loadWorkspaceNodes(
-    state.currentWorkspace.handle,
+    state.currentWorkspace.root.handle,
     node.handle,
   )
 

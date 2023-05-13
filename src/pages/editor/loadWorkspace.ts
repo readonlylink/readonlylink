@@ -1,10 +1,13 @@
 import { Workspace } from './Workspace'
+import { WorkspaceNodeDirectory } from './WorkspaceNode'
 import { loadWorkspaceNodes } from './loadWorkspaceNodes'
 
 export async function loadWorkspace(
   handle: FileSystemDirectoryHandle,
 ): Promise<Workspace> {
-  const nodes = await loadWorkspaceNodes(handle, handle)
+  const root = WorkspaceNodeDirectory(handle)
 
-  return { handle, nodes }
+  root.children = await loadWorkspaceNodes(handle, handle)
+
+  return { root }
 }

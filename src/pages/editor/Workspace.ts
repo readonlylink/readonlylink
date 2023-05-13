@@ -1,6 +1,5 @@
-import { WorkspaceNode } from './WorkspaceNode'
+import { WorkspaceNodeDirectory } from './WorkspaceNode'
 
 export type Workspace = {
-  handle: FileSystemDirectoryHandle
-  nodes: Array<WorkspaceNode>
+  root: WorkspaceNodeDirectory
 }

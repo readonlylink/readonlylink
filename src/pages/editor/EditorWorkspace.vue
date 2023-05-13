@@ -12,12 +12,12 @@ defineProps<{
 <template>
   <div class="flex h-full w-full flex-col overflow-auto border-r border-black">
     <div class="border-b border-black px-3 py-1 font-bold">
-      {{ workspace.handle.name }}
+      {{ workspace.root.handle.name }}
     </div>
 
     <div class="flex h-full w-full flex-col overflow-x-auto">
       <EditorWorkspaceNode
-        v-for="(node, index) of workspace.nodes"
+        v-for="(node, index) of workspace.root.children"
         :key="index"
         :state="state"
         :workspace="workspace"
