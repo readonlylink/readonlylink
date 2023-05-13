@@ -40,7 +40,7 @@ const lang = useGlobalLang()
       <button
         v-if="node.isHovered && workspaceNodeFileRemoveIsSupported(node)"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
-        @click="
+        @click.stop="
           callWithConfirm(() => stateWorkspaceNodeFileRemove(state, node), {
             message: lang.isZh()
               ? `确认要删除这个文件吗？\n${node.relativePath}`

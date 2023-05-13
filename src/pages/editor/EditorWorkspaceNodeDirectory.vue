@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { FolderIcon, FolderOpenIcon } from '@heroicons/vue/24/outline'
+import {
+  FolderIcon,
+  FolderOpenIcon,
+  TrashIcon,
+} from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
@@ -48,6 +52,14 @@ defineProps<{
       </div>
 
       <div class="flex items-center space-x-1">
+        <button
+          v-if="node.isHovered"
+          :title="lang.isZh() ? '删除这个文件夹' : 'Remove this directory'"
+          @click.stop=""
+        >
+          <TrashIcon class="h-4 w-4" />
+        </button>
+
         <button
           v-if="workspaceNodeIsModified(node)"
           :title="
