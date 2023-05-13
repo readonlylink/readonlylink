@@ -8,6 +8,7 @@ import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
 import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab'
 import { workspaceNodeFileRemove } from './workspaceNodeFileRemove'
+import { workspaceNodeFileRemoveIsSupported } from './workspaceNodeFileRemoveIsSupported'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
 defineProps<{
@@ -37,7 +38,7 @@ const lang = useGlobalLang()
 
     <div class="flex items-center space-x-1">
       <button
-        v-if="node.isHovered"
+        v-if="node.isHovered && workspaceNodeFileRemoveIsSupported(node)"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
         @click="
           callWithConfirm(() => workspaceNodeFileRemove(node), {

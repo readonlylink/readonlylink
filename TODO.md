@@ -1,7 +1,5 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` show button by only when supported
-
 [editor] `stateFileCreate` should open in workspace root and add new node to workspace
 
 [editor] `EditorWorkspaceNodeDirectory` -- remove directory
