@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
+import EditorWorkspaceRoot from './EditorWorkspaceRoot.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 
@@ -11,9 +12,11 @@ defineProps<{
 
 <template>
   <div class="flex h-full w-full flex-col overflow-auto border-r border-black">
-    <div class="border-b border-black px-3 py-1 font-bold">
-      {{ workspace.root.handle.name }}
-    </div>
+    <EditorWorkspaceRoot
+      class="border-b border-black"
+      :state="state"
+      :workspace="workspace"
+    />
 
     <div class="flex h-full w-full flex-col overflow-x-auto">
       <EditorWorkspaceNode

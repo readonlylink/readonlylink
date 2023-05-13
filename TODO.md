@@ -1,10 +1,11 @@
 # editor
 
-[editor] `stateFileCreate` should open in workspace root
-
-[editor] `stateFileCreate` create tab also create node
-
 [editor] `EditorWorkspaceNodeDirectory` -- remove directory
+
+- recursively close tab
+
+[editor] `EditorWorkspaceRoot` -- create file and directory
+[editor] `EditorWorkspaceNodeDirectory` -- create sub file and sub directory
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory

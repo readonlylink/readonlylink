@@ -24,6 +24,7 @@ const lang = useGlobalLang()
   >
     <div class="flex space-x-4 overflow-x-auto pr-4">
       <button
+        v-if="!state.currentWorkspace"
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateFileCreate(state)"
       >

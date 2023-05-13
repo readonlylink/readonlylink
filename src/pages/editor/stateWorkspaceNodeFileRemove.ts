@@ -1,6 +1,7 @@
 import { State } from './State'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateTabClose } from './stateTabClose'
+import { stateWorkspaceNodeFileClose } from './stateWorkspaceNodeFileClose'
 
 export async function stateWorkspaceNodeFileRemove(
   state: State,
