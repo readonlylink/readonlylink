@@ -1,11 +1,6 @@
-# editor
-
-[editor] `EditorWorkspaceWelcome`
+[editor] `EditorWorkspaceRoot` a toggle to show hidden files
 
 [editor] `EditorToolbar` -- to open a directory you must close all file tabs first
-
-[editor] `EditorWorkspaceNodeFile` -- rename file
-[editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
 # editor welcome
 
@@ -22,6 +17,8 @@
 
 [editor-fallback] fallback when there is no file system access api
 
+- https://developer.chrome.com/articles/file-system-access
+- https://developer.chrome.com/articles/browser-fs-access
 - https://github.com/GoogleChromeLabs/browser-fs-access
 
 # author
@@ -56,3 +53,7 @@
 [editor] [maybe] use custom `<dialog>` instead of `callWithConfirm` -- to default to CANCEL.
 
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
+[editor] rename file and directory
+
+- not possible for now: https://github.com/WICG/file-system-access/issues/413

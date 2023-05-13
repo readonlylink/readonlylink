@@ -7,6 +7,7 @@ import EditorTabbar from './EditorTabbar.vue'
 import EditorToolbar from './EditorToolbar.vue'
 import EditorWelcome from './EditorWelcome.vue'
 import EditorWorkspace from './EditorWorkspace.vue'
+import EditorWorkspaceWelcome from './EditorWorkspaceWelcome.vue'
 import { State } from './State'
 
 defineProps<{ state: State }>()
@@ -38,6 +39,10 @@ const splitpanesSize = useLocalStorage('ManagerLayout.splitpanesSize', 24)
           v-if="state.currentTab"
           :state="state"
           :tab="state.currentTab"
+        />
+        <EditorWorkspaceWelcome
+          v-else-if="state.currentWorkspace"
+          :state="state"
         />
         <EditorWelcome v-else :state="state" />
       </Pane>
