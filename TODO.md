@@ -1,8 +1,6 @@
 # editor
 
-[editor] `EditorWorkspaceRoot` -- create directory
-
-- `stateWorkspaceNodeDirectoryCreate`
+[editor] `EditorWorkspaceRoot` -- do not repeat create file or directory
 
 [editor] `EditorWorkspaceNodeDirectory` -- create file
 [editor] `EditorWorkspaceNodeDirectory` -- create directory
