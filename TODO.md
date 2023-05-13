@@ -14,6 +14,8 @@
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
+# editor welcome
+
 [editor] `EditorWelcome` -- show recent files
 [editor] `EditorWelcome` -- show recent directories
 

@@ -24,9 +24,9 @@ defineProps<{ state: State }>()
         <span><b>只读编辑器</b></span>
       </template>
       <template #en>
-        <span>Welcome to use</span>
+        <span> Welcome to use </span>
         <br class="block md:hidden" />
-        <span><b>Readonly Editor</b></span>
+        <span><b> Readonly Editor </b></span>
       </template>
     </Lang>
 
