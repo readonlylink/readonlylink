@@ -1,11 +1,15 @@
 # editor
 
-[editor] `EditorWorkspaceNodeFile` -- delete file
+[editor] `Workspace` has `root: WorkspaceNodeDirectory`
 
-[editor] `workspaceNodeFileRemove`
-[editor] `workspaceNodeFileRemoveIsSupported`
+[editor] `WorkspaceNode` -- take `parent?: WorkspaceNodeDirectory`
 
-[editor] `EditorWorkspaceNodeDirectory` -- delete directory
+[editor] `EditorWorkspaceNodeFile` -- remove file
+
+- `workspaceNodeFileRemove`
+- `workspaceNodeFileRemoveIsSupported`
+
+[editor] `EditorWorkspaceNodeDirectory` -- remove directory
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory

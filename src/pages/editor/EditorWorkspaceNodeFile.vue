@@ -37,6 +37,7 @@ defineProps<{
       <button
         v-if="node.isHovered"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
+        @click=""
       >
         <TrashIcon class="h-4 w-4" />
       </button>
