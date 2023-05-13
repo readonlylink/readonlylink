@@ -7,6 +7,7 @@ export type WorkspaceNodeFile = {
   handle: FileSystemFileHandle
   relativePath?: string
   tab?: Tab
+  isHovered?: boolean
 }
 
 export function WorkspaceNodeFile(
@@ -25,6 +26,7 @@ export type WorkspaceNodeDirectory = {
   isOpen: boolean
   isLoaded: boolean
   relativePath?: string
+  isHovered?: boolean
 }
 
 export function WorkspaceNodeDirectory(

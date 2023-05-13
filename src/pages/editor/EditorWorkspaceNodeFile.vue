@@ -21,6 +21,8 @@ defineProps<{
   <button
     class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
     :class="{ 'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node) }"
+    @mouseover="node.isHovered = true"
+    @mouseleave="node.isHovered = false"
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
     <div class="flex items-center space-x-1 overflow-auto">
@@ -30,7 +32,7 @@ defineProps<{
 
     <div class="flex items-center space-x-1">
       <button
-        v-if="stateWorkspaceNodeIsCurrentTab(state, node)"
+        v-if="node.isHovered"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
       >
         <TrashIcon class="h-4 w-4" />

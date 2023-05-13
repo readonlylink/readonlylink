@@ -1,12 +1,13 @@
 # editor
 
-[editor] `workspaceNodeFileRemove`
-[editor] `workspaceNodeFileRemoveIsSupported`
-
 [editor] `EditorTabbarTab` -- use color to show modified
 [editor] `EditorWorkspaceNode*` -- use color to show modified
 
 [editor] `EditorWorkspaceNodeFile` -- delete file
+
+[editor] `workspaceNodeFileRemove`
+[editor] `workspaceNodeFileRemoveIsSupported`
+
 [editor] `EditorWorkspaceNodeDirectory` -- delete directory
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
