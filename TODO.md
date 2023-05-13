@@ -1,7 +1,5 @@
 # editor
 
-[editor] rename `tab.fileHandle` to `tab.handle`
-
 [editor] `workspaceNodeFileRemove`
 
 [editor] `EditorWorkspaceNodeFile` show button by only when supported

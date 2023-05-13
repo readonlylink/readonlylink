@@ -15,7 +15,7 @@ export async function tabFileSave(
   tab.isProcessing = true
 
   try {
-    const writable = await tab.fileHandle.createWritable()
+    const writable = await tab.handle.createWritable()
     await writable.write(tab.text)
     await writable.close()
     tab.originalText = tab.text

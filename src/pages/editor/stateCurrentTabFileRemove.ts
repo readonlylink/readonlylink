@@ -10,8 +10,8 @@ export async function stateCurrentTabFileRemove(state: State): Promise<void> {
   }
 
   if (
-    'remove' in state.currentTab.fileHandle &&
-    typeof state.currentTab.fileHandle.remove === 'function'
+    'remove' in state.currentTab.handle &&
+    typeof state.currentTab.handle.remove === 'function'
   ) {
     state.message = formatReportMessage({
       who,
@@ -22,7 +22,7 @@ export async function stateCurrentTabFileRemove(state: State): Promise<void> {
     state.currentTab.isProcessing = true
 
     try {
-      await state.currentTab.fileHandle.remove()
+      await state.currentTab.handle.remove()
       await stateTabClose(state, state.currentTab)
     } catch (error) {
       state.message = formatReportMessage({

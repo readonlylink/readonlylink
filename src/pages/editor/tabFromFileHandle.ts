@@ -1,12 +1,12 @@
 import { Tab } from './Tab'
 
 export async function tabFromFileHandle(
-  fileHandle: FileSystemFileHandle,
+  handle: FileSystemFileHandle,
 ): Promise<Tab> {
   const file = await fileHandle.getFile()
   const text = await file.text()
   return {
-    fileHandle,
+    handle,
     file,
     text,
     originalText: text,

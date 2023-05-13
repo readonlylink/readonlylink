@@ -1,5 +1,5 @@
 export type Tab = {
-  fileHandle: FileSystemFileHandle
+  handle: FileSystemFileHandle
   file: File
   text: string
   originalText: string
