@@ -1,7 +1,6 @@
 # editor
 
-[editor] `EditorWorkspaceNodeDirectory` -- create file
-[editor] `EditorWorkspaceNodeDirectory` -- create directory
+[editor] `stateWorkspaceNodeDirectoryCreate` -- open directory after created
 
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory

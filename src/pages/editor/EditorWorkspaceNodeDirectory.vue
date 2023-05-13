@@ -7,22 +7,28 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { useWindow } from '../../reactives/useWindow'
+import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
+import { callWithPrompt } from '../../utils/browser/callWithPrompt'
 import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
+import { stateWorkspaceNodeDirectoryCreate } from './stateWorkspaceNodeDirectoryCreate'
 import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
 import { stateWorkspaceNodeDirectoryRemove } from './stateWorkspaceNodeDirectoryRemove'
+import { stateWorkspaceNodeFileCreate } from './stateWorkspaceNodeFileCreate'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
-
-const lang = useGlobalLang()
 
 defineProps<{
   state: State
   workspace: Workspace
   node: WorkspaceNodeDirectory
 }>()
+
+const lang = useGlobalLang()
+const window = useWindow()
 </script>
 
 <template>
@@ -58,16 +64,58 @@ defineProps<{
       <div class="flex items-center space-x-1">
         <button
           v-if="node.isHovered"
-          @click.stop=""
           :title="lang.isZh() ? '创建文件' : 'Create File'"
+          @click.stop="
+            callWithPrompt({
+              message: lang.isZh()
+                ? `创建文件\n${node.relativePath}:`
+                : `Create file\n${node.relativePath}:`,
+              action: async (name) => {
+                if (
+                  (await arrayFromAsyncIterable(node.handle.keys())).includes(
+                    name,
+                  )
+                ) {
+                  window.alert(
+                    lang.isZh()
+                      ? `文件或文件夹已经存在：${name}:`
+                      : `File or directory alreay exists: ${name}`,
+                  )
+                } else {
+                  await stateWorkspaceNodeFileCreate(state, node, name)
+                }
+              },
+            })
+          "
         >
           <DocumentPlusIcon class="h-5 w-5" />
         </button>
 
         <button
           v-if="node.isHovered"
-          @click.stop=""
           :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
+          @click.stop="
+            callWithPrompt({
+              message: lang.isZh()
+                ? `创建文件夹\n${node.relativePath}:`
+                : `Create directory\n${node.relativePath}:`,
+              action: async (name) => {
+                if (
+                  (await arrayFromAsyncIterable(node.handle.keys())).includes(
+                    name,
+                  )
+                ) {
+                  window.alert(
+                    lang.isZh()
+                      ? `文件或文件夹已经存在：${name}:`
+                      : `File or directory alreay exists: ${name}`,
+                  )
+                } else {
+                  await stateWorkspaceNodeDirectoryCreate(state, node, name)
+                }
+              },
+            })
+          "
         >
           <FolderPlusIcon class="h-5 w-5" />
         </button>
