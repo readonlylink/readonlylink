@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { DocumentTextIcon, TrashIcon } from '@heroicons/vue/24/outline'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeFile } from './WorkspaceNode'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
 import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
+
+const lang = useGlobalLang()
 
 defineProps<{
   state: State
@@ -26,12 +29,16 @@ defineProps<{
     </div>
 
     <div class="flex items-center space-x-1">
-      <button v-if="stateWorkspaceNodeIsCurrentTab(state, node)">
+      <button
+        v-if="stateWorkspaceNodeIsCurrentTab(state, node)"
+        :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
+      >
         <TrashIcon class="h-4 w-4" />
       </button>
 
       <button
         v-if="workspaceNodeIsModified(node)"
+        :title="lang.isZh() ? '这个文件修改过' : 'This file is modified'"
         class="rounded-full bg-stone-400 p-2"
       ></button>
     </div>

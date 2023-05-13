@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { FolderIcon, FolderOpenIcon } from '@heroicons/vue/24/outline'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
 import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
+
+const lang = useGlobalLang()
 
 defineProps<{
   state: State
@@ -42,6 +45,9 @@ defineProps<{
       <div class="flex items-center space-x-1">
         <button
           v-if="workspaceNodeIsModified(node)"
+          :title="
+            lang.isZh() ? '这个文件夹修改过' : 'This directory is modified'
+          "
           class="rounded-full bg-stone-400 p-2"
         ></button>
       </div>
