@@ -4,7 +4,7 @@ import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
 import { workspaceNodeCompare } from './workspaceNodeCompare'
 import { workspaceNodeCreate } from './workspaceNodeCreate'
 
-export async function stateWorkspaceNodeDirectoryCreate(
+export async function stateWorkspaceNodeFileCreate(
   state: State,
   node: WorkspaceNodeDirectory,
   name: string,
