@@ -1,7 +1,5 @@
 # editor
 
-[editor] `stateCurrentTabFileRemove` remove tab should also remove node
-
 [editor] `stateFileCreate` should open in workspace root
 
 [editor] `stateFileCreate` create tab also create node

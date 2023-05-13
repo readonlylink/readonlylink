@@ -2,6 +2,7 @@ import { State } from './State'
 import { Tab } from './Tab'
 import { formatReportMessage } from './formatReportMessage'
 import { stateTabClose } from './stateTabClose'
+import { stateWorkspaceNodeFileClose } from './stateWorkspaceNodeFileClose'
 
 export async function stateTabFileRemove(
   state: State,
@@ -21,6 +22,10 @@ export async function stateTabFileRemove(
     try {
       await tab.handle.remove()
       await stateTabClose(state, tab)
+
+      if (tab.node) {
+        await stateWorkspaceNodeFileClose(state, tab.node)
+      }
     } catch (error) {
       state.message = formatReportMessage({
         who,
