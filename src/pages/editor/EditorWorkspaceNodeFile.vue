@@ -20,7 +20,7 @@ defineProps<{
     :class="{ 'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node) }"
     @click="stateWorkspaceNodeFileOpen(state, node)"
   >
-    <div class="flex items-center overflow-auto">
+    <div class="flex items-center space-x-1 overflow-auto">
       <DocumentTextIcon class="h-4 w-4 shrink-0" />
       <span class="overflow-x-auto">{{ node.handle.name }}</span>
     </div>

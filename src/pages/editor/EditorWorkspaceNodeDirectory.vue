@@ -27,7 +27,7 @@ defineProps<{
         }
       "
     >
-      <div class="flex items-center overflow-auto">
+      <div class="flex items-center space-x-1 overflow-auto">
         <FolderOpenIcon v-if="node.isOpen" class="h-4 w-4 shrink-0" />
         <FolderIcon v-else class="h-4 w-4 shrink-0" />
         <span class="overflow-x-auto"
