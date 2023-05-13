@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { DocumentTextIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeFile } from './WorkspaceNode'
@@ -9,13 +10,13 @@ import { stateWorkspaceNodeIsCurrentTab } from './stateWorkspaceNodeIsCurrentTab
 import { workspaceNodeFileRemove } from './workspaceNodeFileRemove'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
-const lang = useGlobalLang()
-
 defineProps<{
   state: State
   workspace: Workspace
   node: WorkspaceNodeFile
 }>()
+
+const lang = useGlobalLang()
 </script>
 
 <template>
@@ -38,7 +39,13 @@ defineProps<{
       <button
         v-if="node.isHovered"
         :title="lang.isZh() ? '删除这个文件' : 'Remove this file'"
-        @click="workspaceNodeFileRemove(node)"
+        @click="
+          callWithConfirm(() => workspaceNodeFileRemove(node), {
+            message: lang.isZh()
+              ? `确认要删除这个文件吗？\n${node.relativePath}`
+              : `Are you sure to remove this file?\n${node.relativePath}`,
+          })
+        "
       >
         <TrashIcon class="h-4 w-4" />
       </button>
