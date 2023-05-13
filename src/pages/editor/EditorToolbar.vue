@@ -85,11 +85,11 @@ const lang = useGlobalLang()
               {
                 message: lang.isZh()
                   ? `确认要删除这个文件吗？\n${
-                      state.currentTab.relativePath ||
+                      state.currentTab.node?.relativePath ||
                       state.currentTab.file.name
                     }`
                   : `Are you sure to remove this file?\n${
-                      state.currentTab.relativePath ||
+                      state.currentTab.node?.relativePath ||
                       state.currentTab.file.name
                     }`,
               },

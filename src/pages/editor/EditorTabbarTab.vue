@@ -18,7 +18,7 @@ defineProps<{
 <template>
   <div
     class="flex max-w-min items-center space-x-0.5 overflow-x-auto whitespace-pre py-1 pl-3 pr-1.5"
-    :title="tab.relativePath || tab.file.name"
+    :title="tab.node?.relativePath || tab.file.name"
     :class="{
       'bg-stone-200': tab === state.currentTab,
       'bg-white hover:bg-stone-100': tab !== state.currentTab,

@@ -12,5 +12,5 @@ export function stateWorkspaceNodeIsCurrentTab(
     return false
   }
 
-  return node.relativePath === state.currentTab.relativePath
+  return node.relativePath === state.currentTab.node?.relativePath
 }

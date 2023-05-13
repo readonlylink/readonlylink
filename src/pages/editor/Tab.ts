@@ -1,3 +1,5 @@
+import { WorkspaceNodeFile } from './WorkspaceNode'
+
 export type Tab = {
   handle: FileSystemFileHandle
   file: File
@@ -6,5 +8,5 @@ export type Tab = {
   isProcessing: boolean
   scrollTop: number
   isHeightOverflow?: boolean
-  relativePath?: string
+  node?: WorkspaceNodeFile
 }

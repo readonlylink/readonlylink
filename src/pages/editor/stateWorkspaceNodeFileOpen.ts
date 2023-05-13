@@ -7,15 +7,14 @@ export async function stateWorkspaceNodeFileOpen(
   node: WorkspaceNodeFile,
 ): Promise<void> {
   const tab = node.tab || (await tabFromFileHandle(node.handle))
-
-  tab.relativePath = node.relativePath
+  tab.node = node
 
   if (!node.tab) {
     node.tab = tab
   }
 
   const foundTab = state.tabs.find(
-    (exitingTab) => exitingTab.relativePath === tab.relativePath,
+    (exitingTab) => exitingTab.node?.relativePath === tab.node?.relativePath,
   )
 
   if (foundTab) {
