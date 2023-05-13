@@ -6,8 +6,13 @@ export async function stateWorkspaceNodeFileOpen(
   state: State,
   node: WorkspaceNodeFile,
 ): Promise<void> {
-  const tab = await tabFromFileHandle(node.handle)
+  const tab = node.tab || (await tabFromFileHandle(node.handle))
+
   tab.relativePath = node.relativePath
+
+  if (!node.tab) {
+    node.tab = tab
+  }
 
   const foundTab = state.tabs.find(
     (exitingTab) => exitingTab.relativePath === tab.relativePath,

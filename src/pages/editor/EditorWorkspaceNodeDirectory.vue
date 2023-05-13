@@ -27,11 +27,13 @@ defineProps<{
         }
       "
     >
-      <FolderOpenIcon v-if="node.isOpen" class="h-4 w-4 shrink-0" />
-      <FolderIcon v-else class="h-4 w-4 shrink-0" />
-      <span class="overflow-x-auto"
-        >{{ node.handle.name }}<span class="font-bold">/</span></span
-      >
+      <div class="flex items-center overflow-auto">
+        <FolderOpenIcon v-if="node.isOpen" class="h-4 w-4 shrink-0" />
+        <FolderIcon v-else class="h-4 w-4 shrink-0" />
+        <span class="overflow-x-auto"
+          >{{ node.handle.name }}<span class="font-bold">/</span></span
+        >
+      </div>
     </button>
 
     <div

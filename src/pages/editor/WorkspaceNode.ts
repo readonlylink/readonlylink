@@ -1,9 +1,12 @@
+import { Tab } from './Tab'
+
 export type WorkspaceNode = WorkspaceNodeFile | WorkspaceNodeDirectory
 
 export type WorkspaceNodeFile = {
   kind: 'WorkspaceNodeFile'
   handle: FileSystemFileHandle
   relativePath?: string
+  tab?: Tab
 }
 
 export function WorkspaceNodeFile(
