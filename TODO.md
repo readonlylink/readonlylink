@@ -1,7 +1,3 @@
-[editor] `stateWorkspaceFilterNodes` -- based on `state.showDotFiles`
-
-- and do sort in a single place
-
 # editor welcome
 
 [editor] `EditorWelcome` -- show recent files

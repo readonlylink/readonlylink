@@ -2,7 +2,6 @@ import { State } from './State'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
 import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
 import { stateWorkspaceNodeFileOpen } from './stateWorkspaceNodeFileOpen'
-import { workspaceNodeCompare } from './workspaceNodeCompare'
 import { workspaceNodeCreate } from './workspaceNodeCreate'
 
 export async function stateWorkspaceNodeFileCreate(
@@ -22,7 +21,6 @@ export async function stateWorkspaceNodeFileCreate(
   )
 
   node.children.push(child)
-  node.children.sort(workspaceNodeCompare)
 
   node.isOpen = true
 

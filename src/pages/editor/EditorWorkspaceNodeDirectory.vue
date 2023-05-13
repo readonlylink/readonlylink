@@ -15,6 +15,7 @@ import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
+import { stateWorkspaceFilterNodes } from './stateWorkspaceFilterNodes'
 import { stateWorkspaceNodeDirectoryCreate } from './stateWorkspaceNodeDirectoryCreate'
 import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
 import { stateWorkspaceNodeDirectoryRemove } from './stateWorkspaceNodeDirectoryRemove'
@@ -151,7 +152,10 @@ const window = useWindow()
     >
       <EditorWorkspaceNode
         class="border-l border-black"
-        v-for="(child, index) of node.children"
+        v-for="(child, index) of stateWorkspaceFilterNodes(
+          state,
+          node.children,
+        )"
         :key="index"
         :state="state"
         :workspace="workspace"
