@@ -10,9 +10,8 @@ export async function stateWorkspaceNodeFileRemove(
   if ('remove' in node.handle && typeof node.handle.remove === 'function') {
     await node.handle.remove()
     await stateWorkspaceNodeClose(state, node)
-  }
-
-  if (node.tab) {
-    await stateTabClose(state, node.tab)
+    if (node.tab) {
+      await stateTabClose(state, node.tab)
+    }
   }
 }

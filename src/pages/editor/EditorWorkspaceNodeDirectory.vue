@@ -5,11 +5,13 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import EditorWorkspaceNode from './EditorWorkspaceNode.vue'
 import { State } from './State'
 import { Workspace } from './Workspace'
 import { WorkspaceNodeDirectory } from './WorkspaceNode'
 import { stateWorkspaceNodeDirectoryLoad } from './stateWorkspaceNodeDirectoryLoad'
+import { stateWorkspaceNodeDirectoryRemove } from './stateWorkspaceNodeDirectoryRemove'
 import { workspaceNodeIsModified } from './workspaceNodeIsModified'
 
 const lang = useGlobalLang()
@@ -55,7 +57,16 @@ defineProps<{
         <button
           v-if="node.isHovered"
           :title="lang.isZh() ? '删除这个文件夹' : 'Remove this directory'"
-          @click.stop=""
+          @click.stop="
+            callWithConfirm(
+              () => stateWorkspaceNodeDirectoryRemove(state, node),
+              {
+                message: lang.isZh()
+                  ? `确认要删除这个文件夹吗？\n${node.relativePath}`
+                  : `Are you sure to remove this directory?\n${node.relativePath}`,
+              },
+            )
+          "
         >
           <TrashIcon class="h-4 w-4" />
         </button>
