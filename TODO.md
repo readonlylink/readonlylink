@@ -1,5 +1,9 @@
 # editor
 
+[editor] `EditorWorkspaceWelcome`
+
+[editor] `EditorToolbar` -- to open a directory you must close all file tabs first
+
 [editor] `EditorWorkspaceNodeFile` -- rename file
 [editor] `EditorWorkspaceNodeDirectory` -- rename directory
 
@@ -46,3 +50,9 @@
 [md] `<question>`
 [md] `<answer>`
 [md] `<katex>`
+
+# editor
+
+[editor] [maybe] use custom `<dialog>` instead of `callWithConfirm` -- to default to CANCEL.
+
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog

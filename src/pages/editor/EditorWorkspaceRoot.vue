@@ -51,7 +51,7 @@ const window = useWindow()
       </button>
 
       <button
-        :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
+        :title="lang.isZh() ? '创建文件夹' : 'Create directory'"
         @click.stop="
           callWithPrompt({
             message: lang.isZh()

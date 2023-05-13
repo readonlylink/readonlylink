@@ -64,7 +64,7 @@ const window = useWindow()
       <div class="flex items-center space-x-1">
         <button
           v-if="node.isHovered"
-          :title="lang.isZh() ? '创建文件' : 'Create File'"
+          :title="lang.isZh() ? '创建文件' : 'Create file'"
           @click.stop="
             callWithPrompt({
               message: lang.isZh()
@@ -93,7 +93,7 @@ const window = useWindow()
 
         <button
           v-if="node.isHovered"
-          :title="lang.isZh() ? '创建文件夹' : 'Create Directory'"
+          :title="lang.isZh() ? '创建文件夹' : 'Create directory'"
           @click.stop="
             callWithPrompt({
               message: lang.isZh()
