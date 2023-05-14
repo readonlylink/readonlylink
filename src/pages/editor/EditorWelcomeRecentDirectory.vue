@@ -5,6 +5,7 @@ import Scope from '../../components/utils/Scope.vue'
 import { useWindow } from '../../reactives/useWindow'
 import { State } from './State'
 import { stateOpenDirectoryHandle } from './stateDirectoryOpen'
+import { stateRemoveRecentlyOpenedDirectory } from './stateRemoveRecentlyOpenedDirectory'
 
 defineProps<{
   state: State
@@ -26,7 +27,7 @@ const lang = useGlobalLang()
         :disabled="false && !scope.isHovered"
         :title="lang.isZh() ? '删除这条记录' : 'Remove this record'"
         class="z-20 disabled:text-white"
-        @click=""
+        @click="stateRemoveRecentlyOpenedDirectory(state, directoryHandle.name)"
       >
         <XMarkIcon v-if="scope.isHovered" class="h-5 w-5" />
         <FolderIcon v-else class="h-5 w-5" />

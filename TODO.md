@@ -1,5 +1,3 @@
-[editor] `stateRemoveRecentlyOpened`
-
 [editor] `EditorWelcomeRecent` be able to remove record
 
 [editor] confirm to leave page
