@@ -4,6 +4,17 @@ import { State } from './State'
 export type StateOptions = {}
 
 export async function loadState(options: StateOptions): Promise<State> {
+  return {
+    tabs: [],
+    recentlyOpened: {
+      fileHandles: await loadFileHandles(),
+      directoryHandles: await loadDirectoryHandles(),
+    },
+  }
+}
+async function loadFileHandles(): Promise<
+  Record<string, FileSystemFileHandle>
+> {
   const fileHandles: Record<string, FileSystemFileHandle> = {}
 
   for (const [key, value] of await Kv.entries()) {
@@ -18,6 +29,12 @@ export async function loadState(options: StateOptions): Promise<State> {
     }
   }
 
+  return fileHandles
+}
+
+async function loadDirectoryHandles(): Promise<
+  Record<string, FileSystemDirectoryHandle>
+> {
   const directoryHandles: Record<string, FileSystemDirectoryHandle> = {}
 
   for (const [key, value] of await Kv.entries()) {
@@ -32,11 +49,5 @@ export async function loadState(options: StateOptions): Promise<State> {
     }
   }
 
-  return {
-    tabs: [],
-    recentlyOpened: {
-      fileHandles,
-      directoryHandles,
-    },
-  }
+  return directoryHandles
 }
