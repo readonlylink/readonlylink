@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FolderIcon } from '@heroicons/vue/24/outline'
+import { FolderIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Scope from '../../components/utils/Scope.vue'
 import { useWindow } from '../../reactives/useWindow'
@@ -16,23 +16,36 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <Scope :scope="{ errorMessage: undefined }" v-slot="{ scope }">
-    <button
-      class="flex items-center space-x-1 hover:underline"
-      :class="{ 'text-red-600': scope.errorMessage }"
-      @click="
-        stateOpenDirectoryHandle(state, directoryHandle).catch((error) => {
-          window.alert(
-            lang.isZh()
-              ? `打开文件夹失败：${error.message}`
-              : `Fail to open directory: ${error.message}`,
-          )
-          scope.errorMessage = error.message
-        })
-      "
+  <Scope :scope="{ isHovered: false }" v-slot="{ scope }">
+    <div
+      class="flex max-w-max space-x-2"
+      @mouseover="scope.isHovered = true"
+      @mouseleave="scope.isHovered = false"
     >
-      <FolderIcon class="h-5 w-5" />
-      <span>{{ directoryHandle.name }}<span class="font-bold">/</span></span>
-    </button>
+      <button
+        :disabled="false && !scope.isHovered"
+        :title="lang.isZh() ? '删除这条记录' : 'Remove this record'"
+        class="z-20 disabled:text-white"
+        @click=""
+      >
+        <XMarkIcon v-if="scope.isHovered" class="h-5 w-5" />
+        <FolderIcon v-else class="h-5 w-5" />
+      </button>
+
+      <button
+        class="hover:underline"
+        @click="
+          stateOpenDirectoryHandle(state, directoryHandle).catch((error) => {
+            window.alert(
+              lang.isZh()
+                ? `打开文件夹失败：${error.message}`
+                : `Fail to open directory: ${error.message}`,
+            )
+          })
+        "
+      >
+        <span>{{ directoryHandle.name }}<span class="font-bold">/</span></span>
+      </button>
+    </div>
   </Scope>
 </template>

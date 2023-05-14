@@ -2,7 +2,7 @@ import * as Kv from 'idb-keyval'
 import { watch } from 'vue'
 import { State } from './State'
 
-export function stateReactivelyStoreRecentlyOpened(state: State): void {
+export function stateReactivelySaveRecentlyOpened(state: State): void {
   watch(
     () => state.recentlyOpened.fileHandles,
     async (value) => {

@@ -16,10 +16,9 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <Scope :scope="{ errorMessage: undefined }" v-slot="{ scope }">
+  <Scope :scope="{}" v-slot="{ scope }">
     <button
       class="flex items-center space-x-1 hover:underline"
-      :class="{ 'text-red-600': scope.errorMessage }"
       @click="
         stateOpenFileHandle(state, fileHandle).catch((error) => {
           window.alert(
@@ -27,7 +26,6 @@ const lang = useGlobalLang()
               ? `打开文件失败：${error.message}`
               : `Fail to open file: ${error.message}`,
           )
-          scope.errorMessage = error.message
         })
       "
     >
