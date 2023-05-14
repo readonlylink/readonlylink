@@ -1,4 +1,4 @@
-[article] support markdown data url -- v.s. plaintext
+[article] extract `stateIsMarkdown`
 
 # editor-fallback
 

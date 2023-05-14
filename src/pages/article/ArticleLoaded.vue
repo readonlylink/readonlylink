@@ -17,7 +17,10 @@ const state = stateReactive(props.state)
       <title>{{ stateTitle(state) }}</title>
     </Head>
 
-    <ArticleMarkdown v-if="state.url.endsWith('.md')" :state="state" />
+    <ArticleMarkdown
+      v-if="state.url.endsWith('.md') || state.contentType === 'text/markdown'"
+      :state="state"
+    />
     <ArticlePlaintext v-else :state="state" />
   </div>
 </template>

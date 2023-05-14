@@ -14,7 +14,7 @@ const origin = useCurrentOrigin()
   <div class="flex space-x-4">
     <a
       v-if="state.currentTab && state.currentTab.file.name.endsWith('.md')"
-      :href="`${origin}/articles/data:text/plain;base64,${Base64.encode(
+      :href="`${origin}/articles/data:text/markdown;base64,${Base64.encode(
         state.currentTab.text,
       )}`"
       class="flex items-center space-x-1 hover:underline"
