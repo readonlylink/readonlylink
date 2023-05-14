@@ -1,3 +1,8 @@
+extract `EditorWelcomeRecentFile`
+extract `EditorWelcomeRecentDirectory`
+`EditorWelcomeRecent` delete entry -- hover to show `TrashIcon`
+`EditorWelcomeRecent` color warning about broken entry
+
 # article
 
 [article] support data url

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { DocumentTextIcon, FolderIcon } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
+import { useWindow } from '../../reactives/useWindow'
 import { State } from './State'
 import { stateOpenDirectoryHandle } from './stateDirectoryOpen'
 import { stateOpenFileHandle } from './stateFileOpen'
 
 defineProps<{ state: State }>()
+
+const window = useWindow()
 </script>
 
 <template>
@@ -44,7 +47,11 @@ defineProps<{ state: State }>()
         >
           <button
             class="flex items-center space-x-1 hover:underline"
-            @click="stateOpenDirectoryHandle(state, directoryHandle)"
+            @click="
+              stateOpenDirectoryHandle(state, directoryHandle).catch((error) =>
+                window.alert(error.message),
+              )
+            "
           >
             <FolderIcon class="h-5 w-5" />
             <span
@@ -71,7 +78,11 @@ defineProps<{ state: State }>()
         >
           <button
             class="flex items-center space-x-1 hover:underline"
-            @click="stateOpenFileHandle(state, fileHandle)"
+            @click="
+              stateOpenFileHandle(state, fileHandle).catch((error) =>
+                window.alert(error.message),
+              )
+            "
           >
             <DocumentTextIcon class="h-5 w-5" />
             <span>{{ fileHandle.name }}</span>
