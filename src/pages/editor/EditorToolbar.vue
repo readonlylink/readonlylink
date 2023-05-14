@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { PlayIcon } from '@heroicons/vue/24/outline'
+import { Base64 } from 'js-base64'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import EditorToolbarLang from './EditorToolbarLang.vue'
 import { State } from './State'
@@ -16,6 +19,7 @@ import { tabIsModified } from './tabIsModified'
 defineProps<{ state: State }>()
 
 const lang = useGlobalLang()
+const origin = useCurrentOrigin()
 </script>
 
 <template>
@@ -104,6 +108,21 @@ const lang = useGlobalLang()
     </div>
 
     <div class="flex space-x-4">
+      <a
+        v-if="state.currentTab && state.currentTab.file.name.endsWith('.md')"
+        :href="`${origin}/articles/data:text/plain;base64,${Base64.encodeURL(
+          state.currentTab.text,
+        )}`"
+        class="flex items-center space-x-1 hover:underline"
+        target="_blank"
+      >
+        <PlayIcon class="h-5 w-5" />
+        <Lang>
+          <template #zh>预览 Markdown</template>
+          <template #en>Preview Markdown</template>
+        </Lang>
+      </a>
+
       <Hyperlink
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         href="/"

@@ -1,7 +1,5 @@
-# article
+# editor render links
 
-[article] support data url
-[editor] link to article data url
 [editor] link to https://mimor.app/mimors data url
 
 # editor-fallback
