@@ -3,6 +3,7 @@ import { Head } from '@vueuse/head'
 import ArticleMarkdown from './ArticleMarkdown.vue'
 import ArticlePlaintext from './ArticlePlaintext.vue'
 import { State } from './State'
+import { stateIsMarkdown } from './stateIsMarkdown'
 import { stateReactive } from './stateReactive'
 import { stateTitle } from './stateTitle'
 
@@ -17,10 +18,7 @@ const state = stateReactive(props.state)
       <title>{{ stateTitle(state) }}</title>
     </Head>
 
-    <ArticleMarkdown
-      v-if="state.url.endsWith('.md') || state.contentType === 'text/markdown'"
-      :state="state"
-    />
+    <ArticleMarkdown v-if="stateIsMarkdown(state)" :state="state" />
     <ArticlePlaintext v-else :state="state" />
   </div>
 </template>

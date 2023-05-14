@@ -1,5 +1,3 @@
-[article] extract `stateIsMarkdown`
-
 # editor-fallback
 
 [editor-fallback] fallback when there is no file system access api
