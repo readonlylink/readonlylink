@@ -8,7 +8,7 @@ export type State = {
   message?: string
   showDotFiles?: boolean
   recentlyOpened: {
-    fileHandles: Array<FileSystemFileHandle>
-    directoryHandles: Array<FileSystemDirectoryHandle>
+    fileHandles: Record<string, FileSystemFileHandle>
+    directoryHandles: Record<string, FileSystemDirectoryHandle>
   }
 }
