@@ -1,9 +1,6 @@
 # editor welcome
 
-[editor] extract `EditorWelcomeStart`
-[editor] extract `EditorWelcomeRecent`
-
-[editor] `EditorWelcome` -- fix style
+[editor] `EditorWelcomeRecent` -- fix style
 [editor] `EditorWelcome` -- show recent directories
 [editor] `EditorWelcomeWorkspace` -- show recent files in this directory
 

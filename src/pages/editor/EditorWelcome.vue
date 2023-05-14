@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
+import EditorWelcomeRecent from './EditorWelcomeRecent.vue'
 import EditorWelcomeStart from './EditorWelcomeStart.vue'
 import { State } from './State'
-import { stateOpenFileHandle } from './stateFileOpen'
 
 defineProps<{ state: State }>()
 </script>
@@ -58,16 +58,9 @@ defineProps<{ state: State }>()
     </div>
 
     <div
-      class="flex h-full shrink grow basis-0 flex-col space-y-4 overflow-auto p-4 md:space-y-6 md:p-8"
+      class="flex h-full w-full shrink grow basis-0 flex-col overflow-auto p-4 md:p-8"
     >
-      <div
-        v-for="(fileHandle, index) of state.recentlyOpened.fileHandles"
-        :key="index"
-      >
-        <button @click="stateOpenFileHandle(state, fileHandle)">
-          {{ fileHandle.name }}
-        </button>
-      </div>
+      <EditorWelcomeRecent :state="state" />
     </div>
   </div>
 </template>
