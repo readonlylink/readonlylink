@@ -15,21 +15,27 @@ defineProps<{ state: State }>()
     <div
       class="flex max-w-lg flex-col items-start space-y-2 text-xl md:text-2xl"
     >
-      <Lang>
-        <!-- prettier-ignore -->
+      <Lang class="flex flex-col space-y-2.5">
         <template #zh>
-            <b>只读编辑器</b>是嵌入在浏览器中的文本编辑器。
-            它可以编辑纯文本内容，并且用「只读连接」来渲染所编辑的内容。
-            如果浏览器支持读写文件的 Web API，那么这个编辑器就也支持读写本地文件。
-            目前支持相关 Web API 的浏览器有 Chrome、Edge 和 Opera 等基于 Chromium 的浏览器。
-          </template>
+          <p><b>只读编辑器</b>是嵌入在浏览器中的文本编辑器。</p>
+
+          <p>它可以访问用户的本地文件系统，并且预览 Markdown 文件。</p>
+
+          <p>目前支持 Chrome、Edge 和 Opera 等基于 Chromium 的浏览器。</p>
+        </template>
         <template #en>
-          <b>Readonly Editor</b> is a text editor embedded in the browser. It
-          can edit plain text content, and use <em>Readonly.Link</em> to render
-          them. If the browser supports the <em>File System Access API</em>,
-          this editor will also support editing user's local files. Currently
-          Chromium-based browsers (such as Chrome, Edge and Opera) support this
-          API.
+          <p>
+            <b>Readonly Editor</b> is a text editor embedded in the browser.
+          </p>
+
+          <p>
+            It can access user's local file system, and preview Markdown files.
+          </p>
+
+          <p>
+            Currently we support Chromium-based browsers (such as Chrome, Edge
+            and Opera).
+          </p>
         </template>
       </Lang>
     </div>
