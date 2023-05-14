@@ -1,6 +1,4 @@
-# editor render links
-
-[editor] link to https://mimor.app/mimors data url
+[article] support markdown data url -- v.s. plaintext
 
 # editor-fallback
 
