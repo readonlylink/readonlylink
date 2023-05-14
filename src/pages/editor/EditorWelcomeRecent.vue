@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { DocumentTextIcon, FolderIcon } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { useWindow } from '../../reactives/useWindow'
+import EditorWelcomeRecentDirectory from './EditorWelcomeRecentDirectory.vue'
+import EditorWelcomeRecentFile from './EditorWelcomeRecentFile.vue'
 import { State } from './State'
-import { stateOpenDirectoryHandle } from './stateDirectoryOpen'
-import { stateOpenFileHandle } from './stateFileOpen'
 
 defineProps<{ state: State }>()
 
@@ -40,25 +39,13 @@ const window = useWindow()
       </Lang>
 
       <div class="flex flex-col overflow-y-auto">
-        <div
+        <EditorWelcomeRecentDirectory
           v-for="(directoryHandle, index) of state.recentlyOpened
             .directoryHandles"
           :key="index"
-        >
-          <button
-            class="flex items-center space-x-1 hover:underline"
-            @click="
-              stateOpenDirectoryHandle(state, directoryHandle).catch((error) =>
-                window.alert(error.message),
-              )
-            "
-          >
-            <FolderIcon class="h-5 w-5" />
-            <span
-              >{{ directoryHandle.name }}<span class="font-bold">/</span></span
-            >
-          </button>
-        </div>
+          :state="state"
+          :directoryHandle="directoryHandle"
+        />
       </div>
     </div>
 
@@ -72,22 +59,12 @@ const window = useWindow()
       </Lang>
 
       <div class="flex flex-col overflow-y-auto">
-        <div
+        <EditorWelcomeRecentFile
           v-for="(fileHandle, index) of state.recentlyOpened.fileHandles"
           :key="index"
-        >
-          <button
-            class="flex items-center space-x-1 hover:underline"
-            @click="
-              stateOpenFileHandle(state, fileHandle).catch((error) =>
-                window.alert(error.message),
-              )
-            "
-          >
-            <DocumentTextIcon class="h-5 w-5" />
-            <span>{{ fileHandle.name }}</span>
-          </button>
-        </div>
+          :state="state"
+          :fileHandle="fileHandle"
+        />
       </div>
     </div>
   </div>
