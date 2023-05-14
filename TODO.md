@@ -1,6 +1,5 @@
 # editor welcome
 
-[editor] `stateReactivelyStoreRecentlyOpened`
 [editor] `EditorWelcome` -- show recent files
 [editor] `EditorWelcome` -- show recent directories
 [editor] `EditorWelcomeWorkspace` -- show recent files in this directory
