@@ -1,10 +1,6 @@
-# editor-fallback
+# history
 
-[editor-fallback] fallback when there is no file system access api
-
-- https://developer.chrome.com/articles/file-system-access
-- https://developer.chrome.com/articles/browser-fs-access
-- https://github.com/GoogleChromeLabs/browser-fs-access
+[history] store visited links to `idb-keyval`
 
 # author
 
@@ -20,9 +16,13 @@
 
 [author] [maybe] web components to let xieyuheng.com use `authors/` with good route names
 
-# history
+# editor-fallback
 
-[history] store visited links to `localStorage`
+[editor-fallback] fallback when there is no file system access api
+
+- https://developer.chrome.com/articles/file-system-access
+- https://developer.chrome.com/articles/browser-fs-access
+- https://github.com/GoogleChromeLabs/browser-fs-access
 
 # md
 
