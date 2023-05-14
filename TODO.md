@@ -1,8 +1,3 @@
-[editor] confirm to leave page
-
-- https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
-- https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
-
 # article
 
 [article] support data url
