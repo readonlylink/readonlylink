@@ -1,7 +1,13 @@
-extract `EditorWelcomeRecentFile`
-extract `EditorWelcomeRecentDirectory`
-`EditorWelcomeRecent` delete entry -- hover to show `TrashIcon`
-`EditorWelcomeRecent` color warning about broken entry
+[editor] extract `EditorWelcomeRecentFile`
+[editor] extract `EditorWelcomeRecentDirectory`
+
+[editor] `EditorWelcomeRecent` delete entry -- hover to show `TrashIcon`
+[editor] `EditorWelcomeRecent` color warning about broken entry
+
+[editor] confirm to leave page
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
 
 # article
 
