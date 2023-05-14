@@ -1,7 +1,3 @@
-# editor welcome
-
-[editor] `EditorWelcome` -- open recent directory
-
 # article
 
 [article] support data url

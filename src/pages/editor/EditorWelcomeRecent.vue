@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import { DocumentTextIcon, FolderIcon } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { State } from './State'
+import { stateOpenDirectoryHandle } from './stateDirectoryOpen'
 import { stateOpenFileHandle } from './stateFileOpen'
 
 defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex flex-col space-y-4 overflow-auto">
+  <div class="flex flex-col space-y-4 overflow-auto md:space-y-6">
     <div
       v-if="Object.keys(state.recentlyOpened.directoryHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
@@ -23,8 +25,14 @@ defineProps<{ state: State }>()
             .directoryHandles"
           :key="index"
         >
-          <button @click="">
-            {{ directoryHandle.name }}
+          <button
+            class="flex items-center space-x-1 hover:underline"
+            @click="stateOpenDirectoryHandle(state, directoryHandle)"
+          >
+            <FolderIcon class="h-5 w-5" />
+            <span
+              >{{ directoryHandle.name }}<span class="font-bold">/</span></span
+            >
           </button>
         </div>
       </div>
@@ -44,8 +52,12 @@ defineProps<{ state: State }>()
           v-for="(fileHandle, index) of state.recentlyOpened.fileHandles"
           :key="index"
         >
-          <button @click="stateOpenFileHandle(state, fileHandle)">
-            {{ fileHandle.name }}
+          <button
+            class="flex items-center space-x-1 hover:underline"
+            @click="stateOpenFileHandle(state, fileHandle)"
+          >
+            <DocumentTextIcon class="h-5 w-5" />
+            <span>{{ fileHandle.name }}</span>
           </button>
         </div>
       </div>
