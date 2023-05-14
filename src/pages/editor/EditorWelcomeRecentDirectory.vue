@@ -26,7 +26,7 @@ const lang = useGlobalLang()
       <button
         :disabled="false && !scope.isHovered"
         :title="lang.isZh() ? '删除这条记录' : 'Remove this record'"
-        class="z-20 disabled:text-white"
+        class="disabled:text-white"
         @click="stateRemoveRecentlyOpenedDirectory(state, directoryHandle.name)"
       >
         <XMarkIcon v-if="scope.isHovered" class="h-5 w-5" />
@@ -34,7 +34,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        class="hover:underline"
+        class="overflow-auto hover:underline"
         @click="
           stateOpenDirectoryHandle(state, directoryHandle).catch((error) => {
             window.alert(
@@ -45,7 +45,9 @@ const lang = useGlobalLang()
           })
         "
       >
-        <span>{{ directoryHandle.name }}<span class="font-bold">/</span></span>
+        <span class="overflow-x-auto whitespace-pre"
+          >{{ directoryHandle.name }}<span class="font-bold">/</span></span
+        >
       </button>
     </div>
   </Scope>

@@ -34,7 +34,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        class="hover:underline"
+        class="overflow-auto hover:underline"
         @click="
           stateOpenFileHandle(state, fileHandle).catch((error) => {
             window.alert(
@@ -45,7 +45,9 @@ const lang = useGlobalLang()
           })
         "
       >
-        <span>{{ fileHandle.name }}</span>
+        <span class="overflow-x-auto whitespace-pre">{{
+          fileHandle.name
+        }}</span>
       </button>
     </div>
   </Scope>
