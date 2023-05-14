@@ -1,5 +1,3 @@
-[editor] `EditorWelcomeRecent` be able to remove record
-
 [editor] confirm to leave page
 
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
