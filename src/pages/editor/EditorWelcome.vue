@@ -8,7 +8,7 @@ import Lang from '../../components/lang/Lang.vue'
 import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
-import { stateFileOpen } from './stateFileOpen'
+import { stateFileOpen, stateOpenFileHandle } from './stateFileOpen'
 
 defineProps<{ state: State }>()
 </script>
@@ -110,7 +110,9 @@ defineProps<{ state: State }>()
         v-for="(fileHandle, index) of state.recentlyOpened.fileHandles"
         :key="index"
       >
-        {{ fileHandle.name }}
+        <button @click="stateOpenFileHandle(state, fileHandle)">
+          {{ fileHandle.name }}
+        </button>
       </div>
     </div>
   </div>

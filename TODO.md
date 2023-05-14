@@ -1,6 +1,6 @@
 # editor welcome
 
-[editor] `EditorWelcome` -- open recent file
+[editor] `EditorWelcome` -- fix style
 [editor] `EditorWelcome` -- show recent directories
 [editor] `EditorWelcomeWorkspace` -- show recent files in this directory
 
