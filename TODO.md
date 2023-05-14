@@ -1,3 +1,5 @@
+extract `EditorWelcomeTitle`
+
 # article
 
 [article] support data url

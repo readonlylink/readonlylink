@@ -11,6 +11,23 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex flex-col space-y-4 overflow-auto md:space-y-6">
     <div
+      v-if="
+        Object.keys(state.recentlyOpened.directoryHandles).length === 0 &&
+        Object.keys(state.recentlyOpened.fileHandles).length === 0
+      "
+      class="flex flex-col space-y-4 overflow-auto"
+    >
+      <Lang class="max-w-lg text-xl font-bold text-stone-400 md:text-2xl">
+        <template #zh>
+          <div>最近打开的文件和文件夹，将出现在这里。</div>
+        </template>
+        <template #en>
+          <div>Recently opened files and directories will be listed here.</div>
+        </template>
+      </Lang>
+    </div>
+
+    <div
       v-if="Object.keys(state.recentlyOpened.directoryHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
     >
