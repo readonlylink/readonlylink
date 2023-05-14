@@ -7,4 +7,8 @@ export type State = {
   tabs: Array<Tab>
   message?: string
   showDotFiles?: boolean
+  recentlyOpened: {
+    fileHandles: Array<FileSystemFileHandle>
+    directoryHandles: Array<FileSystemDirectoryHandle>
+  }
 }

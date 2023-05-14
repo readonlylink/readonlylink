@@ -6,4 +6,5 @@ export async function stateFileOpen(state: State): Promise<void> {
   const tab = await tabFromFileHandle(fileHandle)
   state.tabs.push(tab)
   state.currentTab = tab
+  state.recentlyOpened.fileHandles.push(fileHandle)
 }
