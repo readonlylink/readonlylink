@@ -1,5 +1,6 @@
-[editor] `EditorWelcomeRecent` delete entry -- hover to show `TrashIcon`
 [editor] `EditorWelcomeRecent` color warning about broken entry
+
+[editor] `EditorWelcomeRecent` delete entry -- hover to show `TrashIcon`
 
 [editor] confirm to leave page
 
