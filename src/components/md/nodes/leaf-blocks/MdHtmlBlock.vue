@@ -32,8 +32,7 @@ function elementPlugin(element: XElement): Plugin | undefined {
       <component
         v-if="elementPlugin(node)"
         :is="elementPlugin(node)?.component"
-        :element="node"
-        :pageState="state"
+        v-bind="elementPlugin(node)?.propsBuilder({ state, element: node })"
       />
 
       <div v-else v-html="safeHtml(format([node]))"></div>

@@ -1,4 +1,4 @@
-[refactor] improve md-plugin component interface
+[refactor] improve md-plugin component definition
 
 # author
 
