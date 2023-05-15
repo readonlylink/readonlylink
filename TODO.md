@@ -1,6 +1,5 @@
 # history
 
-[history] `loadState` has `history`
 [history] `HistoryLoaded` vs `HistoryLoading`
 [history] store visited links to `idb-keyval`
 
