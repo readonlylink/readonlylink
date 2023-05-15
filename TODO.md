@@ -1,5 +1,9 @@
 # history
 
+[history] `reactives/useGlobalHistory`
+[history] `reactives/globalHistoryReactivelySaveToIndexedDB`
+[history] `State` has `history`
+[history] `HistoryLoaded` vs `HistoryLoading`
 [history] store visited links to `idb-keyval`
 
 # author
@@ -10,11 +14,9 @@
 
 - if it is so, `src` should be optional for all `books/` and `manuals/` too
 
-[author] searchable file list as a plugin -- using code block?
-
 [author] `author.json` has `tabs`
 
-[author] [maybe] web components to let xieyuheng.com use `authors/` with good route names
+[author] searchable file list as a markdown plugin -- using code block?
 
 # editor-fallback
 
