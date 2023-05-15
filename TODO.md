@@ -1,7 +1,3 @@
-# docs
-
-[docs] about using editor to preview markdown article
-
 # history
 
 [history] store visited links to `idb-keyval`

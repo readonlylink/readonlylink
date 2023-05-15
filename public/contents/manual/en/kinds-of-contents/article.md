@@ -18,6 +18,8 @@ https://readonly.link/articles/:link
 
 You can also enter link directly in [**readonly.link/articles**](https://readonly.link/articles) page.
 
+You can also use [**readonly.link/editor**](https://readonly.link/eidtor) to edit Markdown files and preview rendering results.
+
 ## Article Attributes
 
 At the front of a Markdown file, we can sue YAML to set attributes of the article.

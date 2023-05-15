@@ -18,6 +18,8 @@ https://readonly.link/articles/:link
 
 你也可以在 [**readonly.link/articles**](https://readonly.link/articles) 页面直接输入链接。
 
+你也可以在 [**readonly.link/editor**](https://readonly.link/editor) 编辑 Markdown 文件，并预览文章染结果。
+
 ## 文章的属性
 
 在 Markdown 文件的开头，可以用 YAML 的格式来设置文章的属性。
