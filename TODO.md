@@ -1,5 +1,3 @@
-[history] `History` -- sort record
-
 [refactor] improve md-plugin component interface
 
 # author

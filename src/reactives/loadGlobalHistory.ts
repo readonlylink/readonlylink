@@ -38,3 +38,14 @@ watch(
     deep: true,
   },
 )
+
+export function sortGlobalHistoryRecord(): void {
+  const entries = Object.entries(globalHistory.record)
+
+  entries.sort(([, x], [, y]) => (x.time > y.time ? -1 : 1))
+
+  for (const [key, value] of entries) {
+    delete globalHistory.record[key]
+    globalHistory.record[key] = value
+  }
+}
