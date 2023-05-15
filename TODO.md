@@ -1,5 +1,4 @@
-[history] `HistoryEntry` -- show time
-[history] `HistoryEntry` -- delete button
+[history] `History` -- sort record
 
 [refactor] improve md-plugin component interface
 

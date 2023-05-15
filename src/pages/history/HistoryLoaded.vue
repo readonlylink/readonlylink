@@ -24,7 +24,7 @@ const lang = useGlobalLang()
         <template #en> History </template>
       </Lang>
 
-      <div class="flex flex-col overflow-y-auto py-3">
+      <div class="flex flex-col space-y-4 overflow-y-auto py-3">
         <HistoryEntry
           v-for="(entry, key) of state.history.record"
           :key="key"
