@@ -1,15 +1,15 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
 import ReadonlylinkArticle from './ReadonlylinkArticle.vue'
 import ReadonlylinkAuthor from './ReadonlylinkAuthor.vue'
 import ReadonlylinkBook from './ReadonlylinkBook.vue'
 import ReadonlylinkManual from './ReadonlylinkManual.vue'
 import ReadonlylinkUnknown from './ReadonlylinkUnknown.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
 
 const props = defineProps<{ state: State }>()
 
-const state = stateReactive(props.state)
+const state = reactive(props.state)
 </script>
 
 <template>

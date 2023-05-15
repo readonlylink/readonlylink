@@ -1,4 +1,6 @@
-[refactor] improve md-plugin component definition
+[refactor] remove `ReadonlylinkCard`
+
+update mimor
 
 # author
 
