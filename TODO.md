@@ -1,7 +1,6 @@
 # history
 
-[history] `HistoryLoading`
-
+[history] `HistoryLoaded`
 [history] store visited links to `idb-keyval`
 
 # author
