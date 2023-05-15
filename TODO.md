@@ -1,6 +1,7 @@
-# history
+[history] `HistoryEntry` -- show time
+[history] `HistoryEntry` -- delete button
 
-[history] `HistoryEntry` -- show card
+[refactor] improve md-plugin component interface
 
 # author
 
