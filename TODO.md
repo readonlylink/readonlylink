@@ -1,6 +1,6 @@
 # history
 
-[history] `reactives/useGlobalHistory`
+[history] `reactives/loadGlobalHistory`
 [history] `reactives/globalHistoryReactivelySaveToIndexedDB`
 [history] `State` has `history`
 [history] `HistoryLoaded` vs `HistoryLoading`
