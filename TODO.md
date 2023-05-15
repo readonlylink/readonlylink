@@ -1,6 +1,6 @@
 # history
 
-[history] `HistoryLoaded`
+[history] `HistoryEntry` -- show card
 [history] store visited links to `idb-keyval`
 
 # author
