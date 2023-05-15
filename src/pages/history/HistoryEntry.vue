@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CalendarDaysIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import ReadonlylinkCard from '../../md-plugins/readonlylink/ReadonlylinkCard.vue'
+import Readonlylink from '../../md-plugins/readonlylink/Readonlylink.vue'
 import { HistoryEntry } from '../../models/history/History'
 import { formatDateTime } from '../../utils/formatDate'
 import { State } from './State'
@@ -32,6 +32,6 @@ const lang = useGlobalLang()
         }}</span>
       </div>
     </div>
-    <ReadonlylinkCard :url="entry.url" />
+    <Readonlylink :url="entry.url" />
   </div>
 </template>

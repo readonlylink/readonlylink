@@ -1,5 +1,3 @@
-[refactor] remove `ReadonlylinkCard`
-
 update mimor
 
 # author
