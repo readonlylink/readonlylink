@@ -12,7 +12,7 @@ defineProps<{ state: State }>()
 <template>
   <div>
     <div class="flex items-baseline justify-between">
-      <Lang class="font-logo text-2xl font-bold text-stone-800">
+      <Lang class="font-logo text-2xl font-bold">
         <template #zh> 订阅 </template>
         <template #en> Subscriptions </template>
       </Lang>
@@ -30,7 +30,10 @@ defineProps<{ state: State }>()
       </div>
     </div>
 
-    <div class="flex space-x-2 overflow-x-auto py-1">
+    <div
+      v-if="state.authors.length > 0"
+      class="flex space-x-2 overflow-x-auto py-1"
+    >
       <SubscriptionAuthor
         v-for="author of state.authors"
         :key="author.url"
@@ -53,7 +56,7 @@ defineProps<{ state: State }>()
     </template>
 
     <template v-else>
-      <Lang>
+      <Lang class="py-3 text-xl text-stone-500">
         <template #zh> 还未订阅任何作者。 </template>
         <template #en> Not subscribed to any author yet. </template>
       </Lang>

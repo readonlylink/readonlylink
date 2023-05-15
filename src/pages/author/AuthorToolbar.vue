@@ -27,7 +27,7 @@ function unsubscribe() {
   <div>
     <button
       v-if="!isSubscribed()"
-      class="flex items-center font-sans text-xl text-stone-400 hover:text-stone-800"
+      class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
       @click="subscribe()"
     >
       <Lang>
@@ -40,7 +40,7 @@ function unsubscribe() {
 
     <button
       v-else
-      class="flex items-center font-sans text-xl text-stone-400 hover:text-stone-800"
+      class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
       @click="unsubscribe()"
     >
       <Lang>

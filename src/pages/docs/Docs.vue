@@ -17,7 +17,7 @@ const lang = useGlobalLang()
       <title v-else>Docs | Readonly</title>
     </Head>
 
-    <Lang class="font-logo text-2xl font-bold text-stone-800">
+    <Lang class="font-logo text-2xl font-bold">
       <template #zh> 文档 </template>
       <template #en> Docs </template>
     </Lang>

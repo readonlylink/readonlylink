@@ -19,9 +19,17 @@ const lang = useGlobalLang()
         <title v-else>History</title>
       </Head>
 
-      <Lang class="font-logo text-2xl font-bold text-stone-800">
+      <Lang class="font-logo text-2xl font-bold">
         <template #zh> 历史 </template>
         <template #en> History </template>
+      </Lang>
+
+      <Lang
+        v-if="Object.keys(state.history.record).length === 0"
+        class="py-3 text-xl text-stone-500"
+      >
+        <template #zh> 还没有历史记录。 </template>
+        <template #en> No history record yet. </template>
       </Lang>
 
       <div class="flex flex-col space-y-4 overflow-y-auto py-3">

@@ -41,7 +41,7 @@ async function submit(event: Event) {
               class="flex items-end justify-between"
               title="Article | Readonly.Link Manual"
             >
-              <Lang class="font-logo text-2xl font-bold text-stone-800">
+              <Lang class="font-logo text-2xl font-bold">
                 <template #zh> 文章 </template>
                 <template #en> Article </template>
               </Lang>
@@ -52,7 +52,7 @@ async function submit(event: Event) {
                     : `/manuals/${origin}/contents/manual/en.json/-/kinds-of-contents/article.md`
                 "
               >
-                <QuestionMarkCircleIcon class="h-6 w-6 text-stone-800" />
+                <QuestionMarkCircleIcon class="h-6 w-6" />
               </Hyperlink>
             </div>
           </template>

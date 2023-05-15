@@ -12,7 +12,7 @@ const state = stateReactive(props.state)
 
 <template>
   <div>
-    <Lang class="font-logo text-2xl font-bold text-stone-800">
+    <Lang class="font-logo text-2xl font-bold">
       <template #zh> 作者动态 </template>
       <template #en> Authors' activities </template>
     </Lang>
