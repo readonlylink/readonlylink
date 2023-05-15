@@ -1,4 +1,5 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
+import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { State } from './State'
 import { loadAuthorConfig } from './loadAuthorConfig'
 
