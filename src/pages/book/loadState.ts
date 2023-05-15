@@ -1,5 +1,6 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
+import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadBookConfig } from './BookConfig'
 import { State } from './State'
@@ -29,6 +30,9 @@ export async function loadState(options: StateOptions): Promise<State> {
   const documents = Object.fromEntries(
     Object.entries(texts).map(([path, text]) => [path, parseDocument(text)]),
   )
+
+  const history = await loadGlobalHistory()
+  history.record[url] = { time: Date.now(), url }
 
   return {
     url,

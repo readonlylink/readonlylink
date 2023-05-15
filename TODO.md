@@ -1,6 +1,5 @@
 # history
 
-[history] store visited book, manual, author to history
 [history] `HistoryEntry` -- show card
 
 # author

@@ -16,6 +16,9 @@ export async function loadState(options: StateOptions): Promise<State> {
   const text = await response.text()
   const document = parseDocument(text)
 
+  const history = await loadGlobalHistory()
+  history.record[url] = { time: Date.now(), url }
+
   return {
     url,
     config,
