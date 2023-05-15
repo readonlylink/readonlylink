@@ -1,5 +1,3 @@
-update mimor
-
 # author
 
 [author] `State` has `path`
@@ -10,7 +8,11 @@ update mimor
 
 [author] `author.json` has `tabs`
 
-[author] searchable file list as a markdown plugin -- using code block?
+# searchable file list
+
+searchable file list as a markdown plugin -- using code block?
+
+- for `authors/`
 
 # editor-fallback
 
