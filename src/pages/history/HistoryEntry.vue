@@ -9,5 +9,8 @@ defineProps<{
 </script>
 
 <template>
-  <div>TODO</div>
+  <div>
+    <div>{{ entry.time }}</div>
+    <div>{{ entry.url }}</div>
+  </div>
 </template>

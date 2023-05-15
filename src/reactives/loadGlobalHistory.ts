@@ -1,6 +1,6 @@
 import * as Kv from 'idb-keyval'
 import { reactive, watch } from 'vue'
-import { History } from '../models/history/History'
+import { History, HistoryEntry } from '../models/history/History'
 
 const globalHistory: History = reactive({
   record: {},
@@ -13,7 +13,11 @@ export async function loadGlobalHistory(): Promise<History> {
     return globalHistory
   }
 
-  globalHistory.record = (await Kv.get('globalHistory.record')) || {}
+  const record = await Kv.get('globalHistory.record')
+  if (record) {
+    globalHistory.record = record
+  }
+  //  globalHistory.record =  {}
 
   initialized = true
 
@@ -23,7 +27,12 @@ export async function loadGlobalHistory(): Promise<History> {
 watch(
   () => globalHistory.record,
   async (value) => {
-    await Kv.set('globalHistory.record', { ...globalHistory.record })
+    const record: Record<string, HistoryEntry> = {}
+    for (const [key, value] of Object.entries(globalHistory.record)) {
+      record[key] = { ...value }
+    }
+
+    await Kv.set('globalHistory.record', record)
   },
   {
     deep: true,
