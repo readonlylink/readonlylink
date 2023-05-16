@@ -4,11 +4,12 @@ import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import BookPageNav from './BookPageNav.vue'
+import BookPageNotFound from './BookPageNotFound.vue'
 import { State } from './State'
 
 const props = defineProps<{
   state: State
-  document: Document
+  document?: Document
 }>()
 
 watch(
@@ -33,7 +34,8 @@ const url = computed(() => {
 <template>
   <div class="h-screen-dynamic flex flex-col px-6">
     <BookPageNav class="py-6" :state="state" />
-    <MdPage :key="state.path" :document="document" :url="url" />
+    <MdPage v-if="document" :key="state.path" :document="document" :url="url" />
+    <BookPageNotFound v-else :state="state" />
     <BookPageNav class="py-6" :state="state" />
   </div>
 </template>

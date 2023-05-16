@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { computed, watch } from 'vue'
+import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import BookContents from './BookContents.vue'
 import BookPage from './BookPage.vue'
@@ -13,8 +13,6 @@ import { stateTitle } from './stateTitle'
 const props = defineProps<{ state: State }>()
 const state = stateReactive(props.state)
 const route = useRoute()
-
-const currentDocument = computed(() => stateCurrentDocument(state))
 
 watch(
   () => route.query['front-matter'],
@@ -38,11 +36,7 @@ watch(
     </Head>
 
     <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
-    <BookPage
-      v-else-if="currentDocument"
-      :state="state"
-      :document="currentDocument"
-    />
-    <BookTitlePage v-else :state="state" />
+    <BookTitlePage v-else-if="!state.path" :state="state" />
+    <BookPage v-else :state="state" :document="stateCurrentDocument(state)" />
   </div>
 </template>

@@ -1,5 +1,3 @@
-[book] `BookPage` use `BookPageNotFound`
-
 [manual] `ManualPageNotFound`
 
 # author
