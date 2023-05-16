@@ -27,5 +27,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     config,
     text,
     homepageDocument,
+    documents: {},
   }
 }

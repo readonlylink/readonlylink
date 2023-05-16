@@ -7,4 +7,5 @@ export type State = {
   config: AuthorConfig
   text: string
   homepageDocument: Document
+  documents: Record<string, Document>
 }

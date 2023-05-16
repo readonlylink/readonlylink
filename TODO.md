@@ -1,7 +1,5 @@
 # author
 
-[author] `stateCurrentDocument`
-
 [author] `AuthorPage` take `document` as a prop
 
 [author] `author.json` has `tabs`
