@@ -1,3 +1,5 @@
+[page-layout] `PageMenu` active link
+
 # author
 
 [author] `author.json` has `tabs`
@@ -15,10 +17,6 @@
 [config] `src` should be optional for `books/` and `manuals/`
 
 - use the directory of the config as the src by default
-
-# page-layout
-
-[page-layout] active link
 
 # searchable file list
 

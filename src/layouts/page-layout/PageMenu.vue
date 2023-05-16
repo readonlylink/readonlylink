@@ -10,6 +10,13 @@ const origin = window.location.origin
     class="flex w-full flex-wrap justify-between py-1 font-sans text-stone-400"
   >
     <div class="flex flex-wrap">
+      <Hyperlink class="pr-3 hover:text-stone-900" href="/">
+        <Lang>
+          <template #zh> 首页 </template>
+          <template #en> HOME </template>
+        </Lang>
+      </Hyperlink>
+
       <Hyperlink class="pr-3 hover:text-stone-900" href="/authors">
         <Lang>
           <template #zh> 作者 </template>
