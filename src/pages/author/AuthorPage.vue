@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Document } from '@xieyuheng/x-markdown'
+import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
@@ -23,7 +24,20 @@ const avatarURL = computed(
   () => new URL(props.state.config.avatar, props.state.url),
 )
 
-const url = computed(() => new URL(props.state.url))
+const url = computed(() => {
+  if (props.state.path === undefined) {
+    return new URL(props.state.url)
+  }
+
+  if (props.state.config.src) {
+    return new URL(
+      join(props.state.config.src, props.state.path),
+      props.state.url,
+    )
+  }
+
+  return new URL(props.state.path, props.state.url)
+})
 </script>
 
 <template>

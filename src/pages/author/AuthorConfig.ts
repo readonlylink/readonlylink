@@ -6,6 +6,7 @@ export type AuthorConfig = {
   tagline?: string
   avatar: string
   homepage: string
+  src?: string
   activities: Array<string>
   tabs?: Array<string>
 }
@@ -16,6 +17,7 @@ export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
   tagline: ty.optional(ty.string()),
   avatar: ty.string(),
   homepage: ty.string(),
+  src: ty.optional(ty.string()),
   activities: ty.array(ty.string()),
   tabs: ty.optional(ty.array(ty.string())),
 })

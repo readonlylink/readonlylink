@@ -4,12 +4,6 @@
 [author] `loadState` load `documents` from tabs
 [author] `AuthorTabbar` -- show `tabs`
 
-[author] `AuthorPage` fix the compute of `url`
-
-[author] `AuthorConfig` has optional `src`
-
-- use the directory of the config as the src by default
-
 # config
 
 [config] `src` should be optional for `books/` and `manuals/`
