@@ -44,7 +44,7 @@ const url = computed(() => new URL(props.state.url))
         {{ state.config.name }}
       </div>
 
-      <MdPage :key="state.url" :document="state.document" :url="url" />
+      <MdPage :key="state.url" :document="state.homepageDocument" :url="url" />
     </div>
   </div>
 </template>

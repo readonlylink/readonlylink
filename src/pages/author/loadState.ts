@@ -16,7 +16,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const homepageURL = new URL(config.homepage, url)
   const response = await fetch(homepageURL)
   const text = await response.text()
-  const document = parseDocument(text)
+  const homepageDocument = parseDocument(text)
 
   const history = await loadGlobalHistory()
   history.record[url] = { time: Date.now(), url }
@@ -26,6 +26,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     path,
     config,
     text,
-    document,
+    homepageDocument,
   }
 }

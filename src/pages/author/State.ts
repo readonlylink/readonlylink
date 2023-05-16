@@ -6,5 +6,5 @@ export type State = {
   path?: string
   config: AuthorConfig
   text: string
-  document: Document
+  homepageDocument: Document
 }

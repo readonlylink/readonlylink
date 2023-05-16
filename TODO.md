@@ -1,14 +1,18 @@
 # author
 
+[author] `stateCurrentDocument`
+
 [author] `AuthorPage` take `document` as a prop
+
+[author] `author.json` has `tabs`
+
+[author] `loadState` load `documents` from tabs
 
 [author] `AuthorPage` fix the compute of `url`
 
 [author] `AuthorConfig` has optional `src`
 
 - use the directory of the config as the src by default
-
-[author] `author.json` has `tabs`
 
 # config
 
