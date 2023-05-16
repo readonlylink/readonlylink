@@ -1,6 +1,9 @@
 # author
 
-[author] [maybe] extract `AuthorLayout`
+[author] `AuthorAvatar`
+[author] `AuthorTitle`
+[author] `AuthorLayout`
+
 [author] `loadState` load `documents` from tabs
 [author] `AuthorTabbar` -- show `tabs`
 

@@ -21,12 +21,16 @@ export async function loadState(options: StateOptions): Promise<State> {
   const history = await loadGlobalHistory()
   history.record[url] = { time: Date.now(), url }
 
+  const documents = {
+    [config.homepage]: homepageDocument,
+  }
+
   return {
     url,
     path,
     config,
     text,
     homepageDocument,
-    documents: {},
+    documents,
   }
 }

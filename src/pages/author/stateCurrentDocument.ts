@@ -3,7 +3,7 @@ import { State } from './State'
 
 export function stateCurrentDocument(state: State): Document | undefined {
   if (state.path === undefined) {
-    return state.homepageDocument
+    return undefined
   }
 
   return state.documents[state.path]

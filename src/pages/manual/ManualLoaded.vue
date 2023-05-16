@@ -18,8 +18,6 @@ const router = useRouter()
 
 stateReactivelyUpdateRoute(state, router)
 
-const who = 'ManualLoaded'
-
 const currentDocument = computed(() => stateCurrentDocument(state))
 
 watch(
