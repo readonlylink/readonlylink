@@ -1,5 +1,3 @@
-[page-layout] `PageMenu` active link
-
 # author
 
 [author] `author.json` has `tabs`
