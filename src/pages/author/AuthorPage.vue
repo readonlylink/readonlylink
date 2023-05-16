@@ -3,7 +3,7 @@ import { Document } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
-import Hyperlink from '../../components/utils/Hyperlink.vue'
+import AuthorAvatar from './AuthorAvatar.vue'
 import AuthorPageNotFound from './AuthorPageNotFound.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
@@ -18,10 +18,6 @@ watch(
   () => {
     window.scrollTo(0, 0)
   },
-)
-
-const avatarURL = computed(
-  () => new URL(props.state.config.avatar, props.state.url),
 )
 
 const url = computed(() => {
@@ -42,19 +38,15 @@ const url = computed(() => {
 
 <template>
   <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
-    <Hyperlink
-      :href="`/authors/${state.url}`"
+    <AuthorAvatar
       class="block h-[3.5rem] w-[3.5rem] shrink-0 object-contain p-2 md:hidden"
-    >
-      <img :src="avatarURL.href" :alt="state.config.name" />
-    </Hyperlink>
+      :state="state"
+    />
 
-    <Hyperlink
-      :href="`/authors/${state.url}`"
+    <AuthorAvatar
       class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4rem] w-[4rem] shrink-0 object-contain md:block"
-    >
-      <img :src="avatarURL.href" :alt="state.config.name" />
-    </Hyperlink>
+      :state="state"
+    />
 
     <AuthorToolbar class="absolute right-0 top-0 p-2 md:p-3" :state="state" />
 
@@ -69,6 +61,7 @@ const url = computed(() => {
         :document="document"
         :url="url"
       />
+
       <AuthorPageNotFound v-else :state="state" />
     </div>
   </div>
