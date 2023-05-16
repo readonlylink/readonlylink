@@ -1,8 +1,8 @@
 # author
 
-[author] `author.json` has `tabs`
-
+[author] [maybe] extract `AuthorLayout`
 [author] `loadState` load `documents` from tabs
+[author] `AuthorTabbar` -- show `tabs`
 
 [author] `AuthorPage` fix the compute of `url`
 
