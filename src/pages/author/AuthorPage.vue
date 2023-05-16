@@ -3,12 +3,13 @@ import { Document } from '@xieyuheng/x-markdown'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import AuthorPageNotFound from './AuthorPageNotFound.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
 const props = defineProps<{
   state: State
-  document: Document
+  document?: Document
 }>()
 
 watch(
@@ -48,7 +49,13 @@ const url = computed(() => new URL(props.state.url))
         {{ state.config.name }}
       </div>
 
-      <MdPage :key="state.url" :document="document" :url="url" />
+      <MdPage
+        v-if="document"
+        :key="state.url"
+        :document="document"
+        :url="url"
+      />
+      <AuthorPageNotFound v-else :state="state" />
     </div>
   </div>
 </template>

@@ -1,8 +1,7 @@
+[book] `BookPageNotFound`
+[manual] `ManualPageNotFound`
+
 # author
-
-[author] `AuthorNotFound`
-
-- fix the type of `stateCurrentDocument` -- migth be `undefined`
 
 [author] `author.json` has `tabs`
 
@@ -19,14 +18,6 @@
 [config] `src` should be optional for `books/` and `manuals/`
 
 - use the directory of the config as the src by default
-
-# book
-
-[book] `BookNotFound`
-
-# book
-
-[manual] `ManualNotFound`
 
 # page-layout
 
