@@ -23,6 +23,7 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/authors', component: AuthorList },
   { path: '/authors/', component: AuthorList },
   { path: '/authors/:url(.*)', component: Author },
+  { path: '/authors/:url(.*)/-/:path(.*)', component: Author },
 
   { path: '/articles', component: ArticleEntrance },
   { path: '/articles/', component: ArticleEntrance },

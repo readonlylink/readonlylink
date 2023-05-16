@@ -5,10 +5,11 @@ import { loadAuthorConfig } from './loadAuthorConfig'
 
 export type StateOptions = {
   url: string
+  path?: string
 }
 
 export async function loadState(options: StateOptions): Promise<State> {
-  const { url } = options
+  const { url, path } = options
 
   const config = await loadAuthorConfig(url)
 
@@ -22,6 +23,7 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   return {
     url,
+    path,
     config,
     text,
     document,

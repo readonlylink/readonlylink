@@ -12,8 +12,9 @@ const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
   const url = String(route.params.url)
+  const path = route.params.path ? String(route.params.path) : undefined
 
-  return { url }
+  return { url, path }
 }
 
 watch(

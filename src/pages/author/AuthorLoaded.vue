@@ -1,13 +1,22 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 import AuthorPage from './AuthorPage.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
 import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
-
 const state = stateReactive(props.state)
+const route = useRoute()
+
+watch(
+  () => route.params.path,
+  (value) => {
+    state.path = value ? String(value) : undefined
+  },
+)
 </script>
 
 <template>

@@ -3,6 +3,7 @@ import { AuthorConfig } from './AuthorConfig'
 
 export type State = {
   url: string
+  path?: string
   config: AuthorConfig
   text: string
   document: Document

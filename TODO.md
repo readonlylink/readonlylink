@@ -1,12 +1,24 @@
 # author
 
-[author] `State` has `path`
+[author] `AuthorPage` take `document` as a prop
+
+[author] `AuthorPage` fix the compute of `url`
 
 [author] `AuthorConfig` has optional `src`
 
-- if it is so, `src` should be optional for all `books/` and `manuals/` too
+- use the directory of the config as the src by default
 
 [author] `author.json` has `tabs`
+
+# config
+
+[config] `src` should be optional for `books/` and `manuals/`
+
+- use the directory of the config as the src by default
+
+# page-layout
+
+[page-layout] active link
 
 # searchable file list
 

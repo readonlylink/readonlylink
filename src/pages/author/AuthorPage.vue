@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
+
+watch(
+  () => props.state.path,
+  () => {
+    window.scrollTo(0, 0)
+  },
+)
 
 const avatarURL = computed(
   () => new URL(props.state.config.avatar, props.state.url),
