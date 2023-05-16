@@ -1,5 +1,3 @@
-[manual] `ManualPageNotFound`
-
 # author
 
 [author] `author.json` has `tabs`
