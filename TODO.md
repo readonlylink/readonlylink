@@ -25,18 +25,20 @@ searchable file list as a markdown plugin -- using code block?
 # md
 
 > For https://readonly.link/books/https://cicada-monologues.netlify.app/book.json
+> But we can do this only after we have a good markdown parser
+> that can handle XML with newline.
 
 [md] `<poem-vertical>`
 [md] `<question>`
 [md] `<answer>`
 [md] `<katex>`
 
-# editor
+# editor maybe
 
 [editor] [maybe] use custom `<dialog>` instead of `callWithConfirm` -- to default to CANCEL.
 
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 
-[editor] rename file and directory
+[editor] [maybe] rename file and directory
 
 - not possible for now: https://github.com/WICG/file-system-access/issues/413
