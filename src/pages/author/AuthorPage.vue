@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import { Document } from '@xieyuheng/x-markdown'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
-const props = defineProps<{ state: State }>()
+const props = defineProps<{
+  state: State
+  document: Document
+}>()
 
 watch(
   () => props.state.path,
@@ -44,7 +48,7 @@ const url = computed(() => new URL(props.state.url))
         {{ state.config.name }}
       </div>
 
-      <MdPage :key="state.url" :document="state.homepageDocument" :url="url" />
+      <MdPage :key="state.url" :document="document" :url="url" />
     </div>
   </div>
 </template>

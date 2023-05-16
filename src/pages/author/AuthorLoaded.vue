@@ -4,6 +4,7 @@ import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AuthorPage from './AuthorPage.vue'
 import { State } from './State'
+import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateReactive } from './stateReactive'
 import { stateTitle } from './stateTitle'
 
@@ -24,5 +25,5 @@ watch(
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <AuthorPage :state="state" />
+  <AuthorPage :state="state" :document="stateCurrentDocument(state)" />
 </template>

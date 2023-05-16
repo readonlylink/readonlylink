@@ -1,7 +1,7 @@
 import { Document } from '@xieyuheng/x-markdown'
 import { State } from './State'
 
-export function stateCurrentDocument(state: State): Document | undefined {
+export function stateCurrentDocument(state: State): Document {
   if (state.path === undefined) {
     return state.homepageDocument
   }
