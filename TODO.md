@@ -1,3 +1,5 @@
+[author] click title to should go back to home
+
 [author] social links
 
 - bilibili

@@ -41,7 +41,7 @@ const url = computed(() => {
 <template>
   <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
     <AuthorAvatar
-      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4rem] w-[4rem] shrink-0 object-contain md:block"
+      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4.2rem] w-[4.2rem] shrink-0 object-contain md:block"
       :state="state"
     />
 
@@ -56,7 +56,7 @@ const url = computed(() => {
 
       <div class="flex items-center space-x-3 overflow-auto md:hidden">
         <AuthorAvatar
-          class="block h-[4rem] w-[4rem] shrink-0 object-contain md:hidden"
+          class="block h-[4.2rem] w-[4.2rem] shrink-0 object-contain md:hidden"
           :state="state"
         />
 
