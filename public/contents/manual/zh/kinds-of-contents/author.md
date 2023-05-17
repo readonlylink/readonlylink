@@ -16,16 +16,33 @@ https://readonly.link/authors/:link
 
 ## 作者的配置文件
 
-我们可以在作者的配置文件中，声明作者的名字、头像、动态，等等。
+我们可以在作者的配置文件中，声明作者的名字、头像、动态、等等。
 
 ```json
 {
   "kind": "Author",
   "name": "Xie Yuheng",
+  "contact": {
+    "bilibili": "https://space.bilibili.com/550104600",
+    "github": "https://github.com/xieyuheng",
+    "email": "xyheme@gmail.com",
+    "twitter": "https://twitter.com/CicadaLanguage",
+    "readonlylink": "https://readonly.link/authors/https://inner.xieyuheng.com/author.json"
+  },
   "tagline": "A programmer who created readonly.link.",
-  "homepage": "README.md",
+  "homepage": "HOME.md",
   "avatar": "assets/images/xieyuheng-square.jpg",
+  "tabs": {
+    "HOME": "HOME.md",
+    "PROJECTS": "PROJECTS.md",
+    "TRANSLATIONS": "TRANSLATIONS.md",
+    "PAPERS": "PAPERS.md",
+    "RESUME": "RESUME.md"
+  },
   "activities": [
+    "activities/2023-05-05-an-introduction-to-cell-complex.md",
+    "activities/2023-04-12-reading-refactoring-ui.md",
+    "activities/2023-04-08-craftinginterpreters-zh.md",
     "activities/2023-03-18-vv-foundations-of-mathematics.zh.md",
     "activities/2023-03-18-vv-foundations-of-mathematics.en.md",
     "activities/2023-03-17-hello-readonlylink.md"
