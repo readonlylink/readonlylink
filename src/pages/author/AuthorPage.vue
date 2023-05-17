@@ -6,6 +6,7 @@ import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorActivities from './AuthorActivities.vue'
 import AuthorAvatar from './AuthorAvatar.vue'
+import AuthorContact from './AuthorContact.vue'
 import AuthorPageNotFound from './AuthorPageNotFound.vue'
 import AuthorTabbar from './AuthorTabbar.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
@@ -48,12 +49,20 @@ const url = computed(() => {
 
     <div class="p-5">
       <div class="hidden flex-col items-baseline overflow-auto md:flex">
-        <Hyperlink
-          :href="`/authors/${state.url}/-/${state.config.homepage}`"
-          class="overflow-x-auto whitespace-pre text-3xl font-bold"
-        >
-          {{ state.config.name }}
-        </Hyperlink>
+        <div class="flex w-full items-baseline justify-between">
+          <Hyperlink
+            :href="`/authors/${state.url}/-/${state.config.homepage}`"
+            class="overflow-x-auto whitespace-pre text-3xl font-bold"
+          >
+            {{ state.config.name }}
+          </Hyperlink>
+
+          <AuthorContact
+            v-if="state.config.contact"
+            :state="state"
+            :contact="state.config.contact"
+          />
+        </div>
 
         <AuthorToolbar class="py-1" :state="state" />
       </div>
@@ -65,12 +74,20 @@ const url = computed(() => {
         />
 
         <div class="flex flex-col overflow-auto">
-          <Hyperlink
-            :href="`/authors/${state.url}/-/${state.config.homepage}`"
-            class="overflow-x-auto whitespace-pre text-2xl font-bold"
-          >
-            {{ state.config.name }}
-          </Hyperlink>
+          <div class="flex w-full items-baseline justify-between">
+            <Hyperlink
+              :href="`/authors/${state.url}/-/${state.config.homepage}`"
+              class="overflow-x-auto whitespace-pre text-2xl font-bold"
+            >
+              {{ state.config.name }}
+            </Hyperlink>
+
+            <AuthorContact
+              v-if="state.config.contact"
+              :state="state"
+              :contact="state.config.contact"
+            />
+          </div>
 
           <AuthorToolbar :state="state" />
         </div>

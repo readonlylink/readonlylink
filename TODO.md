@@ -1,5 +1,4 @@
-[author] `AuthorContact` -- show icon of links in `contact`
-
+[author] author can provide different contents for different languages
 [author] support switch lang to switch contents
 
 # searchable file list
