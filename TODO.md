@@ -1,5 +1,3 @@
-[authors] fix title
-
 [docs] update new features about `authors/`
 
 # author
