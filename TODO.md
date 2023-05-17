@@ -1,7 +1,5 @@
 # author
 
-[author] `AuthorPage` -- improve layout
-
 [author] `loadState` load `documents` from tabs
 [author] `AuthorTabbar` -- show `tabs`
 

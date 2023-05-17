@@ -39,20 +39,32 @@ const url = computed(() => {
 <template>
   <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
     <AuthorAvatar
-      class="block h-[3.5rem] w-[3.5rem] shrink-0 object-contain p-2 md:hidden"
-      :state="state"
-    />
-
-    <AuthorAvatar
       class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4rem] w-[4rem] shrink-0 object-contain md:block"
       :state="state"
     />
 
-    <AuthorToolbar class="absolute right-0 top-0 p-2 md:p-3" :state="state" />
+    <div class="p-5">
+      <div class="hidden items-baseline space-x-3 md:flex">
+        <div class="text-3xl font-bold">
+          {{ state.config.name }}
+        </div>
 
-    <div class="mx-5 mb-5 md:m-6">
-      <div class="text-3xl font-bold">
-        {{ state.config.name }}
+        <AuthorToolbar :state="state" />
+      </div>
+
+      <div class="flex items-center space-x-3 overflow-auto md:hidden">
+        <AuthorAvatar
+          class="block h-[4rem] w-[4rem] shrink-0 object-contain md:hidden"
+          :state="state"
+        />
+
+        <div class="flex flex-col overflow-auto">
+          <div class="overflow-x-auto whitespace-pre text-2xl font-bold">
+            {{ state.config.name }}
+          </div>
+
+          <AuthorToolbar :state="state" />
+        </div>
       </div>
 
       <MdPage
@@ -61,7 +73,6 @@ const url = computed(() => {
         :document="document"
         :url="url"
       />
-
       <AuthorPageNotFound v-else :state="state" />
     </div>
   </div>
