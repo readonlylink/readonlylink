@@ -1,5 +1,3 @@
-[author] `AuthorActivities` -- use `SubscriptionActivity`
-
 # searchable file list
 
 searchable file list as a markdown plugin -- using code block?

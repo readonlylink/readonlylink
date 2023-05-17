@@ -3,15 +3,12 @@ import { useRoute } from 'vue-router'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
 
-const props = defineProps<{
+defineProps<{
   state: State
   tabs: Record<string, string>
 }>()
 
 const route = useRoute()
-
-console.log(route.path)
-console.log(props.tabs)
 </script>
 
 <template>

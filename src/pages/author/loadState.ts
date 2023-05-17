@@ -1,6 +1,7 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
+import { loadState as loadSubscriptionState } from '../subscription/loadState'
 import { State } from './State'
 import { loadAuthorConfig } from './loadAuthorConfig'
 
@@ -40,6 +41,10 @@ export async function loadState(options: StateOptions): Promise<State> {
     documents[path] = parseDocument(text)
   }
 
+  const list = [url]
+
+  const subscriptionState = await loadSubscriptionState({ list })
+
   return {
     url,
     path,
@@ -47,5 +52,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     text,
     homepageDocument,
     documents,
+    subscriptionState,
   }
 }
