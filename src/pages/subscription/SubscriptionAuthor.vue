@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { join } from 'path-browserify'
 import { computed } from 'vue'
 import { Author } from '../author/Author'
 import { State } from './State'
@@ -9,7 +10,11 @@ const props = defineProps<{
 }>()
 
 const avatarURL = computed(
-  () => new URL(props.author.config.avatar, props.author.url),
+  () =>
+    new URL(
+      join(props.author.config.src || '', props.author.config.avatar),
+      props.author.url,
+    ),
 )
 
 function isCurrentAuthor() {

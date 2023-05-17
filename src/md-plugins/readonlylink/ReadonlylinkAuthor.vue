@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { join } from 'path-browserify'
 import { computed } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
@@ -10,7 +11,10 @@ const props = defineProps<{
   config: AuthorConfig
 }>()
 
-const avatarURL = computed(() => new URL(props.config.avatar, props.state.url))
+const avatarURL = computed(
+  () =>
+    new URL(join(props.config.src || '', props.config.avatar), props.state.url),
+)
 </script>
 
 <template>

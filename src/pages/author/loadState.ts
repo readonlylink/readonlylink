@@ -14,7 +14,7 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const config = await loadAuthorConfig(url)
 
-  const homepageURL = new URL(config.homepage, url)
+  const homepageURL = new URL(join(config.src || '', config.homepage), url)
   const response = await fetch(homepageURL)
   const text = await response.text()
   const homepageDocument = parseDocument(text)

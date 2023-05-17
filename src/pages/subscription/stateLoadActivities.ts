@@ -1,4 +1,5 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
+import { join } from 'path-browserify'
 import { isValidDate } from '../../utils/isValidDate'
 import { State } from './State'
 
@@ -10,7 +11,9 @@ export async function stateLoadActivities(state: State): Promise<void> {
   for (const author of state.authors) {
     for (const path of author.config.activities) {
       try {
-        const response = await fetch(new URL(path, author.url))
+        const response = await fetch(
+          new URL(join(author.config.src || '', path), author.url),
+        )
         const text = await response.text()
         const document = parseDocument(text)
         if (isValidDate(document.attributes.date)) {

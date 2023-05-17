@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { join } from 'path-browserify'
 import { computed } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
@@ -12,11 +13,22 @@ const props = defineProps<{
 }>()
 
 const avatarURL = computed(
-  () => new URL(props.activity.author.config.avatar, props.activity.author.url),
+  () =>
+    new URL(
+      join(
+        props.activity.author.config.src || '',
+        props.activity.author.config.avatar,
+      ),
+      props.activity.author.url,
+    ),
 )
 
 const activityURL = computed(
-  () => new URL(props.activity.path, props.activity.author.url),
+  () =>
+    new URL(
+      join(props.activity.author.config.src || '', props.activity.path),
+      props.activity.author.url,
+    ),
 )
 </script>
 
