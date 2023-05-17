@@ -15,7 +15,7 @@ console.log(props.tabs)
 </script>
 
 <template>
-  <div class="flex flex-wrap py-1.5">
+  <div class="flex flex-wrap py-2">
     <Hyperlink
       v-for="(path, name) of tabs"
       :key="name"

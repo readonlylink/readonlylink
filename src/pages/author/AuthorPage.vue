@@ -45,12 +45,12 @@ const url = computed(() => {
     />
 
     <div class="p-5">
-      <div class="hidden items-baseline space-x-3 md:flex">
-        <div class="text-3xl font-bold">
+      <div class="hidden flex-col items-baseline overflow-auto md:flex">
+        <div class="overflow-x-auto whitespace-pre text-3xl font-bold">
           {{ state.config.name }}
         </div>
 
-        <AuthorToolbar :state="state" />
+        <AuthorToolbar class="py-1" :state="state" />
       </div>
 
       <div class="flex items-center space-x-3 overflow-auto md:hidden">

@@ -29,12 +29,12 @@ function unsubscribe() {
     class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
     @click="subscribe()"
   >
-    <BookmarkIcon class="w-4 w-4" />
-
     <Lang>
       <template #zh> 订阅 </template>
       <template #en> SUBSCRIBE </template>
     </Lang>
+
+    <BookmarkIcon class="w-4 w-4" />
   </button>
 
   <button
@@ -42,11 +42,11 @@ function unsubscribe() {
     class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
     @click="unsubscribe()"
   >
-    <BookmarkSlashIcon class="w-4 w-4" />
-
     <Lang>
       <template #zh> 退订 </template>
       <template #en> UNSUBSCRIBE </template>
     </Lang>
+
+    <BookmarkSlashIcon class="w-4 w-4" />
   </button>
 </template>
