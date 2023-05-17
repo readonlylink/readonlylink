@@ -1,4 +1,4 @@
-[author] `AuthorActivities`
+[author] `AuthorActivities` -- use `SubscriptionActivity`
 
 # searchable file list
 

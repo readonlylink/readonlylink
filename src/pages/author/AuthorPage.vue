@@ -3,6 +3,7 @@ import { Document } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
+import AuthorActivities from './AuthorActivities.vue'
 import AuthorAvatar from './AuthorAvatar.vue'
 import AuthorPageNotFound from './AuthorPageNotFound.vue'
 import AuthorTabbar from './AuthorTabbar.vue'
@@ -74,12 +75,8 @@ const url = computed(() => {
         :tabs="state.config.tabs"
       />
 
-      <MdPage
-        v-if="document"
-        :key="state.path"
-        :document="document"
-        :url="url"
-      />
+      <AuthorActivities v-if="state.path === 'ACTIVITIES'" :state="state" />
+      <MdPage v-else-if="document" :document="document" :url="url" />
       <AuthorPageNotFound v-else :state="state" />
     </div>
   </div>

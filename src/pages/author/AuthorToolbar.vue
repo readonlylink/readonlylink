@@ -32,7 +32,11 @@ function unsubscribe() {
   <div class="flex text-xl">
     <Hyperlink
       :href="`/authors/${state.url}/-/ACTIVITIES`"
-      class="mr-3 flex items-center space-x-0.5 text-stone-400 hover:text-black"
+      class="mr-3 flex items-center space-x-0.5 hover:text-black"
+      :class="{
+        'text-black': state.path === 'ACTIVITIES',
+        'text-stone-400': state.path !== 'ACTIVITIES',
+      }"
     >
       <MegaphoneIcon class="w-4 w-4" />
 

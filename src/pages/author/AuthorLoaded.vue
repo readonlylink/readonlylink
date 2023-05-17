@@ -32,5 +32,9 @@ watch(
     <title>{{ stateTitle(state) }}</title>
   </Head>
 
-  <AuthorPage :state="state" :document="stateCurrentDocument(state)" />
+  <AuthorPage
+    :state="state"
+    :document="stateCurrentDocument(state)"
+    :key="state.path"
+  />
 </template>
