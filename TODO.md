@@ -1,4 +1,3 @@
-[subscriptions] fix title
 [authors] fix title
 
 [docs] update new features about `authors/`
