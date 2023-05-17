@@ -16,24 +16,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <div
-      v-if="state.isLoadingActivities"
-      class="py-2 font-sans text-xl text-stone-500"
-    >
-      <Lang>
-        <template #zh> 作者动态加载中⋯⋯ </template>
-        <template #en> Loading authors' activities ... </template>
-      </Lang>
-    </div>
+  <div
+    v-if="state.isLoadingActivities"
+    class="py-2 font-sans text-xl text-stone-500"
+  >
+    <Lang>
+      <template #zh> 作者动态加载中⋯⋯ </template>
+      <template #en> Loading authors' activities ... </template>
+    </Lang>
+  </div>
 
-    <div v-else class="flex flex-col divide-y divide-stone-600">
-      <SubscriptionActivity
-        v-for="activity of stateActivitiesForShow(state.subscriptionState)"
-        :key="activity.author.url + ' ' + activity.path"
-        :state="state.subscriptionState"
-        :activity="activity"
-      />
-    </div>
+  <div v-else class="flex flex-col divide-y divide-stone-600">
+    <SubscriptionActivity
+      v-for="activity of stateActivitiesForShow(state.subscriptionState)"
+      :key="activity.author.url + ' ' + activity.path"
+      :state="state.subscriptionState"
+      :activity="activity"
+    />
   </div>
 </template>
