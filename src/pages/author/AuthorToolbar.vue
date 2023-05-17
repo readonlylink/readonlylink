@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { BookmarkIcon, BookmarkSlashIcon } from '@heroicons/vue/24/outline'
+import {
+  BookmarkIcon,
+  BookmarkSlashIcon,
+  MegaphoneIcon,
+} from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
@@ -25,8 +30,20 @@ function unsubscribe() {
 
 <template>
   <div class="flex text-xl">
+    <Hyperlink
+      :href="`/authors/${state.url}/-/ACTIVITIES`"
+      class="mr-3 flex items-center space-x-0.5 text-stone-400 hover:text-black"
+    >
+      <MegaphoneIcon class="w-4 w-4" />
+
+      <Lang>
+        <template #zh> 动态 </template>
+        <template #en> ACTIVITY </template>
+      </Lang>
+    </Hyperlink>
+
     <button
-      class="mr-3 flex items-center text-stone-400 hover:text-black"
+      class="mr-3 flex items-center space-x-0.5 text-stone-400 hover:text-black"
       @click="isSubscribed() ? unsubscribe() : subscribe()"
     >
       <template v-if="!isSubscribed()">

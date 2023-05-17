@@ -1,4 +1,4 @@
-[author] `AuthorToolbar` link to activity of this author
+[author] `AuthorActivities`
 
 # searchable file list
 
