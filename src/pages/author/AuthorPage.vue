@@ -3,6 +3,7 @@ import { Document } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorActivities from './AuthorActivities.vue'
 import AuthorAvatar from './AuthorAvatar.vue'
 import AuthorPageNotFound from './AuthorPageNotFound.vue'
@@ -47,9 +48,12 @@ const url = computed(() => {
 
     <div class="p-5">
       <div class="hidden flex-col items-baseline overflow-auto md:flex">
-        <div class="overflow-x-auto whitespace-pre text-3xl font-bold">
+        <Hyperlink
+          :href="`/authors/${state.url}/-/${state.config.homepage}`"
+          class="overflow-x-auto whitespace-pre text-3xl font-bold"
+        >
           {{ state.config.name }}
-        </div>
+        </Hyperlink>
 
         <AuthorToolbar class="py-1" :state="state" />
       </div>
@@ -61,9 +65,12 @@ const url = computed(() => {
         />
 
         <div class="flex flex-col overflow-auto">
-          <div class="overflow-x-auto whitespace-pre text-2xl font-bold">
+          <Hyperlink
+            :href="`/authors/${state.url}/-/${state.config.homepage}`"
+            class="overflow-x-auto whitespace-pre text-2xl font-bold"
+          >
             {{ state.config.name }}
-          </div>
+          </Hyperlink>
 
           <AuthorToolbar :state="state" />
         </div>
