@@ -5,12 +5,14 @@ import {
   MegaphoneIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
+const lang = useGlobalLang()
 const subscription = useGlobalSubscription()
 
 function isSubscribed() {
@@ -29,10 +31,10 @@ function unsubscribe() {
 </script>
 
 <template>
-  <div class="flex text-xl">
+  <div class="flex overflow-x-auto text-xl">
     <Hyperlink
       :href="`/authors/${state.url}/-/ACTIVITIES`"
-      class="mr-3 flex items-center space-x-0.5 hover:text-black"
+      class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
       :class="{
         'text-black': state.path === 'ACTIVITIES',
         'text-stone-400': state.path !== 'ACTIVITIES',
@@ -47,7 +49,8 @@ function unsubscribe() {
     </Hyperlink>
 
     <button
-      class="mr-3 flex items-center space-x-0.5 text-stone-400 hover:text-black"
+      class="mr-3 flex shrink-0 items-center space-x-0.5 text-stone-400 hover:text-black"
+      :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
       @click="isSubscribed() ? unsubscribe() : subscribe()"
     >
       <template v-if="!isSubscribed()">
