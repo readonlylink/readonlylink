@@ -17,6 +17,7 @@ export type AuthorContact = {
   github?: string
   email?: string
   twitter?: string
+  readonlylink?: string
 }
 
 export const AuthorContactSchema: Schema<AuthorContact> = ty.object({
@@ -24,6 +25,7 @@ export const AuthorContactSchema: Schema<AuthorContact> = ty.object({
   github: ty.optional(ty.string()),
   email: ty.optional(ty.string()),
   twitter: ty.optional(ty.string()),
+  readonlylink: ty.optional(ty.string()),
 })
 
 export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
