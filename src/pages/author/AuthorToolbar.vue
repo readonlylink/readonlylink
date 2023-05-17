@@ -24,29 +24,26 @@ function unsubscribe() {
 </script>
 
 <template>
-  <button
-    v-if="!isSubscribed()"
-    class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
-    @click="subscribe()"
-  >
-    <Lang>
-      <template #zh> 订阅 </template>
-      <template #en> SUBSCRIBE </template>
-    </Lang>
+  <div class="flex text-xl">
+    <button
+      class="mr-3 flex items-center text-stone-400 hover:text-black"
+      @click="isSubscribed() ? unsubscribe() : subscribe()"
+    >
+      <template v-if="!isSubscribed()">
+        <BookmarkIcon class="w-4 w-4" />
 
-    <BookmarkIcon class="w-4 w-4" />
-  </button>
-
-  <button
-    v-else
-    class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
-    @click="unsubscribe()"
-  >
-    <Lang>
-      <template #zh> 退订 </template>
-      <template #en> UNSUBSCRIBE </template>
-    </Lang>
-
-    <BookmarkSlashIcon class="w-4 w-4" />
-  </button>
+        <Lang>
+          <template #zh> 订阅 </template>
+          <template #en> SUBSCRIBE </template>
+        </Lang>
+      </template>
+      <template v-else>
+        <BookmarkSlashIcon class="w-4 w-4" />
+        <Lang>
+          <template #zh> 退订 </template>
+          <template #en> UNSUBSCRIBE </template>
+        </Lang>
+      </template>
+    </button>
+  </div>
 </template>

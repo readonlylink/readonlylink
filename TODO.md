@@ -1,8 +1,4 @@
-# config
-
-[config] `src` should be optional for `books/` and `manuals/`
-
-- use the directory of the config as the src by default
+[author] `AuthorToolbar` link to activity of this author
 
 # searchable file list
 

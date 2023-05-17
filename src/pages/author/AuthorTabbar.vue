@@ -19,7 +19,7 @@ console.log(props.tabs)
     <Hyperlink
       v-for="(path, name) of tabs"
       :key="name"
-      class="pr-3 text-xl hover:text-black"
+      class="mr-3 text-xl hover:text-black"
       :class="{
         'text-black': route.path.endsWith(`/-/${path}`),
         'text-stone-400': !route.path.endsWith(`/-/${path}`),
