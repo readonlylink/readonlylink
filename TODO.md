@@ -1,6 +1,5 @@
 # author
 
-[author] `loadState` load `documents` from tabs
 [author] `AuthorTabbar` -- show `tabs`
 
 # config
