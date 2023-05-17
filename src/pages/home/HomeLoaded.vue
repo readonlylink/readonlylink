@@ -30,7 +30,7 @@ const state = stateReactive(props.state)
       </Lang>
     </div>
 
-    <div class="flex flex-col divide-y divide-stone-600">
+    <div class="flex flex-col divide-y divide-black">
       <SubscriptionActivity
         v-for="activity of stateActivitiesForShow(state.subscriptionState)"
         :key="activity.author.url + ' ' + activity.path"

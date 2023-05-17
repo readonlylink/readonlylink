@@ -26,7 +26,7 @@ onMounted(() => {
     </Lang>
   </div>
 
-  <div v-else class="flex flex-col divide-y divide-stone-600">
+  <div v-else class="flex flex-col divide-y divide-black">
     <SubscriptionActivity
       v-for="activity of stateActivitiesForShow(state.subscriptionState)"
       :key="activity.author.url + ' ' + activity.path"
