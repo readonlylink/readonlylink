@@ -1,7 +1,3 @@
-# author
-
-[author] `AuthorTabbar` -- show `tabs`
-
 # config
 
 [config] `src` should be optional for `books/` and `manuals/`

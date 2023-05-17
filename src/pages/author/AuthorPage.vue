@@ -5,6 +5,7 @@ import { computed, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import AuthorAvatar from './AuthorAvatar.vue'
 import AuthorPageNotFound from './AuthorPageNotFound.vue'
+import AuthorTabbar from './AuthorTabbar.vue'
 import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
@@ -67,9 +68,15 @@ const url = computed(() => {
         </div>
       </div>
 
+      <AuthorTabbar
+        v-if="state.config.tabs"
+        :state="state"
+        :tabs="state.config.tabs"
+      />
+
       <MdPage
         v-if="document"
-        :key="state.url"
+        :key="state.path"
         :document="document"
         :url="url"
       />

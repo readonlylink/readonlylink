@@ -26,7 +26,7 @@ function unsubscribe() {
 <template>
   <button
     v-if="!isSubscribed()"
-    class="flex items-center font-sans text-stone-400 hover:text-black"
+    class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
     @click="subscribe()"
   >
     <BookmarkIcon class="w-4 w-4" />
@@ -39,7 +39,7 @@ function unsubscribe() {
 
   <button
     v-else
-    class="flex items-center font-sans text-stone-400 hover:text-black"
+    class="flex items-center font-sans text-xl text-stone-400 hover:text-black"
     @click="unsubscribe()"
   >
     <BookmarkSlashIcon class="w-4 w-4" />
