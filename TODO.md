@@ -1,3 +1,8 @@
+[subscriptions] fix title
+[authors] fix title
+
+[docs] update new features about `authors/`
+
 # author
 
 [author] author can provide different contents for different languages

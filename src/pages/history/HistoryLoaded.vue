@@ -15,8 +15,8 @@ const lang = useGlobalLang()
   <PageLayout>
     <div class="flex h-full max-w-3xl flex-col overflow-auto">
       <Head>
-        <title v-if="lang.isZh()">历史</title>
-        <title v-else>History</title>
+        <title v-if="lang.isZh()">历史 | 只读</title>
+        <title v-else>History | Readonly</title>
       </Head>
 
       <Lang class="font-logo text-2xl font-bold">
