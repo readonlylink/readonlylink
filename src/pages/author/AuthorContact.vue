@@ -14,7 +14,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex space-x-1 text-stone-400 md:space-x-2">
+  <div class="flex items-center space-x-1.5 text-stone-400 md:space-x-2">
     <a
       v-if="contact.bilibili"
       :href="contact.bilibili"
