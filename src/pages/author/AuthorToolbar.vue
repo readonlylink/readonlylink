@@ -40,7 +40,7 @@ function unsubscribe() {
         'text-stone-400': state.path !== 'ACTIVITIES',
       }"
     >
-      <MegaphoneIcon class="w-4 w-4" />
+      <MegaphoneIcon class="h-4 w-4" />
 
       <Lang>
         <template #zh> 动态 </template>
@@ -54,7 +54,7 @@ function unsubscribe() {
       @click="isSubscribed() ? unsubscribe() : subscribe()"
     >
       <template v-if="!isSubscribed()">
-        <BookmarkIcon class="w-4 w-4" />
+        <BookmarkIcon class="h-4 w-4" />
 
         <Lang>
           <template #zh> 订阅 </template>
@@ -62,7 +62,7 @@ function unsubscribe() {
         </Lang>
       </template>
       <template v-else>
-        <BookmarkSlashIcon class="w-4 w-4" />
+        <BookmarkSlashIcon class="h-4 w-4" />
         <Lang>
           <template #zh> 退订 </template>
           <template #en> UNSUBSCRIBE </template>

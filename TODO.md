@@ -5,6 +5,8 @@
 - email
 - twitter
 
+[author] support switch lang to switch contents
+
 # searchable file list
 
 searchable file list as a markdown plugin -- using code block?
