@@ -44,7 +44,7 @@ function unsubscribe() {
 
       <Lang>
         <template #zh> 动态 </template>
-        <template #en> ACTIVITY </template>
+        <template #en> ACTIVITIES </template>
       </Lang>
     </Hyperlink>
 
