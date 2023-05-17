@@ -1,9 +1,4 @@
-[author] social links
-
-- bilibili
-- github
-- email
-- twitter
+[author] `AuthorContact` -- show icon of links in `contact`
 
 [author] support switch lang to switch contents
 
