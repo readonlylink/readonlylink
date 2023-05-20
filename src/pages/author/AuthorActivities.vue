@@ -20,7 +20,7 @@ defineProps<{ state: State }>()
 
   <div v-else class="flex flex-col divide-y divide-black">
     <Activity
-      v-for="activity of sortActivities(state.subscriptionState.activities)"
+      v-for="activity of sortActivities(state.activities)"
       :key="activity.author.url + ' ' + activity.path"
       :activity="activity"
     />

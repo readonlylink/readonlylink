@@ -1,6 +1,7 @@
 import { Document } from '@xieyuheng/x-markdown'
+import { Activity } from '../../models/activity/Activity'
+import { Author } from '../../models/author/Author'
 import { AuthorConfig } from '../../models/author/AuthorConfig'
-import { State as SubscriptionState } from '../subscription/State'
 
 export type State = {
   url: string
@@ -9,6 +10,7 @@ export type State = {
   text: string
   homepageDocument: Document
   documents: Record<string, Document>
-  subscriptionState: SubscriptionState
   isLoadingActivities?: boolean
+  author: Author
+  activities: Array<Activity>
 }

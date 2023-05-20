@@ -1,6 +1,3 @@
-[author] no need `subscriptionState`
-[author] no need `isLoadingActivities`
-
 `components/Activity` fix info style
 
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
