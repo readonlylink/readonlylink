@@ -1,11 +1,3 @@
-extract `asyncRun` -- to avoid the use of 'No need to await.' comment
-
-```
-asyncRun(async () => {
-
-})
-```
-
 [home] `stateRefresh` -- cache `activities` in indexeddb
 
 [subscriptions] cache in indexeddb
