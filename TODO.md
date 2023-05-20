@@ -1,5 +1,3 @@
-extract `sortActivities`
-
 [home] no need `subscriptionState`
 [author] no need `subscriptionState`
 
