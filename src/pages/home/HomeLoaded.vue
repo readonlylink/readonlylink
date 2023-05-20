@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
 import { stateActivitiesForShow } from '../subscription/stateActivitiesForShow'
-import SubscriptionActivity from '../subscription/SubscriptionActivity.vue'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
 
@@ -31,7 +31,7 @@ const state = stateReactive(props.state)
     </div>
 
     <div class="flex flex-col divide-y divide-black">
-      <SubscriptionActivity
+      <Activity
         v-for="activity of stateActivitiesForShow(state.subscriptionState)"
         :key="activity.author.url + ' ' + activity.path"
         :state="state.subscriptionState"

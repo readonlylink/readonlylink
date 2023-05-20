@@ -1,4 +1,4 @@
-remove `SubscriptionActivity`
+`components/Activity` fix info style
 
 [subscriptions] inline `stateLoadActivities`
 
