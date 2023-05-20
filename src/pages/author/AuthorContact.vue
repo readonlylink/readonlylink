@@ -2,6 +2,7 @@
 import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 import BilibiliLineIcon from '../../components/icons/BilibiliLineIcon.vue'
 import GithubIcon from '../../components/icons/GithubIcon.vue'
+import MimorIcon from '../../components/icons/MimorIcon.vue'
 import ReadonlyIcon from '../../components/icons/ReadonlyIcon.vue'
 import TwitterIcon from '../../components/icons/TwitterIcon.vue'
 import { AuthorContact } from './AuthorConfig'
@@ -49,6 +50,15 @@ defineProps<{
       target="_blank"
     >
       <TwitterIcon class="h-5 w-5" />
+    </a>
+
+    <a
+      v-if="contact.mimor"
+      :href="contact.mimor"
+      :title="contact.mimor"
+      target="_blank"
+    >
+      <MimorIcon class="h-5 w-5" />
     </a>
 
     <a

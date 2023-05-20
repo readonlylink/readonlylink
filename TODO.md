@@ -1,3 +1,7 @@
+[home] cache activities in indexeddb
+[author] cache authors in indexeddb
+[subscriptions] cache in indexeddb
+
 # author
 
 [author] author can provide different contents for different languages
