@@ -1,3 +1,5 @@
+extract `loadActivitiesFromAuthor` & `loadActivitiesFromAuthors`
+
 [home] no need `subscriptionState`
 [author] no need `subscriptionState`
 
