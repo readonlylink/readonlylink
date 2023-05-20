@@ -1,3 +1,6 @@
+`loadAuthorActivities`
+
+[subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [home] use `subscriptionStateRefresh` for cache
 [author] use `subscriptionStateRefresh` for cache
