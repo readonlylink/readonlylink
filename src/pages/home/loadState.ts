@@ -1,4 +1,6 @@
-import { loadState as loadSubscriptionState } from '../subscription/loadState'
+import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
+import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
 
 export type StateOptions = {
@@ -8,11 +10,13 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { list } = options
 
-  const subscriptionState = await loadSubscriptionState({ list })
+  const authors = await promiseAllFulfilled(list.map(loadAuthor))
+  const activities = await loadActivitiesFromAuthors(authors)
 
   return {
     list,
     isLoadingActivities: false,
-    subscriptionState,
+    authors,
+    activities,
   }
 }

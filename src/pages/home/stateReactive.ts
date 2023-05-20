@@ -8,9 +8,7 @@ export function stateReactive(state: State): State {
 
   asyncRun(async () => {
     state.isLoadingActivities = true
-    state.subscriptionState.activities = await loadActivitiesFromAuthors(
-      state.subscriptionState.authors,
-    )
+    state.activities = await loadActivitiesFromAuthors(state.authors)
     state.isLoadingActivities = false
   })
 
