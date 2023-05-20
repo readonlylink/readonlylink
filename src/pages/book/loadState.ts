@@ -1,6 +1,7 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { loadBookConfig } from './BookConfig'
 import { State } from './State'
@@ -18,7 +19,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const config = await loadBookConfig({ url })
 
   const texts: Record<string, string> = Object.fromEntries(
-    await Promise.all(
+    await promiseAllFulfilled(
       config.contents.map(async (path) => {
         const response = await fetch(new URL(join(config.src, path), url))
         const text = await response.text()

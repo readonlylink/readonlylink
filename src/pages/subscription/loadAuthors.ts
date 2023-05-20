@@ -1,10 +1,11 @@
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { Author } from '../author/Author'
 import { AuthorConfigSchema } from '../author/AuthorConfig'
 
 export async function loadAuthors(list: Array<string>): Promise<Array<Author>> {
   const who = 'loadAuthors'
 
-  const results = await Promise.all(
+  const results = await promiseAllFulfilled(
     list.map(async (url) => {
       try {
         const response = await fetch(url)

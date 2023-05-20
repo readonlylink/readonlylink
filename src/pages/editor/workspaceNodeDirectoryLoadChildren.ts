@@ -1,4 +1,5 @@
 import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { WorkspaceNode, WorkspaceNodeDirectory } from './WorkspaceNode'
 import { workspaceNodeCreate } from './workspaceNodeCreate'
 
@@ -7,7 +8,7 @@ export async function workspaceNodeDirectoryLoadChildren(
   parent: WorkspaceNodeDirectory,
 ): Promise<Array<WorkspaceNode>> {
   const handles = await arrayFromAsyncIterable(parent.handle.values())
-  return await Promise.all(
+  return await promiseAllFulfilled(
     handles.map((handle) => workspaceNodeCreate(root, parent, handle)),
   )
 }
