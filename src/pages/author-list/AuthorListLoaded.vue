@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { reactive } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import AuthorCard from './AuthorCard.vue'
 import { State } from './State'
+import { stateRefresh } from './stateRefresh'
 
-defineProps<{ state: State }>()
+const props = defineProps<{ state: State }>()
 
+const state = reactive(props.state)
 const lang = useGlobalLang()
+
+// No need to await.
+stateRefresh(state)
 </script>
 
 <template>

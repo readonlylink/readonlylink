@@ -1,6 +1,13 @@
-[author-list] `AuthorList` -- cache authors in indexeddb
+extract `asyncRun` -- to avoid the use of 'No need to await.' comment
 
-[home] cache activities in indexeddb
+```
+asyncRun(async () => {
+
+})
+```
+
+[home] `stateRefresh` -- cache `activities` in indexeddb
+
 [subscriptions] cache in indexeddb
 
 use `Promise.allSettled` instead of `Promise.all`
