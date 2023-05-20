@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
-import { stateActivitiesForShow } from '../subscription/stateActivitiesForShow'
+import { sortActivities } from '../../models/activity/sortActivities'
 import { State } from './State'
 import { stateReactive } from './stateReactive'
 
@@ -32,7 +32,7 @@ const state = stateReactive(props.state)
 
     <div class="flex flex-col divide-y divide-black">
       <Activity
-        v-for="activity of stateActivitiesForShow(state.subscriptionState)"
+        v-for="activity of sortActivities(state.subscriptionState.activities)"
         :key="activity.author.url + ' ' + activity.path"
         :activity="activity"
       />
