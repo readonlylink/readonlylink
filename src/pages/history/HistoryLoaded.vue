@@ -13,7 +13,7 @@ const lang = useGlobalLang()
 
 <template>
   <PageLayout>
-    <div class="flex h-full max-w-3xl flex-col overflow-auto">
+    <div class="flex h-full max-w-3xl flex-col">
       <Head>
         <title v-if="lang.isZh()">历史 | 只读</title>
         <title v-else>History | Readonly</title>
@@ -32,7 +32,7 @@ const lang = useGlobalLang()
         <template #en> No history record yet. </template>
       </Lang>
 
-      <div class="flex flex-col space-y-4 overflow-y-auto py-3">
+      <div class="flex flex-col space-y-4 py-3">
         <HistoryEntry
           v-for="(entry, key) of state.history.record"
           :key="key"

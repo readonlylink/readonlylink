@@ -1,6 +1,6 @@
+[author] move `stateRefresh` to `stateReactive`
 [subscriptions] inline `stateLoadActivities`
-
-[subscriptions] `stateRefresh` -- cache `activities` in indexeddb
+quit using `stateLoadActivitiesOnce`
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [home] use `subscriptionStateRefresh` for cache
 [author] use `subscriptionStateRefresh` for cache
