@@ -1,9 +1,9 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
+import { loadBookConfig } from '../../models/book/loadBookConfig'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
-import { loadBookConfig } from './BookConfig'
 import { State } from './State'
 
 export type StateOptions = {

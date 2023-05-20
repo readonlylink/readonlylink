@@ -6,7 +6,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { BookConfig } from '../../pages/book/BookConfig'
+import { BookConfig } from '../../models/book/BookConfig'
 import { State } from './State'
 
 defineProps<{

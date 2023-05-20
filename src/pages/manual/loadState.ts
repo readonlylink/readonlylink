@@ -1,9 +1,9 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
+import { loadManualConfig } from '../../models/manual/loadManualConfig'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
-import { loadManualConfig } from './ManualConfig'
 import { State } from './State'
 
 export type StateOptions = {

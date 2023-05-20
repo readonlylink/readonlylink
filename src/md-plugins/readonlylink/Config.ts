@@ -1,6 +1,6 @@
 import { AuthorConfig } from '../../models/author/AuthorConfig'
-import { BookConfig } from '../../pages/book/BookConfig'
-import { ManualConfig } from '../../pages/manual/ManualConfig'
+import { BookConfig } from '../../models/book/BookConfig'
+import { ManualConfig } from '../../models/manual/ManualConfig'
 
 export type Config = BookConfig | ManualConfig | AuthorConfig | ArticleConfig
 

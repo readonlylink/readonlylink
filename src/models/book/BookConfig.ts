@@ -25,14 +25,3 @@ export const BookConfigSchema: Schema<BookConfig> = ty.object({
   src: ty.string(),
   contents: ty.array(ty.string()),
 })
-
-export async function loadBookConfig(options: {
-  url: string
-}): Promise<BookConfig> {
-  const { url } = options
-
-  const response = await fetch(url)
-  const json = await response.json()
-
-  return BookConfigSchema.validate(json)
-}

@@ -6,7 +6,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { ManualConfig } from '../../pages/manual/ManualConfig'
+import { ManualConfig } from '../../models/manual/ManualConfig'
 import { State } from './State'
 
 defineProps<{

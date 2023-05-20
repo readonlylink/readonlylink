@@ -1,5 +1,3 @@
-move `BookConfig` to `models/`
-move `ManualConfig` to `models/`
 move `Activity` to `models/`
 
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb

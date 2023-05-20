@@ -1,5 +1,5 @@
 import { Document } from '@xieyuheng/x-markdown'
-import { ManualConfig } from './ManualConfig'
+import { ManualConfig } from '../../models/manual/ManualConfig'
 
 export type State = {
   url: string

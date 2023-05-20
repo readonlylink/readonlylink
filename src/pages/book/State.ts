@@ -1,5 +1,5 @@
 import { Document } from '@xieyuheng/x-markdown'
-import { BookConfig } from './BookConfig'
+import { BookConfig } from '../../models/book/BookConfig'
 
 export type State = {
   url: string
