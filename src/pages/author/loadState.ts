@@ -1,6 +1,7 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { loadState as loadSubscriptionState } from '../subscription/loadState'
 import { State } from './State'
 import { loadAuthorConfig } from './loadAuthorConfig'
@@ -27,22 +28,15 @@ export async function loadState(options: StateOptions): Promise<State> {
     [config.homepage]: homepageDocument,
   }
 
-  const results = await Promise.allSettled(
-    Object.values(config.tabs || {}).map(async (path) => {
-      const response = await fetch(new URL(join(config.src || '', path), url))
-      const text = await response.text()
-      return [path, text]
-    }),
+  const texts: Record<string, string> = Object.fromEntries(
+    await promiseAllFulfilled(
+      Object.values(config.tabs || {}).map(async (path) => {
+        const response = await fetch(new URL(join(config.src || '', path), url))
+        const text = await response.text()
+        return [path, text]
+      }),
+    ),
   )
-
-  const texts: Record<string, string> = {}
-
-  for (const result of results) {
-    if (result.status === 'fulfilled') {
-      const [path, text] = result.value
-      texts[path] = text
-    }
-  }
 
   for (const [path, text] of Object.entries(texts)) {
     documents[path] = parseDocument(text)

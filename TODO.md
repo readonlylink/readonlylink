@@ -1,6 +1,4 @@
-extract `promiseAllFulfilled`
-
-use `Promise.allSettled` instead of `Promise.all`
+use `promiseAllFulfilled` instead of `Promise.all`
 
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [home] use `subscriptionStateRefresh` for cache
