@@ -1,4 +1,4 @@
-`loadAuthorActivities`
+[subscriptions] inline `stateLoadActivities`
 
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
