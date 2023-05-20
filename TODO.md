@@ -1,4 +1,3 @@
-[author] inline `stateLoadActivitiesOnce`
 [subscriptions] inline `stateLoadActivities`
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 [home] use `subscriptionStateRefresh` for cache

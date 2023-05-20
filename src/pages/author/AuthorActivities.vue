@@ -1,18 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import SubscriptionActivity from '../subscription/SubscriptionActivity.vue'
 import { stateActivitiesForShow } from '../subscription/stateActivitiesForShow'
 import { State } from './State'
-import { stateLoadActivitiesOnce } from './stateLoadActivitiesOnce'
 
-const props = defineProps<{ state: State }>()
-
-onMounted(() => {
-  if (props.state.isLoadingActivities === undefined) {
-    stateLoadActivitiesOnce(props.state)
-  }
-})
+defineProps<{ state: State }>()
 </script>
 
 <template>
