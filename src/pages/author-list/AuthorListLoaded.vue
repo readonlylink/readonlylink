@@ -1,21 +1,15 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { reactive } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import { asyncRun } from '../../utils/asyncRun'
 import AuthorCard from './AuthorCard.vue'
 import { State } from './State'
-import { stateRefresh } from './stateRefresh'
+import { stateReactive } from './stateReactive'
 
 const props = defineProps<{ state: State }>()
 
-const state = reactive(props.state)
+const state = stateReactive(props.state)
 const lang = useGlobalLang()
-
-asyncRun(async () => {
-  await stateRefresh(state)
-})
 </script>
 
 <template>
