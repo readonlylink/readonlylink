@@ -19,17 +19,6 @@ const state = stateReactive(props.state)
 
     <div class="border-b border-stone-500 pb-1"></div>
 
-    <div v-if="state.isLoadingActivities">
-      <Lang
-        class="border-b border-dashed border-stone-500 py-2 font-sans text-stone-500"
-      >
-        <template #zh> 作者动态逐渐加载中⋯⋯ </template>
-        <template #en>
-          Loading authors' activities, little by little ...
-        </template>
-      </Lang>
-    </div>
-
     <div class="flex flex-col divide-y divide-black">
       <Activity
         v-for="activity of sortActivities(state.activities)"

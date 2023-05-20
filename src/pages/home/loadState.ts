@@ -15,7 +15,6 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   return {
     list,
-    isLoadingActivities: false,
     authors,
     activities,
   }
