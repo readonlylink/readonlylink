@@ -32,7 +32,7 @@ const activityURL = computed(
 
 <template>
   <div class="flex flex-col py-1.5">
-    <div class="flex items-center space-x-2 py-2">
+    <div class="flex items-center space-x-2 overflow-auto py-2">
       <Hyperlink :href="`/authors/${activity.author.url}`" class="shrink-0">
         <img
           :src="avatarURL.href"
@@ -41,33 +41,26 @@ const activityURL = computed(
         />
       </Hyperlink>
 
-      <div class="flex flex-col space-y-1 overflow-x-auto overflow-y-hidden">
+      <div class="flex flex-col space-y-1 overflow-auto">
         <Hyperlink
           :href="`/authors/${activity.author.url}`"
-          class="hover:text-stone-400"
+          class="shrink-0 overflow-x-auto whitespace-pre text-lg font-bold hover:text-stone-400"
         >
-          <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre text-lg font-bold"
-          >
-            {{ activity.author.config.name }}
-          </div>
+          {{ activity.author.config.name }}
         </Hyperlink>
+
         <Hyperlink
           :href="`/authors/${activity.author.url}`"
-          class="hover:underline"
+          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-mono text-xs hover:underline"
         >
-          <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
-          >
-            {{ activity.author.url }}
-          </div>
+          {{ activity.author.url }}
         </Hyperlink>
-        <Hyperlink :href="`/articles/${activityURL}`" class="hover:underline">
-          <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-xs"
-          >
-            {{ formatDateTime(activity.document.attributes.date) }}
-          </div>
+
+        <Hyperlink
+          :href="`/articles/${activityURL}`"
+          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-mono text-xs hover:underline"
+        >
+          {{ formatDateTime(activity.document.attributes.date) }}
         </Hyperlink>
       </div>
     </div>

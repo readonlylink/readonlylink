@@ -1,5 +1,3 @@
-`components/Activity` fix info style
-
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 
 [home] use `subscriptionStateRefresh` for cache
