@@ -1,4 +1,3 @@
-extract `AuthorContact`
 move `BookConfig` to `models/`
 move `ManualConfig` to `models/`
 move `Activity` to `models/`

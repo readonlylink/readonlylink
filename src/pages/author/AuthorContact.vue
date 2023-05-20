@@ -5,7 +5,7 @@ import GithubIcon from '../../components/icons/GithubIcon.vue'
 import MimorIcon from '../../components/icons/MimorIcon.vue'
 import ReadonlyIcon from '../../components/icons/ReadonlyIcon.vue'
 import TwitterIcon from '../../components/icons/TwitterIcon.vue'
-import { AuthorContact } from '../../models/author/AuthorConfig'
+import { AuthorContact } from '../../models/author/AuthorContact'
 import { State } from './State'
 
 defineProps<{

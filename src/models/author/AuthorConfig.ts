@@ -1,4 +1,5 @@
 import ty, { Schema } from '@xieyuheng/ty'
+import { AuthorContact, AuthorContactSchema } from './AuthorContact'
 
 export type AuthorConfig = {
   kind: 'Author'
@@ -11,24 +12,6 @@ export type AuthorConfig = {
   tabs?: Record<string, string>
   contact?: AuthorContact
 }
-
-export type AuthorContact = {
-  bilibili?: string
-  github?: string
-  email?: string
-  twitter?: string
-  mimor?: string
-  readonlylink?: string
-}
-
-export const AuthorContactSchema: Schema<AuthorContact> = ty.object({
-  bilibili: ty.optional(ty.string()),
-  github: ty.optional(ty.string()),
-  email: ty.optional(ty.string()),
-  twitter: ty.optional(ty.string()),
-  mimor: ty.optional(ty.string()),
-  readonlylink: ty.optional(ty.string()),
-})
 
 export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
   kind: ty.const('Author' as const),
