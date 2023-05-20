@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
-import SubscriptionActivity from './SubscriptionActivity.vue'
 import SubscriptionAuthor from './SubscriptionAuthor.vue'
 import { stateActivitiesForShow } from './stateActivitiesForShow'
 
@@ -46,7 +46,7 @@ defineProps<{ state: State }>()
       <div class="border-b border-black"></div>
 
       <div class="flex flex-col divide-y divide-black">
-        <SubscriptionActivity
+        <Activity
           v-for="activity of stateActivitiesForShow(state)"
           :key="activity.author.url + ' ' + activity.path"
           :state="state"
