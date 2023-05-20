@@ -6,7 +6,8 @@ title: Style Guide
 
 # Calling `stateReactive`
 
-The `stateReactive` function is used to create watchers, and it must
+The `stateReactive` function (or `reactive` directly)
+is used to create watchers, and it must
 NOT be called in async function -- like in `loadState` or in
 `onMounted(async () => { ... })`.
 
