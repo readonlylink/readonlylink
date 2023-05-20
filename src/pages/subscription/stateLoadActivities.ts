@@ -1,9 +1,6 @@
-import { loadActivitiesFromAuthor } from '../../models/activity/loadActivitiesFromAuthor'
-import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
+import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
 import { State } from './State'
 
 export async function stateLoadActivities(state: State): Promise<void> {
-  state.activities = (
-    await promiseAllFulfilled(state.authors.map(loadActivitiesFromAuthor))
-  ).flatMap((activities) => activities)
+  state.activities = await loadActivitiesFromAuthors(state.authors)
 }

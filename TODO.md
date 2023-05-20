@@ -1,11 +1,9 @@
-extract `loadActivitiesFromAuthor` & `loadActivitiesFromAuthors`
+[subscriptions] inline `stateLoadActivities`
 
 [home] no need `subscriptionState`
 [author] no need `subscriptionState`
 
 `components/Activity` fix info style
-
-[subscriptions] inline `stateLoadActivities`
 
 [subscriptions] `stateRefresh` -- cache `activities` in indexeddb
 
