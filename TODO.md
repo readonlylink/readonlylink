@@ -1,4 +1,3 @@
-[author-list] fix loading page
 [author-list] `AuthorList` -- cache authors in indexeddb
 
 [home] cache activities in indexeddb

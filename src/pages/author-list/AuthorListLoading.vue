@@ -1,20 +1,19 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
-
-defineProps<{ list: Array<string> }>()
 </script>
 
 <template>
-  <div class="py-3 font-sans text-xl text-stone-500">
+  <div>
+    <div class="flex items-baseline">
+      <Lang class="font-logo text-2xl font-bold">
+        <template #zh> 作者 </template>
+        <template #en> Authors </template>
+      </Lang>
+    </div>
+
     <Lang>
       <template #zh> 作者列表加载中⋯⋯ </template>
-      <template #en> Loading author list ... </template>
+      <template #en> Loading author list... </template>
     </Lang>
-
-    <div class="overflow-x-auto whitespace-pre py-1 font-mono text-base">
-      <div v-for="(url, index) of list" :key="index">
-        {{ url }}
-      </div>
-    </div>
   </div>
 </template>
