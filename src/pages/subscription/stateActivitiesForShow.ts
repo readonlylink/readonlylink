@@ -1,4 +1,4 @@
-import { Activity } from './Activity'
+import { Activity } from '../../models/activity/Activity'
 import { State } from './State'
 
 export function stateActivitiesForShow(state: State): Array<Activity> {

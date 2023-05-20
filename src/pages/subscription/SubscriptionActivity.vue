@@ -3,8 +3,8 @@ import { join } from 'path-browserify'
 import { computed } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import { Activity } from '../../models/activity/Activity'
 import { formatDateTime } from '../../utils/formatDate'
-import { Activity } from './Activity'
 import { State } from './State'
 
 const props = defineProps<{

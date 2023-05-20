@@ -1,5 +1,5 @@
+import { Activity } from '../../models/activity/Activity'
 import { Author } from '../../models/author/Author'
-import { Activity } from './Activity'
 
 export type State = {
   kind?: string
