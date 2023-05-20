@@ -1,6 +1,6 @@
-import { loadAuthor } from '../../models/author/loadAuthor'
-import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
+import * as Kv from 'idb-keyval'
 import { State } from './State'
+import { stateRefresh } from './stateRefresh'
 
 export type StateOptions = {
   kind?: string
@@ -10,12 +10,21 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind, list } = options
 
-  const authors = await promiseAllFulfilled(list.map(loadAuthor))
-
-  return {
+  const state = {
     kind,
     list,
-    authors,
+    authors: [],
     activities: [],
   }
+
+  const cachedAuthors = await Kv.get('Subscription/state.authors')
+  const cachedActivities = await Kv.get('Subscription/state.activities')
+  if (cachedAuthors && cachedActivities) {
+    state.authors = cachedAuthors
+    state.activities = cachedActivities
+  } else {
+    await stateRefresh(state)
+  }
+
+  return state
 }

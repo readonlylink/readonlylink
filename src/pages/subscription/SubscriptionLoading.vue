@@ -8,6 +8,11 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <PageLayout>
+    <Lang class="font-logo text-2xl font-bold">
+      <template #zh> 订阅 </template>
+      <template #en> Subscriptions </template>
+    </Lang>
+
     <div class="font-sans text-xl text-stone-500">
       <Lang>
         <template #zh> 订阅列表加载中⋯⋯ </template>

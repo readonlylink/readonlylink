@@ -1,6 +1,3 @@
-[author] `stateRefresh` -- cache `activities` in indexeddb
-[subscriptions] `stateRefresh` -- cache `activities` in indexeddb
-
 # author
 
 [author] author can provide different contents for different languages
