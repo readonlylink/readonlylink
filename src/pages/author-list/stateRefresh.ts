@@ -6,8 +6,8 @@ import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
 
 export async function stateRefresh(state: State): Promise<void> {
-  const authorURLs = useDefaultAuthorList()
-  const authors = await promiseAllFulfilled(authorURLs.map(loadAuthor))
+  const list = useDefaultAuthorList()
+  const authors = await promiseAllFulfilled(list.map(loadAuthor))
 
   state.authors = authors
 

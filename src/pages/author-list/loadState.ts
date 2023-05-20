@@ -4,9 +4,9 @@ import { State } from './State'
 import { stateRefresh } from './stateRefresh'
 
 export async function loadState(): Promise<State> {
-  const authorURLs = useDefaultAuthorList()
+  const list = useDefaultAuthorList()
   const state = {
-    authorURLs,
+    list,
     authors: [],
   }
 
