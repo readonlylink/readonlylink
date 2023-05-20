@@ -1,7 +1,6 @@
-import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
-import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
-import { loadAuthor } from '../author/loadAuthor'
+import * as Kv from 'idb-keyval'
 import { State } from './State'
+import { stateRefresh } from './stateRefresh'
 
 export type StateOptions = {
   list: Array<string>
@@ -10,12 +9,18 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { list } = options
 
-  const authors = await promiseAllFulfilled(list.map(loadAuthor))
-  const activities = await loadActivitiesFromAuthors(authors)
-
-  return {
+  const state = {
     list,
-    authors,
-    activities,
+    activities: [],
   }
+
+  const cachedActivities = await Kv.get('Home/state.activities')
+  if (cachedActivities) {
+    console.log('cachedActivities')
+    state.activities = cachedActivities
+  } else {
+    await stateRefresh(state)
+  }
+
+  return state
 }
