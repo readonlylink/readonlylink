@@ -1,5 +1,3 @@
-[subscriptions] inline `stateLoadActivities`
-
 [home] no need `subscriptionState`
 [author] no need `subscriptionState`
 

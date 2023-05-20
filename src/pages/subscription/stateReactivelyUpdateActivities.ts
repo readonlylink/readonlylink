@@ -1,12 +1,12 @@
 import { watch } from 'vue'
+import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
 import { State } from './State'
-import { stateLoadActivities } from './stateLoadActivities'
 
 export function stateReactivelyUpdateActivities(state: State) {
   watch(
     () => state.authors,
     async () => {
-      await stateLoadActivities(state)
+      state.activities = await loadActivitiesFromAuthors(state.authors)
     },
     {
       immediate: true,

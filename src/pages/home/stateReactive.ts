@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
+import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
 import { asyncRun } from '../../utils/asyncRun'
-import { stateLoadActivities } from '../subscription/stateLoadActivities'
 import { State } from './State'
 
 export function stateReactive(state: State): State {
@@ -8,7 +8,9 @@ export function stateReactive(state: State): State {
 
   asyncRun(async () => {
     state.isLoadingActivities = true
-    await stateLoadActivities(state.subscriptionState)
+    state.subscriptionState.activities = await loadActivitiesFromAuthors(
+      state.subscriptionState.authors,
+    )
     state.isLoadingActivities = false
   })
 
