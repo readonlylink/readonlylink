@@ -1,6 +1,7 @@
-import { loadAuthors } from '../../models/author/loadAuthors'
+import { loadAuthor } from '../../models/author/loadAuthor'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { State } from './State'
 
 export async function stateLoadAuthors(state: State): Promise<void> {
-  state.authors = await loadAuthors(state.list)
+  state.authors = await promiseAllFulfilled(state.list.map(loadAuthor))
 }

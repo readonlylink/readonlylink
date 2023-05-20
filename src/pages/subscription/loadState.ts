@@ -1,4 +1,5 @@
-import { loadAuthors } from '../../models/author/loadAuthors'
+import { loadAuthor } from '../../models/author/loadAuthor'
+import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { State } from './State'
 
 export type StateOptions = {
@@ -9,7 +10,7 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind, list } = options
 
-  const authors = await loadAuthors(list)
+  const authors = await promiseAllFulfilled(list.map(loadAuthor))
 
   return {
     kind,
