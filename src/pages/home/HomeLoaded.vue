@@ -34,7 +34,6 @@ const state = stateReactive(props.state)
       <Activity
         v-for="activity of stateActivitiesForShow(state.subscriptionState)"
         :key="activity.author.url + ' ' + activity.path"
-        :state="state.subscriptionState"
         :activity="activity"
       />
     </div>

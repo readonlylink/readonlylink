@@ -1,3 +1,8 @@
+extract `sortActivities`
+
+[home] no need `subscriptionState`
+[author] no need `subscriptionState`
+
 `components/Activity` fix info style
 
 [subscriptions] inline `stateLoadActivities`

@@ -49,7 +49,6 @@ defineProps<{ state: State }>()
         <Activity
           v-for="activity of stateActivitiesForShow(state)"
           :key="activity.author.url + ' ' + activity.path"
-          :state="state"
           :activity="activity"
         />
       </div>
