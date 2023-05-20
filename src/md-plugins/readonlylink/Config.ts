@@ -1,4 +1,4 @@
-import { AuthorConfig } from '../../pages/author/AuthorConfig'
+import { AuthorConfig } from '../../models/author/AuthorConfig'
 import { BookConfig } from '../../pages/book/BookConfig'
 import { ManualConfig } from '../../pages/manual/ManualConfig'
 

@@ -1,6 +1,6 @@
 import { Document } from '@xieyuheng/x-markdown'
+import { AuthorConfig } from '../../models/author/AuthorConfig'
 import { State as SubscriptionState } from '../subscription/State'
-import { AuthorConfig } from './AuthorConfig'
 
 export type State = {
   url: string

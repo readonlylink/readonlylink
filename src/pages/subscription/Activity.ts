@@ -1,5 +1,5 @@
 import { Document } from '@xieyuheng/x-markdown'
-import { Author } from '../author/Author'
+import { Author } from '../../models/author/Author'
 
 export type Activity = {
   author: Author

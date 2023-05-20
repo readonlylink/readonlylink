@@ -1,4 +1,4 @@
-import { Author } from './Author'
+import { Author } from '../../models/author/Author'
 import { loadAuthorConfig } from './loadAuthorConfig'
 
 export async function loadAuthor(url: string): Promise<Author> {

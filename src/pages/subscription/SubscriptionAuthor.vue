@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { join } from 'path-browserify'
 import { computed } from 'vue'
-import { Author } from '../author/Author'
+import { Author } from '../../models/author/Author'
 import { State } from './State'
 
 const props = defineProps<{

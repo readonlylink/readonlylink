@@ -1,4 +1,4 @@
-import { Author } from '../author/Author'
+import { Author } from '../../models/author/Author'
 
 export type State = {
   list: Array<string>

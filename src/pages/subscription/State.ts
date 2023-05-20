@@ -1,4 +1,4 @@
-import { Author } from '../author/Author'
+import { Author } from '../../models/author/Author'
 import { Activity } from './Activity'
 
 export type State = {
