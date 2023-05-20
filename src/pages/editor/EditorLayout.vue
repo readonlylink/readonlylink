@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core'
+import { Head } from '@vueuse/head'
 import { Pane, Splitpanes } from 'splitpanes'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import EditorEchoarea from './EditorEchoarea.vue'
 import EditorTab from './EditorTab.vue'
 import EditorTabbar from './EditorTabbar.vue'
@@ -13,12 +15,18 @@ import { State } from './State'
 defineProps<{ state: State }>()
 
 const splitpanesSize = useLocalStorage('ManagerLayout.splitpanesSize', 24)
+const lang = useGlobalLang()
 </script>
 
 <template>
   <div
     class="h-screen-dynamic h-screen-dynamic-dynamic flex w-screen flex-col text-xl"
   >
+    <Head>
+      <title v-if="lang.isZh()">编辑器 | 只读</title>
+      <title v-else>Editor | Readonly</title>
+    </Head>
+
     <Splitpanes
       class="splitter-6 md:splitter-3 flex h-full w-full overflow-auto"
       @resized="splitpanesSize = $event[0].size"
