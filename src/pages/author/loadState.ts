@@ -27,15 +27,22 @@ export async function loadState(options: StateOptions): Promise<State> {
     [config.homepage]: homepageDocument,
   }
 
-  const texts: Record<string, string> = Object.fromEntries(
-    await Promise.all(
-      Object.values(config.tabs || {}).map(async (path) => {
-        const response = await fetch(new URL(join(config.src || '', path), url))
-        const text = await response.text()
-        return [path, text]
-      }),
-    ),
+  const results = await Promise.allSettled(
+    Object.values(config.tabs || {}).map(async (path) => {
+      const response = await fetch(new URL(join(config.src || '', path), url))
+      const text = await response.text()
+      return [path, text]
+    }),
   )
+
+  const texts: Record<string, string> = {}
+
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      const [path, text] = result.value
+      texts[path] = text
+    }
+  }
 
   for (const [path, text] of Object.entries(texts)) {
     documents[path] = parseDocument(text)

@@ -1,8 +1,10 @@
-[home] `stateRefresh` -- cache `activities` in indexeddb
-
-[subscriptions] cache in indexeddb
+extract `promiseAllFulfilled`
 
 use `Promise.allSettled` instead of `Promise.all`
+
+[subscriptions] `stateRefresh` -- cache `activities` in indexeddb
+[home] use `subscriptionStateRefresh` for cache
+[author] use `subscriptionStateRefresh` for cache
 
 # author
 
