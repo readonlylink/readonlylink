@@ -1,6 +1,11 @@
+[author-list] use `State`
+
+[author-list] `AuthorList` -- cache authors in indexeddb
+
 [home] cache activities in indexeddb
-[author] cache authors in indexeddb
 [subscriptions] cache in indexeddb
+
+use `Promise.allSettled` instead of `Promise.all`
 
 # author
 
