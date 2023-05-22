@@ -11,7 +11,7 @@ export function stateReactive(state: State): State {
   stateReactivelyUpdateAuthors(state)
   stateReactivelyUpdateActivities(state)
 
-  if (!state.isRefreshed) {
+  if (state.isLoadedFromCache) {
     asyncRun(async () => {
       await stateRefresh(state)
     })

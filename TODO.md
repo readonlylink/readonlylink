@@ -1,5 +1,3 @@
-[subscription] use `isLoadedFromCache` instead of `isRefreshed`
-
 `<readonlylink>` -- `stateRefresh` -- support cache
 
 - use `isLoadedFromCache` instead of `isRefreshed`

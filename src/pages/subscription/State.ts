@@ -7,5 +7,5 @@ export type State = {
   authors: Array<Author>
   currentAuthor?: Author
   activities: Array<Activity>
-  isRefreshed?: boolean
+  isLoadedFromCache?: boolean
 }

@@ -10,7 +10,7 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { kind, list } = options
 
-  const state = {
+  const state: State = {
     kind,
     list,
     authors: [],
@@ -22,6 +22,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   if (cachedAuthors && cachedActivities) {
     state.authors = cachedAuthors
     state.activities = cachedActivities
+    state.isLoadedFromCache = true
   } else {
     await stateRefresh(state)
   }
