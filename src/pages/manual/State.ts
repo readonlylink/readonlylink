@@ -7,4 +7,5 @@ export type State = {
   config: ManualConfig
   texts: Record<string, string>
   documents: Record<string, Document>
+  isLoadedFromCache?: boolean
 }
