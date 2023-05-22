@@ -15,12 +15,15 @@ export async function loadState(options: StateOptions): Promise<State> {
     return {
       url,
       config: cachedConfig,
+      isLoadedFromCache: true,
     }
   } else {
     const config = await loadConfig(url)
+    await Kv.set(url, config, store)
     return {
       url,
       config,
+      isLoadedFromCache: false,
     }
   }
 }

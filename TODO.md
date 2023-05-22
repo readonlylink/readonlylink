@@ -1,7 +1,3 @@
-`<readonlylink>` -- `stateRefresh` -- support cache
-
-- use `isLoadedFromCache` instead of `isRefreshed`
-
 `articles/` -- `stateRefresh` -- support cache
 `books/` -- `stateRefresh` -- support cache
 `manuals/` -- `stateRefresh` -- support cache

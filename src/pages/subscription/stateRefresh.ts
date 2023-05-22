@@ -7,10 +7,8 @@ import { State } from './State'
 export async function stateRefresh(state: State): Promise<void> {
   const authors = await promiseAllFulfilled(state.list.map(loadAuthor))
   const activities = await loadActivitiesFromAuthors(authors)
-
   state.authors = authors
   state.activities = activities
-
   await Kv.set('Subscription/state.authors', authors)
   await Kv.set('Subscription/state.activities', activities)
 }
