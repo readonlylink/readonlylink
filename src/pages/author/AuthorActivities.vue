@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Activity from '../../components/activity/Activity.vue'
-import Lang from '../../components/lang/Lang.vue'
 import { sortActivities } from '../../models/activity/sortActivities'
 import { State } from './State'
 
@@ -8,17 +7,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div
-    v-if="state.isLoadingActivities"
-    class="py-2 font-sans text-xl text-stone-500"
-  >
-    <Lang>
-      <template #zh> 作者动态加载中⋯⋯ </template>
-      <template #en> Loading authors' activities ... </template>
-    </Lang>
-  </div>
-
-  <div v-else class="flex flex-col divide-y divide-black">
+  <div class="flex flex-col divide-y divide-black">
     <Activity
       v-for="activity of sortActivities(state.activities)"
       :key="activity.author.url + ' ' + activity.path"

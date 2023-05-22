@@ -10,7 +10,6 @@ export type State = {
   text: string
   homepageDocument: Document
   documents: Record<string, Document>
-  isLoadingActivities?: boolean
   author: Author
   activities: Array<Activity>
 }

@@ -1,5 +1,6 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
+import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { State } from './State'
@@ -44,13 +45,15 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const author = await loadAuthor(url)
 
+  const activities = await loadActivitiesFromAuthors([author])
+
   return {
     url,
     path,
     config,
     text,
     homepageDocument,
-    activities: [],
+    activities,
     author,
     documents,
   }
