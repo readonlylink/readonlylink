@@ -3,6 +3,7 @@ import { join } from 'path-browserify'
 import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
 import { loadGlobalHistory } from '../../reactives/loadGlobalHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
+import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'
 import { loadAuthor } from './loadAuthor'
 import { loadAuthorConfig } from './loadAuthorConfig'
@@ -13,7 +14,8 @@ export type StateOptions = {
 }
 
 export async function loadState(options: StateOptions): Promise<State> {
-  const { url, path } = options
+  const { path } = options
+  const url = stringTrimEnd(options.url, '/')
 
   const config = await loadAuthorConfig(url)
 

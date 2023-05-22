@@ -12,4 +12,5 @@ export type State = {
   documents: Record<string, Document>
   author: Author
   activities: Array<Activity>
+  isLoadedFromCache?: boolean
 }

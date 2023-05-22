@@ -1,4 +1,3 @@
-`authors/` -- `loadStateFromCacheFirst`
 `authors/` -- `stateRefresh`
 
 update mimor to support cache in `<x-mimor>`
