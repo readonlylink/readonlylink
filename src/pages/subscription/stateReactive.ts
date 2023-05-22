@@ -11,9 +11,11 @@ export function stateReactive(state: State): State {
   stateReactivelyUpdateAuthors(state)
   stateReactivelyUpdateActivities(state)
 
-  asyncRun(async () => {
-    await stateRefresh(state)
-  })
+  if (!state.isRefreshed) {
+    asyncRun(async () => {
+      await stateRefresh(state)
+    })
+  }
 
   return state
 }

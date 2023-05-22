@@ -1,4 +1,4 @@
-[subscription] should not `stateRefresh` twice
+rename `Lang` to `LANG`
 
 `<readonlylink>` -- cache config by url -- use `idb` instead of `idb-keyval`
 `articles/` -- support cache
