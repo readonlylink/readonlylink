@@ -1,8 +1,8 @@
-import { openDB } from 'idb'
+import * as Kv from 'idb-keyval'
 import { State } from './State'
 
 export async function stateRefresh(state: State): Promise<void> {
-  const db = await openDB('readonlylink')
+  const store = Kv.createStore('<readonlylink>', 'configs')
 
   // TODO
 

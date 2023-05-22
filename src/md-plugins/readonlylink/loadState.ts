@@ -1,4 +1,4 @@
-import { openDB } from 'idb'
+import * as Kv from 'idb-keyval'
 import { State } from './State'
 import { loadConfig } from './loadConfig'
 
@@ -8,12 +8,19 @@ export type StateOptions = {
 
 export async function loadState(options: StateOptions): Promise<State> {
   const { url } = options
-  const config = await loadConfig(url)
 
-  const db = await openDB('readonlylink')
-
-  return {
-    url,
-    config,
+  const store = Kv.createStore('<readonlylink>', 'configs')
+  const cachedConfig = await Kv.get(url, store)
+  if (cachedConfig) {
+    return {
+      url,
+      config: cachedConfig,
+    }
+  } else {
+    const config = await loadConfig(url)
+    return {
+      url,
+      config,
+    }
   }
 }

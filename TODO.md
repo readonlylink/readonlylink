@@ -1,5 +1,4 @@
-`<readonlylink>` -- `stateRefresh` -- cache config by url -- use `idb` instead of `idb-keyval`
-
+`<readonlylink>` -- `stateRefresh` -- support cache
 `articles/` -- `stateRefresh` -- support cache
 `books/` -- `stateRefresh` -- support cache
 `manuals/` -- `stateRefresh` -- support cache
