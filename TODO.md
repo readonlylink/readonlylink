@@ -1,3 +1,14 @@
+[author-list] should not `stateRefresh` twice
+[subscription] should not `stateRefresh` twice
+
+`<readonlylink>` -- cache config by url -- use `idb` instead of `idb-keyval`
+`articles/` -- support cache
+`books/` -- support cache
+`manuals/` -- support cache
+`authors/` -- support cache
+
+update mimor to support cache in `<x-mimor>`
+
 # author
 
 [author] author can provide different contents for different languages
