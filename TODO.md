@@ -1,5 +1,3 @@
-`authors/` -- `stateRefresh`
-
 update mimor to support cache in `<x-mimor>`
 
 # author
