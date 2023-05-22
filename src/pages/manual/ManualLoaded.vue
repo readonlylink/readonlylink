@@ -25,6 +25,7 @@ watch(
   (value) => {
     state.path = value ? String(value) : state.config.main
   },
+  { immediate: true },
 )
 </script>
 
