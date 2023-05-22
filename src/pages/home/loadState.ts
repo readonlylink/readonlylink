@@ -16,7 +16,6 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const cachedActivities = await Kv.get('Home/state.activities')
   if (cachedActivities) {
-    console.log('cachedActivities')
     state.activities = cachedActivities
   } else {
     await stateRefresh(state)

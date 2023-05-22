@@ -1,4 +1,3 @@
-[author-list] should not `stateRefresh` twice
 [subscription] should not `stateRefresh` twice
 
 `<readonlylink>` -- cache config by url -- use `idb` instead of `idb-keyval`

@@ -1,6 +1,5 @@
 import * as Kv from 'idb-keyval'
 import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
-import { asyncRun } from '../../utils/asyncRun'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
@@ -11,7 +10,7 @@ export async function stateRefresh(state: State): Promise<void> {
 
   state.authors = authors
 
-  asyncRun(async () => {
-    await Kv.set('AuthorList/state.authors', authors)
-  })
+  await Kv.set('AuthorList/state.authors', authors)
+
+  state.isRefreshed = true
 }

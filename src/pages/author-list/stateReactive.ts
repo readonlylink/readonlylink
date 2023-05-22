@@ -6,9 +6,11 @@ import { stateRefresh } from './stateRefresh'
 export function stateReactive(state: State): State {
   state = reactive(state) as State
 
-  asyncRun(async () => {
-    await stateRefresh(state)
-  })
+  if (!state.isRefreshed) {
+    asyncRun(async () => {
+      await stateRefresh(state)
+    })
+  }
 
   return state
 }
