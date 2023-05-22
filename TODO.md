@@ -1,5 +1,3 @@
-`articles/` -- `stateRefresh`
-
 `books/` -- `loadStateFromCacheFirst`
 `books/` -- `stateRefresh`
 
