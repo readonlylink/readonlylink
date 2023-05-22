@@ -5,7 +5,7 @@ import { stateRefresh } from './stateRefresh'
 
 export async function loadState(): Promise<State> {
   const list = useDefaultAuthorList()
-  const state = {
+  const state: State = {
     list,
     authors: [],
   }
@@ -13,6 +13,7 @@ export async function loadState(): Promise<State> {
   const cachedAuthors = await Kv.get('AuthorList/state.authors')
   if (cachedAuthors) {
     state.authors = cachedAuthors
+    state.isLoadedFromCache = true
   } else {
     await stateRefresh(state)
   }

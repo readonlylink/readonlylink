@@ -6,7 +6,7 @@ import { stateRefresh } from './stateRefresh'
 export function stateReactive(state: State): State {
   state = reactive(state) as State
 
-  if (!state.isRefreshed) {
+  if (state.isLoadedFromCache) {
     asyncRun(async () => {
       await stateRefresh(state)
     })

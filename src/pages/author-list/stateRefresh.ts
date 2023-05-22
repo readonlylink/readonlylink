@@ -11,6 +11,4 @@ export async function stateRefresh(state: State): Promise<void> {
   state.authors = authors
 
   await Kv.set('AuthorList/state.authors', authors)
-
-  state.isRefreshed = true
 }
