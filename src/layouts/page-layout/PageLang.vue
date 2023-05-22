@@ -21,7 +21,7 @@ const lang = useGlobalLang()
     <ListboxButton class="flex items-center">
       <Lang>
         <template #zh>语言</template>
-        <template #en>Lang</template>
+        <template #en>LANG</template>
       </Lang>
 
       <ArrowsUpDownIcon class="h-5 w-5" />
