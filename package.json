@@ -22,6 +22,7 @@
     "@xieyuheng/x-node": "^0.0.7",
     "browser-fs-access": "^0.34.0",
     "highlight.js": "^11.8.0",
+    "idb": "^7.1.1",
     "idb-keyval": "^6.2.1",
     "js-base64": "^3.7.5",
     "js-yaml": "^4.1.0",

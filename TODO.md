@@ -1,8 +1,9 @@
-`<readonlylink>` -- cache config by url -- use `idb` instead of `idb-keyval`
-`articles/` -- support cache
-`books/` -- support cache
-`manuals/` -- support cache
-`authors/` -- support cache
+`<readonlylink>` -- `stateRefresh` -- cache config by url -- use `idb` instead of `idb-keyval`
+
+`articles/` -- `stateRefresh` -- support cache
+`books/` -- `stateRefresh` -- support cache
+`manuals/` -- `stateRefresh` -- support cache
+`authors/` -- `stateRefresh` -- support cache
 
 update mimor to support cache in `<x-mimor>`
 
