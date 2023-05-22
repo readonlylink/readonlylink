@@ -5,6 +5,7 @@ import { loadState } from './loadState'
 export async function stateRefresh(state: State): Promise<void> {
   const store = Kv.createStore('authors', 'cache')
   const newState = await loadState(state)
+  delete newState.path
   Object.assign(state, newState)
   await Kv.set(state.url, newState, store)
 }
