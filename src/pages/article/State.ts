@@ -5,4 +5,5 @@ export type State = {
   text: string
   contentType: string
   document: Document
+  isLoadedFromCache?: boolean
 }

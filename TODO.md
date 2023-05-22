@@ -1,7 +1,13 @@
-`articles/` -- `stateRefresh` -- support cache
-`books/` -- `stateRefresh` -- support cache
-`manuals/` -- `stateRefresh` -- support cache
-`authors/` -- `stateRefresh` -- support cache
+`articles/` -- `stateRefresh`
+
+`books/` -- `loadStateFromCacheFirst`
+`books/` -- `stateRefresh`
+
+`manuals/` -- `loadStateFromCacheFirst`
+`manuals/` -- `stateRefresh`
+
+`authors/` -- `loadStateFromCacheFirst`
+`authors/` -- `stateRefresh`
 
 update mimor to support cache in `<x-mimor>`
 
