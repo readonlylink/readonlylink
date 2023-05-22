@@ -1,3 +1,6 @@
+[author-list] use `isLoadedFromCache` instead of `isRefreshed`
+[subscription] use `isLoadedFromCache` instead of `isRefreshed`
+
 `<readonlylink>` -- `stateRefresh` -- support cache
 `articles/` -- `stateRefresh` -- support cache
 `books/` -- `stateRefresh` -- support cache

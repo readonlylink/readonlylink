@@ -11,6 +11,4 @@ export async function stateRefresh(state: State): Promise<void> {
   state.activities = activities
 
   await Kv.set('Home/state.activities', activities)
-
-  state.isRefreshed = true
 }
