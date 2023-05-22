@@ -8,4 +8,5 @@ export type State = {
   config: BookConfig
   texts: Record<string, string>
   documents: Record<string, Document>
+  isLoadedFromCache?: boolean
 }
