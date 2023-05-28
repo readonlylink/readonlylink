@@ -18,7 +18,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     <div
       class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl md:text-4xl"
     >
-      <div class="px-2 font-bold">
+      <div class="px-2 text-center font-bold">
         {{ state.config.title }}
       </div>
 
