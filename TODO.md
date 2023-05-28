@@ -1,4 +1,4 @@
-update mimor to support cache in `<x-mimor>`
+add domain prefix to idb key -- for local testing
 
 # author
 
