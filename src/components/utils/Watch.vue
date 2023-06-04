@@ -4,18 +4,19 @@ import { watch } from 'vue'
 type MaybePromise<T> = Promise<T> | T
 
 const props = defineProps<{
-  value: any
-  action: (value: any) => MaybePromise<void>
+  target: any
+  action: (target: any) => MaybePromise<void>
   immediate?: boolean
   deep?: boolean
 }>()
 
-const target = props.value instanceof Function ? props.value : () => props.value
+const target =
+  props.target instanceof Function ? props.target : () => props.target
 
 watch(
   target,
-  async (value) => {
-    await props.action(value)
+  async (target) => {
+    await props.action(target)
   },
   {
     immediate: props.immediate,
