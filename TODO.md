@@ -1,3 +1,5 @@
+quit using headlessui
+
 add domain prefix to idb key -- for local testing
 
 # author
@@ -21,7 +23,7 @@ searchable file list as a markdown plugin -- using code block?
 
 # md
 
-> For https://readonly.link/books/https://cicada-monologues.netlify.app/book.json
+> For https://readonly.link/books/https://cicada-monologues.vercel.app/book.json
 > But we can do this only after we have a good markdown parser
 > that can handle XML with newline.
 
