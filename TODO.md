@@ -1,7 +1,5 @@
 quit using headlessui
 
-add domain prefix to idb key -- for local testing
-
 # author
 
 [author] author can provide different contents for different languages

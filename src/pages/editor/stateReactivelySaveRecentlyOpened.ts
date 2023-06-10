@@ -6,7 +6,9 @@ export function stateReactivelySaveRecentlyOpened(state: State): void {
   watch(
     () => state.recentlyOpened.fileHandles,
     async (value) => {
-      await Kv.set('Editor/state.recentlyOpened.fileHandles', { ...value })
+      await Kv.set('readonly.link/Editor/state.recentlyOpened.fileHandles', {
+        ...value,
+      })
     },
     { deep: true },
   )
@@ -14,7 +16,10 @@ export function stateReactivelySaveRecentlyOpened(state: State): void {
   watch(
     () => state.recentlyOpened.directoryHandles,
     async (value) => {
-      await Kv.set('Editor/state.recentlyOpened.directoryHandles', { ...value })
+      await Kv.set(
+        'readonly.link/Editor/state.recentlyOpened.directoryHandles',
+        { ...value },
+      )
     },
     { deep: true },
   )

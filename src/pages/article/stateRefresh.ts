@@ -3,7 +3,7 @@ import { State } from './State'
 import { loadState } from './loadState'
 
 export async function stateRefresh(state: State): Promise<void> {
-  const store = Kv.createStore('articles', 'cache')
+  const store = Kv.createStore('readonly.link/articles', 'cache')
   const newState = await loadState(state)
   Object.assign(state, newState)
   await Kv.set(state.url, newState, store)

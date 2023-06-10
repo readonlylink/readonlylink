@@ -10,7 +10,7 @@ export async function loadState(): Promise<State> {
     authors: [],
   }
 
-  const cachedAuthors = await Kv.get('AuthorList/state.authors')
+  const cachedAuthors = await Kv.get('readonly.link/AuthorList/state.authors')
   if (cachedAuthors) {
     state.authors = cachedAuthors
     state.isLoadedFromCache = true

@@ -13,7 +13,7 @@ export async function loadGlobalHistory(): Promise<History> {
     return globalHistory
   }
 
-  const record = await Kv.get('globalHistory.record')
+  const record = await Kv.get('readonly.link/globalHistory.record')
   if (record) {
     globalHistory.record = record
   }
@@ -32,7 +32,7 @@ watch(
       record[key] = { ...value }
     }
 
-    await Kv.set('globalHistory.record', record)
+    await Kv.set('readonly.link/globalHistory.record', record)
   },
   {
     deep: true,

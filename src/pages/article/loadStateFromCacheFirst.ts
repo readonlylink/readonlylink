@@ -8,7 +8,7 @@ export async function loadStateFromCacheFirst(
 ): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
 
-  const store = Kv.createStore('articles', 'cache')
+  const store = Kv.createStore('readonly.link/articles', 'cache')
   const cached = await Kv.get(url, store)
   if (cached) {
     return {

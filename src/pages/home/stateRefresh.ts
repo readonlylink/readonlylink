@@ -8,5 +8,5 @@ export async function stateRefresh(state: State): Promise<void> {
   const authors = await promiseAllFulfilled(state.list.map(loadAuthor))
   const activities = await loadActivitiesFromAuthors(authors)
   state.activities = activities
-  await Kv.set('Home/state.activities', activities)
+  await Kv.set('readonly.link/Home/state.activities', activities)
 }

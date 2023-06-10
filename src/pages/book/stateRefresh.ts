@@ -3,7 +3,7 @@ import { State } from './State'
 import { loadState } from './loadState'
 
 export async function stateRefresh(state: State): Promise<void> {
-  const store = Kv.createStore('books', 'cache')
+  const store = Kv.createStore('readonly.link/books', 'cache')
   const newState = await loadState(state)
   delete newState.path
   delete newState.frontMatter

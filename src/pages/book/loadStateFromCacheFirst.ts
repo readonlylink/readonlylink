@@ -9,7 +9,7 @@ export async function loadStateFromCacheFirst(
   const { path, frontMatter } = options
   const url = stringTrimEnd(options.url, '/')
 
-  const store = Kv.createStore('books', 'cache')
+  const store = Kv.createStore('readonly.link/books', 'cache')
   const cached = await Kv.get(url, store)
   if (cached) {
     return {

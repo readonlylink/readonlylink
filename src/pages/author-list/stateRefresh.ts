@@ -8,5 +8,5 @@ export async function stateRefresh(state: State): Promise<void> {
   const list = useDefaultAuthorList()
   const authors = await promiseAllFulfilled(list.map(loadAuthor))
   state.authors = authors
-  await Kv.set('AuthorList/state.authors', authors)
+  await Kv.set('readonly.link/AuthorList/state.authors', authors)
 }

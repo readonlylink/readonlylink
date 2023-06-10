@@ -14,7 +14,7 @@ export async function loadState(options: StateOptions): Promise<State> {
     activities: [],
   }
 
-  const cachedActivities = await Kv.get('Home/state.activities')
+  const cachedActivities = await Kv.get('readonly.link/Home/state.activities')
   if (cachedActivities) {
     state.activities = cachedActivities
     state.isLoadedFromCache = true

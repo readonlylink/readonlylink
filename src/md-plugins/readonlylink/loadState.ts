@@ -9,7 +9,7 @@ export type StateOptions = {
 export async function loadState(options: StateOptions): Promise<State> {
   const { url } = options
 
-  const store = Kv.createStore('<readonlylink>', 'configs')
+  const store = Kv.createStore('readonly.link/<readonlylink>', 'configs')
   const cachedConfig = await Kv.get(url, store)
   if (cachedConfig) {
     return {
