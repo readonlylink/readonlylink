@@ -1,5 +1,8 @@
 quit using headlessui
 
+- pages/editor/EditorToolbarLang.vue
+- layouts/page-layout/PageLang.vue
+
 # author
 
 [author] author can provide different contents for different languages
