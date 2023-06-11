@@ -1,4 +1,3 @@
-[editor] `EditorToolbarLang` -- quit using headlessui
 remove headlessui
 
 # author

@@ -2,8 +2,8 @@
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import PageLang from '../../layouts/page-layout/PageLang.vue'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
-import EditorToolbarLang from './EditorToolbarLang.vue'
 import EditorToolbarPreview from './EditorToolbarPreview.vue'
 import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
@@ -107,7 +107,7 @@ const lang = useGlobalLang()
     <div class="flex space-x-4">
       <EditorToolbarPreview :state="state" />
 
-      <EditorToolbarLang class="z-20" :state="state" />
+      <PageLang class="z-20" />
 
       <Hyperlink
         class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
