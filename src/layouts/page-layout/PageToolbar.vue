@@ -7,6 +7,6 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex">
-    <PageLang class="text-stone-400 hover:text-stone-900" />
+    <PageLang />
   </div>
 </template>

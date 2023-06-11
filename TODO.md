@@ -1,7 +1,5 @@
-quit using headlessui
-
-- pages/editor/EditorToolbarLang.vue
-- layouts/page-layout/PageLang.vue
+[editor] `EditorToolbarLang` -- quit using headlessui
+ambr "text-stone-900" "text-black"
 
 # author
 

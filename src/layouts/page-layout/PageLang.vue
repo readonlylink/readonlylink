@@ -1,57 +1,63 @@
 <script setup lang="ts">
 import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-} from '@headlessui/vue'
-import {
   ArrowsUpDownIcon,
   CheckIcon,
   LanguageIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { langTagName, useGlobalLang } from '../../components/lang/useGlobalLang'
+import List from '../../components/utils/List.vue'
+import Popup from '../../components/utils/Popup.vue'
 
 const lang = useGlobalLang()
 </script>
 
 <template>
-  <Listbox as="div" class="relative flex font-sans" v-model="lang.tag">
-    <ListboxButton class="flex items-center">
-      <Lang>
-        <template #zh>语言</template>
-        <template #en>LANG</template>
-      </Lang>
+  <Popup class="relative flex font-sans">
+    <template #toggle>
+      <div class="flex items-center">
+        <Lang>
+          <template #zh>语言</template>
+          <template #en>LANG</template>
+        </Lang>
 
-      <ArrowsUpDownIcon class="h-5 w-5" />
-      <LanguageIcon class="w-5 p-px" />
-    </ListboxButton>
+        <ArrowsUpDownIcon class="h-5 w-5" />
+        <LanguageIcon class="w-5 p-px" />
+      </div>
+    </template>
 
-    <Transition
-      enterActiveClass="transition duration-100 ease-out"
-      enterFromClass="transform scale-95 opacity-0"
-      enterToClass="transform scale-100 opacity-100"
-      leaveActiveClass="transition duration-75 ease-out"
-      leaveFromClass="transform scale-100 opacity-100"
-      leaveToClass="transform scale-95 opacity-0"
-    >
-      <ListboxOptions class="absolute right-0 top-9 min-w-max border bg-white">
-        <ListboxOption
-          v-slot="{ active, selected }"
-          v-for="tag of lang.knownTags"
-          :key="tag"
-          :value="tag"
+    <template #panel="{ popup }">
+      <Transition
+        enterActiveClass="transition duration-100 ease-out"
+        enterFromClass="transform scale-95 opacity-0"
+        enterToClass="transform scale-100 opacity-100"
+        leaveActiveClass="transition duration-75 ease-out"
+        leaveFromClass="transform scale-100 opacity-100"
+        leaveToClass="transform scale-95 opacity-0"
+      >
+        <List
+          v-show="popup.open"
+          class="absolute right-0 top-9 min-w-max border bg-white"
+          :entries="
+            lang.knownTags.map((tag) => ({ tag, name: langTagName(tag) }))
+          "
         >
-          <div
-            class="flex min-w-max items-center px-2 py-1"
-            :class="[active && `bg-stone-100`]"
-          >
-            {{ langTagName(tag) }}
-            <CheckIcon v-if="selected" class="ml-2 h-5 w-5" />
-          </div>
-        </ListboxOption>
-      </ListboxOptions>
-    </Transition>
-  </Listbox>
+          <template #entry="{ entry }">
+            <button
+              class="flex min-w-max items-center px-2 py-1"
+              @click="
+                () => {
+                  lang.tag = entry.tag
+                  popup.open = false
+                }
+              "
+            >
+              <span>{{ entry.name }}</span>
+              <CheckIcon v-if="lang.tag === entry.tag" class="ml-2 h-5 w-5" />
+            </button>
+          </template>
+        </List>
+      </Transition>
+    </template>
+  </Popup>
 </template>
