@@ -35,7 +35,7 @@ async function save() {
       <div class="flex justify-end py-1">
         <button
           @click="save()"
-          class="font-sans text-stone-400 hover:text-stone-900"
+          class="font-sans text-stone-400 hover:text-black"
         >
           <Lang>
             <template #zh> 保存 </template>

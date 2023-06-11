@@ -1,5 +1,5 @@
 [editor] `EditorToolbarLang` -- quit using headlessui
-ambr "text-stone-900" "text-black"
+remove headlessui
 
 # author
 

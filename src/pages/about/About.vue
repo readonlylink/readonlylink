@@ -25,16 +25,14 @@ const lang = useGlobalLang()
     </div>
 
     <main class="space-y-3 py-4">
-      <Lang class="inline-flex flex-wrap items-baseline text-stone-900">
+      <Lang class="inline-flex flex-wrap items-baseline text-black">
         <template #zh>
-          <div class="pr-1 font-logo font-bold text-stone-900">只读链接</div>
+          <div class="pr-1 font-logo font-bold text-black">只读链接</div>
           <div>是一个文档渲染工具，</div>
           <div>文字创作者的社区。</div>
         </template>
         <template #en>
-          <div class="pr-1 font-logo font-bold text-stone-900">
-            Readonly.Link
-          </div>
+          <div class="pr-1 font-logo font-bold text-black">Readonly.Link</div>
           <div class="pr-1">is a document rendering tool,</div>
           <div>and a community for authors.</div>
         </template>
@@ -140,19 +138,18 @@ const lang = useGlobalLang()
       <Lang class="font-logo font-bold text-stone-500">
         <template #zh>
           <div>
-            分享<span class="text-stone-900">只读</span>链接，<br
+            分享<span class="text-black">只读</span>链接，<br
               class="md:hidden"
-            /><span class="text-stone-900">只</span>为享受阅<span
-              class="text-stone-900"
+            /><span class="text-black">只</span>为享受阅<span class="text-black"
               >读</span
             >。
           </div>
         </template>
         <template #en>
           <div>
-            <span class="text-stone-900">Readonly</span> links,
+            <span class="text-black">Readonly</span> links,
             <br class="md:hidden" />
-            for your <span class="text-stone-900">read only</span>.
+            for your <span class="text-black">read only</span>.
           </div>
         </template>
       </Lang>

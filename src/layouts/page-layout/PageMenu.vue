@@ -14,7 +14,7 @@ const origin = window.location.origin
   >
     <div class="flex flex-wrap">
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/' }"
         href="/"
       >
@@ -25,7 +25,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/authors' }"
         href="/authors"
       >
@@ -36,7 +36,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/docs' }"
         href="/docs"
       >
@@ -47,7 +47,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/history' }"
         href="/history"
       >
@@ -58,7 +58,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/subscriptions' }"
         href="/subscriptions"
       >
@@ -69,7 +69,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/editor' }"
         href="/editor"
       >
@@ -80,7 +80,7 @@ const origin = window.location.origin
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-stone-900"
+        class="pr-3 hover:text-black"
         :class="{ 'text-black': route.path === '/about' }"
         href="/about"
       >

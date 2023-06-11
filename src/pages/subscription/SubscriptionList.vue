@@ -20,7 +20,7 @@ defineProps<{ state: State }>()
       <div>
         <Hyperlink
           href="/subscriptions?kind=Editor"
-          class="text-stone-400 hover:text-stone-900"
+          class="text-stone-400 hover:text-black"
         >
           <Lang class="font-sans">
             <template #zh> 编辑 </template>
