@@ -1,5 +1,3 @@
-remove headlessui
-
 # author
 
 [author] author can provide different contents for different languages
