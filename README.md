@@ -15,6 +15,11 @@ npm run check   # Type check
 npm run format  # Format the code
 ```
 
+Notes:
+
+- Currently, this is a pure frontend project,
+  we do NOT need any backend server to run it.
+
 ## Contributions
 
 To make a contribution, fork this project and create a pull request.
