@@ -1,3 +1,5 @@
+readonlylink 的作者订阅按钮，点击可以提示打开订阅列表。
+
 # author
 
 [author] author can provide different contents for different languages
