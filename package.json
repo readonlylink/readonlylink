@@ -27,14 +27,14 @@
     "js-yaml": "^4.1.0",
     "jsdom": "^22.1.0",
     "katex": "^0.16.8",
-    "mimor": "^0.0.20",
+    "mimor": "^0.0.21",
     "path-browserify": "^1.0.1",
     "qs": "^6.11.2",
     "sanitize-html": "^2.11.0",
     "splitpanes": "^3.1.5",
     "vue": "^3.3.4",
     "vue-meta": "^2.4.0",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.3"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
