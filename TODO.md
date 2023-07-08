@@ -1,4 +1,4 @@
-readonlylink 的作者订阅按钮，点击可以提示打开订阅列表。
+[author] click subscription -- 可以提示打开订阅列表。
 
 # author
 

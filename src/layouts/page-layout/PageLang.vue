@@ -6,7 +6,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { langTagName, useGlobalLang } from '../../components/lang/useGlobalLang'
-import List from '../../components/utils/List.vue'
+import List from '../../components/utils/ListFocusKeyboardUpAndDown.vue'
 import Popup from '../../components/utils/Popup.vue'
 
 const lang = useGlobalLang()

@@ -3,29 +3,26 @@ import { onMounted, reactive, ref, watch } from 'vue'
 
 /*
 
-   Always show the toggle, toggle to show the panel.
+   Always show the button, click the button to toggle the panel.
 
    - Close on click outside.
+
    - Close on escape.
 
 */
 
-type State = {
-  open: boolean
-}
-
-const state: State = reactive({
+const state = reactive({
   open: false,
 })
 
-const toggleElement = ref<HTMLButtonElement | undefined>()
+const buttonElement = ref<HTMLButtonElement | undefined>()
 const panelElement = ref<HTMLDivElement | undefined>()
 
 watch(
   () => state.open,
   (value) => {
     if (!value) {
-      toggleElement.value?.focus()
+      buttonElement.value?.focus()
     }
   },
 )
@@ -35,12 +32,12 @@ onMounted(() => {
     const target = event.target as HTMLElement
 
     if (!panelElement.value) return
-    if (!toggleElement.value) return
+    if (!buttonElement.value) return
 
     if (!panelElement.value.contains(target)) {
       // console.log('outside of panel')
-      if (!toggleElement.value.contains(target)) {
-        // console.log('outside of toggle')
+      if (!buttonElement.value.contains(target)) {
+        // console.log('outside of button')
         state.open = false
       }
     }
@@ -49,16 +46,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    @keydown.escape.prevent.stop="
-      () => {
-        state.open = false
-        toggleElement?.focus()
-      }
-    "
-  >
-    <button ref="toggleElement" @click="state.open = !state.open">
-      <slot name="toggle" :popup="state" />
+  <div @keydown.escape.prevent.stop="state.open = false">
+    <button ref="buttonElement" type="button" @click="state.open = !state.open">
+      <slot name="button" :popup="state" />
     </button>
 
     <div ref="panelElement">
