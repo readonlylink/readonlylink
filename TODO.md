@@ -1,5 +1,3 @@
-[author] click subscription -- 可以提示打开订阅列表。
-
 # author
 
 [author] author can provide different contents for different languages

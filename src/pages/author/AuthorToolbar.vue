@@ -7,6 +7,7 @@ import {
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
+import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
 import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
 import { State } from './State'
 
@@ -14,6 +15,7 @@ const props = defineProps<{ state: State }>()
 
 const lang = useGlobalLang()
 const subscription = useGlobalSubscription()
+const origin = useCurrentOrigin()
 
 function isSubscribed() {
   return subscription.list.includes(props.state.url)
@@ -48,26 +50,33 @@ function unsubscribe() {
       </Lang>
     </Hyperlink>
 
-    <button
+    <a
+      v-if="!isSubscribed()"
       class="mr-3 flex shrink-0 items-center space-x-0.5 text-stone-400 hover:text-black"
       :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
-      @click="isSubscribed() ? unsubscribe() : subscribe()"
+      @click="subscribe()"
+      :href="`${origin}/subscriptions`"
+      target="_blank"
     >
-      <template v-if="!isSubscribed()">
-        <BookmarkIcon class="h-4 w-4" />
+      <BookmarkIcon class="h-4 w-4" />
 
-        <Lang>
-          <template #zh> 订阅 </template>
-          <template #en> SUBSCRIBE </template>
-        </Lang>
-      </template>
-      <template v-else>
-        <BookmarkSlashIcon class="h-4 w-4" />
-        <Lang>
-          <template #zh> 退订 </template>
-          <template #en> UNSUBSCRIBE </template>
-        </Lang>
-      </template>
+      <Lang>
+        <template #zh> 订阅 </template>
+        <template #en> SUBSCRIBE </template>
+      </Lang>
+    </a>
+
+    <button
+      v-if="isSubscribed()"
+      class="mr-3 flex shrink-0 items-center space-x-0.5 text-stone-400 hover:text-black"
+      :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
+      @click="unsubscribe()"
+    >
+      <BookmarkSlashIcon class="h-4 w-4" />
+      <Lang>
+        <template #zh> 退订 </template>
+        <template #en> UNSUBSCRIBE </template>
+      </Lang>
     </button>
   </div>
 </template>
