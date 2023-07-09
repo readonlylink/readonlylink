@@ -1,3 +1,5 @@
+有些 headline 是类似分隔符的，比如 “part 1”，可以不占用一级 headline，用定制的 element 处理。
+
 # author
 
 [author] author can provide different contents for different languages

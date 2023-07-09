@@ -55,6 +55,9 @@ function scrollIntoView() {
     :href="'#' + headlineId"
     :id="headlineId"
     class="-ml-4 flex items-baseline font-sans"
+    :style="{
+      'text-wrap': 'balance',
+    }"
     @click.prevent="jumpToHeadline()"
     @mouseover="hovered = true"
     @mouseleave="hovered = false"
