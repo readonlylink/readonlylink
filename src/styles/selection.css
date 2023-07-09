@@ -1,5 +1,3 @@
-@layer base {
-  body {
-    @apply selection:bg-stone-900 selection:text-white;
-  }
+body {
+  @apply selection:bg-stone-900 selection:text-white;
 }

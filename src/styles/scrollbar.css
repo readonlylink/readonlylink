@@ -7,49 +7,47 @@ References:
 
 */
 
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-  .scrollbar-h-0::-webkit-scrollbar {
-    height: 0px;
-  }
+.scrollbar-h-0::-webkit-scrollbar {
+  height: 0px;
+}
 
-  .scrollbar-h-2::-webkit-scrollbar {
-    height: 2px;
-  }
+.scrollbar-h-2::-webkit-scrollbar {
+  height: 2px;
+}
 
-  .scrollbar-h-4::-webkit-scrollbar {
-    height: 4px;
-  }
+.scrollbar-h-4::-webkit-scrollbar {
+  height: 4px;
+}
 
-  .scrollbar-h-8::-webkit-scrollbar {
-    height: 8px;
-  }
+.scrollbar-h-8::-webkit-scrollbar {
+  height: 8px;
+}
 
-  .scrollbar-w-0::-webkit-scrollbar {
-    width: 0px;
-  }
+.scrollbar-w-0::-webkit-scrollbar {
+  width: 0px;
+}
 
-  .scrollbar-w-2::-webkit-scrollbar {
-    width: 2px;
-  }
+.scrollbar-w-2::-webkit-scrollbar {
+  width: 2px;
+}
 
-  .scrollbar-w-4::-webkit-scrollbar {
-    width: 4px;
-  }
+.scrollbar-w-4::-webkit-scrollbar {
+  width: 4px;
+}
 
-  .scrollbar-w-8::-webkit-scrollbar {
-    width: 8px;
-  }
+.scrollbar-w-8::-webkit-scrollbar {
+  width: 8px;
+}
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 ::-webkit-scrollbar {
