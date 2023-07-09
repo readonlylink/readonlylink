@@ -30,10 +30,13 @@ const attributes = computed(() => normalizeAttributes(props.config.attributes))
 
     <Hyperlink :href="`/articles/${state.url}`">
       <div class="py-1 font-sans hover:text-stone-500">
-        <div class="font-bold">
+        <div class="text-balance font-bold">
           {{ config.title }}
         </div>
-        <div v-if="config.attributes.subtitle" class="text-base font-bold">
+        <div
+          v-if="config.attributes.subtitle"
+          class="text-balance text-base font-bold"
+        >
           {{ config.attributes.subtitle }}
         </div>
       </div>

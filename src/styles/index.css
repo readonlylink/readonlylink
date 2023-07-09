@@ -6,3 +6,7 @@
 @import './height.css';
 @import 'highlight.js/styles/github.css';
 @import 'katex/dist/katex.css';
+
+.text-balance {
+  text-wrap: balance;
+}

@@ -24,7 +24,7 @@ defineProps<{
 
     <Hyperlink :href="`/manuals/${state.url}`">
       <div class="py-1 font-sans hover:text-stone-500">
-        <div class="font-bold">
+        <div class="text-balance font-bold">
           {{ config.title }}
         </div>
       </div>

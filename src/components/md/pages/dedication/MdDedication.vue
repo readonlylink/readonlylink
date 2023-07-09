@@ -7,10 +7,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex h-full flex-col items-center justify-center text-2xl"
-    :style="{
-      'text-wrap': 'balance',
-    }"
+    class="text-balance flex h-full flex-col items-center justify-center text-2xl"
   >
     <div
       class="my-2 font-serif text-stone-600"
