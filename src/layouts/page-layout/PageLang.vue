@@ -14,7 +14,7 @@ const lang = useGlobalLang()
 
 <template>
   <Popup class="relative flex font-sans">
-    <template #toggle>
+    <template #button>
       <div class="flex items-center">
         <Lang>
           <template #zh>语言</template>
