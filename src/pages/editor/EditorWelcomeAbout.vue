@@ -7,13 +7,13 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex flex-col space-y-4">
-    <Lang class="text-2xl font-bold md:text-3xl">
+    <Lang class="text-2xl font-bold sm:text-3xl">
       <template #zh>关于</template>
       <template #en>About</template>
     </Lang>
 
     <div
-      class="flex max-w-lg flex-col items-start space-y-2 text-xl md:text-2xl"
+      class="flex max-w-lg flex-col items-start space-y-2 text-xl sm:text-2xl"
     >
       <Lang class="flex flex-col space-y-2.5">
         <template #zh>

@@ -24,7 +24,7 @@ const url = computed(() => {
 </script>
 
 <template>
-  <div class="flex max-w-3xl flex-col px-6 md:px-10 xl:mx-auto">
+  <div class="flex max-w-3xl flex-col px-6 sm:px-10 xl:mx-auto">
     <MdPage :key="state.path" :document="document" :url="url" />
     <ManualPageEnding class="py-6" :state="state" />
   </div>

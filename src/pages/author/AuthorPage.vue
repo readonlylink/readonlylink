@@ -43,12 +43,12 @@ const url = computed(() => {
 <template>
   <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
     <AuthorAvatar
-      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4.2rem] w-[4.2rem] shrink-0 object-contain md:block"
+      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4.2rem] w-[4.2rem] shrink-0 object-contain sm:block"
       :state="state"
     />
 
     <div class="p-5">
-      <div class="hidden flex-col items-baseline overflow-auto md:flex">
+      <div class="hidden flex-col items-baseline overflow-auto sm:flex">
         <div class="flex w-full items-baseline justify-between">
           <Hyperlink
             :href="`/authors/${state.url}/-/${state.config.homepage}`"
@@ -67,9 +67,9 @@ const url = computed(() => {
         <AuthorToolbar class="py-1" :state="state" />
       </div>
 
-      <div class="flex items-center space-x-3 overflow-auto md:hidden">
+      <div class="flex items-center space-x-3 overflow-auto sm:hidden">
         <AuthorAvatar
-          class="block h-[4.2rem] w-[4.2rem] shrink-0 object-contain md:hidden"
+          class="block h-[4.2rem] w-[4.2rem] shrink-0 object-contain sm:hidden"
           :state="state"
         />
 

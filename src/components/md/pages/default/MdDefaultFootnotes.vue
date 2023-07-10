@@ -11,16 +11,16 @@ const props = defineProps<{ state: State }>()
       v-for="footnote of state.document.footnotes"
       :id="`-footnote-${footnote.id}`"
       :key="footnote.id"
-      class="flex flex-col md:flex-row"
+      class="flex flex-col sm:flex-row"
     >
       <a
-        class="pb-0.5 pr-2 text-blue-600 hover:underline md:pb-0"
+        class="pb-0.5 pr-2 text-blue-600 hover:underline sm:pb-0"
         :href="`#-footnote-ref-${footnote.id}`"
       >
         [^{{ footnote.name }}]
       </a>
 
-      <div class="pl-4 md:pl-0">
+      <div class="pl-4 sm:pl-0">
         <MdNode
           v-for="(node, index) in footnote.nodes"
           :key="index"

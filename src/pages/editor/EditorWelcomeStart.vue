@@ -15,12 +15,12 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex flex-col space-y-4">
-    <Lang class="text-2xl font-bold md:text-3xl">
+    <Lang class="text-2xl font-bold sm:text-3xl">
       <template #zh>开始</template>
       <template #en>Start</template>
     </Lang>
 
-    <div class="flex flex-col items-start space-y-2 text-xl md:text-2xl">
+    <div class="flex flex-col items-start space-y-2 text-xl sm:text-2xl">
       <button
         class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
         @click="stateDirectoryOpen(state)"

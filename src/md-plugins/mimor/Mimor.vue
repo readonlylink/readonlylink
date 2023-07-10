@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="h-[36rem] w-full md:w-[36rem]" title="An embedded mimor.">
+  <div class="h-[36rem] w-full sm:w-[36rem]" title="An embedded mimor.">
     <x-mimor class="h-full" :src="src" />
   </div>
 </template>

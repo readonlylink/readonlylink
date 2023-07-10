@@ -1,10 +1,10 @@
 <template>
   <div class="overflow-auto">
-    <div class="block overflow-auto md:hidden">
+    <div class="block overflow-auto sm:hidden">
       <slot name="mobile"></slot>
     </div>
 
-    <div class="hidden overflow-auto md:block">
+    <div class="hidden overflow-auto sm:block">
       <slot name="desktop"></slot>
     </div>
   </div>

@@ -11,7 +11,7 @@ const window = useWindow()
 </script>
 
 <template>
-  <div class="flex flex-col space-y-4 overflow-auto md:space-y-6">
+  <div class="flex flex-col space-y-4 overflow-auto sm:space-y-6">
     <div
       v-if="
         Object.keys(state.recentlyOpened.directoryHandles).length === 0 &&
@@ -19,7 +19,7 @@ const window = useWindow()
       "
       class="flex flex-col space-y-4 overflow-auto"
     >
-      <Lang class="max-w-lg text-xl font-bold text-stone-400 md:text-2xl">
+      <Lang class="max-w-lg text-xl font-bold text-stone-400 sm:text-2xl">
         <template #zh>
           <div>最近打开的文件和文件夹，将出现在这里。</div>
         </template>
@@ -33,7 +33,7 @@ const window = useWindow()
       v-if="Object.keys(state.recentlyOpened.directoryHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
     >
-      <Lang class="text-2xl font-bold md:text-3xl">
+      <Lang class="text-2xl font-bold sm:text-3xl">
         <template #zh>最近打开的文件夹</template>
         <template #en>Recently Opened Directories</template>
       </Lang>
@@ -53,7 +53,7 @@ const window = useWindow()
       v-if="Object.keys(state.recentlyOpened.fileHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
     >
-      <Lang class="text-2xl font-bold md:text-3xl">
+      <Lang class="text-2xl font-bold sm:text-3xl">
         <template #zh>最近打开的文件</template>
         <template #en>Recently Opened Files</template>
       </Lang>

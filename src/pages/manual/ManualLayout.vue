@@ -30,7 +30,7 @@ watch(
 
 <template>
   <div class="h-screen-dynamic flex flex-col">
-    <div class="hidden h-full overflow-y-auto md:block">
+    <div class="hidden h-full overflow-y-auto sm:block">
       <div class="flex h-full overflow-y-auto">
         <ManualPageNav
           :state="state"
@@ -44,7 +44,7 @@ watch(
       </div>
     </div>
 
-    <div class="flex h-full flex-col md:hidden">
+    <div class="flex h-full flex-col sm:hidden">
       <div class="flex overflow-y-auto">
         <ManualPageNav
           v-if="showNav"
@@ -58,7 +58,7 @@ watch(
       </div>
 
       <button
-        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 md:hidden"
+        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 sm:hidden"
         @click="showNav = !showNav"
         v-on-click-outside="
           () => {

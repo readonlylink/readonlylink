@@ -70,11 +70,11 @@ function scrollIntoView() {
       :class="[
         hovered ? 'text-stone-400' : 'text-white',
         {
-          'text-3xl md:text-4xl': node.level === 1,
-          'text-2xl md:text-3xl': node.level === 2,
-          'text-xl md:text-2xl': node.level === 3,
-          'text-xl md:text-xl': node.level === 4,
-          'md:text-xl': node.level === 5 || node.level === 6,
+          'text-3xl sm:text-4xl': node.level === 1,
+          'text-2xl sm:text-3xl': node.level === 2,
+          'text-xl sm:text-2xl': node.level === 3,
+          'text-xl sm:text-xl': node.level === 4,
+          'sm:text-xl': node.level === 5 || node.level === 6,
         },
       ]"
     >
@@ -85,11 +85,11 @@ function scrollIntoView() {
       <MdNode
         class="inline font-bold"
         :class="{
-          'text-3xl md:text-4xl': node.level === 1,
-          'text-2xl md:text-3xl': node.level === 2,
-          'text-xl md:text-2xl': node.level === 3,
-          'text-xl md:text-xl': node.level === 4,
-          'md:text-xl': node.level === 5 || node.level === 6,
+          'text-3xl sm:text-4xl': node.level === 1,
+          'text-2xl sm:text-3xl': node.level === 2,
+          'text-xl sm:text-2xl': node.level === 3,
+          'text-xl sm:text-xl': node.level === 4,
+          'sm:text-xl': node.level === 5 || node.level === 6,
         }"
         v-for="(child, index) in node.children"
         :key="index"

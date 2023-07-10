@@ -16,13 +16,13 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-serif text-2xl"
   >
     <div
-      class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl md:text-4xl"
+      class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl sm:text-4xl"
     >
       <div class="px-2 text-center font-bold">
         {{ state.config.title }}
       </div>
 
-      <div class="px-2 text-center font-sans text-xl md:text-2xl">
+      <div class="px-2 text-center font-sans text-xl sm:text-2xl">
         {{ state.config.subtitle }}
       </div>
 
@@ -74,7 +74,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-sans text-lg hover:text-stone-500 md:flex-row"
+        class="flex flex-col items-center py-1 font-sans text-lg hover:text-stone-500 sm:flex-row"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>

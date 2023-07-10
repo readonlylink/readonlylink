@@ -28,7 +28,7 @@ const lang = useGlobalLang()
     </Head>
 
     <Splitpanes
-      class="splitter-6 md:splitter-3 flex h-full w-full overflow-auto"
+      class="splitter-6 sm:splitter-3 flex h-full w-full overflow-auto"
       @resized="splitpanesSize = $event[0].size"
     >
       <Pane

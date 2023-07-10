@@ -10,10 +10,10 @@ defineProps<{ state: State }>()
 
 <template>
   <div
-    class="flex h-full w-full flex-col overflow-auto md:flex-row md:justify-between"
+    class="flex h-full w-full flex-col overflow-auto sm:flex-row sm:justify-between"
   >
     <div
-      class="flex shrink grow basis-0 flex-col space-y-4 px-6 py-4 md:h-full md:space-y-6 md:overflow-auto md:px-12 md:py-8"
+      class="flex shrink grow basis-0 flex-col space-y-4 px-6 py-4 sm:h-full sm:space-y-6 sm:overflow-auto sm:px-12 sm:py-8"
     >
       <EditorWelcomeTitle :state="state" />
       <EditorWelcomeStart :state="state" />
@@ -21,7 +21,7 @@ defineProps<{ state: State }>()
     </div>
 
     <div
-      class="flex w-full shrink grow basis-0 flex-col px-6 py-4 md:h-full md:overflow-auto md:px-12 md:py-8"
+      class="flex w-full shrink grow basis-0 flex-col px-6 py-4 sm:h-full sm:overflow-auto sm:px-12 sm:py-8"
     >
       <EditorWelcomeRecent :state="state" />
     </div>
