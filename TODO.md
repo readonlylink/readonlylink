@@ -1,3 +1,5 @@
+[book] show subtitle in contents page
+
 leave Invalid Date as is such as `"date": "清"`
 
 support dark mode
