@@ -69,23 +69,27 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
           {{ attributes.translators.join(', ') }}
         </div>
       </div>
+
+      <div class="flex flex-col items-center px-2">
+        <div v-if="state.config.year" class="text font-ui text-lg">
+          {{ state.config.year }}
+        </div>
+        <div v-else-if="state.config.date" class="text font-ui text-lg">
+          {{ state.config.date }}
+        </div>
+      </div>
     </section>
+
+
 
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-ui text-lg hover:text-stone-500 sm:flex-row"
+        class="flex flex-col items-center py-1 font-code text-base hover:text-stone-500 sm:flex-row"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>
       </a>
-
-      <div v-if="state.config.year" class="text font-ui text-base">
-        {{ state.config.year }}
-      </div>
-      <div v-else-if="state.config.date" class="text font-ui text-base">
-        {{ state.config.date }}
-      </div>
     </section>
   </div>
 </template>

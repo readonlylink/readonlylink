@@ -1,7 +1,5 @@
 [book] show subtitle in contents page
 
-leave Invalid Date as is such as `"date": "清"`
-
 support dark mode
 
 动态详情页面，动态 entry 在列表中不应该 scroll
