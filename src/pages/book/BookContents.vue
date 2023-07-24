@@ -20,7 +20,7 @@ onMounted(() => {
       v-for="(document, path) in state.documents"
       :key="path"
     >
-      <div class="py-3">
+      <div class="py-2">
         <div class="flex flex-wrap text-balance items-baseline">
           <Hyperlink
             :href="`/books/${state.url}/-/${path}`"
