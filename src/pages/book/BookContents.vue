@@ -38,7 +38,7 @@ onMounted(() => {
         </div>
 
         <div
-          class="py-0.5 text-right font-ui text-xs italic leading-3 tracking-tight text-stone-500 hover:text-black"
+          class="py-0.5 text-right font-ui text-xs  leading-3 tracking-tight text-stone-500 hover:text-black"
         >
           <Hyperlink :href="`/books/${state.url}/-/${path}`">
             {{ path }}

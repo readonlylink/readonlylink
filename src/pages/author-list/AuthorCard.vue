@@ -41,7 +41,7 @@ const homepageURL = computed(
       </Hyperlink>
       <div
         v-if="author.config.tagline"
-        class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-lg italic"
+        class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-lg "
       >
         {{ author.config.tagline }}
       </div>

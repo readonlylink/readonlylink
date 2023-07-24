@@ -55,7 +55,7 @@ const avatarURL = computed(
 
         <div
           v-if="config.tagline"
-          class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-base italic"
+          class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-base"
         >
           {{ config.tagline }}
         </div>
