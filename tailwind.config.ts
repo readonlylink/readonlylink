@@ -9,10 +9,10 @@ export default {
       },
     },
     fontFamily: {
-      ui: ['serif'],
+      ui: ['sans-serif'],
       content: ['sans-serif'],
       code: ['Fira Code', 'monospace'],
-      logo: ['serif'],
+      logo: ['sans-serif'],
     },
   },
 } satisfies Config
