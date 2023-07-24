@@ -80,12 +80,10 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
       </div>
     </section>
 
-
-
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-code text-base hover:text-stone-500 sm:flex-row"
+        class="flex flex-col items-center py-1 font-code text-base hover:text-stone-500 sm:flex-row break-all"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>
