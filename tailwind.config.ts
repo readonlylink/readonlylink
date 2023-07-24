@@ -10,7 +10,7 @@ export default {
     },
     fontFamily: {
       ui: ['serif'],
-      content: ['sans'],
+      content: ['sans-serif'],
       code: ['monospace'],
       logo: ['serif'],
     },
