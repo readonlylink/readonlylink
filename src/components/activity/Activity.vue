@@ -66,7 +66,6 @@ const activityURL = computed(
     </div>
 
     <MdPage
-      class="h-full max-h-[490px] overflow-y-auto"
       :document="activity.document"
       :url="activityURL"
     />
