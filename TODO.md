@@ -1,10 +1,10 @@
-[book] show subtitle in contents page
+动态详情页面 -- more space
 
-support dark mode
-
-动态详情页面，动态 entry 在列表中不应该 scroll
+动态详情页面 -- 动态 entry 在列表中不应该 scroll
 
 有些 headline 是类似分隔符的，比如 “part 1”，可以不占用一级 headline，用定制的 element 处理。
+
+support dark mode
 
 # author
 
