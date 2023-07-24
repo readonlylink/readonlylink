@@ -11,7 +11,7 @@ export default {
     fontFamily: {
       ui: ['serif'],
       content: ['sans-serif'],
-      code: ['monospace'],
+      code: ['Fira Code', 'monospace'],
       logo: ['serif'],
     },
   },
