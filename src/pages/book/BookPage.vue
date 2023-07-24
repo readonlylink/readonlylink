@@ -17,6 +17,8 @@ watch(
   () => {
     window.scrollTo(0, 0)
   },
+  {
+immediate: true },
 )
 
 const url = computed(() => {
