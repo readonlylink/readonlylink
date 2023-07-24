@@ -10,7 +10,7 @@ const origin = window.location.origin
 
 <template>
   <div
-    class="flex w-full flex-wrap justify-between py-1 font-sans text-stone-400"
+    class="flex w-full flex-wrap justify-between py-1 font-ui text-stone-400"
   >
     <div class="flex flex-wrap">
       <Hyperlink

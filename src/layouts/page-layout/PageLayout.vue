@@ -8,7 +8,7 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="h-screen-dynamic mx-auto flex max-w-3xl flex-col px-3 py-3 font-serif text-xl sm:px-6 sm:py-4"
+    class="h-screen-dynamic mx-auto flex max-w-3xl flex-col px-3 py-3 font-content text-xl sm:px-6 sm:py-4"
   >
     <Head>
       <title v-if="lang.isZh()">只读</title>

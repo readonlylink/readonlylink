@@ -23,13 +23,13 @@ const attributes = computed(() => normalizeAttributes(props.config.attributes))
 
 <template>
   <div>
-    <Lang class="font-sans text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500">
       <template #zh> 文章 </template>
       <template #en> Article </template>
     </Lang>
 
     <Hyperlink :href="`/articles/${state.url}`">
-      <div class="py-1 font-sans hover:text-stone-500">
+      <div class="py-1 font-ui hover:text-stone-500">
         <div class="text-balance font-bold">
           {{ config.title }}
         </div>
@@ -42,7 +42,7 @@ const attributes = computed(() => normalizeAttributes(props.config.attributes))
       </div>
     </Hyperlink>
 
-    <div class="flex flex-col font-sans text-base text-stone-700">
+    <div class="flex flex-col font-ui text-base text-stone-700">
       <div
         class="flex items-center space-x-2"
         v-if="attributes.authors.length > 0"

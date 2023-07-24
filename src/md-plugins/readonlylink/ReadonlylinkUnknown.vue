@@ -11,12 +11,12 @@ defineProps<{
 
 <template>
   <div>
-    <Lang class="font-sans text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500">
       <template #zh> 未知 </template>
       <template #en> Unknown </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre font-mono text-sm">
+    <div class="overflow-x-auto whitespace-pre font-code text-sm">
       {{ config }}
     </div>
   </div>

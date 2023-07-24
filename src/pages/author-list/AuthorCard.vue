@@ -34,14 +34,14 @@ const homepageURL = computed(
       </Hyperlink>
       <Hyperlink :href="`/authors/${author.url}`" class="hover:underline">
         <div
-          class="overflow-x-auto overflow-y-hidden whitespace-pre font-mono text-base"
+          class="overflow-x-auto overflow-y-hidden whitespace-pre font-code text-base"
         >
           {{ author.url }}
         </div>
       </Hyperlink>
       <div
         v-if="author.config.tagline"
-        class="overflow-x-auto overflow-y-hidden whitespace-pre font-serif text-lg italic"
+        class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-lg italic"
       >
         {{ author.config.tagline }}
       </div>

@@ -13,7 +13,7 @@ defineProps<{ options: StateOptions }>()
       <template #en> Subscriptions </template>
     </Lang>
 
-    <div class="font-sans text-xl text-stone-500">
+    <div class="font-ui text-xl text-stone-500">
       <Lang>
         <template #zh> 订阅列表加载中⋯⋯ </template>
         <template #en> Loading subscriptions ... </template>

@@ -17,20 +17,20 @@ defineProps<{
 
 <template>
   <div>
-    <Lang class="font-sans text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500">
       <template #zh> 手册 </template>
       <template #en> Manual </template>
     </Lang>
 
     <Hyperlink :href="`/manuals/${state.url}`">
-      <div class="py-1 font-sans hover:text-stone-500">
+      <div class="py-1 font-ui hover:text-stone-500">
         <div class="text-balance font-bold">
           {{ config.title }}
         </div>
       </div>
     </Hyperlink>
 
-    <div class="flex flex-col font-sans text-base text-stone-700">
+    <div class="flex flex-col font-ui text-base text-stone-700">
       <div
         class="flex items-center space-x-2"
         v-if="config.authors && config.authors.length > 0"

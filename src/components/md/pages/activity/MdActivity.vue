@@ -8,7 +8,7 @@ const props = defineProps<{ state: State }>()
 <template>
   <div class="flex flex-col text-xl">
     <div
-      class="my-2 font-serif"
+      class="my-2 font-content"
       v-for="(child, index) in state.document.children"
       :key="index"
     >

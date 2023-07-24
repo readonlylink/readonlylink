@@ -30,7 +30,7 @@ function handleScroll(event: Event, tab: Tab) {
 <template>
   <div
     ref="rootElement"
-    class="scrollbar-w-0 scrollbar-h-8 flex h-full flex-col items-end overflow-y-auto px-3 py-2 font-mono"
+    class="scrollbar-w-0 scrollbar-h-8 flex h-full flex-col items-end overflow-y-auto px-3 py-2 font-code"
     :class="{ 'overflow-x-scroll': tab.isHeightOverflow }"
     @scroll="handleScroll($event, tab)"
   >

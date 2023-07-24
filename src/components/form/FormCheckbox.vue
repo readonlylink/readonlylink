@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="flex flex-col">
     <div class="flex w-full items-center pb-2 pt-3">
-      <label :for="name" class="shrink-0 font-sans">
+      <label :for="name" class="shrink-0 font-ui">
         <slot name="label" />
       </label>
 

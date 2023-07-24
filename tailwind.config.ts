@@ -9,11 +9,10 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['Linux Biolinum O', 'Source Han Serif SC', 'sans-serif'],
-      serif: ['Linux Libertine O', 'LXGW WenKai', 'serif'],
-      // NOTE One Chinese character should equal to two English characters.
-      mono: ['Fira Code', 'LXGW WenKai Larger', 'monospace'],
-      logo: ['Bodoni Moda', 'Source Han Serif SC', 'serif'],
+      ui: ['serif'],
+      content: ['sans'],
+      code: ['monospace'],
+      logo: ['serif'],
     },
   },
 } satisfies Config

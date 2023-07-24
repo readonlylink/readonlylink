@@ -35,7 +35,7 @@ function showAttributes() {
     <MdDefaultAttributes v-if="showAttributes()" class="mb-4" :state="state" />
 
     <div
-      class="my-2 font-serif"
+      class="my-2 font-content"
       v-for="(child, index) in state.document.children"
       :key="index"
     >

@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
           href="/subscriptions?kind=Editor"
           class="text-stone-400 hover:text-black"
         >
-          <Lang class="font-sans">
+          <Lang class="font-ui">
             <template #zh> 编辑 </template>
             <template #en> EDIT </template>
           </Lang>

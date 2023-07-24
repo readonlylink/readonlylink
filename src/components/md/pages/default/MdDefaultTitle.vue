@@ -9,7 +9,7 @@ const subtitle = computed(() => props.state.document.attributes.subtitle)
 </script>
 
 <template>
-  <div class="flex flex-col font-sans">
+  <div class="flex flex-col font-ui">
     <h1
       class="text-balance text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight"
     >

@@ -51,14 +51,14 @@ const activityURL = computed(
 
         <Hyperlink
           :href="`/authors/${activity.author.url}`"
-          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-mono text-xs hover:underline"
+          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-code text-xs hover:underline"
         >
           {{ activity.author.url }}
         </Hyperlink>
 
         <Hyperlink
           :href="`/articles/${activityURL}`"
-          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-mono text-xs hover:underline"
+          class="shrink-0 overflow-x-auto whitespace-pre py-0.5 font-code text-xs hover:underline"
         >
           {{ formatDateTime(activity.document.attributes.date) }}
         </Hyperlink>

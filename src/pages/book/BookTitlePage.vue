@@ -13,16 +13,16 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
 <template>
   <div
-    class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-serif text-2xl"
+    class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-content text-2xl"
   >
     <div
-      class="flex flex-col items-center space-y-2 py-4 font-sans text-3xl sm:text-4xl"
+      class="flex flex-col items-center space-y-2 py-4 font-ui text-3xl sm:text-4xl"
     >
       <div class="px-2 text-center font-bold">
         {{ state.config.title }}
       </div>
 
-      <div class="px-2 text-center font-sans text-xl sm:text-2xl">
+      <div class="px-2 text-center font-ui text-xl sm:text-2xl">
         {{ state.config.subtitle }}
       </div>
 
@@ -50,7 +50,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         class="flex flex-col items-center py-1.5"
       >
         <div
-          class="py-1 font-sans font-bold"
+          class="py-1 font-ui font-bold"
           v-for="(name, index) in attributes.authors"
           :key="index"
         >
@@ -63,7 +63,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         class="flex flex-col items-center"
       >
         <div
-          class="flex items-center pr-3 text-center font-sans text-xl font-bold"
+          class="flex items-center pr-3 text-center font-ui text-xl font-bold"
         >
           <LanguageIcon class="w-5 pr-1" />
           {{ attributes.translators.join(', ') }}
@@ -74,16 +74,16 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-sans text-lg hover:text-stone-500 sm:flex-row"
+        class="flex flex-col items-center py-1 font-ui text-lg hover:text-stone-500 sm:flex-row"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>
       </a>
 
-      <div v-if="state.config.year" class="text font-sans text-base">
+      <div v-if="state.config.year" class="text font-ui text-base">
         {{ state.config.year }}
       </div>
-      <div v-else-if="state.config.date" class="text font-sans text-base">
+      <div v-else-if="state.config.date" class="text font-ui text-base">
         {{ state.config.date }}
       </div>
     </section>

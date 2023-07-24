@@ -19,7 +19,7 @@ const avatarURL = computed(
 
 <template>
   <div>
-    <Lang class="font-sans text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500">
       <template #zh> 作者 </template>
       <template #en> Author </template>
     </Lang>
@@ -39,7 +39,7 @@ const avatarURL = computed(
       <div class="overflow-x-auto">
         <Hyperlink :href="`/authors/${state.url}`">
           <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre py-1 font-sans font-bold hover:text-stone-500"
+            class="overflow-x-auto overflow-y-hidden whitespace-pre py-1 font-ui font-bold hover:text-stone-500"
           >
             {{ config.name }}
           </div>
@@ -47,7 +47,7 @@ const avatarURL = computed(
 
         <Hyperlink v-if="state.url" :href="`/authors/${state.url}`">
           <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre py-0.5 font-mono text-base text-xs hover:underline"
+            class="overflow-x-auto overflow-y-hidden whitespace-pre py-0.5 font-code text-base text-xs hover:underline"
           >
             {{ state.url }}
           </div>
@@ -55,7 +55,7 @@ const avatarURL = computed(
 
         <div
           v-if="config.tagline"
-          class="overflow-x-auto overflow-y-hidden whitespace-pre font-serif text-base italic"
+          class="overflow-x-auto overflow-y-hidden whitespace-pre font-content text-base italic"
         >
           {{ config.tagline }}
         </div>

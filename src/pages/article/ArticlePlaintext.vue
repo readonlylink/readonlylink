@@ -13,7 +13,7 @@ watch(
 </script>
 
 <template>
-  <div class="m-6 overflow-x-auto whitespace-pre font-mono">
+  <div class="m-6 overflow-x-auto whitespace-pre font-code">
     {{ state.text }}
   </div>
 </template>
