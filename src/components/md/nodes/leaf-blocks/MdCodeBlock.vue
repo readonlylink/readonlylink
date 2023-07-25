@@ -25,12 +25,12 @@ function noHighlight() {
   <div>
     <pre
       v-if="noHighlight()"
-      class="mx-4 overflow-x-auto text-base"
-    ><code>{{ node.text }}</code></pre>
+      class="mx-4 overflow-x-auto text-base "
+    >{{ node.text }}</pre>
 
     <Highlight
       v-else
-      class="mx-4 overflow-x-auto text-base"
+      class="mx-4 overflow-x-auto text-base font-code"
       :text="node.text"
     />
   </div>

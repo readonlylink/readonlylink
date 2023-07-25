@@ -12,5 +12,5 @@ const highlightedHtml = computed(() => {
 </script>
 
 <template>
-  <pre><code v-html="safeHtml(highlightedHtml)"></code></pre>
+  <pre v-html="safeHtml(highlightedHtml)"></pre>
 </template>
