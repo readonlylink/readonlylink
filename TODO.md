@@ -1,3 +1,5 @@
+[book] contents show lines and bytes
+
 highlight each code block by type
 
 动态详情页面 -- more space
