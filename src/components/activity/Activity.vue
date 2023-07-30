@@ -65,9 +65,6 @@ const activityURL = computed(
       </div>
     </div>
 
-    <MdPage
-      :document="activity.document"
-      :url="activityURL"
-    />
+    <MdPage :document="activity.document" :url="activityURL" />
   </div>
 </template>

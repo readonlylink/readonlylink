@@ -15,11 +15,7 @@ onMounted(() => {
   <div
     class="min-h-screen-dynamic flex flex-col justify-center px-6 py-12 font-content text-2xl"
   >
-    <div
-
-      v-for="(document, path) in state.documents"
-      :key="path"
-    >
+    <div v-for="(document, path) in state.documents" :key="path">
       <div class="py-2">
         <div class="flex flex-wrap text-balance items-baseline">
           <Hyperlink
@@ -38,7 +34,7 @@ onMounted(() => {
         </div>
 
         <div
-          class="py-0.5 text-right font-ui text-xs  leading-3 tracking-tight text-stone-500 hover:text-black"
+          class="py-0.5 text-right font-ui text-xs leading-3 tracking-tight text-stone-500 hover:text-black"
         >
           <Hyperlink :href="`/books/${state.url}/-/${path}`">
             {{ path }}
