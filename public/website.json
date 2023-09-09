@@ -1,0 +1,7 @@
+{
+  "cors": true,
+  "rewriteNotFoundTo": "index.html",
+  "cacheControlPatterns": {
+    "assets/**": "max-age=31536000"
+  }
+}
