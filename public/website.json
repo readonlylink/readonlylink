@@ -1,6 +1,6 @@
 {
   "cors": true,
-  "rewriteNotFoundTo": "index.html",
+  "redirectNotFoundTo": "index.html",
   "cacheControlPatterns": {
     "assets/**": "max-age=31536000"
   }
