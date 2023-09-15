@@ -52,7 +52,7 @@ const url = computed(() => {
         <div class="flex w-full items-baseline justify-between">
           <Hyperlink
             :href="`/authors/${state.url}/-/${state.config.homepage}`"
-            class="overflow-x-auto whitespace-pre text-3xl font-bold"
+            class="overflow-x-auto overflow-y-hidden whitespace-pre text-3xl font-bold"
           >
             {{ state.config.name }}
           </Hyperlink>
