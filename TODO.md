@@ -1,3 +1,5 @@
+[manual] left right write keys to turn page
+
 [book] contents show lines and bytes
 
 highlight each code block by type

@@ -33,19 +33,19 @@
     "splitpanes": "^3.1.5",
     "vue": "^3.3.4",
     "vue-meta": "^2.4.0",
-    "vue-router": "^4.2.4"
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.5",
+    "@types/js-yaml": "^4.0.6",
     "@types/path-browserify": "^1.0.0",
     "@types/qs": "^6.9.8",
-    "@types/sanitize-html": "^2.9.0",
-    "@types/splitpanes": "^2.2.1",
-    "@types/wicg-file-system-access": "^2020.9.6",
+    "@types/sanitize-html": "^2.9.1",
+    "@types/splitpanes": "^2.2.2",
+    "@types/wicg-file-system-access": "^2020.9.8",
     "@vitejs/plugin-vue": "^4.3.4",
     "@volar/vue-typescript": "^1.6.5",
-    "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.29",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
@@ -55,7 +55,7 @@
     "vite": "^4.4.9",
     "vite-bundle-visualizer": "^0.10.0",
     "vite-plugin-rewrite-all": "^1.0.1",
-    "vitest": "^0.34.4",
-    "vue-tsc": "^1.8.11"
+    "vitest": "^0.34.6",
+    "vue-tsc": "^1.8.15"
   }
 }
