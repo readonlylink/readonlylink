@@ -7,6 +7,8 @@ import ManualPage from './ManualPage.vue'
 import ManualPageNotFound from './ManualPageNotFound.vue'
 import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
+import { stateNextPath } from './stateNextPath'
+import { statePrevPath } from './statePrevPath'
 import { stateReactive } from './stateReactive'
 import { stateReactivelyUpdateRoute } from './stateReactivelyUpdateRoute'
 import { stateTitle } from './stateTitle'
@@ -27,6 +29,19 @@ watch(
   },
   { immediate: true },
 )
+
+window.addEventListener('keydown', (event) => {
+  if (event.altKey) return
+  if (event.ctrlKey) return
+
+  if (event.key === 'ArrowLeft') {
+    router.push(`/manuals/${state.url}/-/${statePrevPath(state)}`)
+  }
+
+  if (event.key === 'ArrowRight') {
+    router.push(`/manuals/${state.url}/-/${stateNextPath(state)}`)
+  }
+})
 </script>
 
 <template>
