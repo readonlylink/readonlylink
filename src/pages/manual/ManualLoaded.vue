@@ -35,11 +35,17 @@ window.addEventListener('keydown', (event) => {
   if (event.ctrlKey) return
 
   if (event.key === 'ArrowLeft') {
-    router.push(`/manuals/${state.url}/-/${statePrevPath(state)}`)
+    const path = statePrevPath(state)
+    if (path !== undefined) {
+      router.push(`/manuals/${state.url}/-/${path}`)
+    }
   }
 
   if (event.key === 'ArrowRight') {
-    router.push(`/manuals/${state.url}/-/${stateNextPath(state)}`)
+    const path = stateNextPath(state)
+    if (path !== undefined) {
+      router.push(`/manuals/${state.url}/-/${path}`)
+    }
   }
 })
 </script>
