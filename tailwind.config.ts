@@ -9,6 +9,13 @@ export default {
       },
     },
     fontFamily: {
+      // sans: ['Unifont', 'sans-serif'],
+      // serif: ['Unifont', 'serif'],
+      // ui: ['Unifont', 'sans-serif'],
+      // content: ['Unifont', 'sans-serif'],
+      // code: ['Unifont', 'monospace'],
+      // logo: ['Unifont', 'sans-serif'],
+
       ui: ['sans-serif'],
       content: ['sans-serif'],
       code: ['monospace'],
