@@ -2,7 +2,6 @@
 import { FolderIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Scope from '../../components/utils/Scope.vue'
-import { useWindow } from '../../reactives/useWindow'
 import { State } from './State'
 import { stateOpenDirectoryHandle } from './stateDirectoryOpen'
 import { stateRemoveRecentlyOpenedDirectory } from './stateRemoveRecentlyOpenedDirectory'
@@ -12,7 +11,7 @@ defineProps<{
   directoryHandle: FileSystemDirectoryHandle
 }>()
 
-const window = useWindow()
+const { alert } = window
 const lang = useGlobalLang()
 </script>
 
@@ -37,7 +36,7 @@ const lang = useGlobalLang()
         class="overflow-auto hover:underline"
         @click="
           stateOpenDirectoryHandle(state, directoryHandle).catch((error) => {
-            window.alert(
+            alert(
               lang.isZh()
                 ? `打开文件夹失败：${error.message}`
                 : `Fail to open directory: ${error.message}`,

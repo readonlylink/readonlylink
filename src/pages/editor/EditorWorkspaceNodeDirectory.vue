@@ -7,7 +7,6 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import { useWindow } from '../../reactives/useWindow'
 import { arrayFromAsyncIterable } from '../../utils/arrayFromAsyncIterable'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import { callWithPrompt } from '../../utils/browser/callWithPrompt'
@@ -29,7 +28,7 @@ defineProps<{
 }>()
 
 const lang = useGlobalLang()
-const window = useWindow()
+const { alert } = window
 </script>
 
 <template>
@@ -77,7 +76,7 @@ const window = useWindow()
                     name,
                   )
                 ) {
-                  window.alert(
+                  alert(
                     lang.isZh()
                       ? `文件或文件夹已经存在：${name}:`
                       : `File or directory alreay exists: ${name}`,
@@ -106,7 +105,7 @@ const window = useWindow()
                     name,
                   )
                 ) {
-                  window.alert(
+                  alert(
                     lang.isZh()
                       ? `文件或文件夹已经存在：${name}:`
                       : `File or directory alreay exists: ${name}`,
