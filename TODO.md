@@ -1,6 +1,5 @@
-[page-layout] more space
+[page-layout] use column and give more space
 [page-layout] inline PageMenu to PageHead
-[page-layout] button for dark mode
 support dark mode
 
 highlight each code block by type
