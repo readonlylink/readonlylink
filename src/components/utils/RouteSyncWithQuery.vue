@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { reactive, watch } from 'vue'
 import { LocationQueryRaw, useRoute, useRouter } from 'vue-router'
-import { useCurrentPathname } from '../../reactives/useCurrentPathname'
-import { useCurrentQuery } from '../../reactives/useCurrentQuery'
+import { useCurrentPathname } from '../../utils/useCurrentPathname'
+import { useCurrentQuery } from '../../utils/useCurrentQuery'
 
 const props = defineProps<{
   name: string

@@ -4,7 +4,7 @@ import { Head } from '@vueuse/head'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
+import { useCurrentOrigin } from '../../utils/useCurrentOrigin'
 
 const origin = useCurrentOrigin()
 const lang = useGlobalLang()

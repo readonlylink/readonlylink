@@ -2,7 +2,7 @@
 import { PlayIcon } from '@heroicons/vue/24/outline'
 import { Base64 } from 'js-base64'
 import Lang from '../../components/lang/Lang.vue'
-import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
+import { useCurrentOrigin } from '../../utils/useCurrentOrigin'
 import { State } from './State'
 
 defineProps<{ state: State }>()

@@ -7,7 +7,7 @@ import {
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
+import { useCurrentOrigin } from '../../utils/useCurrentOrigin'
 import { useSubscription } from '../../models/subscription'
 import { State } from './State'
 
