@@ -8,7 +8,7 @@ const globalHistory: History = reactive({
 
 let initialized = false
 
-export async function loadGlobalHistory(): Promise<History> {
+export async function useHistory(): Promise<History> {
   if (initialized) {
     return globalHistory
   }
