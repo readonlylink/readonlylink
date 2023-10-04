@@ -1,5 +1,3 @@
-[page-layout] use column and give more space
-[page-layout] inline PageMenu to PageHead
 support dark mode
 
 highlight each code block by type
