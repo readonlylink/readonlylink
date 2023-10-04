@@ -1,8 +1,5 @@
 import { reactive, watch } from 'vue'
-
-type Subscription = {
-  list: Array<string>
-}
+import { Subscription } from './Subscription'
 
 const globalSubscription: Subscription = reactive({
   list: [],
