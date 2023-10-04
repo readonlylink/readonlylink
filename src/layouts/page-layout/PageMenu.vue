@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 
 const route = useRoute()
-
-const origin = window.location.origin
+const lang = useGlobalLang()
 </script>
 
 <template>
@@ -13,16 +13,15 @@ const origin = window.location.origin
     class="flex w-full flex-wrap justify-between py-1 font-ui text-stone-400"
   >
     <div class="flex flex-wrap">
-      <Hyperlink
-        class="pr-3 hover:text-black"
-        :class="{ 'text-black': route.path === '/' }"
-        href="/"
+      <button
+        class="pr-3 hover:text-black whitespace-nowrap flex items-center hover:underline"
+        @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
-          <template #zh> 首页 </template>
-          <template #en> HOME </template>
+          <template #zh>中文/English</template>
+          <template #en>English/中文</template>
         </Lang>
-      </Hyperlink>
+      </button>
 
       <Hyperlink
         class="pr-3 hover:text-black"

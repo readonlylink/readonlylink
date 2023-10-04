@@ -1,8 +1,9 @@
+[page-layout] more space
+[page-layout] inline PageMenu to PageHead
+[page-layout] button for dark mode
 support dark mode
 
 highlight each code block by type
-
-动态详情页面 -- more space
 
 有些 headline 是类似分隔符的，比如 “part 1”，可以不占用一级 headline，用定制的 element 处理。
 
