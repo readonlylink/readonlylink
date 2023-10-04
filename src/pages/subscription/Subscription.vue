@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
+import { useSubscription } from '../../reactives/useSubscription'
 import { State } from './State'
 import SubscriptionLoaded from './SubscriptionLoaded.vue'
 import SubscriptionLoading from './SubscriptionLoading.vue'
@@ -12,7 +12,7 @@ const route = useRoute()
 const state = ref<State | undefined>(undefined)
 
 function useStateOptions() {
-  const subscription = useGlobalSubscription()
+  const subscription = useSubscription()
   const list = subscription.list
   const kind = route.query['kind'] ? String(route.query['kind']) : undefined
 
@@ -37,3 +37,4 @@ watch(
   <SubscriptionLoaded v-if="state" :state="state" />
   <SubscriptionLoading v-else :options="useStateOptions()" />
 </template>
+../../reactives/useSubscription

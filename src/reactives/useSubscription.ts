@@ -10,7 +10,7 @@ const globalSubscription: Subscription = reactive({
 
 let initialized = false
 
-export function useGlobalSubscription(): Subscription {
+export function useSubscription(): Subscription {
   if (initialized) {
     return globalSubscription
   }

@@ -1,3 +1,4 @@
+models/subscription
 models/theme
 
 support dark mode

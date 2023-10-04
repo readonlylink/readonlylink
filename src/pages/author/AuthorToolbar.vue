@@ -8,13 +8,13 @@ import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
-import { useGlobalSubscription } from '../../reactives/useGlobalSubscription'
+import { useSubscription } from '../../reactives/useSubscription'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
 const lang = useGlobalLang()
-const subscription = useGlobalSubscription()
+const subscription = useSubscription()
 const origin = useCurrentOrigin()
 
 function isSubscribed() {
@@ -80,3 +80,4 @@ function unsubscribe() {
     </button>
   </div>
 </template>
+../../reactives/useSubscription
