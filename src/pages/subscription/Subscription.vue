@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useSubscription } from '../../reactives/useSubscription'
+import { useSubscription } from '../../models/subscription'
 import { State } from './State'
 import SubscriptionLoaded from './SubscriptionLoaded.vue'
 import SubscriptionLoading from './SubscriptionLoading.vue'
@@ -37,4 +37,4 @@ watch(
   <SubscriptionLoaded v-if="state" :state="state" />
   <SubscriptionLoading v-else :options="useStateOptions()" />
 </template>
-../../reactives/useSubscription
+../../models/subscription

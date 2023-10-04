@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
-import { useSubscription } from '../../reactives/useSubscription'
+import { useSubscription } from '../../models/subscription'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
@@ -45,4 +45,4 @@ async function save() {
     <textarea v-model="text" class="h-full border border-black p-2"></textarea>
   </div>
 </template>
-../../reactives/useSubscription
+../../models/subscription

@@ -1,4 +1,4 @@
-models/subscription
+extract Subscription
 models/theme
 
 support dark mode

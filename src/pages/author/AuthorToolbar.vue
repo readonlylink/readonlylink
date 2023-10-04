@@ -8,7 +8,7 @@ import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useCurrentOrigin } from '../../reactives/useCurrentOrigin'
-import { useSubscription } from '../../reactives/useSubscription'
+import { useSubscription } from '../../models/subscription'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
@@ -80,4 +80,4 @@ function unsubscribe() {
     </button>
   </div>
 </template>
-../../reactives/useSubscription
+../../models/subscription
