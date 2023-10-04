@@ -24,7 +24,7 @@ defineProps<{ state: State }>()
         >
           <Lang class="font-ui">
             <template #zh> 编辑 </template>
-            <template #en> EDIT </template>
+            <template #en> Edit </template>
           </Lang>
         </Hyperlink>
       </div>
