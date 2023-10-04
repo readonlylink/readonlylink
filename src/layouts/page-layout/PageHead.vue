@@ -61,7 +61,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 关于 </template>
-              <template #en> ABOUT </template>
+              <template #en> About </template>
             </Lang>
           </Hyperlink>
         </div>
@@ -74,7 +74,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 作者 </template>
-              <template #en> AUTHORS </template>
+              <template #en> Authors </template>
             </Lang>
           </Hyperlink>
 
@@ -85,7 +85,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 订阅 </template>
-              <template #en> SUBSCRIPTIONS </template>
+              <template #en> Subscriptions </template>
             </Lang>
           </Hyperlink>
 
@@ -96,7 +96,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 历史 </template>
-              <template #en> HISTORY </template>
+              <template #en> History </template>
             </Lang>
           </Hyperlink>
         </div>
@@ -109,7 +109,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 文档 </template>
-              <template #en> DOCS </template>
+              <template #en> Docs </template>
             </Lang>
           </Hyperlink>
 
@@ -120,7 +120,7 @@ const lang = useGlobalLang()
           >
             <Lang>
               <template #zh> 编辑器 </template>
-              <template #en> EDITOR </template>
+              <template #en> Editor </template>
             </Lang>
           </Hyperlink>
         </div>
