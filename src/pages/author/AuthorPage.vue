@@ -41,67 +41,44 @@ const url = computed(() => {
 </script>
 
 <template>
-  <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col">
-    <AuthorAvatar
-      class="absolute -left-[3.8rem] top-[1.5rem] hidden h-[4.2rem] w-[4.2rem] shrink-0 object-contain sm:block"
-      :state="state"
-    />
-
-    <div class="p-5">
-      <div class="hidden flex-col items-baseline overflow-auto sm:flex">
-        <div class="flex w-full items-baseline justify-between">
-          <Hyperlink
-            :href="`/authors/${state.url}/-/${state.config.homepage}`"
-            class="overflow-x-auto overflow-y-hidden whitespace-pre text-3xl font-bold"
-          >
-            {{ state.config.name }}
-          </Hyperlink>
-
-          <AuthorContact
-            v-if="state.config.contact"
-            :state="state"
-            :contact="state.config.contact"
-          />
-        </div>
-
-        <AuthorToolbar class="py-1" :state="state" />
-      </div>
-
-      <div class="flex items-center space-x-3 overflow-auto sm:hidden">
+  <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col p-5">
+    <div class="flex">
+      <div class="flex pr-4">
         <AuthorAvatar
-          class="block h-[4.2rem] w-[4.2rem] shrink-0 object-contain sm:hidden"
+          class="h-[4.5rem] w-[4.5rem] shrink-0 object-contain"
           :state="state"
         />
-
-        <div class="flex w-full flex-col overflow-auto">
-          <div class="flex w-full items-baseline justify-between">
-            <Hyperlink
-              :href="`/authors/${state.url}/-/${state.config.homepage}`"
-              class="overflow-x-auto whitespace-pre text-2xl font-bold"
-            >
-              {{ state.config.name }}
-            </Hyperlink>
-
-            <AuthorContact
-              v-if="state.config.contact"
-              :state="state"
-              :contact="state.config.contact"
-            />
-          </div>
-
-          <AuthorToolbar :state="state" />
-        </div>
       </div>
+
+      <div class="flex flex-col justify-center space-y-2">
+        <Hyperlink
+          :href="`/authors/${state.url}/-/${state.config.homepage}`"
+          class="text-3xl font-bold"
+        >
+          {{ state.config.name }}
+        </Hyperlink>
+
+        <AuthorContact
+          v-if="state.config.contact"
+          :state="state"
+          :contact="state.config.contact"
+        />
+      </div>
+    </div>
+
+    <div class="flex pt-3 pb-6 flex-col">
+      <AuthorToolbar :state="state" />
 
       <AuthorTabbar
         v-if="state.config.tabs"
+        class="py-3"
         :state="state"
         :tabs="state.config.tabs"
       />
-
-      <AuthorActivities v-if="state.path === 'ACTIVITIES'" :state="state" />
-      <MdPage v-else-if="document" :document="document" :url="url" />
-      <AuthorPageNotFound v-else :state="state" />
     </div>
+
+    <AuthorActivities v-if="state.path === 'ACTIVITIES'" :state="state" />
+    <MdPage v-else-if="document" :document="document" :url="url" />
+    <AuthorPageNotFound v-else :state="state" />
   </div>
 </template>

@@ -2,7 +2,6 @@ support dark mode
 
 # author
 
-[author] fix head layout -- give more space
 [author] author can provide different contents for different languages
 [author] support switch lang to switch contents
 
