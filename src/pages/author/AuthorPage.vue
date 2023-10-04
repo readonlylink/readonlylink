@@ -77,7 +77,7 @@ const url = computed(() => {
       />
     </div>
 
-    <AuthorActivities v-if="state.path === 'ACTIVITIES'" :state="state" />
+    <AuthorActivities v-if="state.path === 'activities'" :state="state" />
     <MdPage v-else-if="document" :document="document" :url="url" />
     <AuthorPageNotFound v-else :state="state" />
   </div>

@@ -30,11 +30,11 @@ function unsubscribe() {
 <template>
   <div class="flex text-xl">
     <Hyperlink
-      :href="`/authors/${state.url}/-/ACTIVITIES`"
+      :href="`/authors/${state.url}/-/activities`"
       class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
       :class="{
-        'text-black': state.path === 'ACTIVITIES',
-        'text-stone-400': state.path !== 'ACTIVITIES',
+        'text-black': state.path === 'activities',
+        'text-stone-400': state.path !== 'activities',
       }"
     >
       <Lang>
