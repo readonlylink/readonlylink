@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
-import { useWindow } from '../../reactives/useWindow'
 import EditorWelcomeRecentDirectory from './EditorWelcomeRecentDirectory.vue'
 import EditorWelcomeRecentFile from './EditorWelcomeRecentFile.vue'
 import { State } from './State'
 
 defineProps<{ state: State }>()
-
-const window = useWindow()
 </script>
 
 <template>
