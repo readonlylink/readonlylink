@@ -1,7 +1,5 @@
 support dark mode
 
-support sellect font -- for unifont
-
 highlight each code block by type
 
 动态详情页面 -- more space
