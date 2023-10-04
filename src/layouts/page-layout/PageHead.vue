@@ -104,6 +104,19 @@ const lang = useGlobalLang()
         </div>
 
         <div class="flex flex-col space-y-1 pr-6 pb-6">
+
+
+          <Hyperlink
+            class="pr-3 hover:text-black"
+            :class="{ 'text-black': route.path === '/editor' }"
+            href="/editor"
+          >
+            <Lang>
+              <template #zh> 编辑器 </template>
+              <template #en> Editor </template>
+            </Lang>
+          </Hyperlink>
+
           <a
             :href="
               lang.isZh()
@@ -119,17 +132,6 @@ const lang = useGlobalLang()
               <template #en> Manual </template>
             </Lang>
           </a>
-
-          <Hyperlink
-            class="pr-3 hover:text-black"
-            :class="{ 'text-black': route.path === '/editor' }"
-            href="/editor"
-          >
-            <Lang>
-              <template #zh> 编辑器 </template>
-              <template #en> Editor </template>
-            </Lang>
-          </Hyperlink>
         </div>
       </div>
     </div>

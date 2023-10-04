@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
         Object.keys(state.recentlyOpened.directoryHandles).length === 0 &&
         Object.keys(state.recentlyOpened.fileHandles).length === 0
       "
-      class="flex flex-col space-y-4 overflow-auto"
+      class="flex flex-col space-y-4 overflow-hidden"
     >
       <Lang class="max-w-lg text-xl font-bold text-stone-400 sm:text-2xl">
         <template #zh>
