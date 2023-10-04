@@ -1,9 +1,5 @@
-import { reactive, watch } from 'vue'
 import { Subscription } from './Subscription'
-
-const globalSubscription: Subscription = reactive({
-  list: [],
-})
+import { globalSubscription } from './globalSubscription'
 
 let initialized = false
 
@@ -27,14 +23,3 @@ function loadList(): Array<string> {
 
   return listText.split('\n')
 }
-
-watch(
-  () => globalSubscription.list,
-  (value) => {
-    const listText = value.join('\n')
-    window.localStorage.setItem('globalSubscription.list', listText)
-  },
-  {
-    deep: true,
-  },
-)

@@ -1,5 +1,3 @@
-extract globalSubscription
-
 models/theme
 
 support dark mode
