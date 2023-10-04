@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { reactive, watch } from 'vue'
 import { LocationQueryRaw, useRoute, useRouter } from 'vue-router'
-import { useCurrentPathname } from '../../utils/useCurrentPathname'
-import { useCurrentQuery } from '../../utils/useCurrentQuery'
+import { currentPathname } from '../../utils/currentPathname'
+import { currentQuery } from '../../utils/currentQuery'
 
 const props = defineProps<{
   name: string
@@ -21,9 +21,9 @@ watch(
   (value) => {
     if (value) {
       router.push({
-        path: useCurrentPathname(),
+        path: currentPathname(),
         query: {
-          ...useCurrentQuery(),
+          ...currentQuery(),
           [props.name]: null,
         } as LocationQueryRaw,
       })
@@ -55,3 +55,4 @@ watch(
 </script>
 
 <template></template>
+../../utils/currentPathname

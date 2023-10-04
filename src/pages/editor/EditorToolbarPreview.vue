@@ -2,12 +2,12 @@
 import { PlayIcon } from '@heroicons/vue/24/outline'
 import { Base64 } from 'js-base64'
 import Lang from '../../components/lang/Lang.vue'
-import { useCurrentOrigin } from '../../utils/useCurrentOrigin'
+import { currentOrigin } from '../../utils/currentOrigin'
 import { State } from './State'
 
 defineProps<{ state: State }>()
 
-const origin = useCurrentOrigin()
+const origin = currentOrigin()
 </script>
 
 <template>
@@ -41,3 +41,4 @@ const origin = useCurrentOrigin()
     </Lang>
   </a>
 </template>
+../../utils/currentOrigin

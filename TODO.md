@@ -1,5 +1,3 @@
-drop "use" prefix of useCurrent*
-
 models/author-list
 models/theme
 
