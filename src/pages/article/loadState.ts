@@ -1,5 +1,5 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
-import { useHistory } from '../../reactives/useHistory'
+import { useHistory } from '../../models/history/useHistory'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'
 

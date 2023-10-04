@@ -1,7 +1,7 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadManualConfig } from '../../models/manual/loadManualConfig'
-import { useHistory } from '../../reactives/useHistory'
+import { useHistory } from '../../models/history/useHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'

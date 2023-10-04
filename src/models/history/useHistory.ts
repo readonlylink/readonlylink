@@ -1,6 +1,6 @@
 import * as Kv from 'idb-keyval'
 import { reactive, watch } from 'vue'
-import { History, HistoryEntry } from '../models/history/History'
+import { History, HistoryEntry } from './History'
 
 const globalHistory: History = reactive({
   record: {},
