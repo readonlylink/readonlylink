@@ -1,5 +1,5 @@
 import * as Kv from 'idb-keyval'
-import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
+import { useDefaultAuthorList } from '../../models/author-list'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'

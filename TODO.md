@@ -1,4 +1,3 @@
-models/author-list
 models/theme
 
 support dark mode

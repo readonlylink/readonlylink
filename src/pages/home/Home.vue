@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { useDefaultAuthorList } from '../../reactives/useDefaultAuthorList'
+import { useDefaultAuthorList } from '../../models/author-list'
 import HomeLoaded from './HomeLoaded.vue'
 import HomeLoading from './HomeLoading.vue'
 import { State } from './State'
