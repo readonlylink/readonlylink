@@ -18,7 +18,7 @@ const lang = useGlobalLang()
       <div class="flex items-center">
         <Lang>
           <template #zh>语言</template>
-          <template #en>LANG</template>
+          <template #en>Lang</template>
         </Lang>
 
         <ArrowsUpDownIcon class="h-5 w-5" />

@@ -1,7 +1,3 @@
-rename Docs to Manual -- no need docs routes
-
-fix the use of Lang button in editor
-
 support dark mode
 
 highlight each code block by type

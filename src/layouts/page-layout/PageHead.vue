@@ -4,9 +4,11 @@ import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalTheme } from '../../models/theme'
+import { currentOrigin } from '../../utils/currentOrigin'
 import PageLogo from './PageLogo.vue'
 
 const route = useRoute()
+const origin = currentOrigin()
 const theme = useGlobalTheme()
 const lang = useGlobalLang()
 </script>
@@ -102,16 +104,21 @@ const lang = useGlobalLang()
         </div>
 
         <div class="flex flex-col space-y-1 pr-6 pb-6">
-          <Hyperlink
+          <a
+            :href="
+              lang.isZh()
+                ? `${origin}/manuals/${origin}/contents/manual/zh.json`
+                : `${origin}/manuals/${origin}/contents/manual/en.json`
+            "
             class="pr-3 hover:text-black"
             :class="{ 'text-black': route.path === '/docs' }"
-            href="/docs"
+            target="_blank"
           >
             <Lang>
-              <template #zh> 文档 </template>
-              <template #en> Docs </template>
+              <template #zh> 手册 </template>
+              <template #en> Manual </template>
             </Lang>
-          </Hyperlink>
+          </a>
 
           <Hyperlink
             class="pr-3 hover:text-black"
