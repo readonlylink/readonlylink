@@ -20,8 +20,8 @@ defineProps<{
     class="flex max-w-min items-center space-x-0.5 overflow-x-auto whitespace-pre py-1 pl-3 pr-1.5"
     :title="tab.node?.relativePath || tab.file.name"
     :class="{
-      'bg-stone-200': tab === state.currentTab,
-      'bg-white hover:bg-stone-100': tab !== state.currentTab,
+      'bg-stone-200 dark:bg-stone-600': tab === state.currentTab,
+      'bg-white dark:bg-black hover:bg-stone-100 hover:dark:bg-stone-800': tab !== state.currentTab,
     }"
   >
     <button
@@ -43,7 +43,7 @@ defineProps<{
           action: () => stateTabClose(state, tab),
         })
       "
-      class="rounded-full hover:bg-stone-300"
+      class="rounded-full hover:bg-stone-300 hover:dark:bg-stone-600"
       :class="{
         'bg-amber-500 text-amber-500 hover:bg-amber-300':
           tabIsModified(tab) && !tab.isProcessing,

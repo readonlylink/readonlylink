@@ -27,7 +27,7 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="flex flex-wrap-reverse items-center justify-between bg-stone-200 px-3 py-0.5"
+    class="flex flex-wrap-reverse items-center justify-between bg-stone-200 dark:bg-stone-600 px-3 py-0.5"
   >
     <div class="flex space-x-4 overflow-x-auto pr-4">
       <button

@@ -34,7 +34,7 @@ function handleInput(event: Event, tab: Tab) {
 <template>
   <textarea
     ref="rootElement"
-    class="scrollbar-w-8 scrollbar-h-8 h-full w-full resize-none whitespace-pre px-3 py-2 font-mono caret-red-500 focus:outline-none"
+    class="scrollbar-w-8 scrollbar-h-8 h-full w-full resize-none whitespace-pre px-3 py-2 font-mono caret-red-500 focus:outline-none bg-white dark:bg-black text-black dark:text-white"
     spellcheck="false"
     v-model="tab.text"
     @scroll="handleScroll($event, tab)"

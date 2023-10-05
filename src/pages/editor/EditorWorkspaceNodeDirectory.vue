@@ -34,7 +34,7 @@ const { alert } = window
 <template>
   <div class="flex shrink-0 flex-col overflow-auto">
     <button
-      class="flex w-full shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
+      class="flex w-full shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200 hover:dark:bg-stone-600"
       :class="{
         'text-amber-600': workspaceNodeIsModified(node),
       }"

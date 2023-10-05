@@ -22,10 +22,10 @@ const lang = useGlobalLang()
 
 <template>
   <button
-    class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200"
+    class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200 hover:dark:bg-stone-600"
     :class="{
-      'bg-stone-200': stateWorkspaceNodeIsCurrentTab(state, node),
-      'text-amber-600': workspaceNodeIsModified(node),
+      'bg-stone-200 dark:bg-stone-600': stateWorkspaceNodeIsCurrentTab(state, node),
+      'text-amber-600 dark:bg-amber-400': workspaceNodeIsModified(node),
     }"
     @mouseover="node.isHovered = true"
     @mouseleave="node.isHovered = false"
