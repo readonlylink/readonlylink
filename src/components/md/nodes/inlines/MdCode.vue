@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <code
-    class="break-words rounded-sm bg-sky-100 px-1 py-0.5 font-code text-base text-sky-900 opacity-80"
+    class="break-words rounded-sm bg-sky-100 dark:bg-sky-900 px-1 py-0.5 font-code text-base text-sky-900 dark:text-sky-50 opacity-80"
     >{{ node.text }}</code
   >
 </template>
