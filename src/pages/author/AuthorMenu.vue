@@ -33,7 +33,7 @@ function unfollow() {
 
 <template>
   <div class="flex text-xl text-stone-400">
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
         class="hover:text-black whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
@@ -63,7 +63,7 @@ function unfollow() {
       </button>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <Hyperlink
         :href="`/authors/${state.url}/-/${state.config.homepage}`"
         class="hover:text-black"
@@ -117,7 +117,7 @@ function unfollow() {
       </button>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <Hyperlink href="/" class="hover:text-black">
         <Lang>
           <template #zh> 只读链接 </template>
@@ -127,4 +127,3 @@ function unfollow() {
     </div>
   </div>
 </template>
-../../models/following

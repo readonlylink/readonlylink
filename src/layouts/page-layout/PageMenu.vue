@@ -14,7 +14,7 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex flex-wrap text-stone-400">
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
         class="hover:text-black whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
@@ -44,7 +44,7 @@ const lang = useGlobalLang()
       </button>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <Hyperlink
         class="hover:text-black"
         :class="{ 'text-black': route.path === '/' }"
@@ -90,7 +90,7 @@ const lang = useGlobalLang()
       </Hyperlink>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <a
         href="/editor"
         class="hover:text-black"
