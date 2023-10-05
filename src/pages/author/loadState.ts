@@ -1,12 +1,11 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
+import { loadAuthor, loadAuthorConfig } from '../../models/author'
 import { useHistory } from '../../models/history/useHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'
-import { loadAuthor } from './loadAuthor'
-import { loadAuthorConfig } from './loadAuthorConfig'
 
 export type StateOptions = {
   url: string

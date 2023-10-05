@@ -1,7 +1,7 @@
 import * as Kv from 'idb-keyval'
+import { loadAuthor } from '../../models/author'
 import { useDefaultAuthorList } from '../../models/author-list'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
-import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
 
 export async function stateRefresh(state: State): Promise<void> {

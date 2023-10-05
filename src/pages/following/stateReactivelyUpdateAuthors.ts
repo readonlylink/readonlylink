@@ -1,7 +1,7 @@
 import { watch } from 'vue'
+import { loadAuthor } from '../../models/author'
 import { useFollowing } from '../../models/following'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
-import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
 
 export function stateReactivelyUpdateAuthors(state: State) {
