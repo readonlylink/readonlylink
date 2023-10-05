@@ -58,7 +58,7 @@ watch(
       </div>
 
       <button
-        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 sm:hidden"
+        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white dark:bg-black p-3 sm:hidden"
         @click="showNav = !showNav"
         v-on-click-outside="
           () => {
@@ -66,7 +66,7 @@ watch(
           }
         "
       >
-        <Bars3Icon class="w-7 text-stone-500 dark:text-stone-400" />
+        <Bars3Icon class="w-7 text-stone-500 dark:text-stone-300" />
       </button>
     </div>
   </div>
