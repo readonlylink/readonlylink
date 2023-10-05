@@ -114,7 +114,7 @@ const lang = useGlobalLang()
       <EditorToolbarPreview :state="state" />
 
       <button
-        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
+        class="hover:text-black dark:hover:text-white whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>

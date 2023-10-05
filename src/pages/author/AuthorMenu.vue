@@ -36,7 +36,7 @@ function unfollow() {
   <div class="flex text-xl text-stone-400">
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
-        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
+        class="hover:text-black dark:hover:text-white whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -46,7 +46,7 @@ function unfollow() {
       </button>
 
       <button
-        class="whitespace-nowrap flex items-center hover:text-black"
+        class="whitespace-nowrap flex items-center hover:text-black dark:hover:text-white"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -65,7 +65,7 @@ function unfollow() {
 
       <button
         v-if="!isFollowed()"
-        class="hover:text-black"
+        class="hover:text-black dark:hover:text-white"
         @click="follow()"
       >
         <Lang>
@@ -76,7 +76,7 @@ function unfollow() {
 
       <button
         v-if="isFollowed()"
-        class="hover:text-black"
+        class="hover:text-black dark:hover:text-white"
         @click="unfollow()"
       >
         <Lang>
@@ -89,9 +89,9 @@ function unfollow() {
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <Hyperlink
         :href="`/authors/${state.url}/-/${state.config.homepage}`"
-        class="hover:text-black"
+        class="hover:text-black dark:hover:text-white"
         :class="{
-          'text-black': state.path === state.config.homepage,
+          'text-black dark:text-white': state.path === state.config.homepage,
         }"
       >
         <Lang>
@@ -102,9 +102,9 @@ function unfollow() {
 
       <Hyperlink
         :href="`/authors/${state.url}/-/activities`"
-        class="hover:text-black"
+        class="hover:text-black dark:hover:text-white"
         :class="{
-          'text-black': state.path === 'activities',
+          'text-black dark:text-white': state.path === 'activities',
         }"
       >
         <Lang>
@@ -115,7 +115,7 @@ function unfollow() {
     </div>
 
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
-      <a href="/" target="_blank" class="hover:text-black flex items-center">
+      <a href="/" target="_blank" class="hover:text-black dark:hover:text-white flex items-center">
         <Lang>
           <template #zh> 只读链接 </template>
           <template #en> Readonly.Link </template>

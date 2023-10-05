@@ -16,9 +16,9 @@ const route = useRoute()
     <Hyperlink
       v-for="(path, name) of tabs"
       :key="name"
-      class="mr-3 text-xl hover:text-black"
+      class="mr-3 text-xl hover:text-black dark:hover:text-white"
       :class="{
-        'text-black': route.path.endsWith(`/-/${path}`),
+        'text-black dark:text-white': route.path.endsWith(`/-/${path}`),
         'text-stone-400': !route.path.endsWith(`/-/${path}`),
       }"
       :href="`/authors/${state.url}/-/${path}`"

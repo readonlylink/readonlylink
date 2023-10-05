@@ -37,10 +37,14 @@ const url = computed(() => {
 </script>
 
 <template>
-  <div class="h-screen-dynamic relative mx-auto flex max-w-3xl flex-col p-5">
-    <AuthorHead :state="state" />
-    <AuthorActivities v-if="state.path === 'activities'" :state="state" />
-    <MdPage v-else-if="document" :document="document" :url="url" />
-    <AuthorPageNotFound v-else :state="state" />
+  <div
+    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+  >
+    <div class="relative mx-auto flex max-w-3xl flex-col p-5">
+      <AuthorHead :state="state" />
+      <AuthorActivities v-if="state.path === 'activities'" :state="state" />
+      <MdPage v-else-if="document" :document="document" :url="url" />
+      <AuthorPageNotFound v-else :state="state" />
+    </div>
   </div>
 </template>

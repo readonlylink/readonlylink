@@ -19,7 +19,7 @@ defineProps<{
       v-if="contact.bilibili"
       :href="contact.bilibili"
       :title="contact.bilibili"
-      class="hover:text-black"
+      class="hover:text-black dark:hover:text-white"
       target="_blank"
     >
       <BilibiliLineIcon class="h-5 w-5" />
@@ -29,7 +29,7 @@ defineProps<{
       v-if="contact.github"
       :href="contact.github"
       :title="contact.github"
-      class="hover:text-black"
+      class="hover:text-black dark:hover:text-white"
       target="_blank"
     >
       <GithubIcon class="h-5 w-5" />
@@ -39,7 +39,7 @@ defineProps<{
       v-if="contact.email"
       :href="`mailto:${contact.email}`"
       :title="contact.email"
-      class="hover:text-black"
+      class="hover:text-black dark:hover:text-white"
       target="_blank"
     >
       <EnvelopeIcon class="h-5 w-5" />
@@ -49,7 +49,7 @@ defineProps<{
       v-if="contact.twitter"
       :href="contact.twitter"
       :title="contact.twitter"
-      class="hover:text-black"
+      class="hover:text-black dark:hover:text-white"
       target="_blank"
     >
       <TwitterIcon class="h-5 w-5" />
@@ -59,7 +59,7 @@ defineProps<{
       v-if="contact.mimor"
       :href="contact.mimor"
       :title="contact.mimor"
-      class="hover:text-black"
+      class="hover:text-black dark:hover:text-white"
       target="_blank"
     >
       <MimorIcon class="h-5 w-5" />

@@ -32,7 +32,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
       <Hyperlink :href="`/books/${state.url}?front-matter=contents`">
         <div
-          class="flex items-center space-x-0.5 py-2 font-bold text-stone-400 hover:text-black"
+          class="flex items-center space-x-0.5 py-2 font-bold text-stone-400 hover:text-black dark:hover:text-white"
         >
           <BookOpenIcon class="w-5 pb-0.5" />
 

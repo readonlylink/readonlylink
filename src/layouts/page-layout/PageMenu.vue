@@ -17,7 +17,7 @@ const lang = useGlobalLang()
   <div class="flex flex-wrap text-stone-400">
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
-        class="hover:text-black whitespace-nowrap flex items-center"
+        class="hover:text-black dark:hover:text-white"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -27,7 +27,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        class="whitespace-nowrap flex items-center hover:text-black"
+        class="hover:text-black dark:hover:text-white"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -47,8 +47,8 @@ const lang = useGlobalLang()
 
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <Hyperlink
-        class="hover:text-black"
-        :class="{ 'text-black': route.path === '/' }"
+        class="hover:text-black dark:hover:text-white"
+        :class="{ 'text-black dark:text-white': route.path === '/' }"
         href="/"
       >
         <Lang>
@@ -58,8 +58,8 @@ const lang = useGlobalLang()
       </Hyperlink>
 
       <Hyperlink
-        class="hover:text-black"
-        :class="{ 'text-black': route.path === '/authors' }"
+        class="hover:text-black dark:hover:text-white"
+        :class="{ 'text-black dark:text-white': route.path === '/authors' }"
         href="/authors"
       >
         <Lang>
@@ -69,8 +69,8 @@ const lang = useGlobalLang()
       </Hyperlink>
 
       <Hyperlink
-        class="hover:text-black"
-        :class="{ 'text-black': route.path === '/following' }"
+        class="hover:text-black dark:hover:text-white"
+        :class="{ 'text-black dark:text-white': route.path === '/following' }"
         href="/following"
       >
         <Lang>
@@ -80,8 +80,8 @@ const lang = useGlobalLang()
       </Hyperlink>
 
       <Hyperlink
-        class="hover:text-black"
-        :class="{ 'text-black': route.path === '/history' }"
+        class="hover:text-black dark:hover:text-white"
+        :class="{ 'text-black dark:text-white': route.path === '/history' }"
         href="/history"
       >
         <Lang>
@@ -94,8 +94,8 @@ const lang = useGlobalLang()
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <a
         href="/editor"
-        class="hover:text-black  flex items-center"
-        :class="{ 'text-black': route.path === '/editor' }"
+        class="hover:text-black dark:hover:text-white flex items-center"
+        :class="{ 'text-black dark:text-white': route.path === '/editor' }"
         target="_blank"
       >
         <Lang>
@@ -112,8 +112,8 @@ const lang = useGlobalLang()
             ? `${origin}/manuals/${origin}/contents/manual/zh.json`
             : `${origin}/manuals/${origin}/contents/manual/en.json`
         "
-        class="hover:text-black  flex items-center"
-        :class="{ 'text-black': route.path === '/docs' }"
+        class="hover:text-black dark:hover:text-white flex items-center"
+        :class="{ 'text-black dark:text-white': route.path === '/docs' }"
         target="_blank"
       >
         <Lang>
@@ -125,8 +125,8 @@ const lang = useGlobalLang()
       </a>
 
       <Hyperlink
-        class="hover:text-black"
-        :class="{ 'text-black': route.path === '/about' }"
+        class="hover:text-black dark:hover:text-white"
+        :class="{ 'text-black dark:text-white': route.path === '/about' }"
         href="/about"
       >
         <Lang>
