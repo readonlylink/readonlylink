@@ -66,7 +66,6 @@ function unfollow() {
       <button
         v-if="!isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
         @click="follow()"
       >
         <Lang>
@@ -78,7 +77,6 @@ function unfollow() {
       <button
         v-if="isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
         @click="unfollow()"
       >
         <Lang>
