@@ -14,9 +14,9 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex flex-wrap text-stone-400">
-    <div class="flex flex-col space-y-1 pr-6 pb-6">
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
       <button
-        class="pr-3 hover:text-black whitespace-nowrap flex items-center hover:underline"
+        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -26,7 +26,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        class="pr-3 whitespace-nowrap flex items-center hover:text-black"
+        class="whitespace-nowrap flex items-center hover:text-black"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -42,22 +42,22 @@ const lang = useGlobalLang()
           </template>
         </Lang>
       </button>
-
-      <Hyperlink
-        class="pr-3 hover:text-black"
-        :class="{ 'text-black': route.path === '/about' }"
-        href="/about"
-      >
-        <Lang>
-          <template #zh> 关于 </template>
-          <template #en> About </template>
-        </Lang>
-      </Hyperlink>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-6 pb-6">
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
       <Hyperlink
-        class="pr-3 hover:text-black"
+        class="hover:text-black"
+        :class="{ 'text-black': route.path === '/' }"
+        href="/"
+      >
+        <Lang>
+          <template #zh> 首页 </template>
+          <template #en> Homepage </template>
+        </Lang>
+      </Hyperlink>
+
+      <Hyperlink
+        class="hover:text-black"
         :class="{ 'text-black': route.path === '/authors' }"
         href="/authors"
       >
@@ -68,7 +68,7 @@ const lang = useGlobalLang()
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-black"
+        class="hover:text-black"
         :class="{ 'text-black': route.path === '/subscriptions' }"
         href="/subscriptions"
       >
@@ -79,7 +79,7 @@ const lang = useGlobalLang()
       </Hyperlink>
 
       <Hyperlink
-        class="pr-3 hover:text-black"
+        class="hover:text-black"
         :class="{ 'text-black': route.path === '/history' }"
         href="/history"
       >
@@ -90,17 +90,18 @@ const lang = useGlobalLang()
       </Hyperlink>
     </div>
 
-    <div class="flex flex-col space-y-1 pr-6 pb-6">
-      <Hyperlink
-        class="pr-3 hover:text-black"
-        :class="{ 'text-black': route.path === '/editor' }"
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
+      <a
         href="/editor"
+        class="hover:text-black"
+        :class="{ 'text-black': route.path === '/editor' }"
+        target="_blank"
       >
         <Lang>
           <template #zh> 编辑器 </template>
           <template #en> Editor </template>
         </Lang>
-      </Hyperlink>
+      </a>
 
       <a
         :href="
@@ -108,7 +109,7 @@ const lang = useGlobalLang()
             ? `${origin}/manuals/${origin}/contents/manual/zh.json`
             : `${origin}/manuals/${origin}/contents/manual/en.json`
         "
-        class="pr-3 hover:text-black"
+        class="hover:text-black"
         :class="{ 'text-black': route.path === '/docs' }"
         target="_blank"
       >
@@ -117,6 +118,17 @@ const lang = useGlobalLang()
           <template #en> Manual </template>
         </Lang>
       </a>
+
+      <Hyperlink
+        class="hover:text-black"
+        :class="{ 'text-black': route.path === '/about' }"
+        href="/about"
+      >
+        <Lang>
+          <template #zh> 关于 </template>
+          <template #en> About </template>
+        </Lang>
+      </Hyperlink>
     </div>
   </div>
 </template>

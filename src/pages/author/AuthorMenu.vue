@@ -33,9 +33,9 @@ function unsubscribe() {
 
 <template>
   <div class="flex text-xl text-stone-400">
-    <div class="flex flex-col space-y-1 pr-6 pb-6">
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
       <button
-        class="pr-3 hover:text-black whitespace-nowrap flex items-center hover:underline"
+        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -45,7 +45,7 @@ function unsubscribe() {
       </button>
 
       <button
-        class="pr-3 whitespace-nowrap flex items-center hover:text-black"
+        class="whitespace-nowrap flex items-center hover:text-black"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -63,10 +63,23 @@ function unsubscribe() {
       </button>
     </div>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
+      <Hyperlink
+          :href="`/authors/${state.url}/-/${state.config.homepage}`"
+        class="hover:text-black"
+        :class="{
+          'text-black': state.path === state.config.homepage,
+        }"
+      >
+        <Lang>
+          <template #zh> 首页 </template>
+          <template #en> Homepage </template>
+        </Lang>
+      </Hyperlink>
+
       <Hyperlink
         :href="`/authors/${state.url}/-/activities`"
-        class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
+        class="hover:text-black"
         :class="{
           'text-black': state.path === 'activities',
         }"
@@ -79,7 +92,7 @@ function unsubscribe() {
 
       <a
         v-if="!isSubscribed()"
-        class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
+        class="hover:text-black"
         :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
         @click="subscribe()"
         :href="`${origin}/subscriptions`"
@@ -93,7 +106,7 @@ function unsubscribe() {
 
       <button
         v-if="isSubscribed()"
-        class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
+        class="hover:text-black"
         :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
         @click="unsubscribe()"
       >
@@ -102,6 +115,15 @@ function unsubscribe() {
           <template #en> Subscribed </template>
         </Lang>
       </button>
+    </div>
+
+    <div class="flex flex-col space-y-1 pr-8 pb-6">
+      <Hyperlink href="/" class="hover:text-black">
+        <Lang>
+          <template #zh> 只读链接 </template>
+          <template #en> Readonly.Link </template>
+        </Lang>
+      </Hyperlink>
     </div>
   </div>
 </template>

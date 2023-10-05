@@ -1,8 +1,6 @@
-[author] back to readonlylink button
+fix the manual -- we will add link to readonlylink in rendered page -- no one cares anyway
 
 rename subscription to follow
-
-fix the manual -- we will add link to readonlylink in rendered page -- no one cares anyway
 
 support dark mode
 
