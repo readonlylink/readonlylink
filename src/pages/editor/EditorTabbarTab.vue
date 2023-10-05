@@ -21,13 +21,14 @@ defineProps<{
     :title="tab.node?.relativePath || tab.file.name"
     :class="{
       'bg-stone-200 dark:bg-stone-600': tab === state.currentTab,
-      'bg-white dark:bg-black hover:bg-stone-100 hover:dark:bg-stone-800': tab !== state.currentTab,
+      'bg-white dark:bg-black hover:bg-stone-100 hover:dark:bg-stone-800':
+        tab !== state.currentTab,
     }"
   >
     <button
       @click="state.currentTab = tab"
       class="scrollbar-h-0 shrink grow basis-0 overflow-x-auto text-start"
-      :class="{ 'text-amber-600': tabIsModified(tab) }"
+      :class="{ 'text-amber-600 dark:text-amber-400': tabIsModified(tab) }"
     >
       {{ tab.file.name }}
     </button>
@@ -45,7 +46,7 @@ defineProps<{
       "
       class="rounded-full hover:bg-stone-300 hover:dark:bg-stone-600"
       :class="{
-        'bg-amber-500 text-amber-500 hover:bg-amber-300':
+        'bg-amber-500 dark:bg-amber-300 text-amber-500 dark:text-amber-300 hover:bg-amber-300 hover:dark:bg-amber-600':
           tabIsModified(tab) && !tab.isProcessing,
         'animate-spin': tab.isProcessing,
       }"
