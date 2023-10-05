@@ -1,5 +1,5 @@
-[author] author can provide different contents for different languages
 [author] author can provide different logos for light vs dark
+[author] author can provide different contents for different languages
 
 [page-layout] PageFoot -- link to Xie Yuheng Software Studio
 [manual] link to readonly.link

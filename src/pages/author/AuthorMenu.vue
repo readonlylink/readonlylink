@@ -33,7 +33,7 @@ function unfollow() {
 </script>
 
 <template>
-  <div class="flex text-xl text-stone-400">
+  <div class="flex text-xl flex-wrap text-stone-400">
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
         class="hover:text-black dark:hover:text-white whitespace-nowrap flex items-center hover:underline"
