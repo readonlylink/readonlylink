@@ -82,13 +82,13 @@ Notes:
 - It is adviced to write short activity Markdown file, for a long activity will show a scrollbar.
 - The custom element [`<readonlylink>`](../custom-elements/readonlylink.md) can be used when writing activity.
 
-## Subscribe to Author's Activities
+## Following an Author
 
 You can use activities to introduce your new article, new book or new update of a book and so on.
 
-Your reader can subscribe to your activities
+Your reader can follow your activities
 by adding your `author.json` link
-to [subscription list](https://readonly.link/subscriptions?kind=Editor).
+to [following list](https://readonly.link/following?kind=Editor).
 
-In your author's homepage, there will be a `SUBSCRIBE` button,
-your reader can also click this button to subscribe to your activities.
+In your author's homepage, there will be a `Follow` button,
+your reader can also click this button to follow your activities.

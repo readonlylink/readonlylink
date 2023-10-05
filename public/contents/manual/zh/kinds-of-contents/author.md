@@ -81,11 +81,11 @@ https://readonly.link/authors/:link
 - 建议写简短的动态 Markdown 文件，长的动态在显示的时候会带有滚动条。
 - 动态中很适合使用 [`<readonlylink>`](../custom-elements/readonlylink.md) 这个定制元素。
 
-## 订阅作者动态
+## 关注作者动态
 
 你可以以动态的方式，介绍你新写的文章和书籍，等等。
 
-你的读者可以通过将你的作者 `author.json` 链接加入 [订阅列表](https://readonly.link/subscriptions?kind=Editor) 的方式，来订阅你发布的动态。
+你的读者可以通过将你的作者 `author.json` 链接加入 [关注列表](https://readonly.link/following?kind=Editor) 的方式，来关注你发布的动态。
 
-在你的作者主页的右上角，也会有一个 `订阅` 按钮，
-你的读者在访问你的作者主页时，也可以直接点击这个按钮来订阅你的动态。
+在你的作者主页的右上角，也会有一个 `关注` 按钮，
+你的读者在访问你的作者主页时，也可以直接点击这个按钮来关注你的动态。

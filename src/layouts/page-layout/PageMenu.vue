@@ -73,7 +73,7 @@ const lang = useGlobalLang()
         href="/following"
       >
         <Lang>
-          <template #zh> 订阅 </template>
+          <template #zh> 关注 </template>
           <template #en> Following </template>
         </Lang>
       </Hyperlink>

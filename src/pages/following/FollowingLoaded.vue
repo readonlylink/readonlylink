@@ -30,7 +30,7 @@ watch(
 <template>
   <PageLayout>
     <Head>
-      <title v-if="lang.isZh()">订阅 | 只读</title>
+      <title v-if="lang.isZh()">关注 | 只读</title>
       <title v-else>Following | Readonly</title>
     </Head>
 

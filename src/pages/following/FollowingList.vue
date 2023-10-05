@@ -13,7 +13,7 @@ defineProps<{ state: State }>()
   <div>
     <div class="flex items-baseline justify-between">
       <Lang class="font-logo text-2xl font-bold">
-        <template #zh> 订阅 </template>
+        <template #zh> 关注 </template>
         <template #en> Following </template>
       </Lang>
 
@@ -56,8 +56,8 @@ defineProps<{ state: State }>()
 
     <template v-else>
       <Lang class="py-3 text-xl text-stone-500">
-        <template #zh> 还未订阅任何作者。 </template>
-        <template #en> Not subscribed to any author yet. </template>
+        <template #zh> 还未关注任何作者。 </template>
+        <template #en> Not following any author yet. </template>
       </Lang>
     </template>
   </div>

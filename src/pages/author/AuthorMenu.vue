@@ -16,17 +16,17 @@ const theme = useGlobalTheme()
 const lang = useGlobalLang()
 const following = useFollowing()
 
-function isSubscribed() {
+function isFollowed() {
   return following.list.includes(props.state.url)
 }
 
-function subscribe() {
-  if (!isSubscribed()) {
+function follow() {
+  if (!isFollowed()) {
     following.list = [...following.list, props.state.url]
   }
 }
 
-function unsubscribe() {
+function unfollow() {
   following.list = following.list.filter((url) => url !== props.state.url)
 }
 </script>
@@ -91,28 +91,28 @@ function unsubscribe() {
       </Hyperlink>
 
       <a
-        v-if="!isSubscribed()"
+        v-if="!isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
-        @click="subscribe()"
+        :title="lang.isZh() ? '关注与退订' : 'Follow or unfollow'"
+        @click="follow()"
         :href="`${origin}/following`"
         target="_blank"
       >
         <Lang>
-          <template #zh> 订阅 </template>
-          <template #en> Subscribe </template>
+          <template #zh> 关注 </template>
+          <template #en> Follow </template>
         </Lang>
       </a>
 
       <button
-        v-if="isSubscribed()"
+        v-if="isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
-        @click="unsubscribe()"
+        :title="lang.isZh() ? '关注与退订' : 'Follow or unfollow'"
+        @click="unfollow()"
       >
         <Lang>
-          <template #zh> 已订阅 </template>
-          <template #en> Subscribed </template>
+          <template #zh> 已关注 </template>
+          <template #en> Followed </template>
         </Lang>
       </button>
     </div>
