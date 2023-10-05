@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
+import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import PageLang from '../../layouts/page-layout/PageLang.vue'
+import { useGlobalTheme } from '../../models/theme'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
+import { currentOrigin } from '../../utils/currentOrigin'
 import EditorToolbarPreview from './EditorToolbarPreview.vue'
 import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
@@ -16,6 +19,9 @@ import { tabIsModified } from './tabIsModified'
 
 defineProps<{ state: State }>()
 
+const route = useRoute()
+const origin = currentOrigin()
+const theme = useGlobalTheme()
 const lang = useGlobalLang()
 </script>
 
@@ -107,17 +113,45 @@ const lang = useGlobalLang()
     <div class="flex space-x-4">
       <EditorToolbarPreview :state="state" />
 
-      <PageLang class="z-20" />
+      <button
+        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
+        @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
+      >
+        <Lang>
+          <template #zh>中文/English</template>
+          <template #en>English/中文</template>
+        </Lang>
+      </button>
+
+      <button
+        class="whitespace-nowrap flex items-center hover:underline"
+        @click="
+          theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
+        "
+      >
+        <Lang>
+          <template #zh>
+            <span v-if="theme.name === 'dark'">深色/普通</span>
+            <span v-else>普通/深色</span>
+          </template>
+          <template #en>
+            <span v-if="theme.name === 'dark'">Dark/Light</span>
+            <span v-else>Light/Dark</span>
+          </template>
+        </Lang>
+      </button>
 
       <Hyperlink
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline flex items-center"
         href="/"
         target="_blank"
       >
         <Lang>
-          <template #zh>首页</template>
-          <template #en>Home</template>
+          <template #zh>只读链接</template>
+          <template #en>Readonly.Link</template>
         </Lang>
+
+        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
       </Hyperlink>
     </div>
   </div>

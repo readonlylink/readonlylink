@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
@@ -61,6 +62,30 @@ function unfollow() {
           </template>
         </Lang>
       </button>
+
+      <button
+        v-if="!isFollowed()"
+        class="hover:text-black"
+        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
+        @click="follow()"
+      >
+        <Lang>
+          <template #zh> 取关/关注 </template>
+          <template #en> Unfollow/Follow </template>
+        </Lang>
+      </button>
+
+      <button
+        v-if="isFollowed()"
+        class="hover:text-black"
+        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
+        @click="unfollow()"
+      >
+        <Lang>
+          <template #zh> 关注/取关 </template>
+          <template #en> Follow/Unfollow </template>
+        </Lang>
+      </button>
     </div>
 
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
@@ -89,39 +114,17 @@ function unfollow() {
           <template #en> Activities </template>
         </Lang>
       </Hyperlink>
-
-      <button
-        v-if="!isFollowed()"
-        class="hover:text-black"
-        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
-        @click="follow()"
-      >
-        <Lang>
-          <template #zh> 关注 </template>
-          <template #en> Follow </template>
-        </Lang>
-      </button>
-
-      <button
-        v-if="isFollowed()"
-        class="hover:text-black"
-        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
-        @click="unfollow()"
-      >
-        <Lang>
-          <template #zh> 取关 </template>
-          <template #en> Unfollow </template>
-        </Lang>
-      </button>
     </div>
 
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
-      <Hyperlink href="/" class="hover:text-black">
+      <a href="/" target="_blank" class="hover:text-black flex items-center">
         <Lang>
           <template #zh> 只读链接 </template>
           <template #en> Readonly.Link </template>
         </Lang>
-      </Hyperlink>
+
+        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
+      </a>
     </div>
   </div>
 </template>

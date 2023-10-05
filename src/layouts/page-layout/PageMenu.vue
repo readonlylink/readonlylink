@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
@@ -16,7 +17,7 @@ const lang = useGlobalLang()
   <div class="flex flex-wrap text-stone-400">
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <button
-        class="hover:text-black whitespace-nowrap flex items-center hover:underline"
+        class="hover:text-black whitespace-nowrap flex items-center"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -93,7 +94,7 @@ const lang = useGlobalLang()
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
       <a
         href="/editor"
-        class="hover:text-black"
+        class="hover:text-black  flex items-center"
         :class="{ 'text-black': route.path === '/editor' }"
         target="_blank"
       >
@@ -101,6 +102,8 @@ const lang = useGlobalLang()
           <template #zh> 编辑器 </template>
           <template #en> Editor </template>
         </Lang>
+
+        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
       </a>
 
       <a
@@ -109,7 +112,7 @@ const lang = useGlobalLang()
             ? `${origin}/manuals/${origin}/contents/manual/zh.json`
             : `${origin}/manuals/${origin}/contents/manual/en.json`
         "
-        class="hover:text-black"
+        class="hover:text-black  flex items-center"
         :class="{ 'text-black': route.path === '/docs' }"
         target="_blank"
       >
@@ -117,6 +120,8 @@ const lang = useGlobalLang()
           <template #zh> 手册 </template>
           <template #en> Manual </template>
         </Lang>
+
+        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
       </a>
 
       <Hyperlink
