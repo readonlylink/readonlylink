@@ -1,4 +1,4 @@
-[author] AuthorHead -- column layout
+[author] AuthorMenu -- column layout
 
 rename subscription to follow
 

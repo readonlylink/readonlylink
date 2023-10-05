@@ -29,6 +29,7 @@ function unsubscribe() {
 
 <template>
   <div class="flex text-xl">
+    <div class="flex flex-col">
     <Hyperlink
       :href="`/authors/${state.url}/-/activities`"
       class="mr-3 flex shrink-0 items-center space-x-0.5 hover:text-black"
@@ -67,6 +68,8 @@ function unsubscribe() {
         <template #zh> 已订阅 </template>
         <template #en> Subscribed </template>
       </Lang>
-    </button>
+    </button>      
+    </div>
+
   </div>
 </template>
