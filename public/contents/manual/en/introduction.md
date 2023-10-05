@@ -6,7 +6,6 @@ title: Introduction
 
 - Readonly.Link is readonly, no need to register to use it.
 - Readonly.Link is a pure frontend public service, always open source and always free to use.
-- When Readonly.Link renders your content, it will not display any extra contents (such as Ads).
 
 # Source Code
 

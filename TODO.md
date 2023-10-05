@@ -1,5 +1,3 @@
-fix the manual -- we will add link to readonlylink in rendered page -- no one cares anyway
-
 rename subscription to follow
 
 support dark mode
