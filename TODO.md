@@ -1,8 +1,5 @@
 [manual] support dark mode
-[manual] loading use PageLayout
-
 [author] support dark mode
-[author] loading use PageLayout
 
 support dark logo vs light logo
 
