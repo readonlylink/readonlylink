@@ -13,7 +13,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
 <template>
   <div
-    class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-content text-2xl"
+    class="h-screen-dynamic flex flex-col items-center justify-between py-12 text-2xl"
   >
     <div class="flex flex-col items-center space-y-2 py-4 text-3xl sm:text-4xl">
       <div class="px-2 text-center font-bold">
@@ -79,7 +79,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
     <section class="flex flex-col items-center px-2">
       <a
         :href="state.url"
-        class="flex flex-col items-center py-1 font-code text-base hover:text-stone-500 hover:dark:text-stone-400 sm:flex-row break-all"
+        class="flex flex-col items-center py-1 font-mono text-base hover:text-stone-500 hover:dark:text-stone-400 sm:flex-row break-all"
         target="_blank"
       >
         <span class="text-center">{{ state.url }}</span>

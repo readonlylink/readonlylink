@@ -5,7 +5,7 @@ import Lang from '../../components/lang/Lang.vue'
 <template>
   <div>
     <div class="flex items-baseline">
-      <Lang class="font-logo text-2xl font-bold">
+      <Lang class="text-2xl font-bold">
         <template #zh> 作者 </template>
         <template #en> Authors </template>
       </Lang>

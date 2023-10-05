@@ -41,7 +41,7 @@ async function submit(event: Event) {
               class="flex items-end justify-between"
               title="Manual | Readonly.Link Manual"
             >
-              <Lang class="font-logo text-2xl font-bold">
+              <Lang class="text-2xl font-bold">
                 <template #zh> 手册 </template>
                 <template #en> Manual </template>
               </Lang>

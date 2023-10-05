@@ -12,7 +12,7 @@ defineProps<{ state: State }>()
 <template>
   <div>
     <div class="flex items-baseline justify-between">
-      <Lang class="font-logo text-2xl font-bold">
+      <Lang class="text-2xl font-bold">
         <template #zh> 关注 </template>
         <template #en> Following </template>
       </Lang>

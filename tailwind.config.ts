@@ -9,10 +9,5 @@ export default {
         square: 'square',
       },
     },
-    fontFamily: {
-      content: ['sans-serif'],
-      code: ['monospace'],
-      logo: ['sans-serif'],
-    },
   },
 } satisfies Config

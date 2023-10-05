@@ -10,7 +10,7 @@ defineProps<{ state: State }>()
     class="text-balance flex h-full flex-col items-center justify-center text-2xl"
   >
     <div
-      class="my-2 font-content text-stone-600"
+      class="my-2 text-stone-600"
       v-for="(child, index) in state.document.children"
       :key="index"
     >

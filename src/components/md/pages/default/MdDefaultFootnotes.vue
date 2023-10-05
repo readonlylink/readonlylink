@@ -6,7 +6,7 @@ const props = defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex flex-col space-y-3 font-content">
+  <div class="flex flex-col space-y-3">
     <div
       v-for="footnote of state.document.footnotes"
       :id="`-footnote-${footnote.id}`"

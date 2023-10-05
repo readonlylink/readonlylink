@@ -16,7 +16,7 @@ defineProps<{
       <template #en> Unknown </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre font-code text-sm">
+    <div class="overflow-x-auto whitespace-pre font-mono text-sm">
       {{ config }}
     </div>
   </div>

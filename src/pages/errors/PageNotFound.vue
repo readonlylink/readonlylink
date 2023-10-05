@@ -18,14 +18,14 @@ const route = useRoute()
     </Head>
 
     <div class="space-y-2 overflow-x-auto py-4">
-      <div class="font-code text-2xl">404</div>
+      <div class="font-mono text-2xl">404</div>
       <div>
         <Lang>
           <template #zh> 没有这个页面。 </template>
           <template #en> Page not found. </template>
         </Lang>
       </div>
-      <div class="overflow-x-auto font-code text-sm">{{ route.fullPath }}</div>
+      <div class="overflow-x-auto font-mono text-sm">{{ route.fullPath }}</div>
     </div>
   </PageLayout>
 </template>

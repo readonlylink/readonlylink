@@ -11,7 +11,7 @@ const lang = useGlobalLang()
     class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
   >
     <div
-      class="mx-auto flex max-w-3xl flex-col px-3 py-3 font-content text-xl sm:px-6 sm:py-4"
+      class="mx-auto flex max-w-3xl flex-col px-3 py-3 text-xl sm:px-6 sm:py-4"
     >
       <Head>
         <title v-if="lang.isZh()">只读</title>

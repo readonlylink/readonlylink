@@ -8,7 +8,7 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <PageLayout>
-    <Lang class="font-logo text-2xl font-bold">
+    <Lang class="text-2xl font-bold">
       <template #zh> 关注 </template>
       <template #en> Following </template>
     </Lang>

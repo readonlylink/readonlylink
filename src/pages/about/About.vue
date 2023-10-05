@@ -16,7 +16,7 @@ const lang = useGlobalLang()
     </Head>
 
     <div class="flex items-baseline space-x-4">
-      <div class="font-logo text-2xl font-bold">
+      <div class="text-2xl font-bold">
         <Lang>
           <template #zh> 关于 </template>
           <template #en> About </template>
@@ -29,12 +29,12 @@ const lang = useGlobalLang()
         class="inline-flex flex-wrap items-baseline bg-white dark:bg-black text-black dark:text-white"
       >
         <template #zh>
-          <div class="pr-1 font-logo font-bold">只读链接</div>
+          <div class="pr-1 font-bold">只读链接</div>
           <div>是一个文档渲染工具，</div>
           <div>文字创作者的社区。</div>
         </template>
         <template #en>
-          <div class="pr-1 font-logo font-bold">Readonly.Link</div>
+          <div class="pr-1 font-bold">Readonly.Link</div>
           <div class="pr-1">is a document rendering tool,</div>
           <div>and a community for authors.</div>
         </template>
@@ -97,7 +97,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <div class="flex items-baseline space-x-4">
-        <div class="font-logo text-2xl font-bold">
+        <div class="text-2xl font-bold">
           <Lang>
             <template #zh> 开源 </template>
             <template #en> Open source </template>
@@ -129,7 +129,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <div class="flex items-baseline space-x-4">
-        <div class="font-logo text-2xl font-bold">
+        <div class="text-2xl font-bold">
           <Lang>
             <template #zh> 口号 </template>
             <template #en> Slogan </template>
@@ -143,7 +143,7 @@ const lang = useGlobalLang()
       </Lang>
 
       <Lang
-        class="font-logo font-bold text-stone-500 dark:text-stone-400 dark:text-stone-400"
+        class="font-bold text-stone-500 dark:text-stone-400 dark:text-stone-400"
       >
         <template #zh>
           <div>

@@ -19,7 +19,7 @@ const lang = useGlobalLang()
         <title v-else>History | Readonly</title>
       </Head>
 
-      <Lang class="font-logo text-2xl font-bold">
+      <Lang class="text-2xl font-bold">
         <template #zh> 历史 </template>
         <template #en> History </template>
       </Lang>

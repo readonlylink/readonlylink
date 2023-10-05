@@ -7,7 +7,7 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <div>
-    <Lang class="font-logo text-2xl font-bold">
+    <Lang class="text-2xl font-bold">
       <template #zh> 作者动态 </template>
       <template #en> Authors' activities </template>
     </Lang>
@@ -19,7 +19,7 @@ defineProps<{ options: StateOptions }>()
       <template #en> Loading authors' activities ... </template>
     </Lang>
 
-    <div class="overflow-x-auto whitespace-pre py-1 font-code text-sm">
+    <div class="overflow-x-auto whitespace-pre py-1 font-mono text-sm">
       {{ options }}
     </div>
   </div>

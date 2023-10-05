@@ -13,7 +13,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="min-h-screen-dynamic flex flex-col justify-center px-6 py-12 font-content text-2xl"
+    class="min-h-screen-dynamic flex flex-col justify-center px-6 py-12 text-2xl"
   >
     <div v-for="(document, path) in state.documents" :key="path">
       <div class="py-2">
