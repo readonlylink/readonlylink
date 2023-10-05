@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { Document } from '@xieyuheng/x-markdown'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import AuthorAvatar from './AuthorAvatar.vue'
 import AuthorContact from './AuthorContact.vue'
+import AuthorMenu from './AuthorMenu.vue'
 import AuthorTabbar from './AuthorTabbar.vue'
-import AuthorToolbar from './AuthorToolbar.vue'
 import { State } from './State'
 
 defineProps<{
@@ -39,7 +38,7 @@ defineProps<{
     </div>
 
     <div class="flex pt-3 pb-6 flex-col">
-      <AuthorToolbar :state="state" />
+      <AuthorMenu :state="state" />
 
       <AuthorTabbar
         v-if="state.config.tabs"
