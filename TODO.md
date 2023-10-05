@@ -1,7 +1,3 @@
-ambr ' text-black dark:text-white' ' text-black dark:text-white'
-ambr 'dark:text-white' dark:text-white
-
-[readonlylink] support dark mode
 [manual] support dark mode
 [book] support dark mode
 [author] support dark mode

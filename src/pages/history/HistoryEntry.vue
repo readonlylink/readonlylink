@@ -25,7 +25,7 @@ const lang = useGlobalLang()
     </div>
 
     <button
-      class="flex items-center space-x-1 hover:text-stone-500"
+      class="flex items-center space-x-1 hover:text-stone-500 hover:dark:text-stone-400"
       :title="lang.isZh() ? '删除这条记录' : 'Remove this record'"
       @click="delete state.history.record[entry.url]"
     >

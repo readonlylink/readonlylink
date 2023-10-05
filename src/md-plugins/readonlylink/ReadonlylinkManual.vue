@@ -17,13 +17,13 @@ defineProps<{
 
 <template>
   <div>
-    <Lang class="font-ui text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500 dark:text-stone-400">
       <template #zh> 手册 </template>
       <template #en> Manual </template>
     </Lang>
 
     <Hyperlink :href="`/manuals/${state.url}`">
-      <div class="py-1 font-ui hover:text-stone-500">
+      <div class="py-1 font-ui hover:text-stone-500 hover:dark:text-stone-400">
         <div class="text-balance font-bold">
           {{ config.title }}
         </div>

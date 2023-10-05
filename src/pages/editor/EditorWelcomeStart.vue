@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
 
     <div class="flex flex-col items-start space-y-2 text-xl sm:text-2xl">
       <button
-        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateDirectoryOpen(state)"
       >
         <FolderIcon class="h-7 w-7" />
@@ -33,7 +33,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateFileOpen(state)"
       >
         <DocumentTextIcon class="h-7 w-7" />
@@ -44,7 +44,7 @@ defineProps<{ state: State }>()
       </button>
 
       <button
-        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="flex space-x-2 whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateFileCreate(state)"
       >
         <DocumentPlusIcon class="h-7 w-7" />

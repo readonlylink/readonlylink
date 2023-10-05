@@ -26,7 +26,7 @@ const lang = useGlobalLang()
 
       <Lang
         v-if="Object.keys(state.history.record).length === 0"
-        class="py-3 text-xl text-stone-500"
+        class="py-3 text-xl text-stone-500 dark:text-stone-400"
       >
         <template #zh> 还没有历史记录。 </template>
         <template #en> No history record yet. </template>

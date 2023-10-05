@@ -33,7 +33,7 @@ defineProps<{ state: State }>()
       <div v-for="path in paths" :key="path">
         <Hyperlink
           :href="`/manuals/${state.url}/-/${path}`"
-          class="text-xl hover:text-stone-500"
+          class="text-xl hover:text-stone-500 hover:dark:text-stone-400"
           :class="
             path === state.path &&
             'underline decoration-stone-500 decoration-wavy underline-offset-4'

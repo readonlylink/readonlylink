@@ -19,7 +19,7 @@ const avatarURL = computed(
 
 <template>
   <div>
-    <Lang class="font-ui text-base text-stone-500">
+    <Lang class="font-ui text-base text-stone-500 dark:text-stone-400">
       <template #zh> 作者 </template>
       <template #en> Author </template>
     </Lang>
@@ -39,7 +39,7 @@ const avatarURL = computed(
       <div class="overflow-x-auto">
         <Hyperlink :href="`/authors/${state.url}`">
           <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre py-1 font-ui font-bold hover:text-stone-500"
+            class="overflow-x-auto overflow-y-hidden whitespace-pre py-1 font-ui font-bold hover:text-stone-500 hover:dark:text-stone-400"
           >
             {{ config.name }}
           </div>

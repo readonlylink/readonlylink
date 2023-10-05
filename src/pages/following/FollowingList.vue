@@ -55,7 +55,7 @@ defineProps<{ state: State }>()
     </template>
 
     <template v-else>
-      <Lang class="py-3 text-xl text-stone-500">
+      <Lang class="py-3 text-xl text-stone-500 dark:text-stone-400">
         <template #zh> 还未关注任何作者。 </template>
         <template #en> Not following any author yet. </template>
       </Lang>

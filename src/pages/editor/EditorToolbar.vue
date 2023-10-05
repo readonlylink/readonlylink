@@ -32,7 +32,7 @@ const lang = useGlobalLang()
     <div class="flex space-x-4 overflow-x-auto pr-4">
       <button
         v-if="!state.currentWorkspace"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateFileCreate(state)"
       >
         <Lang>
@@ -43,7 +43,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="!state.currentWorkspace"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateFileOpen(state)"
       >
         <Lang>
@@ -54,7 +54,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="!state.currentWorkspace && state.tabs.length === 0"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         @click="stateDirectoryOpen(state)"
       >
         <Lang>
@@ -65,7 +65,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="state.currentTab"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         :disabled="
           state.currentTab.isProcessing || !tabIsModified(state.currentTab)
         "
@@ -79,7 +79,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="state.currentTab && tabFileRemoveIsSupported(state.currentTab)"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
         :disabled="!state.currentTab || state.currentTab.isProcessing"
         @click="
           () => {
@@ -142,7 +142,7 @@ const lang = useGlobalLang()
       </button>
 
       <Hyperlink
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline flex items-center"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline flex items-center"
         href="/"
         target="_blank"
       >

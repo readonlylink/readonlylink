@@ -66,7 +66,7 @@ watch(
           }
         "
       >
-        <Bars3Icon class="w-7 text-stone-500" />
+        <Bars3Icon class="w-7 text-stone-500 dark:text-stone-400" />
       </button>
     </div>
   </div>
