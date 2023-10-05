@@ -13,7 +13,7 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <Popup class="relative flex font-ui">
+  <Popup class="relative flex">
     <template #button>
       <div class="flex items-center">
         <Lang>

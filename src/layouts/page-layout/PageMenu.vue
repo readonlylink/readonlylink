@@ -13,7 +13,7 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <div class="flex flex-wrap">
+  <div class="flex flex-wrap text-stone-400">
     <div class="flex flex-col space-y-1 pr-6 pb-6">
       <button
         class="pr-3 hover:text-black whitespace-nowrap flex items-center hover:underline"

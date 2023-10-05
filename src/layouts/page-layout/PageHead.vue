@@ -12,7 +12,7 @@ import PageMenu from './PageMenu.vue'
       </Hyperlink>
     </div>
 
-    <div class="text-stone-400 py-3">
+    <div class="py-3">
       <PageMenu />
     </div>
   </div>
