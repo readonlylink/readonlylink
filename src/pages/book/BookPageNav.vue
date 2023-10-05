@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="statePrevPath(state)"
         :href="`/books/${state.url}/-/${statePrevPath(state)}`"
-        class="text-stone-400 hover:text-black"
+        class="text-stone-400 hover:text-black hover:dark:text-white"
         title="Previous Page"
       >
         <Lang>
@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
           <template #en> PREV </template>
         </Lang>
       </Hyperlink>
-      <div v-else class="text-stone-200">
+      <div v-else class="text-stone-200 dark:text-stone-600">
         <Lang>
           <template #zh> 前一页 </template>
           <template #en> PREV </template>
@@ -33,7 +33,7 @@ defineProps<{ state: State }>()
     <div class="flex">
       <Hyperlink
         :href="`/books/${state.url}`"
-        class="text-stone-400 hover:text-black"
+        class="text-stone-400 hover:text-black hover:dark:text-white"
         title="Back to Title Page"
       >
         <Lang>
@@ -41,10 +41,10 @@ defineProps<{ state: State }>()
           <template #en> TITLE </template>
         </Lang>
       </Hyperlink>
-      <div class="px-0.5">/</div>
+      <div class="px-0.5 text-stone-400">/</div>
       <Hyperlink
         :href="`/books/${state.url}?front-matter=contents`"
-        class="text-stone-400 hover:text-black"
+        class="text-stone-400 hover:text-black hover:dark:text-white"
         title="Back to Contents"
       >
         <Lang>
@@ -58,7 +58,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="stateNextPath(state)"
         :href="`/books/${state.url}/-/${stateNextPath(state)}`"
-        class="text-stone-400 hover:text-black"
+        class="text-stone-400 hover:text-black hover:dark:text-white"
         title="Next Page"
       >
         <Lang>
@@ -66,7 +66,7 @@ defineProps<{ state: State }>()
           <template #en> NEXT </template>
         </Lang>
       </Hyperlink>
-      <div v-else class="text-stone-200">
+      <div v-else class="text-stone-200 dark:text-stone-600">
         <Lang>
           <template #zh> 下一页 </template>
           <template #en> NEXT </template>

@@ -36,7 +36,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
 
           <Lang class="text-xl">
             <template #zh> 阅读 </template>
-            <template #en> READ </template>
+            <template #en> Read </template>
           </Lang>
         </div>
       </Hyperlink>
