@@ -53,8 +53,8 @@ function unfollow() {
       >
         <Lang>
           <template #zh>
-            <span v-if="theme.name === 'dark'">深色/普通</span>
-            <span v-else>普通/深色</span>
+            <span v-if="theme.name === 'dark'">深色/浅色</span>
+            <span v-else>浅色/深色</span>
           </template>
           <template #en>
             <span v-if="theme.name === 'dark'">Dark/Light</span>
