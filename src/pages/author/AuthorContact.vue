@@ -3,7 +3,6 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 import BilibiliLineIcon from '../../components/icons/BilibiliLineIcon.vue'
 import GithubIcon from '../../components/icons/GithubIcon.vue'
 import MimorIcon from '../../components/icons/MimorIcon.vue'
-import ReadonlyIcon from '../../components/icons/ReadonlyIcon.vue'
 import TwitterIcon from '../../components/icons/TwitterIcon.vue'
 import { AuthorContact } from '../../models/author/AuthorContact'
 import { State } from './State'
@@ -64,16 +63,6 @@ defineProps<{
       target="_blank"
     >
       <MimorIcon class="h-5 w-5" />
-    </a>
-
-    <a
-      v-if="contact.readonlylink"
-      :href="contact.readonlylink"
-      :title="contact.readonlylink"
-      class="hover:text-black"
-      target="_blank"
-    >
-      <ReadonlyIcon class="h-5 w-5" />
     </a>
   </div>
 </template>
