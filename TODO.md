@@ -1,4 +1,8 @@
-support dark mode
+[article] support dark mode
+[manual] support dark mode
+[book] support dark mode
+[author] support dark mode
+support dark logo vs light logo
 
 # author
 

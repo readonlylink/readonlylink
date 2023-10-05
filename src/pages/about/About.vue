@@ -25,14 +25,16 @@ const lang = useGlobalLang()
     </div>
 
     <main class="space-y-3 py-4">
-      <Lang class="inline-flex flex-wrap items-baseline text-black">
+      <Lang
+        class="inline-flex flex-wrap items-baseline bg-white dark:bg-black text-black dark:text-white"
+      >
         <template #zh>
-          <div class="pr-1 font-logo font-bold text-black">只读链接</div>
+          <div class="pr-1 font-logo font-bold">只读链接</div>
           <div>是一个文档渲染工具，</div>
           <div>文字创作者的社区。</div>
         </template>
         <template #en>
-          <div class="pr-1 font-logo font-bold text-black">Readonly.Link</div>
+          <div class="pr-1 font-logo font-bold">Readonly.Link</div>
           <div class="pr-1">is a document rendering tool,</div>
           <div>and a community for authors.</div>
         </template>
@@ -47,7 +49,9 @@ const lang = useGlobalLang()
             target="_blank"
           >
             谢宇恒
-            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
+            <ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400"
+            />
           </a>
           发起。
         </template>
@@ -59,7 +63,9 @@ const lang = useGlobalLang()
             target="_blank"
           >
             Xie Yuheng
-            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" />
+            <ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400"
+            />
           </a>
           at the end of 2021.
         </template>
@@ -106,7 +112,7 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
             >源代码<ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500" /></a
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400" /></a
           >。
         </template>
         <template #en>
@@ -116,7 +122,7 @@ const lang = useGlobalLang()
             target="_blank"
           >
             Source code
-            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500" /></a
+            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500 dark:text-stone-400" /></a
           >.
         </template>
       </Lang>
@@ -135,21 +141,22 @@ const lang = useGlobalLang()
         <template #en> Our slogan is: </template>
       </Lang>
 
-      <Lang class="font-logo font-bold text-stone-500">
+      <Lang class="font-logo font-bold text-stone-500 dark:text-stone-400">
         <template #zh>
           <div>
-            分享<span class="text-black">只读</span>链接，<br
+            分享<span class="text-black dark:text-white">只读</span>链接，<br
               class="sm:hidden"
-            /><span class="text-black">只</span>为享受阅<span class="text-black"
+            /><span class="text-black dark:text-white">只</span>为享受阅<span
+              class="text-black"
               >读</span
             >。
           </div>
         </template>
         <template #en>
           <div>
-            <span class="text-black">Readonly</span> links,
+            <span class="text-black dark:text-white">Readonly</span> links,
             <br class="sm:hidden" />
-            for your <span class="text-black">read only</span>.
+            for your <span class="text-black dark:text-white">read only</span>.
           </div>
         </template>
       </Lang>
