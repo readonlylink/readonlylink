@@ -17,9 +17,9 @@ const state = stateReactive(props.state)
       <template #en> Authors' activities </template>
     </Lang>
 
-    <div class="border-b border-stone-500 pb-1"></div>
+    <div class="border-b border-black dark:border-white pb-1"></div>
 
-    <div class="flex flex-col divide-y divide-black">
+    <div class="flex flex-col divide-y divide-black dark:divide-white">
       <Activity
         v-for="activity of sortActivities(state.activities)"
         :key="activity.author.url + ' ' + activity.path"

@@ -14,7 +14,7 @@ defineProps<{
     </label>
 
     <textarea
-      class="w-full rounded-sm border border-stone-500 p-3 disabled:bg-stone-100"
+      class="w-full rounded-sm border border-black dark:border-white p-3 disabled:bg-stone-100"
       :id="name"
       :name="name"
       :value="String(form.values[name])"

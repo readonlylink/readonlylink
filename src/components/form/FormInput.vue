@@ -13,7 +13,7 @@ defineProps<{
       <slot name="label" />
     </label>
 
-    <div class="flex w-full items-center rounded-sm border border-stone-500">
+    <div class="flex w-full items-center rounded-sm border border-black dark:border-white">
       <input
         class="w-full p-3 font-bold disabled:bg-stone-100"
         :id="name"

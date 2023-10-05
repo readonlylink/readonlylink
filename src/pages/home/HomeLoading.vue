@@ -12,7 +12,7 @@ defineProps<{ options: StateOptions }>()
       <template #en> Authors' activities </template>
     </Lang>
 
-    <div class="border-b border-stone-500 pb-1"></div>
+    <div class="border-b border-black dark:border-white pb-1"></div>
 
     <Lang>
       <template #zh> 作者动态加载中⋯⋯ </template>
