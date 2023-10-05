@@ -51,9 +51,10 @@ window.addEventListener('keydown', (event) => {
 </script>
 
 <template>
+  <div   class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white">
   <Head>
     <title>{{ stateTitle(state) }}</title>
-  </Head>
+  </Head>    
 
   <ManualLayout :state="state">
     <ManualPage
@@ -63,4 +64,7 @@ window.addEventListener('keydown', (event) => {
     />
     <ManualPageNotFound v-else :state="state" />
   </ManualLayout>
+  </div>
+
+
 </template>
