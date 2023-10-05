@@ -90,29 +90,27 @@ function unfollow() {
         </Lang>
       </Hyperlink>
 
-      <a
+      <button
         v-if="!isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '关注与退订' : 'Follow or unfollow'"
+        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
         @click="follow()"
-        :href="`${origin}/following`"
-        target="_blank"
       >
         <Lang>
           <template #zh> 关注 </template>
           <template #en> Follow </template>
         </Lang>
-      </a>
+      </button>
 
       <button
         v-if="isFollowed()"
         class="hover:text-black"
-        :title="lang.isZh() ? '关注与退订' : 'Follow or unfollow'"
+        :title="lang.isZh() ? '关注与取关' : 'Follow or unfollow'"
         @click="unfollow()"
       >
         <Lang>
-          <template #zh> 已关注 </template>
-          <template #en> Followed </template>
+          <template #zh> 取关 </template>
+          <template #en> Unfollow </template>
         </Lang>
       </button>
     </div>
