@@ -49,7 +49,7 @@ const avatarURL = computed(() =>
 
         <Hyperlink v-if="state.url" :href="`/authors/${state.url}`">
           <div
-            class="overflow-x-auto overflow-y-hidden whitespace-pre py-0.5 font-mono text-base text-xs hover:underline"
+            class="overflow-x-auto overflow-y-hidden whitespace-pre py-0.5 font-mono text-xs hover:underline"
           >
             {{ state.url }}
           </div>
