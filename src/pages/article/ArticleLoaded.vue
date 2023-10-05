@@ -13,12 +13,14 @@ const state = stateReactive(props.state)
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl">
+  <div class="bg-white dark:bg-black text-black dark:text-white">
     <Head>
       <title>{{ stateTitle(state) }}</title>
     </Head>
 
-    <ArticleMarkdown v-if="stateIsMarkdown(state)" :state="state" />
-    <ArticlePlaintext v-else :state="state" />
+    <div class="mx-auto max-w-3xl">
+      <ArticleMarkdown v-if="stateIsMarkdown(state)" :state="state" />
+      <ArticlePlaintext v-else :state="state" />
+    </div>
   </div>
 </template>
