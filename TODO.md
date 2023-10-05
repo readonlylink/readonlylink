@@ -1,5 +1,3 @@
-[author] author can provide different contents for different languages
-
 # searchable file list
 
 searchable file list as a markdown plugin
