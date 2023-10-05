@@ -5,7 +5,7 @@ export type AuthorConfig = {
   kind: 'Author'
   name: string
   tagline?: string
-  avatar: string
+  avatar: string | { light: string; dark: string }
   homepage: string
   src?: string
   activities: Array<string>
@@ -17,7 +17,13 @@ export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
   kind: ty.const('Author' as const),
   name: ty.string(),
   tagline: ty.optional(ty.string()),
-  avatar: ty.string(),
+  avatar: ty.union(
+    ty.string(),
+    ty.object({
+      light: ty.string(),
+      dark: ty.string(),
+    }),
+  ),
   homepage: ty.string(),
   src: ty.optional(ty.string()),
   activities: ty.array(ty.string()),

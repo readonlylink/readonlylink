@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { join } from 'path-browserify'
-import { computed } from 'vue'
+import { authorAvatarURL } from '../../models/author'
 import { Author } from '../../models/author/Author'
 import { State } from './State'
 
@@ -8,14 +7,6 @@ const props = defineProps<{
   state: State
   author: Author
 }>()
-
-const avatarURL = computed(
-  () =>
-    new URL(
-      join(props.author.config.src || '', props.author.config.avatar),
-      props.author.url,
-    ),
-)
 
 function isCurrentAuthor() {
   return props.state.currentAuthor?.url === props.author.url
@@ -36,7 +27,7 @@ function toggle() {
       <img
         class="h-[5rem] w-[5rem] shrink-0"
         :class="[isCurrentAuthor() && 'ring-4 ring-rose-300']"
-        :src="avatarURL.href"
+        :src="authorAvatarURL(author).href"
         :alt="author.config.name"
       />
 

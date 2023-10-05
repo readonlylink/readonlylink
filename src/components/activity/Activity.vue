@@ -4,22 +4,12 @@ import { computed } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { Activity } from '../../models/activity/Activity'
+import { authorAvatarURL } from '../../models/author'
 import { formatDateTime } from '../../utils/formatDate'
 
 const props = defineProps<{
   activity: Activity
 }>()
-
-const avatarURL = computed(
-  () =>
-    new URL(
-      join(
-        props.activity.author.config.src || '',
-        props.activity.author.config.avatar,
-      ),
-      props.activity.author.url,
-    ),
-)
 
 const activityURL = computed(
   () =>
@@ -35,7 +25,7 @@ const activityURL = computed(
     <div class="flex items-center space-x-2 overflow-auto py-2">
       <Hyperlink :href="`/authors/${activity.author.url}`" class="shrink-0">
         <img
-          :src="avatarURL.href"
+          :src="authorAvatarURL(activity.author).href"
           :alt="activity.author.config.name"
           class="h-[4.2rem] w-[4.2rem]"
         />

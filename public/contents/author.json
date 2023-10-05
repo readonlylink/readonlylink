@@ -3,7 +3,10 @@
   "name": "Readonly.Link",
   "tagline": "Readonly links, for your read only.",
   "homepage": "README.md",
-  "avatar": "assets/images/readonly-logo.png",
+  "avatar": {
+    "light": "assets/images/readonly-logo.png",
+    "dark": "assets/images/readonly-logo-dark.png"
+  },
   "activities": [
     "activities/2023-07-24-the-c-programming-language.md",
     "activities/2023-07-23-有趣的金圣叹.md",
