@@ -1,3 +1,4 @@
+[article] support dark mode
 [manual] support dark mode
 [book] support dark mode
 [author] support dark mode
