@@ -47,8 +47,7 @@ async function save() {
 
     <textarea
       v-model="text"
-      class="h-full border border-black dark:border-white p-2"
+      class="h-full border border-black dark:border-white p-2 bg-white dark:bg-black text-black dark:text-white"
     ></textarea>
   </div>
 </template>
-../../models/following ../../models/following
