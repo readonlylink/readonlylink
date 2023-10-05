@@ -1,7 +1,7 @@
-import { parseDocument } from '@xieyuheng/x-markdown'
+import { Document, parseDocument } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
 import { loadActivitiesFromAuthors } from '../../models/activity/loadActivitiesFromAuthors'
-import { loadAuthor, loadAuthorConfig } from '../../models/author'
+import { loadAuthor } from '../../models/author'
 import { useHistory } from '../../models/history/useHistory'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
@@ -16,23 +16,16 @@ export async function loadState(options: StateOptions): Promise<State> {
   const { path } = options
   const url = stringTrimEnd(options.url, '/')
 
-  const config = await loadAuthorConfig(url)
-
-  const homepageURL = new URL(join(config.src || '', config.homepage), url)
-  const response = await fetch(homepageURL)
-  const text = await response.text()
-  const homepageDocument = parseDocument(text)
-
   const history = await useHistory()
   history.record[url] = { time: Date.now(), url }
 
-  const documents = {
-    [config.homepage]: homepageDocument,
-  }
+  const author = await loadAuthor(url)
+  const config = author.config
 
+  const paths = [...Object.values(config.tabs || {}), config.homepage]
   const texts: Record<string, string> = Object.fromEntries(
     await promiseAllFulfilled(
-      Object.values(config.tabs || {}).map(async (path) => {
+      paths.map(async (path) => {
         const response = await fetch(new URL(join(config.src || '', path), url))
         const text = await response.text()
         return [path, text]
@@ -40,11 +33,10 @@ export async function loadState(options: StateOptions): Promise<State> {
     ),
   )
 
+  const documents: Record<string, Document> = {}
   for (const [path, text] of Object.entries(texts)) {
     documents[path] = parseDocument(text)
   }
-
-  const author = await loadAuthor(url)
 
   const activities = await loadActivitiesFromAuthors([author])
 
@@ -52,8 +44,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     url,
     path,
     config,
-    text,
-    homepageDocument,
     activities,
     author,
     documents,
