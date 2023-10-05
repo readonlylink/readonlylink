@@ -1,5 +1,3 @@
-rename subscription to follow
-
 support dark mode
 
 # author

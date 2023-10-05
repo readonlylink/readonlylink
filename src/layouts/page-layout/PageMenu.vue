@@ -69,12 +69,12 @@ const lang = useGlobalLang()
 
       <Hyperlink
         class="hover:text-black"
-        :class="{ 'text-black': route.path === '/subscriptions' }"
-        href="/subscriptions"
+        :class="{ 'text-black': route.path === '/following' }"
+        href="/following"
       >
         <Lang>
           <template #zh> 订阅 </template>
-          <template #en> Subscriptions </template>
+          <template #en> Following </template>
         </Lang>
       </Hyperlink>
 

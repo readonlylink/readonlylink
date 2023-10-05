@@ -1,14 +1,14 @@
 import { watch } from 'vue'
-import { useSubscription } from '../../models/subscription'
+import { useFollowing } from '../../models/following'
 import { promiseAllFulfilled } from '../../utils/promiseAllFulfilled'
 import { loadAuthor } from '../author/loadAuthor'
 import { State } from './State'
 
 export function stateReactivelyUpdateAuthors(state: State) {
-  const subscription = useSubscription()
+  const following = useFollowing()
 
   watch(
-    () => subscription.list,
+    () => following.list,
     async (value) => {
       state.list = value
       state.authors = await promiseAllFulfilled(state.list.map(loadAuthor))

@@ -3,7 +3,7 @@ import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { State } from './State'
-import SubscriptionAuthor from './SubscriptionAuthor.vue'
+import FollowingAuthor from './FollowingAuthor.vue'
 import { stateActivitiesForShow } from './stateActivitiesForShow'
 
 defineProps<{ state: State }>()
@@ -14,12 +14,12 @@ defineProps<{ state: State }>()
     <div class="flex items-baseline justify-between">
       <Lang class="font-logo text-2xl font-bold">
         <template #zh> 订阅 </template>
-        <template #en> Subscriptions </template>
+        <template #en> Following </template>
       </Lang>
 
       <div>
         <Hyperlink
-          href="/subscriptions?kind=Editor"
+          href="/following?kind=Editor"
           class="text-stone-400 hover:text-black"
         >
           <Lang class="font-ui">
@@ -34,7 +34,7 @@ defineProps<{ state: State }>()
       v-if="state.authors.length > 0"
       class="flex space-x-2 overflow-x-auto py-1"
     >
-      <SubscriptionAuthor
+      <FollowingAuthor
         v-for="author of state.authors"
         :key="author.url"
         :state="state"

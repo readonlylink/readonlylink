@@ -2,14 +2,14 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
-import { useSubscription } from '../../models/subscription'
+import { useFollowing } from '../../models/following'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
 
-const subscription = useSubscription()
+const following = useFollowing()
 
-const text = ref<string>(subscription.list.join('\n'))
+const text = ref<string>(following.list.join('\n'))
 
 const router = useRouter()
 
@@ -19,8 +19,8 @@ async function save() {
     .split('\n')
     .map((url) => url.trim())
   props.state.list = list
-  subscription.list = list
-  router.push('/subscriptions')
+  following.list = list
+  router.push('/following')
 }
 </script>
 
@@ -29,7 +29,7 @@ async function save() {
     <div class="flex items-baseline justify-between">
       <Lang class="font-logo text-2xl font-bold">
         <template #zh> 订阅列表 </template>
-        <template #en> Subscriptions </template>
+        <template #en> Following </template>
       </Lang>
 
       <div class="flex justify-end py-1">
@@ -45,4 +45,4 @@ async function save() {
     <textarea v-model="text" class="h-full border border-black p-2"></textarea>
   </div>
 </template>
-../../models/subscription
+../../models/following ../../models/following

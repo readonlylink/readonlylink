@@ -5,8 +5,8 @@ import { useRoute } from 'vue-router'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { State } from './State'
-import SubscriptionEditor from './SubscriptionEditor.vue'
-import SubscriptionList from './SubscriptionList.vue'
+import FollowingEditor from './FollowingEditor.vue'
+import FollowingList from './FollowingList.vue'
 import { stateReactive } from './stateReactive'
 
 const props = defineProps<{ state: State }>()
@@ -31,10 +31,10 @@ watch(
   <PageLayout>
     <Head>
       <title v-if="lang.isZh()">订阅 | 只读</title>
-      <title v-else>Subscription | Readonly</title>
+      <title v-else>Following | Readonly</title>
     </Head>
 
-    <SubscriptionEditor v-if="state.kind === 'Editor'" :state="state" />
-    <SubscriptionList v-else :state="state" />
+    <FollowingEditor v-if="state.kind === 'Editor'" :state="state" />
+    <FollowingList v-else :state="state" />
   </PageLayout>
 </template>

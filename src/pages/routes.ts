@@ -12,7 +12,7 @@ import History from './history/History.vue'
 import Home from './home/Home.vue'
 import ManualEntrance from './manual-entrance/ManualEntrance.vue'
 import Manual from './manual/Manual.vue'
-import Subscription from './subscription/Subscription.vue'
+import Following from './following/Following.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
@@ -41,7 +41,7 @@ export const routes: Array<RouteRecordRaw> = [
 
   { path: '/editor', component: Editor },
 
-  { path: '/subscriptions', component: Subscription },
+  { path: '/following', component: Following },
 
   { path: '/:pathMatch(.*)', component: PageNotFound },
 ]

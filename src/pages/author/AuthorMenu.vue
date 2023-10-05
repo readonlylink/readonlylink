@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { useSubscription } from '../../models/subscription'
+import { useFollowing } from '../../models/following'
 import { useGlobalTheme } from '../../models/theme'
 import { currentOrigin } from '../../utils/currentOrigin'
 import { State } from './State'
@@ -14,20 +14,20 @@ const route = useRoute()
 const origin = currentOrigin()
 const theme = useGlobalTheme()
 const lang = useGlobalLang()
-const subscription = useSubscription()
+const following = useFollowing()
 
 function isSubscribed() {
-  return subscription.list.includes(props.state.url)
+  return following.list.includes(props.state.url)
 }
 
 function subscribe() {
   if (!isSubscribed()) {
-    subscription.list = [...subscription.list, props.state.url]
+    following.list = [...following.list, props.state.url]
   }
 }
 
 function unsubscribe() {
-  subscription.list = subscription.list.filter((url) => url !== props.state.url)
+  following.list = following.list.filter((url) => url !== props.state.url)
 }
 </script>
 
@@ -65,7 +65,7 @@ function unsubscribe() {
 
     <div class="flex flex-col space-y-1 pr-8 pb-6">
       <Hyperlink
-          :href="`/authors/${state.url}/-/${state.config.homepage}`"
+        :href="`/authors/${state.url}/-/${state.config.homepage}`"
         class="hover:text-black"
         :class="{
           'text-black': state.path === state.config.homepage,
@@ -95,7 +95,7 @@ function unsubscribe() {
         class="hover:text-black"
         :title="lang.isZh() ? '订阅与退订' : 'Subscribe or unsubscribe'"
         @click="subscribe()"
-        :href="`${origin}/subscriptions`"
+        :href="`${origin}/following`"
         target="_blank"
       >
         <Lang>
@@ -127,3 +127,4 @@ function unsubscribe() {
     </div>
   </div>
 </template>
+../../models/following

@@ -17,9 +17,9 @@ export async function loadState(options: StateOptions): Promise<State> {
     activities: [],
   }
 
-  const cachedAuthors = await Kv.get('readonly.link/Subscription/state.authors')
+  const cachedAuthors = await Kv.get('readonly.link/Following/state.authors')
   const cachedActivities = await Kv.get(
-    'readonly.link/Subscription/state.activities',
+    'readonly.link/Following/state.activities',
   )
   if (cachedAuthors && cachedActivities) {
     state.authors = cachedAuthors
