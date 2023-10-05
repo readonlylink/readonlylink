@@ -5,7 +5,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="flex border-t border-black px-3">
+  <div class="flex border-t border-black dark:border-white px-3">
     <div v-if="state.message">{{ state.message }}</div>
     <div v-else>&nbsp;</div>
   </div>

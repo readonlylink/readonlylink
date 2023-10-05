@@ -150,7 +150,7 @@ const { alert } = window
       class="flex h-full flex-col pl-3"
     >
       <EditorWorkspaceNode
-        class="border-l border-black"
+        class="border-l border-black dark:border-white"
         v-for="(child, index) of stateWorkspaceFilterNodes(
           state,
           node.children,

@@ -30,7 +30,7 @@ defineProps<{
       </div>
     </Hyperlink>
 
-    <div class="flex flex-col font-ui text-base text-stone-700">
+    <div class="flex flex-col font-ui text-base text-black dark:text-white">
       <div
         class="flex items-center space-x-2"
         v-if="config.authors && config.authors.length > 0"

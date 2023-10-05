@@ -43,7 +43,7 @@ defineProps<{ state: State }>()
     </div>
 
     <template v-if="state.list.length > 0">
-      <div class="border-b border-black"></div>
+      <div class="border-b border-black dark:border-white"></div>
 
       <div class="flex flex-col divide-y divide-black">
         <Activity

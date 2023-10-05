@@ -42,7 +42,7 @@ const attributes = computed(() => normalizeAttributes(props.config.attributes))
       </div>
     </Hyperlink>
 
-    <div class="flex flex-col font-ui text-base text-stone-700">
+    <div class="flex flex-col font-ui text-base text-black dark:text-white">
       <div
         class="flex items-center space-x-2"
         v-if="attributes.authors.length > 0"

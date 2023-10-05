@@ -12,9 +12,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex h-full w-full flex-col overflow-auto border-r border-black">
+  <div class="flex h-full w-full flex-col overflow-auto border-r border-black dark:border-white">
     <EditorWorkspaceRoot
-      class="border-b border-black"
+      class="border-b border-black dark:border-white"
       :state="state"
       :workspace="workspace"
     />

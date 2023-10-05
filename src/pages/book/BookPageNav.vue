@@ -14,7 +14,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="statePrevPath(state)"
         :href="`/books/${state.url}/-/${statePrevPath(state)}`"
-        class="text-stone-400 hover:text-stone-700"
+        class="text-stone-400 hover:text-black"
         title="Previous Page"
       >
         <Lang>
@@ -33,7 +33,7 @@ defineProps<{ state: State }>()
     <div class="flex">
       <Hyperlink
         :href="`/books/${state.url}`"
-        class="text-stone-400 hover:text-stone-700"
+        class="text-stone-400 hover:text-black"
         title="Back to Title Page"
       >
         <Lang>
@@ -44,7 +44,7 @@ defineProps<{ state: State }>()
       <div class="px-0.5">/</div>
       <Hyperlink
         :href="`/books/${state.url}?front-matter=contents`"
-        class="text-stone-400 hover:text-stone-700"
+        class="text-stone-400 hover:text-black"
         title="Back to Contents"
       >
         <Lang>
@@ -58,7 +58,7 @@ defineProps<{ state: State }>()
       <Hyperlink
         v-if="stateNextPath(state)"
         :href="`/books/${state.url}/-/${stateNextPath(state)}`"
-        class="text-stone-400 hover:text-stone-700"
+        class="text-stone-400 hover:text-black"
         title="Next Page"
       >
         <Lang>
