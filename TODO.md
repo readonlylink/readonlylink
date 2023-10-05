@@ -1,8 +1,12 @@
-[author] extract AuthorHead
+[author] AuthorHead -- column layout
+
+rename subscription to follow
 
 [author] lang button
 [author] dark mode button
+
 [author] back to readonlylink button
+
 fix the manual -- we will add link to readonlylink in rendered page -- no one cares anyway
 
 support dark mode
