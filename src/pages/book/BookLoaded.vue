@@ -52,18 +52,17 @@ window.addEventListener('keydown', (event) => {
 </script>
 
 <template>
-  <div     class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white">
-      <Head>
-        <title>{{ stateTitle(state) }}</title>
-      </Head>
+  <div
+    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+  >
+    <Head>
+      <title>{{ stateTitle(state) }}</title>
+    </Head>
 
     <div class="mx-auto max-w-3xl">
-
-
       <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
       <BookTitlePage v-else-if="!state.path" :state="state" />
       <BookPage v-else :state="state" :document="stateCurrentDocument(state)" />
     </div>
   </div>
-
 </template>

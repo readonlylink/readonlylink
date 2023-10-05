@@ -50,7 +50,7 @@ const lang = useGlobalLang()
           >
             谢宇恒
             <ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400"
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400"
             />
           </a>
           发起。
@@ -64,7 +64,7 @@ const lang = useGlobalLang()
           >
             Xie Yuheng
             <ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400"
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400"
             />
           </a>
           at the end of 2021.
@@ -112,7 +112,7 @@ const lang = useGlobalLang()
             class="inline-flex items-center underline"
             target="_blank"
             >源代码<ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400" /></a
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400" /></a
           >。
         </template>
         <template #en>
@@ -123,7 +123,7 @@ const lang = useGlobalLang()
           >
             Source code
             <ArrowTopRightOnSquareIcon
-              class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400" /></a
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400" /></a
           >.
         </template>
       </Lang>
@@ -142,9 +142,7 @@ const lang = useGlobalLang()
         <template #en> Our slogan is: </template>
       </Lang>
 
-      <Lang
-        class="font-bold text-stone-500 dark:text-stone-400 dark:text-stone-400"
-      >
+      <Lang class="font-bold text-stone-500 dark:text-stone-400">
         <template #zh>
           <div>
             分享<span class="text-black dark:text-white">只读</span>链接，<br
