@@ -31,7 +31,7 @@ const lang = useGlobalLang()
     >
       <TrashIcon class="h-5 w-5 shrink-0" />
 
-      <Lang class="font-ui text-lg">
+      <Lang class="text-lg">
         <template #zh>删除</template>
         <template #en>Remove</template>
       </Lang>

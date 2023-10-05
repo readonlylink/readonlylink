@@ -54,7 +54,7 @@ function scrollIntoView() {
     ref="headlineElement"
     :href="'#' + headlineId"
     :id="headlineId"
-    class="text-balance -ml-4 flex items-baseline font-ui"
+    class="text-balance -ml-4 flex items-baseline"
     @click.prevent="jumpToHeadline()"
     @mouseover="hovered = true"
     @mouseleave="hovered = false"

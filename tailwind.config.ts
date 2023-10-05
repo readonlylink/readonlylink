@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'class',  
+  darkMode: 'class',
   theme: {
     extend: {
       listStyleType: {
@@ -10,7 +10,6 @@ export default {
       },
     },
     fontFamily: {
-      ui: ['sans-serif'],
       content: ['sans-serif'],
       code: ['monospace'],
       logo: ['sans-serif'],

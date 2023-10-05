@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div class="flex flex-col">
-    <label :for="name" class="py-2 font-ui">
+    <label :for="name" class="py-2">
       <slot name="label"></slot>
     </label>
 

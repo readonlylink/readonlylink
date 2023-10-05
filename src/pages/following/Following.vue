@@ -2,9 +2,9 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useFollowing } from '../../models/following'
-import { State } from './State'
 import FollowingLoaded from './FollowingLoaded.vue'
 import FollowingLoading from './FollowingLoading.vue'
+import { State } from './State'
 import { loadState } from './loadState'
 
 const route = useRoute()

@@ -2,8 +2,8 @@
 import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { State } from './State'
 import FollowingAuthor from './FollowingAuthor.vue'
+import { State } from './State'
 import { stateActivitiesForShow } from './stateActivitiesForShow'
 
 defineProps<{ state: State }>()
@@ -22,7 +22,7 @@ defineProps<{ state: State }>()
           href="/following?kind=Editor"
           class="text-stone-400 hover:text-black dark:hover:text-white"
         >
-          <Lang class="font-ui">
+          <Lang class="">
             <template #zh> 编辑 </template>
             <template #en> Edit </template>
           </Lang>

@@ -1,1 +1,1 @@
-export * from "./useDefaultAuthorList"
+export * from './useDefaultAuthorList'

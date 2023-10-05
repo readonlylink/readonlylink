@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div>
-    <Lang class="font-ui text-base text-stone-500 dark:text-stone-400">
+    <Lang class="text-base text-stone-500 dark:text-stone-400">
       <template #zh> 未知 </template>
       <template #en> Unknown </template>
     </Lang>

@@ -15,14 +15,12 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
   <div
     class="h-screen-dynamic flex flex-col items-center justify-between py-12 font-content text-2xl"
   >
-    <div
-      class="flex flex-col items-center space-y-2 py-4 font-ui text-3xl sm:text-4xl"
-    >
+    <div class="flex flex-col items-center space-y-2 py-4 text-3xl sm:text-4xl">
       <div class="px-2 text-center font-bold">
         {{ state.config.title }}
       </div>
 
-      <div class="px-2 text-center font-ui text-xl sm:text-2xl">
+      <div class="px-2 text-center text-xl sm:text-2xl">
         {{ state.config.subtitle }}
       </div>
 
@@ -50,7 +48,7 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         class="flex flex-col items-center py-1.5"
       >
         <div
-          class="py-1 font-ui font-bold"
+          class="py-1 font-bold"
           v-for="(name, index) in attributes.authors"
           :key="index"
         >
@@ -62,19 +60,17 @@ const attributes = computed(() => normalizeAttributes(props.state.config))
         v-if="attributes.translators.length > 0"
         class="flex flex-col items-center"
       >
-        <div
-          class="flex items-center pr-3 text-center font-ui text-xl font-bold"
-        >
+        <div class="flex items-center pr-3 text-center text-xl font-bold">
           <LanguageIcon class="w-5 pr-1" />
           {{ attributes.translators.join(', ') }}
         </div>
       </div>
 
       <div class="flex flex-col items-center px-2">
-        <div v-if="state.config.year" class="text font-ui text-lg">
+        <div v-if="state.config.year" class="text text-lg">
           {{ state.config.year }}
         </div>
-        <div v-else-if="state.config.date" class="text font-ui text-lg">
+        <div v-else-if="state.config.date" class="text text-lg">
           {{ state.config.date }}
         </div>
       </div>

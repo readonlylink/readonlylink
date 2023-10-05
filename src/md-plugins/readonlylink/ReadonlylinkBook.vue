@@ -17,13 +17,13 @@ defineProps<{
 
 <template>
   <div>
-    <Lang class="font-ui text-base text-stone-500 dark:text-stone-400">
+    <Lang class="text-base text-stone-500 dark:text-stone-400">
       <template #zh> 书籍 </template>
       <template #en> Book </template>
     </Lang>
 
     <Hyperlink :href="`/books/${state.url}`">
-      <div class="py-1 font-ui hover:text-stone-500 hover:dark:text-stone-400">
+      <div class="py-1 hover:text-stone-500 hover:dark:text-stone-400">
         <div class="text-balance font-bold">
           {{ config.title }}
         </div>
@@ -33,7 +33,7 @@ defineProps<{
       </div>
     </Hyperlink>
 
-    <div class="flex flex-col font-ui text-base text-black dark:text-white">
+    <div class="flex flex-col text-base text-black dark:text-white">
       <div
         class="flex items-center space-x-2"
         v-if="config.authors && config.authors.length > 0"

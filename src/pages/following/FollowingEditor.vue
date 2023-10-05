@@ -33,7 +33,10 @@ async function save() {
       </Lang>
 
       <div class="flex justify-end py-1">
-        <button @click="save()" class="font-ui text-stone-400 hover:text-black dark:hover:text-white">
+        <button
+          @click="save()"
+          class="text-stone-400 hover:text-black dark:hover:text-white"
+        >
           <Lang>
             <template #zh> 保存 </template>
             <template #en> SAVE </template>
@@ -42,7 +45,10 @@ async function save() {
       </div>
     </div>
 
-    <textarea v-model="text" class="h-full border border-black dark:border-white p-2"></textarea>
+    <textarea
+      v-model="text"
+      class="h-full border border-black dark:border-white p-2"
+    ></textarea>
   </div>
 </template>
 ../../models/following ../../models/following

@@ -1,4 +1,7 @@
-import { sortGlobalHistoryRecord, useHistory } from '../../models/history/useHistory'
+import {
+  sortGlobalHistoryRecord,
+  useHistory,
+} from '../../models/history/useHistory'
 import { State } from './State'
 
 export type StateOptions = {}

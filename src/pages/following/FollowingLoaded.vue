@@ -4,9 +4,9 @@ import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import { State } from './State'
 import FollowingEditor from './FollowingEditor.vue'
 import FollowingList from './FollowingList.vue'
+import { State } from './State'
 import { stateReactive } from './stateReactive'
 
 const props = defineProps<{ state: State }>()

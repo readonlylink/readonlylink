@@ -10,11 +10,13 @@ defineProps<{
 
 <template>
   <div class="flex flex-col">
-    <label :for="name" class="py-2 font-ui">
+    <label :for="name" class="py-2">
       <slot name="label" />
     </label>
 
-    <div class="flex w-full items-center rounded-sm border border-black dark:border-white">
+    <div
+      class="flex w-full items-center rounded-sm border border-black dark:border-white"
+    >
       <select
         class="w-full bg-white px-2 py-3 font-bold disabled:bg-stone-100 bg-white dark:bg-black text-black dark:text-white disabled:dark:bg-stone-800"
         :id="name"

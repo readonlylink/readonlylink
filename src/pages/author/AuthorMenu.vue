@@ -115,7 +115,11 @@ function unfollow() {
     </div>
 
     <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
-      <a href="/" target="_blank" class="hover:text-black dark:hover:text-white flex items-center">
+      <a
+        href="/"
+        target="_blank"
+        class="hover:text-black dark:hover:text-white flex items-center"
+      >
         <Lang>
           <template #zh> 只读链接 </template>
           <template #en> Readonly.Link </template>

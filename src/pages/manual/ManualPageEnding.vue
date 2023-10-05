@@ -16,7 +16,9 @@ defineProps<{ state: State }>()
         :key="`/manuals/${state.url}/-/${statePrevPath(state)}`"
         title="Previous Page"
       >
-        <div class="flex h-full p-3 text-black dark:text-white hover:text-stone-400">
+        <div
+          class="flex h-full p-3 text-black dark:text-white hover:text-stone-400"
+        >
           <div class="flex w-1/5 justify-start py-3">
             <ArrowLeftIcon class="w-6" />
           </div>
@@ -40,7 +42,9 @@ defineProps<{ state: State }>()
         :key="`/manuals/${state.url}/-/${stateNextPath(state)}`"
         title="Next Page"
       >
-        <div class="flex h-full p-3 text-black dark:text-white hover:text-stone-400">
+        <div
+          class="flex h-full p-3 text-black dark:text-white hover:text-stone-400"
+        >
           <div
             class="flex w-4/5 items-center overflow-x-auto px-1 text-center text-xl font-bold"
           >

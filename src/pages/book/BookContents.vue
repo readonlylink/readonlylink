@@ -20,21 +20,21 @@ onMounted(() => {
         <div class="flex flex-wrap text-balance items-baseline">
           <Hyperlink
             :href="`/books/${state.url}/-/${path}`"
-            class="font-ui hover:text-stone-500 hover:dark:text-stone-400 font-bold"
+            class="hover:text-stone-500 hover:dark:text-stone-400 font-bold"
           >
             {{ documentTitle(document) }}
           </Hyperlink>
 
           <Hyperlink
             :href="`/books/${state.url}/-/${path}`"
-            class="font-ui pl-3 hover:text-stone-500 hover:dark:text-stone-400"
+            class="pl-3 hover:text-stone-500 hover:dark:text-stone-400"
           >
             {{ document.attributes.subtitle }}
           </Hyperlink>
         </div>
 
         <div
-          class="py-0.5 text-right font-ui text-xs leading-3 tracking-tight text-stone-500 dark:text-stone-400 hover:text-black dark:hover:text-white"
+          class="py-0.5 text-right text-xs leading-3 tracking-tight text-stone-500 dark:text-stone-400 hover:text-black dark:hover:text-white"
         >
           <Hyperlink :href="`/books/${state.url}/-/${path}`">
             {{ path }}

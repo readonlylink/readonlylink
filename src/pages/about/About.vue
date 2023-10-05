@@ -122,7 +122,8 @@ const lang = useGlobalLang()
             target="_blank"
           >
             Source code
-            <ArrowTopRightOnSquareIcon class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400" /></a
+            <ArrowTopRightOnSquareIcon
+              class="w-4 shrink-0 text-stone-500 dark:text-stone-400 dark:text-stone-400" /></a
           >.
         </template>
       </Lang>
@@ -141,7 +142,9 @@ const lang = useGlobalLang()
         <template #en> Our slogan is: </template>
       </Lang>
 
-      <Lang class="font-logo font-bold text-stone-500 dark:text-stone-400 dark:text-stone-400">
+      <Lang
+        class="font-logo font-bold text-stone-500 dark:text-stone-400 dark:text-stone-400"
+      >
         <template #zh>
           <div>
             分享<span class="text-black dark:text-white">只读</span>链接，<br

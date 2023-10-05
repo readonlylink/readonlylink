@@ -18,7 +18,7 @@ const attributes = computed(() =>
 </script>
 
 <template>
-  <div class="flex flex-col font-ui text-black dark:text-white">
+  <div class="flex flex-col text-black dark:text-white">
     <div
       class="flex items-center space-x-2"
       v-if="attributes.authors.length > 0"
