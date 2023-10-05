@@ -1,9 +1,7 @@
-support dark logo vs light logo
-
 # author
 
 [author] author can provide different contents for different languages
-[author] support switch lang to switch contents
+[author] author can provide different logos for light vs dark
 
 # searchable file list
 
