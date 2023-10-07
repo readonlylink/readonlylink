@@ -1,4 +1,4 @@
-import ty, { Schema } from '@xieyuheng/ty'
+import { ty, Schema } from '@xieyuheng/ty'
 
 export type AuthorContact = {
   bilibili?: string
