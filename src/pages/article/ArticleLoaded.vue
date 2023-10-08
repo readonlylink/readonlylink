@@ -14,7 +14,7 @@ const state = stateReactive(props.state)
 
 <template>
   <div
-    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+    class="overflow-auto bg-white dark:bg-black text-black dark:text-white"
   >
     <Head>
       <title>{{ stateTitle(state) }}</title>
