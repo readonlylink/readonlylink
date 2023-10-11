@@ -31,7 +31,7 @@ function noHighlight() {
 
     <Highlight
       v-else
-      class="mx-4 overflow-x-auto text-base font-mono"
+      class="mx-4 overflow-x-auto font-mono text-base"
       :text="node.text"
     />
   </div>

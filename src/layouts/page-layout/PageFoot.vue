@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 
 const lang = useGlobalLang()
 </script>

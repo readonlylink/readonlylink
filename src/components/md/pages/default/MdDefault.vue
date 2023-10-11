@@ -44,7 +44,7 @@ function showAttributes() {
 
     <div
       v-if="state.document.footnotes.length > 0"
-      class="ml-3 mt-6 border-t-2 border-black dark:border-white pt-4"
+      class="ml-3 mt-6 border-t-2 border-black pt-4 dark:border-white"
     >
       <MdDefaultFootnotes :state="state" />
     </div>

@@ -140,7 +140,7 @@ const { alert } = window
           :title="
             lang.isZh() ? '这个文件夹修改过' : 'This directory is modified'
           "
-          class="rounded-full bg-amber-500 dark:bg-amber-300 p-2"
+          class="rounded-full bg-amber-500 p-2 dark:bg-amber-300"
         ></button>
       </div>
     </button>

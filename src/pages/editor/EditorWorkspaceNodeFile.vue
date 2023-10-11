@@ -24,7 +24,10 @@ const lang = useGlobalLang()
   <button
     class="flex shrink-0 items-center justify-between space-x-1 overflow-x-auto whitespace-pre pl-3 pr-1 hover:bg-stone-200 hover:dark:bg-stone-600"
     :class="{
-      'bg-stone-200 dark:bg-stone-600': stateWorkspaceNodeIsCurrentTab(state, node),
+      'bg-stone-200 dark:bg-stone-600': stateWorkspaceNodeIsCurrentTab(
+        state,
+        node,
+      ),
       'text-amber-600 dark:text-amber-400': workspaceNodeIsModified(node),
     }"
     @mouseover="node.isHovered = true"
@@ -55,7 +58,7 @@ const lang = useGlobalLang()
       <button
         v-if="workspaceNodeIsModified(node)"
         :title="lang.isZh() ? '这个文件修改过' : 'This file is modified'"
-        class="rounded-full bg-amber-500 dark:bg-amber-300 p-2"
+        class="rounded-full bg-amber-500 p-2 dark:bg-amber-300"
       ></button>
     </div>
   </button>

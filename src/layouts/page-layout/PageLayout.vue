@@ -9,7 +9,7 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+    class="h-screen-dynamic overflow-auto bg-white text-black dark:bg-black dark:text-white"
   >
     <Head>
       <title v-if="lang.isZh()">只读</title>
@@ -17,7 +17,7 @@ const lang = useGlobalLang()
     </Head>
 
     <div
-      class="mx-auto min-h-full h-full justify-between flex max-w-3xl flex-col px-3 py-3 text-xl sm:px-6 sm:py-4"
+      class="mx-auto flex h-full min-h-full max-w-3xl flex-col justify-between px-3 py-3 text-xl sm:px-6 sm:py-4"
     >
       <div>
         <PageHead />
@@ -28,9 +28,7 @@ const lang = useGlobalLang()
       </div>
 
       <div class="pt-20">
-        <PageFoot
-          class="border-t dark:border-white border-black py-2"
-        />
+        <PageFoot class="border-t border-black py-2 dark:border-white" />
       </div>
     </div>
   </div>

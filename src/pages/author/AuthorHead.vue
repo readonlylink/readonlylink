@@ -37,7 +37,7 @@ defineProps<{
       </div>
     </div>
 
-    <div class="flex py-3 flex-col">
+    <div class="flex flex-col py-3">
       <AuthorMenu :state="state" />
 
       <AuthorTabbar

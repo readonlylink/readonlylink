@@ -33,10 +33,10 @@ function unfollow() {
 </script>
 
 <template>
-  <div class="flex text-xl flex-wrap text-stone-400">
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+  <div class="flex flex-wrap text-xl text-stone-400">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <button
-        class="hover:text-black dark:hover:text-white whitespace-nowrap flex items-center hover:underline"
+        class="flex items-center whitespace-nowrap hover:text-black hover:underline dark:hover:text-white"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -46,7 +46,7 @@ function unfollow() {
       </button>
 
       <button
-        class="whitespace-nowrap flex items-center hover:text-black dark:hover:text-white"
+        class="flex items-center whitespace-nowrap hover:text-black dark:hover:text-white"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -86,7 +86,7 @@ function unfollow() {
       </button>
     </div>
 
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <Hyperlink
         :href="`/authors/${state.url}/-/${state.config.homepage}`"
         class="hover:text-black dark:hover:text-white"
@@ -114,18 +114,18 @@ function unfollow() {
       </Hyperlink>
     </div>
 
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <a
         href="/"
         target="_blank"
-        class="hover:text-black dark:hover:text-white flex items-center"
+        class="flex items-center hover:text-black dark:hover:text-white"
       >
         <Lang>
           <template #zh> 只读链接 </template>
           <template #en> Readonly.Link </template>
         </Lang>
 
-        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
+        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
       </a>
     </div>
   </div>

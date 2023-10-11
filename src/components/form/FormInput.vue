@@ -17,7 +17,7 @@ defineProps<{
       class="flex w-full items-center rounded-sm border border-black dark:border-white"
     >
       <input
-        class="w-full p-3 font-bold disabled:bg-stone-100 disabled:dark:bg-stone-800 bg-white dark:bg-black text-black dark:text-white"
+        class="w-full bg-white p-3 font-bold text-black disabled:bg-stone-100 dark:bg-black dark:text-white disabled:dark:bg-stone-800"
         :id="name"
         :name="name"
         :value="form.values[name]"

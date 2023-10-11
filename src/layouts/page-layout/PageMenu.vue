@@ -15,7 +15,7 @@ const lang = useGlobalLang()
 
 <template>
   <div class="flex flex-wrap text-stone-400">
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <button
         class="hover:text-black dark:hover:text-white"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
@@ -45,7 +45,7 @@ const lang = useGlobalLang()
       </button>
     </div>
 
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <Hyperlink
         class="hover:text-black dark:hover:text-white"
         :class="{ 'text-black dark:text-white': route.path === '/' }"
@@ -91,10 +91,10 @@ const lang = useGlobalLang()
       </Hyperlink>
     </div>
 
-    <div class="flex flex-col items-start space-y-1 pr-8 pb-6">
+    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <a
         href="/editor"
-        class="hover:text-black dark:hover:text-white flex items-center"
+        class="flex items-center hover:text-black dark:hover:text-white"
         :class="{ 'text-black dark:text-white': route.path === '/editor' }"
         target="_blank"
       >
@@ -103,7 +103,7 @@ const lang = useGlobalLang()
           <template #en> Editor </template>
         </Lang>
 
-        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
+        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
       </a>
 
       <a
@@ -112,7 +112,7 @@ const lang = useGlobalLang()
             ? `${origin}/manuals/${origin}/contents/manual/zh.json`
             : `${origin}/manuals/${origin}/contents/manual/en.json`
         "
-        class="hover:text-black dark:hover:text-white flex items-center"
+        class="flex items-center hover:text-black dark:hover:text-white"
         :class="{ 'text-black dark:text-white': route.path === '/docs' }"
         target="_blank"
       >
@@ -121,7 +121,7 @@ const lang = useGlobalLang()
           <template #en> Manual </template>
         </Lang>
 
-        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
+        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
       </a>
 
       <Hyperlink

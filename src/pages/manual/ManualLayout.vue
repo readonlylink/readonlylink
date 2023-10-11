@@ -58,7 +58,7 @@ watch(
       </div>
 
       <button
-        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white dark:bg-black p-3 sm:hidden"
+        class="fixed bottom-6 right-6 z-20 block rounded-full border border-stone-400 bg-white p-3 dark:bg-black sm:hidden"
         @click="showNav = !showNav"
         v-on-click-outside="
           () => {

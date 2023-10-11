@@ -13,9 +13,7 @@ const state = stateReactive(props.state)
 </script>
 
 <template>
-  <div
-    class="overflow-auto bg-white dark:bg-black text-black dark:text-white"
-  >
+  <div class="overflow-auto bg-white text-black dark:bg-black dark:text-white">
     <Head>
       <title>{{ stateTitle(state) }}</title>
     </Head>

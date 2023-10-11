@@ -17,7 +17,7 @@ defineProps<{ state: State }>()
         title="Previous Page"
       >
         <div
-          class="flex h-full p-3 text-black dark:text-white hover:text-stone-400"
+          class="flex h-full p-3 text-black hover:text-stone-400 dark:text-white"
         >
           <div class="flex w-1/5 justify-start py-3">
             <ArrowLeftIcon class="w-6" />
@@ -43,7 +43,7 @@ defineProps<{ state: State }>()
         title="Next Page"
       >
         <div
-          class="flex h-full p-3 text-black dark:text-white hover:text-stone-400"
+          class="flex h-full p-3 text-black hover:text-stone-400 dark:text-white"
         >
           <div
             class="flex w-4/5 items-center overflow-x-auto px-1 text-center text-xl font-bold"

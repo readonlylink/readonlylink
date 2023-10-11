@@ -17,7 +17,7 @@ const state = stateReactive(props.state)
       <template #en> Authors' activities </template>
     </Lang>
 
-    <div class="border-b border-black dark:border-white pb-1"></div>
+    <div class="border-b border-black pb-1 dark:border-white"></div>
 
     <div class="flex flex-col divide-y divide-black dark:divide-white">
       <Activity

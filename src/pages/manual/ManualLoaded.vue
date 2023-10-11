@@ -52,7 +52,7 @@ window.addEventListener('keydown', (event) => {
 
 <template>
   <div
-    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+    class="h-screen-dynamic overflow-auto bg-white text-black dark:bg-black dark:text-white"
   >
     <Head>
       <title>{{ stateTitle(state) }}</title>

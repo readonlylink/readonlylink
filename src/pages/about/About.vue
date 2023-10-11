@@ -26,7 +26,7 @@ const lang = useGlobalLang()
 
     <main class="space-y-3 py-4">
       <Lang
-        class="inline-flex flex-wrap items-baseline bg-white dark:bg-black text-black dark:text-white"
+        class="inline-flex flex-wrap items-baseline bg-white text-black dark:bg-black dark:text-white"
       >
         <template #zh>
           <div class="pr-1 font-bold">只读链接</div>

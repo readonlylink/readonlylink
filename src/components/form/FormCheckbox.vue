@@ -15,7 +15,7 @@ defineProps<{
       </label>
 
       <input
-        class="ml-1 h-5 w-5 font-bold disabled:bg-stone-100 bg-white dark:bg-black text-black dark:text-white disabled:dark:bg-stone-800"
+        class="ml-1 h-5 w-5 bg-white font-bold text-black disabled:bg-stone-100 dark:bg-black dark:text-white disabled:dark:bg-stone-800"
         :id="name"
         :name="name"
         type="checkbox"

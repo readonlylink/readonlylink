@@ -38,7 +38,7 @@ const url = computed(() => {
 
 <template>
   <div
-    class="h-screen-dynamic overflow-auto bg-white dark:bg-black text-black dark:text-white"
+    class="h-screen-dynamic overflow-auto bg-white text-black dark:bg-black dark:text-white"
   >
     <div class="relative mx-auto flex max-w-3xl flex-col p-5">
       <AuthorHead :state="state" />

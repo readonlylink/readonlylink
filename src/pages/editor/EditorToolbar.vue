@@ -27,12 +27,12 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="flex flex-wrap-reverse items-center justify-between bg-stone-200 dark:bg-stone-600 px-3 py-0.5"
+    class="flex flex-wrap-reverse items-center justify-between bg-stone-200 px-3 py-0.5 dark:bg-stone-600"
   >
     <div class="flex space-x-4 overflow-x-auto pr-4">
       <button
         v-if="!state.currentWorkspace"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         @click="stateFileCreate(state)"
       >
         <Lang>
@@ -43,7 +43,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="!state.currentWorkspace"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         @click="stateFileOpen(state)"
       >
         <Lang>
@@ -54,7 +54,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="!state.currentWorkspace && state.tabs.length === 0"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         @click="stateDirectoryOpen(state)"
       >
         <Lang>
@@ -65,7 +65,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="state.currentTab"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         :disabled="
           state.currentTab.isProcessing || !tabIsModified(state.currentTab)
         "
@@ -79,7 +79,7 @@ const lang = useGlobalLang()
 
       <button
         v-if="state.currentTab && tabFileRemoveIsSupported(state.currentTab)"
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline"
+        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         :disabled="!state.currentTab || state.currentTab.isProcessing"
         @click="
           () => {
@@ -114,7 +114,7 @@ const lang = useGlobalLang()
       <EditorToolbarPreview :state="state" />
 
       <button
-        class="hover:text-black dark:hover:text-white whitespace-nowrap flex items-center hover:underline"
+        class="flex items-center whitespace-nowrap hover:text-black hover:underline dark:hover:text-white"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
       >
         <Lang>
@@ -124,7 +124,7 @@ const lang = useGlobalLang()
       </button>
 
       <button
-        class="whitespace-nowrap flex items-center hover:underline"
+        class="flex items-center whitespace-nowrap hover:underline"
         @click="
           theme.name !== 'dark' ? (theme.name = 'dark') : (theme.name = 'light')
         "
@@ -142,7 +142,7 @@ const lang = useGlobalLang()
       </button>
 
       <Hyperlink
-        class="whitespace-pre hover:underline disabled:text-stone-500 disabled:dark:text-stone-400 disabled:no-underline flex items-center"
+        class="flex items-center whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
         href="/"
         target="_blank"
       >
@@ -151,7 +151,7 @@ const lang = useGlobalLang()
           <template #en>Readonly.Link</template>
         </Lang>
 
-        <ArrowTopRightOnSquareIcon class="ml-0.5 w-4 h-4" />
+        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
       </Hyperlink>
     </div>
   </div>
