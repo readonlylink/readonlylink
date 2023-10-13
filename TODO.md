@@ -1,9 +1,6 @@
-quit using stateReactive in all pages
-
-pages/editor/stateReactive.ts
-pages/home/stateReactive.ts
-pages/manual/stateReactive.ts
-pages/following/stateReactive.ts
+remove pages/manual/stateReactive.ts
+remove pages/following/stateReactive.ts
+remove pages/editor/stateReactive.ts
 
 # searchable file list
 

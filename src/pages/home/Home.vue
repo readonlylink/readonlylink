@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import { useDefaultAuthorList } from '../../models/author-list'
 import HomeLoaded from './HomeLoaded.vue'
@@ -17,8 +17,8 @@ function useStateOptions() {
   }
 }
 
-onMounted(async () => {
-  state.value = await stateLoad(useStateOptions())
+watchEffect(async () => {
+  state.value = reactive(await stateLoad(useStateOptions()))
 })
 </script>
 

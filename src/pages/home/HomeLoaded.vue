@@ -1,13 +1,18 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import Activity from '../../components/activity/Activity.vue'
 import Lang from '../../components/lang/Lang.vue'
 import { sortActivities } from '../../models/activity/sortActivities'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
+import { stateRefresh } from './stateRefresh'
 
 const props = defineProps<{ state: State }>()
 
-const state = stateReactive(props.state)
+onMounted(async () => {
+  if (props.state.isLoadedFromCache) {
+    await stateRefresh(props.state)
+  }
+})
 </script>
 
 <template>
