@@ -1,30 +1,26 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { watch } from 'vue'
+import { watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import FollowingEditor from './FollowingEditor.vue'
 import FollowingList from './FollowingList.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
+import { stateWatch } from './stateReactive'
 
 const props = defineProps<{ state: State }>()
 
-const state = stateReactive(props.state)
 const lang = useGlobalLang()
 const route = useRoute()
 
-watch(
-  () => route.query['kind'],
-  (value) => {
-    const kind = value ? String(value) : undefined
-    state.kind = kind
-  },
-  {
-    immediate: true,
-  },
-)
+stateWatch(props.state)
+
+watchEffect(() => {
+  if (route.query['kind']) {
+    props.state.kind = String(route.query['kind'])
+  }
+})
 </script>
 
 <template>

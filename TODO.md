@@ -1,4 +1,3 @@
-remove pages/following/stateReactive.ts
 remove pages/editor/stateReactive.ts
 
 # searchable file list
