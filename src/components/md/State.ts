@@ -13,7 +13,7 @@ export type StateOptions = {
   document: Document
 }
 
-export function createState(options: StateOptions): State {
+export function stateCreate(options: StateOptions): State {
   const { url, document } = options
 
   return {

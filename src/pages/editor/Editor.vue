@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted, reactive } from 'vue'
 import EditorLoaded from './EditorLoaded.vue'
-import { createState } from './createState'
+import { stateCreate } from './stateCreate'
 import { stateLoad } from './stateLoad'
 
-const state = reactive(createState())
+const state = reactive(stateCreate())
 
 onMounted(async () => {
   stateLoad(state)

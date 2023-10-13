@@ -1,6 +1,6 @@
 import { State } from './State'
 
-export function createState(): State {
+export function stateCreate(): State {
   return {
     tabs: [],
     recentlyOpened: {
