@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEventListener } from '@vueuse/core'
 import { onMounted, reactive, ref, watch } from 'vue'
 
 /*
@@ -28,7 +29,7 @@ watch(
 )
 
 onMounted(() => {
-  document.addEventListener('click', (event) => {
+  useEventListener(document, 'click', (event) => {
     const target = event.target as HTMLElement
 
     if (!panelElement.value) return

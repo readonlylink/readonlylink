@@ -1,5 +1,3 @@
-quit using  window.addEventListener and  document.addEventListener directly
-
 # searchable file list
 
 searchable file list as a markdown plugin

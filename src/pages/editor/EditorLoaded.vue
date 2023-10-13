@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEventListener } from '@vueuse/core'
 import EditorLayout from './EditorLayout.vue'
 import { State } from './State'
 import { stateWatch } from './stateWatch'
@@ -8,7 +9,7 @@ const props = defineProps<{ state: State }>()
 
 stateWatch(props.state)
 
-window.addEventListener('beforeunload', (event) => {
+useEventListener(window, 'beforeunload', (event) => {
   if (stateisModified(props.state)) {
     event.preventDefault()
   }

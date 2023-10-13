@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEventListener } from '@vueuse/core'
 import { Head } from '@vueuse/head'
 import { computed, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -34,7 +35,7 @@ watchEffect(() => {
     : props.state.config.main
 })
 
-window.addEventListener('keydown', (event) => {
+useEventListener(window, 'keydown', (event) => {
   if (event.altKey) return
   if (event.ctrlKey) return
 
