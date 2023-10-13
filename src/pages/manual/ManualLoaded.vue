@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { computed, watch } from 'vue'
+import { computed, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import ManualLayout from './ManualLayout.vue'
 import ManualPage from './ManualPage.vue'
@@ -9,42 +9,46 @@ import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateNextPath } from './stateNextPath'
 import { statePrevPath } from './statePrevPath'
-import { stateReactive } from './stateReactive'
 import { stateReactivelyUpdateRoute } from './stateReactivelyUpdateRoute'
+import { stateRefresh } from './stateRefresh'
 import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
-const state = stateReactive(props.state)
+
 const route = useRoute()
 const router = useRouter()
 
-stateReactivelyUpdateRoute(state, router)
+onMounted(async () => {
+  if (props.state.isLoadedFromCache) {
+    await stateRefresh(props.state)
+  }
+})
 
-const currentDocument = computed(() => stateCurrentDocument(state))
+stateReactivelyUpdateRoute(props.state, router)
 
-watch(
-  () => route.params.path,
-  (value) => {
-    state.path = value ? String(value) : state.config.main
-  },
-  { immediate: true },
-)
+const currentDocument = computed(() => stateCurrentDocument(props.state))
+
+watchEffect(() => {
+  props.state.path = route.params.path
+    ? String(route.params.path)
+    : props.state.config.main
+})
 
 window.addEventListener('keydown', (event) => {
   if (event.altKey) return
   if (event.ctrlKey) return
 
   if (event.key === 'ArrowLeft') {
-    const path = statePrevPath(state)
+    const path = statePrevPath(props.state)
     if (path !== undefined) {
-      router.push(`/manuals/${state.url}/-/${path}`)
+      router.push(`/manuals/${props.state.url}/-/${path}`)
     }
   }
 
   if (event.key === 'ArrowRight') {
-    const path = stateNextPath(state)
+    const path = stateNextPath(props.state)
     if (path !== undefined) {
-      router.push(`/manuals/${state.url}/-/${path}`)
+      router.push(`/manuals/${props.state.url}/-/${path}`)
     }
   }
 })

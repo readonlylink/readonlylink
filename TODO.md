@@ -1,4 +1,3 @@
-remove pages/manual/stateReactive.ts
 remove pages/following/stateReactive.ts
 remove pages/editor/stateReactive.ts
 
