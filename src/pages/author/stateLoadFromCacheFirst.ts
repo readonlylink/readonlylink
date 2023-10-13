@@ -1,9 +1,9 @@
 import * as Kv from 'idb-keyval'
 import { stringTrimEnd } from '../../utils/stringTrimEnd'
 import { State } from './State'
-import { StateOptions, loadState } from './loadState'
+import { StateOptions, stateLoad } from './stateLoad'
 
-export async function loadStateFromCacheFirst(
+export async function stateLoadFromCacheFirst(
   options: StateOptions,
 ): Promise<State> {
   const { path } = options
@@ -19,7 +19,7 @@ export async function loadStateFromCacheFirst(
       isLoadedFromCache: true,
     }
   } else {
-    const state = await loadState(options)
+    const state = await stateLoad(options)
     await Kv.set(url, state, store)
     return state
   }

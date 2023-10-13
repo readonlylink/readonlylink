@@ -12,7 +12,7 @@ export type StateOptions = {
   path?: string
 }
 
-export async function loadState(options: StateOptions): Promise<State> {
+export async function stateLoad(options: StateOptions): Promise<State> {
   const { path } = options
   const url = stringTrimEnd(options.url, '/')
 

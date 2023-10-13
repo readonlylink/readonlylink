@@ -4,12 +4,12 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 const state = ref<undefined | State>(undefined)
 
 onMounted(async () => {
-  state.value = await loadState()
+  state.value = await stateLoad()
 })
 </script>
 

@@ -3,7 +3,7 @@ import { useDefaultAuthorList } from '../../models/author-list'
 import { State } from './State'
 import { stateRefresh } from './stateRefresh'
 
-export async function loadState(): Promise<State> {
+export async function stateLoad(): Promise<State> {
   const list = useDefaultAuthorList()
   const state: State = {
     list,

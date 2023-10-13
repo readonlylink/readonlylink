@@ -6,7 +6,7 @@ import { State } from './State'
 
 export type StateOptions = {}
 
-export async function loadState(options: StateOptions): Promise<State> {
+export async function stateLoad(options: StateOptions): Promise<State> {
   const history = await useHistory()
 
   sortGlobalHistoryRecord()

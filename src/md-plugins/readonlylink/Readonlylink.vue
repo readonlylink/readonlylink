@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 import ReadonlylinkLoaded from './ReadonlylinkLoaded.vue'
 import ReadonlylinkLoading from './ReadonlylinkLoading.vue'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 const props = defineProps<{
   url: string
@@ -14,7 +14,7 @@ const state = ref<State | undefined>(undefined)
 watch(
   () => props.url,
   async () => {
-    state.value = await loadState(props)
+    state.value = await stateLoad(props)
   },
   {
     immediate: true,

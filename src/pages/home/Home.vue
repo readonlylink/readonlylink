@@ -5,7 +5,7 @@ import { useDefaultAuthorList } from '../../models/author-list'
 import HomeLoaded from './HomeLoaded.vue'
 import HomeLoading from './HomeLoading.vue'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 const state = ref<State | undefined>(undefined)
 
@@ -18,7 +18,7 @@ function useStateOptions() {
 }
 
 onMounted(async () => {
-  state.value = await loadState(useStateOptions())
+  state.value = await stateLoad(useStateOptions())
 })
 </script>
 

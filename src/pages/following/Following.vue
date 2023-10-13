@@ -5,7 +5,7 @@ import { useFollowing } from '../../models/following'
 import FollowingLoaded from './FollowingLoaded.vue'
 import FollowingLoading from './FollowingLoading.vue'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 const route = useRoute()
 
@@ -25,7 +25,7 @@ function useStateOptions() {
 watch(
   () => route.params.url,
   async () => {
-    state.value = await loadState(useStateOptions())
+    state.value = await stateLoad(useStateOptions())
   },
   {
     immediate: true,

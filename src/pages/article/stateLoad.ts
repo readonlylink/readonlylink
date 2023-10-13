@@ -7,7 +7,7 @@ export type StateOptions = {
   url: string
 }
 
-export async function loadState(options: StateOptions): Promise<State> {
+export async function stateLoad(options: StateOptions): Promise<State> {
   const url = stringTrimEnd(options.url, '/')
   const response = await fetch(url)
   const contentType = response.headers.get('content-type') || ''

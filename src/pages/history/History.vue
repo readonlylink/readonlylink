@@ -3,14 +3,14 @@ import { onMounted, ref } from 'vue'
 import HistoryLoaded from './HistoryLoaded.vue'
 import HistoryLoading from './HistoryLoading.vue'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 const state = ref<State | undefined>(undefined)
 
 const options = {}
 
 onMounted(async () => {
-  state.value = await loadState(options)
+  state.value = await stateLoad(options)
 })
 </script>
 

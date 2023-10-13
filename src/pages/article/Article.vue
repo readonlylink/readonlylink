@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 import ArticleLoaded from './ArticleLoaded.vue'
 import ArticleLoading from './ArticleLoading.vue'
 import { State } from './State'
-import { loadStateFromCacheFirst } from './loadStateFromCacheFirst'
+import { stateLoadFromCacheFirst } from './stateLoadFromCacheFirst'
 
 const route = useRoute()
 
@@ -19,7 +19,7 @@ function useStateOptions() {
 watch(
   () => route.params.url,
   async () => {
-    state.value = await loadStateFromCacheFirst(useStateOptions())
+    state.value = await stateLoadFromCacheFirst(useStateOptions())
   },
   {
     immediate: true,

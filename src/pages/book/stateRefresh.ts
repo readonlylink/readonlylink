@@ -1,10 +1,10 @@
 import * as Kv from 'idb-keyval'
 import { State } from './State'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 
 export async function stateRefresh(state: State): Promise<void> {
   const store = Kv.createStore('readonly.link/books', 'cache')
-  const newState = await loadState(state)
+  const newState = await stateLoad(state)
   delete newState.path
   delete newState.frontMatter
   Object.assign(state, newState)

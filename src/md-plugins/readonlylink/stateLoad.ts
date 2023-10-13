@@ -6,7 +6,7 @@ export type StateOptions = {
   url: string
 }
 
-export async function loadState(options: StateOptions): Promise<State> {
+export async function stateLoad(options: StateOptions): Promise<State> {
   const { url } = options
 
   const store = Kv.createStore('readonly.link/<readonlylink>', 'configs')
