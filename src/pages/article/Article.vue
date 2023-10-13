@@ -1,33 +1,30 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import ArticleLoaded from './ArticleLoaded.vue'
 import ArticleLoading from './ArticleLoading.vue'
 import { State } from './State'
 import { stateLoadFromCacheFirst } from './stateLoadFromCacheFirst'
 
-const route = useRoute()
-
 const state = ref<State | undefined>(undefined)
 
-function useStateOptions() {
-  const url = String(route.params.url)
+const route = useRoute()
 
-  return { url }
-}
-
-watch(
-  () => route.params.url,
-  async () => {
-    state.value = await stateLoadFromCacheFirst(useStateOptions())
-  },
-  {
-    immediate: true,
-  },
-)
+watchEffect(async () => {
+  state.value = reactive(
+    await stateLoadFromCacheFirst({
+      url: String(route.params.url),
+    }),
+  )
+})
 </script>
 
 <template>
   <ArticleLoaded v-if="state" :state="state" :key="state.url" />
-  <ArticleLoading v-else :options="useStateOptions()" />
+  <ArticleLoading
+    v-else
+    :options="{
+      url: String(route.params.url),
+    }"
+  />
 </template>

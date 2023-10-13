@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { watch } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BookContents from './BookContents.vue'
 import BookPage from './BookPage.vue'
@@ -9,25 +9,30 @@ import { State } from './State'
 import { stateCurrentDocument } from './stateCurrentDocument'
 import { stateNextPath } from './stateNextPath'
 import { statePrevPath } from './statePrevPath'
-import { stateReactive } from './stateReactive'
+import { stateRefresh } from './stateRefresh'
 import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
-const state = stateReactive(props.state)
 const route = useRoute()
 const router = useRouter()
+
+onMounted(async () => {
+  if (props.state.isLoadedFromCache) {
+    await stateRefresh(props.state)
+  }
+})
 
 watch(
   () => route.query['front-matter'],
   (value) => {
-    state.frontMatter = value ? String(value) : undefined
+    props.state.frontMatter = value ? String(value) : undefined
   },
 )
 
 watch(
   () => route.params.path,
   (value) => {
-    state.path = value ? String(value) : undefined
+    props.state.path = value ? String(value) : undefined
   },
 )
 
@@ -36,16 +41,16 @@ window.addEventListener('keydown', (event) => {
   if (event.ctrlKey) return
 
   if (event.key === 'ArrowLeft') {
-    const path = statePrevPath(state)
+    const path = statePrevPath(props.state)
     if (path !== undefined) {
-      router.push(`/books/${state.url}/-/${path}`)
+      router.push(`/books/${props.state.url}/-/${path}`)
     }
   }
 
   if (event.key === 'ArrowRight') {
-    const path = stateNextPath(state)
+    const path = stateNextPath(props.state)
     if (path !== undefined) {
-      router.push(`/books/${state.url}/-/${path}`)
+      router.push(`/books/${props.state.url}/-/${path}`)
     }
   }
 })

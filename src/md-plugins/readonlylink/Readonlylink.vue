@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import ReadonlylinkLoaded from './ReadonlylinkLoaded.vue'
 import ReadonlylinkLoading from './ReadonlylinkLoading.vue'
 import { State } from './State'
@@ -11,15 +11,9 @@ const props = defineProps<{
 
 const state = ref<State | undefined>(undefined)
 
-watch(
-  () => props.url,
-  async () => {
-    state.value = await stateLoad(props)
-  },
-  {
-    immediate: true,
-  },
-)
+watchEffect(async () => {
+  state.value = reactive(await stateLoad(props))
+})
 </script>
 
 <template>

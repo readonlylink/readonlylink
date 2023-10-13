@@ -1,15 +1,20 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import ReadonlylinkArticle from './ReadonlylinkArticle.vue'
 import ReadonlylinkAuthor from './ReadonlylinkAuthor.vue'
 import ReadonlylinkBook from './ReadonlylinkBook.vue'
 import ReadonlylinkManual from './ReadonlylinkManual.vue'
 import ReadonlylinkUnknown from './ReadonlylinkUnknown.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
+import { stateRefresh } from './stateRefresh'
 
 const props = defineProps<{ state: State }>()
 
-const state = stateReactive(props.state)
+onMounted(async () => {
+  if (props.state.isLoadedFromCache) {
+    await stateRefresh(props.state)
+  }
+})
 </script>
 
 <template>

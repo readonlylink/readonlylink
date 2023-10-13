@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { onMounted } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import AuthorCard from './AuthorCard.vue'
 import { State } from './State'
-import { stateReactive } from './stateReactive'
+import { stateRefresh } from './stateRefresh'
 
 const props = defineProps<{ state: State }>()
 
-const state = stateReactive(props.state)
 const lang = useGlobalLang()
+
+onMounted(async () => {
+  if (props.state.isLoadedFromCache) {
+    await stateRefresh(props.state)
+  }
+})
 </script>
 
 <template>

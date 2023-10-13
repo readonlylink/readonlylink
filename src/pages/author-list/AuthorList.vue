@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import AuthorListLoaded from './AuthorListLoaded.vue'
 import AuthorListLoading from './AuthorListLoading.vue'
@@ -8,8 +8,8 @@ import { stateLoad } from './stateLoad'
 
 const state = ref<undefined | State>(undefined)
 
-onMounted(async () => {
-  state.value = await stateLoad()
+watchEffect(async () => {
+  state.value = reactive(await stateLoad())
 })
 </script>
 

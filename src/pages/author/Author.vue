@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import AuthorLoaded from './AuthorLoaded.vue'
 import AuthorLoading from './AuthorLoading.vue'
 import { State } from './State'
 import { stateLoadFromCacheFirst } from './stateLoadFromCacheFirst'
 
-const route = useRoute()
-
 const state = ref<State | undefined>(undefined)
+
+const route = useRoute()
 
 function useStateOptions() {
   const url = String(route.params.url)
@@ -17,15 +17,9 @@ function useStateOptions() {
   return { url, path }
 }
 
-watch(
-  () => route.params.url,
-  async () => {
-    state.value = await stateLoadFromCacheFirst(useStateOptions())
-  },
-  {
-    immediate: true,
-  },
-)
+watchEffect(async () => {
+  state.value = reactive(await stateLoadFromCacheFirst(useStateOptions()))
+})
 </script>
 
 <template>

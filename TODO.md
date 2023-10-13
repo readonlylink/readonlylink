@@ -1,3 +1,10 @@
+quit using stateReactive in all pages
+
+pages/editor/stateReactive.ts
+pages/home/stateReactive.ts
+pages/manual/stateReactive.ts
+pages/following/stateReactive.ts
+
 # searchable file list
 
 searchable file list as a markdown plugin
