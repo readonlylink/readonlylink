@@ -1,11 +1,6 @@
-import { reactive } from 'vue'
 import { State } from './State'
 import { stateReactivelySaveRecentlyOpened } from './stateReactivelySaveRecentlyOpened'
 
-export function stateReactive(state: State): State {
-  state = reactive(state) as State
-
+export function stateWatch(state: State): void {
   stateReactivelySaveRecentlyOpened(state)
-
-  return state
 }
