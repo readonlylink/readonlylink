@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { onMounted, reactive } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import EditorLoaded from './EditorLoaded.vue'
-import { stateCreate } from './stateCreate'
+import { State } from './State'
 import { stateLoad } from './stateLoad'
 
-const state = reactive(stateCreate())
+const state = ref<State | undefined>()
 
 onMounted(async () => {
-  stateLoad(state)
+  state.value = reactive(await stateLoad())
 })
 </script>
 

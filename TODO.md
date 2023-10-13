@@ -1,4 +1,3 @@
-[editor] inline stateCreate into stateLoad
 quit using  window.addEventListener and  document.addEventListener directly
 
 # searchable file list

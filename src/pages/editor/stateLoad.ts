@@ -1,7 +1,9 @@
 import * as Kv from 'idb-keyval'
 import { State } from './State'
+import { stateCreate } from './stateCreate'
 
-export async function stateLoad(state: State): Promise<void> {
+export async function stateLoad(): Promise<State> {
+  const state = stateCreate()
   state.recentlyOpened.fileHandles =
     (await Kv.get('readonly.link/Editor/state.recentlyOpened.fileHandles')) ||
     {}
@@ -10,4 +12,6 @@ export async function stateLoad(state: State): Promise<void> {
     (await Kv.get(
       'readonly.link/Editor/state.recentlyOpened.directoryHandles',
     )) || {}
+
+  return state
 }
