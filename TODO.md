@@ -1,3 +1,11 @@
+/embedded-article copy code from Article
+/embedded-article remove ArticlePlaintext
+/embedded-article cache
+
+/embedded-article stateListen & stateListenMessage
+
+- load text and document from message event
+
 # searchable file list
 
 searchable file list as a markdown plugin

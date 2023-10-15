@@ -13,6 +13,8 @@ import History from './history/History.vue'
 import Home from './home/Home.vue'
 import ManualEntrance from './manual-entrance/ManualEntrance.vue'
 import Manual from './manual/Manual.vue'
+import EmbeddedArticle from './embedded-article//EmbeddedArticle.vue'
+
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },
@@ -27,6 +29,8 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/articles/', component: ArticleEntrance },
   { path: '/articles/:url(.*)', component: Article },
 
+  { path: '/embedded-article', component: EmbeddedArticle },
+
   { path: '/books', component: BookEntrance },
   { path: '/books/', component: BookEntrance },
   { path: '/books/:url(.*)', component: Book },
@@ -38,9 +42,7 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
 
   { path: '/history', component: History },
-
   { path: '/editor', component: Editor },
-
   { path: '/following', component: Following },
 
   { path: '/:pathMatch(.*)', component: PageNotFound },
