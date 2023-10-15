@@ -1,4 +1,3 @@
-/embedded-article remove ArticleLoading
 /embedded-article fix naming
 /embedded-article cache
 

@@ -21,10 +21,4 @@ watchEffect(async () => {
 
 <template>
   <ArticleLoaded v-if="state" :state="state" :key="state.url" />
-  <ArticleLoading
-    v-else
-    :options="{
-      url: String(route.params.url),
-    }"
-  />
 </template>
