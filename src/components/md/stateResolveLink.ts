@@ -6,5 +6,9 @@ export function stateResolveLink(state: State, link: string): string {
     return link
   }
 
+  if (!state.url) {
+    return link
+  }
+
   return new URL(link, state.url).href
 }

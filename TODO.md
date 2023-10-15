@@ -2,6 +2,8 @@
 
 - load text and document from message event
 
+stateListen & stateListenMessage
+
 # searchable file list
 
 searchable file list as a markdown plugin

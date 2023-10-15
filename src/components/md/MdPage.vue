@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Document } from '@xieyuheng/x-markdown'
 import { computed, reactive } from 'vue'
-import { stateCreate } from './State'
 import { components } from './pages'
+import { stateCreate } from './stateCreate'
 
 const props = defineProps<{
-  url: URL
+  url?: URL
   document: Document
 }>()
 
