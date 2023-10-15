@@ -1,5 +1,3 @@
-/embedded-article stateListenMessage -- load text and document from message event
-
 # searchable file list
 
 searchable file list as a markdown plugin
