@@ -3,6 +3,12 @@ import { State } from './State'
 
 export function stateListenMessage(state: State): void {
   window.addEventListener('message', (event) => {
+    console.log({
+      who: 'EmbeddedArticle',
+      message: 'receive message',
+      data: event.data,
+    })
+
     if (event.data.document) {
       state.document = event.data.document
     } else if (typeof event.data.text === 'string') {
