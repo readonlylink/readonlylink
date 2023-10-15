@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import EmbeddedArticleMarkdown from './EmbeddedArticleMarkdown.vue'
+import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
 
 const props = defineProps<{ state: State }>()
@@ -8,7 +8,7 @@ const props = defineProps<{ state: State }>()
 <template>
   <div class="overflow-auto bg-white text-black dark:bg-black dark:text-white">
     <div class="mx-auto max-w-3xl">
-      <EmbeddedArticleMarkdown :state="state" />
+      <MdPage v-if="state.document" class="m-6" :document="state.document" />
     </div>
   </div>
 </template>

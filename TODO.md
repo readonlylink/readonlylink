@@ -1,3 +1,5 @@
+/embedded-article inline EmbeddedArticleLoaded
+
 /embedded-article stateListen & stateListenMessage
 
 - load text and document from message event
