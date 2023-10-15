@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import { useRoute } from 'vue-router'
-import EmbeddedArticleLoaded from './EmbeddedArticleLoaded.vue'
+import { reactive } from 'vue'
+import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
 
-const state = ref<State | undefined>(undefined)
-
-const route = useRoute()
-
-watchEffect(async () => {
-  //
-})
+const state = reactive<State>({})
 </script>
 
 <template>
-  <EmbeddedArticleLoaded v-if="state" :state="state" />
+  <div class="overflow-auto bg-white text-black dark:bg-black dark:text-white">
+    <div class="mx-auto max-w-3xl">
+      <MdPage v-if="state.document" class="m-6" :document="state.document" />
+    </div>
+  </div>
 </template>
