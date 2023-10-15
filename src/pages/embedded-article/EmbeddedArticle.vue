@@ -2,8 +2,11 @@
 import { reactive } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import { State } from './State'
+import { stateListen } from './stateListen'
 
 const state = reactive<State>({})
+
+stateListen(state)
 </script>
 
 <template>

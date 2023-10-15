@@ -1,8 +1,4 @@
-/embedded-article stateListen & stateListenMessage
-
-- load text and document from message event
-
-stateListen & stateListenMessage
+/embedded-article stateListenMessage -- load text and document from message event
 
 # searchable file list
 
