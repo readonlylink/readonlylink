@@ -1,4 +1,3 @@
-/embedded-article copy code from Article
 /embedded-article remove ArticlePlaintext
 /embedded-article cache
 
