@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import ArticleLoaded from './ArticleLoaded.vue'
-import ArticleLoading from './ArticleLoading.vue'
+import EmbeddedArticleLoaded from './EmbeddedArticleLoaded.vue'
 import { State } from './State'
 import { stateLoadFromCacheFirst } from './stateLoadFromCacheFirst'
 
@@ -20,5 +19,5 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <ArticleLoaded v-if="state" :state="state" :key="state.url" />
+  <EmbeddedArticleLoaded v-if="state" :state="state" :key="state.url" />
 </template>

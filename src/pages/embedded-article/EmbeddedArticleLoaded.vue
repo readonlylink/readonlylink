@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
 import { onUnmounted } from 'vue'
-import ArticleMarkdown from './ArticleMarkdown.vue'
+import EmbeddedArticleMarkdown from './EmbeddedArticleMarkdown.vue'
 import { State } from './State'
 import { stateRefresh } from './stateRefresh'
 import { stateTitle } from './stateTitle'
@@ -22,7 +22,7 @@ onUnmounted(async () => {
     </Head>
 
     <div class="mx-auto max-w-3xl">
-      <ArticleMarkdown :state="state" />
+      <EmbeddedArticleMarkdown :state="state" />
     </div>
   </div>
 </template>

@@ -1,5 +1,4 @@
-/embedded-article fix naming
-/embedded-article cache
+/embedded-article remove cache
 
 /embedded-article stateListen & stateListenMessage
 
