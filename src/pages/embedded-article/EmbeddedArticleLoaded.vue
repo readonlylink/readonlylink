@@ -1,18 +1,10 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { onUnmounted } from 'vue'
 import EmbeddedArticleMarkdown from './EmbeddedArticleMarkdown.vue'
 import { State } from './State'
-import { stateRefresh } from './stateRefresh'
 import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
-
-onUnmounted(async () => {
-  if (props.state.isLoadedFromCache) {
-    await stateRefresh(props.state)
-  }
-})
 </script>
 
 <template>

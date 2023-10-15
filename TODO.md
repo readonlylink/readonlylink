@@ -1,5 +1,3 @@
-/embedded-article remove cache
-
 /embedded-article stateListen & stateListenMessage
 
 - load text and document from message event

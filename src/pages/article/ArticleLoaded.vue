@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { onUnmounted } from 'vue'
+import { onMounted } from 'vue'
 import ArticleMarkdown from './ArticleMarkdown.vue'
 import ArticlePlaintext from './ArticlePlaintext.vue'
 import { State } from './State'
@@ -10,7 +10,7 @@ import { stateTitle } from './stateTitle'
 
 const props = defineProps<{ state: State }>()
 
-onUnmounted(async () => {
+onMounted(async () => {
   if (props.state.isLoadedFromCache) {
     await stateRefresh(props.state)
   }
