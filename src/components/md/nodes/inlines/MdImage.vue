@@ -12,7 +12,7 @@ const props = defineProps<{
 <template>
   <img
     class="py-1"
-    :src="stateResolveLink(state, node.href)"
-    :alt="node.title"
+    :src="stateResolveLink(state, node.src)"
+    :alt="node.alt"
   />
 </template>
