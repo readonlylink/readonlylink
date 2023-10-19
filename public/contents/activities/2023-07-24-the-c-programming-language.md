@@ -7,3 +7,7 @@ reading the C book makes me feel like
 I have found something truely new.
 
 <readonlylink href="https://books.readonly.link/the-c-programming-language/book.json" />
+
+See also "Scalable C":
+
+<readonlylink href="https://books.readonly.link/scalable-c/book.json" />
