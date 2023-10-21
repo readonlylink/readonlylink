@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Document } from '@xieyuheng/x-markdown'
 import { join } from 'path-browserify'
-import { computed, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import MdPage from '../../components/md/MdPage.vue'
 import BookPageNav from './BookPageNav.vue'
 import BookPageNotFound from './BookPageNotFound.vue'
@@ -12,10 +12,12 @@ const props = defineProps<{
   document?: Document
 }>()
 
+const topElement = ref<HTMLDivElement | undefined>()
+
 watch(
   () => props.state.path,
   () => {
-    window.scrollTo(0, 0)
+    topElement.value?.scrollIntoView()
   },
   {
     immediate: true,
@@ -36,6 +38,7 @@ const url = computed(() => {
 
 <template>
   <div class="h-screen-dynamic flex flex-col px-6">
+    <div ref="topElement"></div>
     <BookPageNav class="py-6" :state="state" />
     <MdPage v-if="document" :key="state.path" :document="document" :url="url" />
     <BookPageNotFound v-else :state="state" />
