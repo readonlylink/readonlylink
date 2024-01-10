@@ -23,6 +23,6 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <AuthorLoaded v-if="state" :state="state" />
+  <AuthorLoaded v-if="state" :state />
   <AuthorLoading v-else :options="useStateOptions()" />
 </template>

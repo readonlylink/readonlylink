@@ -34,7 +34,7 @@ watchEffect(() => {
   </Head>
 
   <AuthorPage
-    :state="state"
+    :state
     :document="stateCurrentDocument(state)"
     :key="state.path"
   />

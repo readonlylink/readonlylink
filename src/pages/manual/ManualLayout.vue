@@ -32,11 +32,7 @@ watch(
   <div class="h-screen-dynamic flex flex-col">
     <div class="hidden h-full overflow-y-auto sm:block">
       <div class="flex h-full overflow-y-auto">
-        <ManualPageNav
-          :state="state"
-          class="overflow-y-auto"
-          style="width: 420px"
-        />
+        <ManualPageNav :state class="overflow-y-auto" style="width: 420px" />
 
         <div ref="slotElement" class="w-full overflow-y-auto">
           <slot />
@@ -48,7 +44,7 @@ watch(
       <div class="flex overflow-y-auto">
         <ManualPageNav
           v-if="showNav"
-          :state="state"
+          :state
           class="fixed z-20 h-full w-5/6 overflow-y-auto bg-white"
         />
 

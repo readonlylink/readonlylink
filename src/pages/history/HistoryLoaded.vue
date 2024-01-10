@@ -36,7 +36,7 @@ const lang = useGlobalLang()
         <HistoryEntry
           v-for="(entry, key) of state.history.record"
           :key="key"
-          :state="state"
+          :state
           :entry="entry"
         />
       </div>

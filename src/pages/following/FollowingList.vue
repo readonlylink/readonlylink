@@ -37,7 +37,7 @@ defineProps<{ state: State }>()
       <FollowingAuthor
         v-for="author of state.authors"
         :key="author.url"
-        :state="state"
+        :state
         :author="author"
       />
     </div>

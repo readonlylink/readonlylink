@@ -15,15 +15,15 @@ defineProps<{ state: State }>()
     <div
       class="flex shrink grow basis-0 flex-col space-y-4 px-6 py-4 sm:h-full sm:space-y-6 sm:overflow-auto sm:px-12 sm:py-8"
     >
-      <EditorWelcomeTitle :state="state" />
-      <EditorWelcomeStart :state="state" />
-      <EditorWelcomeAbout :state="state" />
+      <EditorWelcomeTitle :state />
+      <EditorWelcomeStart :state />
+      <EditorWelcomeAbout :state />
     </div>
 
     <div
       class="flex w-full shrink grow basis-0 flex-col px-6 py-4 sm:h-full sm:overflow-auto sm:px-12 sm:py-8"
     >
-      <EditorWelcomeRecent :state="state" />
+      <EditorWelcomeRecent :state />
     </div>
   </div>
 </template>

@@ -24,7 +24,7 @@ watchEffect(async () => {
 
 <template>
   <PageLayout>
-    <HomeLoaded v-if="state" :state="state" />
+    <HomeLoaded v-if="state" :state />
     <HomeLoading v-else :options="useStateOptions()" />
   </PageLayout>
 </template>

@@ -26,6 +26,6 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <ManualLoaded v-if="state" :state="state" />
+  <ManualLoaded v-if="state" :state />
   <ManualLoading v-else :options="useStateOptions()" />
 </template>

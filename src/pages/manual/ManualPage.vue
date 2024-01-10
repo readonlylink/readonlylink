@@ -26,6 +26,6 @@ const url = computed(() => {
 <template>
   <div class="flex max-w-3xl flex-col px-6 sm:px-10 xl:mx-auto">
     <MdPage :key="state.path" :document="document" :url="url" />
-    <ManualPageEnding class="py-6" :state="state" />
+    <ManualPageEnding class="py-6" :state />
   </div>
 </template>

@@ -26,6 +26,6 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <BookLoaded v-if="state" :state="state" />
+  <BookLoaded v-if="state" :state />
   <BookLoading v-else :options="useStateOptions()" />
 </template>

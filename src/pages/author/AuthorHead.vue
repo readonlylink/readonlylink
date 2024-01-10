@@ -17,7 +17,7 @@ defineProps<{
       <div class="flex pr-4">
         <AuthorAvatar
           class="h-[4.5rem] w-[4.5rem] shrink-0 object-contain"
-          :state="state"
+          :state
         />
       </div>
 
@@ -31,19 +31,19 @@ defineProps<{
 
         <AuthorContact
           v-if="state.config.contact"
-          :state="state"
+          :state
           :contact="state.config.contact"
         />
       </div>
     </div>
 
     <div class="flex flex-col py-3">
-      <AuthorMenu :state="state" />
+      <AuthorMenu :state />
 
       <AuthorTabbar
         v-if="state.config.tabs"
         class="py-3"
-        :state="state"
+        :state
         :tabs="state.config.tabs"
       />
     </div>

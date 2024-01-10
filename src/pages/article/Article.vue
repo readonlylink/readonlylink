@@ -20,7 +20,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <ArticleLoaded v-if="state" :state="state" :key="state.url" />
+  <ArticleLoaded v-if="state" :state :key="state.url" />
   <ArticleLoading
     v-else
     :options="{

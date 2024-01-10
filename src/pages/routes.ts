@@ -7,14 +7,13 @@ import Author from './author/Author.vue'
 import BookEntrance from './book-entrance/BookEntrance.vue'
 import Book from './book/Book.vue'
 import Editor from './editor/Editor.vue'
+import EmbeddedArticle from './embedded-article//EmbeddedArticle.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import Following from './following/Following.vue'
 import History from './history/History.vue'
 import Home from './home/Home.vue'
 import ManualEntrance from './manual-entrance/ManualEntrance.vue'
 import Manual from './manual/Manual.vue'
-import EmbeddedArticle from './embedded-article//EmbeddedArticle.vue'
-
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: Home },

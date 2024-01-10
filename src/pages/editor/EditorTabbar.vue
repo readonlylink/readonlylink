@@ -12,8 +12,8 @@ defineProps<{ state: State }>()
       class="shrink grow basis-0"
       :key="index"
       v-for="(tab, index) of state.tabs"
-      :state="state"
-      :tab="tab"
+      :state
+      :tab
     />
   </div>
 </template>

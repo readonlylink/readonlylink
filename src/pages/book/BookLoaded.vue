@@ -66,9 +66,9 @@ useEventListener(window, 'keydown', (event) => {
     </Head>
 
     <div class="mx-auto max-w-3xl">
-      <BookContents v-if="state.frontMatter === 'contents'" :state="state" />
-      <BookTitlePage v-else-if="!state.path" :state="state" />
-      <BookPage v-else :state="state" :document="stateCurrentDocument(state)" />
+      <BookContents v-if="state.frontMatter === 'contents'" :state />
+      <BookTitlePage v-else-if="!state.path" :state />
+      <BookPage v-else :state :document="stateCurrentDocument(state)" />
     </div>
   </div>
 </template>

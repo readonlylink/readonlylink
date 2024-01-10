@@ -30,5 +30,5 @@ const component = computed(() => components[kind.value])
 </script>
 
 <template>
-  <component :is="component" :state="state" />
+  <component :is="component" :state />
 </template>

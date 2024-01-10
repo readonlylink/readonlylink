@@ -39,9 +39,9 @@ const url = computed(() => {
 <template>
   <div class="h-screen-dynamic flex flex-col px-6">
     <div ref="topElement"></div>
-    <BookPageNav class="py-6" :state="state" />
+    <BookPageNav class="py-6" :state />
     <MdPage v-if="document" :key="state.path" :document="document" :url="url" />
-    <BookPageNotFound v-else :state="state" />
-    <BookPageNav class="py-6" :state="state" />
+    <BookPageNotFound v-else :state />
+    <BookPageNav class="py-6" :state />
   </div>
 </template>

@@ -17,5 +17,5 @@ useEventListener(window, 'beforeunload', (event) => {
 </script>
 
 <template>
-  <EditorLayout :state="state" />
+  <EditorLayout :state />
 </template>

@@ -10,9 +10,5 @@ const props = defineProps<{
 </script>
 
 <template>
-  <img
-    class="py-1"
-    :src="stateResolveLink(state, node.src)"
-    :alt="node.alt"
-  />
+  <img class="py-1" :src="stateResolveLink(state, node.src)" :alt="node.alt" />
 </template>

@@ -17,7 +17,7 @@ defineProps<{
   >
     <EditorWorkspaceRoot
       class="border-b border-black dark:border-white"
-      :state="state"
+      :state
       :workspace="workspace"
     />
 
@@ -28,7 +28,7 @@ defineProps<{
           workspace.root.children,
         )"
         :key="index"
-        :state="state"
+        :state
         :workspace="workspace"
         :node="node"
       />

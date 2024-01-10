@@ -156,7 +156,7 @@ const { alert } = window
           node.children,
         )"
         :key="index"
-        :state="state"
+        :state
         :workspace="workspace"
         :node="child"
       />

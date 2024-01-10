@@ -24,8 +24,8 @@ onMounted(async () => {
     </Head>
 
     <div class="mx-auto max-w-3xl">
-      <ArticleMarkdown v-if="stateIsMarkdown(state)" :state="state" />
-      <ArticlePlaintext v-else :state="state" />
+      <ArticleMarkdown v-if="stateIsMarkdown(state)" :state />
+      <ArticlePlaintext v-else :state />
     </div>
   </div>
 </template>

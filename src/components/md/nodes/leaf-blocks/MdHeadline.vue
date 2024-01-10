@@ -54,7 +54,7 @@ function scrollIntoView() {
     ref="headlineElement"
     :href="'#' + headlineId"
     :id="headlineId"
-    class="text-balance -ml-4 flex items-baseline"
+    class="-ml-4 flex items-baseline text-balance"
     @click.prevent="jumpToHeadline()"
     @mouseover="hovered = true"
     @mouseleave="hovered = false"
@@ -93,7 +93,7 @@ function scrollIntoView() {
         }"
         v-for="(child, index) in node.children"
         :key="index"
-        :state="state"
+        :state
         :node="child"
       />
     </div>

@@ -41,10 +41,10 @@ const url = computed(() => {
     class="h-screen-dynamic overflow-auto bg-white text-black dark:bg-black dark:text-white"
   >
     <div class="relative mx-auto flex max-w-3xl flex-col p-5">
-      <AuthorHead :state="state" />
-      <AuthorActivities v-if="state.path === 'activities'" :state="state" />
+      <AuthorHead :state />
+      <AuthorActivities v-if="state.path === 'activities'" :state />
       <MdPage v-else-if="document" :document="document" :url="url" />
-      <AuthorPageNotFound v-else :state="state" />
+      <AuthorPageNotFound v-else :state />
     </div>
   </div>
 </template>

@@ -28,6 +28,6 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <FollowingLoaded v-if="state" :state="state" />
+  <FollowingLoaded v-if="state" :state />
   <FollowingLoading v-else :options="useStateOptions()" />
 </template>

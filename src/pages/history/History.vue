@@ -15,6 +15,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <HistoryLoaded v-if="state" :state="state" />
+  <HistoryLoaded v-if="state" :state />
   <HistoryLoading v-else options="options" />
 </template>

@@ -29,24 +29,24 @@ function showAttributes() {
     <MdDefaultTitle
       class="my-4"
       v-if="state.document.attributes.title"
-      :state="state"
+      :state
     />
 
-    <MdDefaultAttributes v-if="showAttributes()" class="mb-4" :state="state" />
+    <MdDefaultAttributes v-if="showAttributes()" class="mb-4" :state />
 
     <div
       class="my-2"
       v-for="(child, index) in state.document.children"
       :key="index"
     >
-      <MdNode :state="state" :node="child" />
+      <MdNode :state :node="child" />
     </div>
 
     <div
       v-if="state.document.footnotes.length > 0"
       class="ml-3 mt-6 border-t-2 border-black pt-4 dark:border-white"
     >
-      <MdDefaultFootnotes :state="state" />
+      <MdDefaultFootnotes :state />
     </div>
   </div>
 </template>

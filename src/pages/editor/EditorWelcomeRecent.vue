@@ -40,7 +40,7 @@ defineProps<{ state: State }>()
           v-for="(directoryHandle, index) of state.recentlyOpened
             .directoryHandles"
           :key="index"
-          :state="state"
+          :state
           :directoryHandle="directoryHandle"
         />
       </div>
@@ -59,7 +59,7 @@ defineProps<{ state: State }>()
         <EditorWelcomeRecentFile
           v-for="(fileHandle, index) of state.recentlyOpened.fileHandles"
           :key="index"
-          :state="state"
+          :state
           :fileHandle="fileHandle"
         />
       </div>

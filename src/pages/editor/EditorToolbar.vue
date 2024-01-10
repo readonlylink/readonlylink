@@ -111,7 +111,7 @@ const lang = useGlobalLang()
     </div>
 
     <div class="flex space-x-4">
-      <EditorToolbarPreview :state="state" />
+      <EditorToolbarPreview :state />
 
       <button
         class="flex items-center whitespace-nowrap hover:text-black hover:underline dark:hover:text-white"

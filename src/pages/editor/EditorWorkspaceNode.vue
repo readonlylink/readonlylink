@@ -15,14 +15,14 @@ defineProps<{
 <template>
   <EditorWorkspaceNodeFile
     v-if="node.kind === 'WorkspaceNodeFile'"
-    :state="state"
+    :state
     :workspace="workspace"
     :node="node"
   />
 
   <EditorWorkspaceNodeDirectory
     v-else-if="node.kind === 'WorkspaceNodeDirectory'"
-    :state="state"
+    :state
     :workspace="workspace"
     :node="node"
   />

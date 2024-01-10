@@ -13,7 +13,7 @@ const component = computed(() => components[props.node.kind])
 </script>
 
 <template>
-  <component v-if="component" :is="component" :state="state" :node="node" />
+  <component v-if="component" :is="component" :state :node="node" />
   <span
     v-else
     class="border-2 border-rose-400 font-bold text-rose-400"

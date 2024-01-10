@@ -21,7 +21,7 @@ const indent = computed(() => props.state.document.attributes.paragraph?.indent)
     <MdNode
       v-for="(child, index) in node.children"
       :key="index"
-      :state="state"
+      :state
       :node="child"
     />
   </div>

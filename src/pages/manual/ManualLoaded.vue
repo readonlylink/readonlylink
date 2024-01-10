@@ -63,13 +63,9 @@ useEventListener(window, 'keydown', (event) => {
       <title>{{ stateTitle(state) }}</title>
     </Head>
 
-    <ManualLayout :state="state">
-      <ManualPage
-        v-if="currentDocument"
-        :state="state"
-        :document="currentDocument"
-      />
-      <ManualPageNotFound v-else :state="state" />
+    <ManualLayout :state>
+      <ManualPage v-if="currentDocument" :state :document="currentDocument" />
+      <ManualPageNotFound v-else :state />
     </ManualLayout>
   </div>
 </template>

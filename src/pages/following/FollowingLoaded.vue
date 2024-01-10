@@ -30,7 +30,7 @@ watchEffect(() => {
       <title v-else>Following | Readonly</title>
     </Head>
 
-    <FollowingEditor v-if="state.kind === 'Editor'" :state="state" />
-    <FollowingList v-else :state="state" />
+    <FollowingEditor v-if="state.kind === 'Editor'" :state />
+    <FollowingList v-else :state />
   </PageLayout>
 </template>

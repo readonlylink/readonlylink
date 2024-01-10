@@ -24,7 +24,7 @@ const props = defineProps<{ state: State }>()
         <MdNode
           v-for="(node, index) in footnote.nodes"
           :key="index"
-          :state="state"
+          :state
           :node="node"
         />
       </div>

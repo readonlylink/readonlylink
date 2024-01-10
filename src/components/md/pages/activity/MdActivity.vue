@@ -12,7 +12,7 @@ const props = defineProps<{ state: State }>()
       v-for="(child, index) in state.document.children"
       :key="index"
     >
-      <MdNode :state="state" :node="child" />
+      <MdNode :state :node="child" />
     </div>
   </div>
 </template>

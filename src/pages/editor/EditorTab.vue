@@ -14,10 +14,10 @@ defineProps<{
 <template>
   <div class="flex h-full flex-col overflow-auto">
     <div class="flex h-full w-full overflow-auto">
-      <EditorLinenumber :state="state" :tab="tab" />
-      <EditorTextarea :state="state" :tab="tab" />
+      <EditorLinenumber :state :tab />
+      <EditorTextarea :state :tab />
     </div>
 
-    <EditorModeline :state="state" :tab="tab" />
+    <EditorModeline :state :tab />
   </div>
 </template>

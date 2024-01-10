@@ -15,7 +15,7 @@ watchEffect(async () => {
 
 <template>
   <PageLayout>
-    <AuthorListLoaded v-if="state" :state="state" />
+    <AuthorListLoaded v-if="state" :state />
     <AuthorListLoading v-else />
   </PageLayout>
 </template>

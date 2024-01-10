@@ -23,7 +23,7 @@ defineProps<{
     <MdNode
       v-for="(child, index) in node.children"
       :key="index"
-      :state="state"
+      :state
       :node="child"
     />
 
@@ -39,7 +39,7 @@ defineProps<{
     <MdNode
       v-for="(child, index) in node.children"
       :key="index"
-      :state="state"
+      :state
       :node="child"
     />
   </Hyperlink>

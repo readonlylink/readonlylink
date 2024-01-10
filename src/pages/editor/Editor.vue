@@ -12,5 +12,5 @@ onMounted(async () => {
 </script>
 
 <template>
-  <EditorLoaded v-if="state" :state="state" />
+  <EditorLoaded v-if="state" :state />
 </template>

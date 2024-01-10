@@ -37,25 +37,18 @@ const lang = useGlobalLang()
         min-size="8"
         :size="splitpanesSize"
       >
-        <EditorWorkspace :state="state" :workspace="state.currentWorkspace" />
+        <EditorWorkspace :state :workspace="state.currentWorkspace" />
       </Pane>
 
       <Pane class="flex h-full w-full flex-col overflow-auto">
-        <EditorTabbar :state="state" />
-        <EditorToolbar :state="state" />
-        <EditorTab
-          v-if="state.currentTab"
-          :state="state"
-          :tab="state.currentTab"
-        />
-        <EditorWelcomeWorkspace
-          v-else-if="state.currentWorkspace"
-          :state="state"
-        />
-        <EditorWelcome v-else :state="state" />
+        <EditorTabbar :state />
+        <EditorToolbar :state />
+        <EditorTab v-if="state.currentTab" :state :tab="state.currentTab" />
+        <EditorWelcomeWorkspace v-else-if="state.currentWorkspace" :state />
+        <EditorWelcome v-else :state />
       </Pane>
     </Splitpanes>
 
-    <EditorEchoarea :state="state" />
+    <EditorEchoarea :state />
   </div>
 </template>
