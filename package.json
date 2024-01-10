@@ -7,7 +7,7 @@
     "check:watch": "vue-tsc --noEmit --watch",
     "check:ts": "tsc --noEmit",
     "check:ts:watch": "tsc --noEmit --watch",
-    "test:ts": "vitest --dir src --threads false --run",
+    "test:ts": "vitest --dir src --run",
     "test": "npm run test:ts",
     "format": "prettier src --write"
   },
