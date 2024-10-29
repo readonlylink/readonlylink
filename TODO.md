@@ -1,3 +1,6 @@
+remove links to editor
+remove utils/fsa and dependencies for editor
+
 # searchable file list
 
 searchable file list as a markdown plugin

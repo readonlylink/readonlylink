@@ -6,7 +6,6 @@ import AuthorList from './author-list/AuthorList.vue'
 import Author from './author/Author.vue'
 import BookEntrance from './book-entrance/BookEntrance.vue'
 import Book from './book/Book.vue'
-import Editor from './editor/Editor.vue'
 import EmbeddedArticle from './embedded-article//EmbeddedArticle.vue'
 import PageNotFound from './errors/PageNotFound.vue'
 import Following from './following/Following.vue'
@@ -41,7 +40,6 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/manuals/:url(.*)/-/:path(.*)', component: Manual },
 
   { path: '/history', component: History },
-  { path: '/editor', component: Editor },
   { path: '/following', component: Following },
 
   { path: '/:pathMatch(.*)', component: PageNotFound },
