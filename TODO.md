@@ -1,12 +1,3 @@
-# searchable file list
-
-searchable file list as a markdown plugin
-
-- to write this as element in markdown,
-  we need the markdown parser to handle element well.
-
-- for my old `notes/` in inner.
-
 # md
 
 > For https://readonly.link/books/https://cicada-monologues.vercel.app/book.json
@@ -17,12 +8,6 @@ searchable file list as a markdown plugin
 [md] `<question>`
 [md] `<answer>`
 [md] `<katex>`
-
-# editor
-
-[editor] [maybe] rename file and directory
-
-- not possible for now: https://github.com/WICG/file-system-access/issues/413
 
 # optimization
 
