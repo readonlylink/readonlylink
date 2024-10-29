@@ -1,4 +1,3 @@
-remove links to editor
 remove utils/fsa and dependencies for editor
 
 # searchable file list

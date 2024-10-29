@@ -93,20 +93,6 @@ const lang = useGlobalLang()
 
     <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
       <a
-        href="/editor"
-        class="flex items-center hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/editor' }"
-        target="_blank"
-      >
-        <Lang>
-          <template #zh> 编辑器 </template>
-          <template #en> Editor </template>
-        </Lang>
-
-        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
-      </a>
-
-      <a
         :href="
           lang.isZh()
             ? `${origin}/manuals/${origin}/contents/manual/zh.json`
