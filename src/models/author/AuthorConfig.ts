@@ -1,4 +1,4 @@
-import ty, { Schema } from '@xieyuheng/ty'
+import { z, ZodType } from 'zod'
 import { AuthorContact, AuthorContactSchema } from './AuthorContact'
 
 export type AuthorConfig = {
@@ -13,20 +13,20 @@ export type AuthorConfig = {
   contact?: AuthorContact
 }
 
-export const AuthorConfigSchema: Schema<AuthorConfig> = ty.object({
-  kind: ty.const('Author' as const),
-  name: ty.string(),
-  tagline: ty.optional(ty.string()),
-  avatar: ty.union(
-    ty.string(),
-    ty.object({
-      light: ty.string(),
-      dark: ty.string(),
+export const AuthorConfigSchema: ZodType<AuthorConfig> = z.object({
+  kind: z.literal('Author'),
+  name: z.string(),
+  tagline: z.optional(z.string()),
+  avatar: z.union([
+    z.string(),
+    z.object({
+      light: z.string(),
+      dark: z.string(),
     }),
-  ),
-  homepage: ty.string(),
-  src: ty.optional(ty.string()),
-  activities: ty.array(ty.string()),
-  tabs: ty.optional(ty.dict(ty.string())),
-  contact: ty.optional(AuthorContactSchema),
+  ]),
+  homepage: z.string(),
+  src: z.optional(z.string()),
+  activities: z.array(z.string()),
+  tabs: z.optional(z.record(z.string(), z.string())),
+  contact: z.optional(AuthorContactSchema),
 })

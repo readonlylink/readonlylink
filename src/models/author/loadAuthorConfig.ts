@@ -8,5 +8,5 @@ export async function loadAuthorConfig(
 ): Promise<AuthorConfig> {
   const response = await fetch(url)
   const json = await response.json()
-  return AuthorConfigSchema.validate(json)
+  return AuthorConfigSchema.parse(json)
 }

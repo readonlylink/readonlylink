@@ -1,4 +1,4 @@
-import ty, { Schema } from '@xieyuheng/ty'
+import { z, ZodType } from 'zod'
 
 export type BookConfig = {
   kind: 'Book'
@@ -13,15 +13,15 @@ export type BookConfig = {
   contents: Array<string>
 }
 
-export const BookConfigSchema: Schema<BookConfig> = ty.object({
-  kind: ty.const('Book' as const),
-  title: ty.string(),
-  subtitle: ty.optional(ty.string()),
-  version: ty.optional(ty.string()),
-  authors: ty.array(ty.string()),
-  translators: ty.optional(ty.array(ty.string())),
-  year: ty.optional(ty.string()),
-  date: ty.optional(ty.string()),
-  src: ty.string(),
-  contents: ty.array(ty.string()),
+export const BookConfigSchema: ZodType<BookConfig> = z.object({
+  kind: z.literal('Book' ),
+  title: z.string(),
+  subtitle: z.optional(z.string()),
+  version: z.optional(z.string()),
+  authors: z.array(z.string()),
+  translators: z.optional(z.array(z.string())),
+  year: z.optional(z.string()),
+  date: z.optional(z.string()),
+  src: z.string(),
+  contents: z.array(z.string()),
 })

@@ -1,5 +1,3 @@
-remove @xieyuheng/ty use zod
-
 # searchable file list
 
 searchable file list as a markdown plugin

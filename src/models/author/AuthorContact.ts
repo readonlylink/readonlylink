@@ -1,4 +1,4 @@
-import ty, { Schema } from '@xieyuheng/ty'
+import {z, ZodType} from 'zod'
 
 export type AuthorContact = {
   bilibili?: string
@@ -8,10 +8,10 @@ export type AuthorContact = {
   mimor?: string
 }
 
-export const AuthorContactSchema: Schema<AuthorContact> = ty.object({
-  bilibili: ty.optional(ty.string()),
-  github: ty.optional(ty.string()),
-  email: ty.optional(ty.string()),
-  twitter: ty.optional(ty.string()),
-  mimor: ty.optional(ty.string()),
+export const AuthorContactSchema: ZodType<AuthorContact> = z.object({
+  bilibili: z.optional(z.string()),
+  github: z.optional(z.string()),
+  email: z.optional(z.string()),
+  twitter: z.optional(z.string()),
+  mimor: z.optional(z.string()),
 })

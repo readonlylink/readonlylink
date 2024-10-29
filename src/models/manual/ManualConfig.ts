@@ -1,4 +1,4 @@
-import ty, { Schema } from '@xieyuheng/ty'
+import { z, ZodType} from 'zod'
 
 export type ManualConfig = {
   kind: 'Manual'
@@ -14,16 +14,16 @@ export type ManualConfig = {
   sections: Record<string, Array<string>>
 }
 
-export const ManualConfigSchema: Schema<ManualConfig> = ty.object({
-  kind: ty.const('Manual' as const),
-  title: ty.string(),
-  subtitle: ty.optional(ty.string()),
-  version: ty.optional(ty.string()),
-  authors: ty.array(ty.string()),
-  translators: ty.optional(ty.array(ty.string())),
-  year: ty.optional(ty.string()),
-  date: ty.optional(ty.string()),
-  src: ty.string(),
-  main: ty.string(),
-  sections: ty.dict(ty.array(ty.string())),
+export const ManualConfigSchema: ZodType<ManualConfig> = z.object({
+  kind: z.literal('Manual' ),
+  title: z.string(),
+  subtitle: z.optional(z.string()),
+  version: z.optional(z.string()),
+  authors: z.array(z.string()),
+  translators: z.optional(z.array(z.string())),
+  year: z.optional(z.string()),
+  date: z.optional(z.string()),
+  src: z.string(),
+  main: z.string(),
+  sections: z.record(z.string(), z.array(z.string())),
 })

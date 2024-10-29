@@ -8,5 +8,5 @@ export async function loadManualConfig(options: {
   const response = await fetch(url)
   const json = await response.json()
 
-  return ManualConfigSchema.validate(json)
+  return ManualConfigSchema.parse(json)
 }
