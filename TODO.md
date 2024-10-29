@@ -1,3 +1,5 @@
+be like sourcehut
+
 # md
 
 > For https://readonly.link/books/https://cicada-monologues.vercel.app/book.json
