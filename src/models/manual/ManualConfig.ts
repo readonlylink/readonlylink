@@ -1,4 +1,4 @@
-import { z, ZodType} from 'zod'
+import { z, ZodType } from 'zod'
 
 export type ManualConfig = {
   kind: 'Manual'
@@ -15,7 +15,7 @@ export type ManualConfig = {
 }
 
 export const ManualConfigSchema: ZodType<ManualConfig> = z.object({
-  kind: z.literal('Manual' ),
+  kind: z.literal('Manual'),
   title: z.string(),
   subtitle: z.optional(z.string()),
   version: z.optional(z.string()),

@@ -14,7 +14,7 @@ export type BookConfig = {
 }
 
 export const BookConfigSchema: ZodType<BookConfig> = z.object({
-  kind: z.literal('Book' ),
+  kind: z.literal('Book'),
   title: z.string(),
   subtitle: z.optional(z.string()),
   version: z.optional(z.string()),
