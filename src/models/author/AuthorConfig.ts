@@ -1,4 +1,4 @@
-import { Schema, ty } from '@xieyuheng/ty'
+import ty, { Schema } from '@xieyuheng/ty'
 import { AuthorContact, AuthorContactSchema } from './AuthorContact'
 
 export type AuthorConfig = {

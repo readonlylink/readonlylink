@@ -18,7 +18,7 @@ watchEffect(async () => {
 
 <template>
   <div
-    class="mb-1.5 border border-black px-3 py-2.5 dark:border-white sm:max-w-[40rem]"
+    class="mb-1.5 border border-black px-3 py-2.5 sm:max-w-[40rem] dark:border-white"
   >
     <ReadonlylinkLoaded v-if="state" :state />
     <ReadonlylinkLoading v-else :options="props" />
