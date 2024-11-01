@@ -7,4 +7,4 @@ date: 2023-03-18 20:45+08:00
 而译者 Olivia Han，是知名优质中文社区 [V2EX](https://www.v2ex.com/?r=xieyuheng) 的创始人。
 [附：译者谈 V2EX](https://www.ifanr.com/22202)
 
-<readonlylink href="https://books.readonly.link/rework/book.json" />
+<readonlylink href="https://books.xieyuheng.com/rework/book.json" />
