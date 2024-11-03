@@ -1,3 +1,5 @@
+change <mimor> to <x-mimor>
+
 be like sourcehut
 
 # md
