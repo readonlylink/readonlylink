@@ -25,7 +25,7 @@
     "js-yaml": "^4.1.0",
     "jsdom": "^25.0.1",
     "katex": "^0.16.11",
-    "mimor": "^0.1.12",
+    "mimor": "^0.1.17",
     "path-browserify": "^1.0.1",
     "qs": "^6.13.0",
     "sanitize-html": "^2.13.1",
